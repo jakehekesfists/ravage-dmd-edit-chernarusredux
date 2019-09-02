@@ -1,0 +1,32 @@
+learn french and remove 90% of the R3F stuff. i only need it for moving objects
+maybe find a better logi script. maybe write a new one.. attachto and stuff isnt THAT hard surely.
+
+- logistics config
+some vehicles have fuck all space. need to fix that.
+
+get some other cunt to help me test in a dedicated environ
+
+
+
+
+run through TADST and test solo
+
+- later versions
+    once rhs updates and fixes the broken shotgun reloading. add them back in to the mission
+
+	the big city up near pobeda dam needs to become a radiated zone with roaming, gasmask wearing ai.
+
+    - re-do the status bar icons. 
+/* -----------------------------------
+    File: filename.sqf
+    Author:  JakeHekesFists[DMD] 2019
+-------------------------------------- */
+
+-- upload to github
+use the MIT license
+
+https://www.freecodecamp.org/news/how-open-source-licenses-work-and-how-to-add-them-to-your-projects-34310c3cf94/
+
+
+bugs:
+Ravage repair script does not seem to work with the BTR 40

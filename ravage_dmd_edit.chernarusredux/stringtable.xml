@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- https://community.bistudio.com/wiki/Stringtable.xml#Stringtable_Editors -->
+<Project name="DMD_Server">
+	<!--
+		This will be an open source project on Github and Published on Steam Workshop
+		Any Translations will be welcomed and added to the main branch if submitted. 
+	-->
+
+	<Package name="AddActions">
+		<Key ID="STR_ACT_DESTROYCRATE">
+			<Original>Set Fire to Crate</Original>
+			<English>Set Fire to Crate</English>
+		</Key>
+		<Key ID="STR_ACT_REFILLJERRYCAN">
+			<Original>Refill JerryCan</Original>
+			<English>Refill JerryCan</English>
+		</Key>
+		<Key ID="STR_ACT_REPAIRVEHICLE">
+			<Original>Repair Vehicle</Original>
+			<English>Repair Vehicle</English>
+		</Key>
+		<Key ID="STR_ACT_GETFOOD">
+			<Original>Take Food</Original>
+			<English>Take Food</English>
+		</Key>
+		<Key ID="STR_ACT_GETDRINK">
+			<Original>Take Drink</Original>
+			<English>Take Drink</English>
+		</Key>
+		<Key ID="STR_ACT_DEPOSIT">
+			<Original>Deposit Funds</Original>
+			<English>Deposit Funds</English>
+		</Key>
+		<Key ID="STR_ACT_CLAIMVEH">
+			<Original>Claim Vehicle (Save to DB)</Original>
+			<English>Claim Vehicle (Save to DB)</English>
+		</Key>
+		<Key ID="STR_ACT_EH_DESPAWNWARN">
+			<Original>This vehicle will despawn on server restart, unless manually claimed</Original>
+			<English>This vehicle will despawn on server restart, unless manually claimed</English>
+		</Key>
+		<Key ID="STR_ACT_LOCKVEH">
+			<Original>Lock Vehicle</Original>
+			<English>Lock Vehicle</English>
+		</Key>
+		<Key ID="STR_ACT_UNLOCKVEH">
+			<Original>Unlock Vehicle</Original>
+			<English>Unlock Vehicle</English>
+		</Key>
+		<Key ID="STR_ACT_VEHLOCKED">
+			<Original>VEHICLE LOCKED</Original>
+			<English>VEHICLE LOCKED</English>
+		</Key>
+		<Key ID="STR_ACT_HOTWIREVEH">
+			<Original>Hotwire Vehicle</Original>
+			<English>Hotwire Vehicle</English>
+		</Key>
+	</Package>
+
+	<Package name="ClientScripts">
+		<!-- depositFunds.sqf -->
+		<Key ID="STR_CLI_ATM_NOFUNDS">
+			<Original>You have no funds in your wallet to deposit</Original>
+			<English>You have no funds in your wallet to deposit</English>
+		</Key>
+		<Key ID="STR_CLI_ATM_DEPOSIT">
+			<Original>Deposited $ %1 into your Account</Original>
+			<English>Deposited $ %1 into your Account</English>
+		</Key>
+
+		<!-- destroyCrate.sqf -->
+		<Key ID="STR_CLI_DESTROYCRATE">
+			<Original>The Crate is about to go up in Flames, Step Back!</Original>
+			<English>The Crate is about to go up in Flames, Step Back!</English>
+		</Key>
+
+		<!-- getDrink.sqf -->
+		<Key ID="STR_CLI_GD_EMPTY">
+			<Original>This Water Source is depleted</Original>
+			<English>This Water Source is depleted</English>
+		</Key>
+		<Key ID="STR_CLI_GD_DRINK">
+			<Original>You have taken a Drink from the Water Source</Original>
+			<English>You have taken a Drink from the Water Source</English>
+		</Key>
+		<Key ID="STR_CLI_GD_REFILL">
+			<Original>You have Refilled your Empty Water bottle from the Water Source</Original>
+			<English>You have Refilled your Empty Water bottle from the Water Source</English>
+		</Key>
+		<Key ID="STR_CLI_GD_NOTHIRST">
+			<Original>You aren't thirsty at the moment</Original>
+			<English>You aren't thirsty at the moment</English>
+		</Key>
+
+		<!-- getFood.sqf -->
+		<Key ID="STR_CLI_GF_EMPTY">
+			<Original>This Food Source is depleted</Original>
+			<English>This Food Source is depleted</English>
+		</Key>
+		<Key ID="STR_CLI_GF_EAT">
+			<Original>You have grabbed a quick bite to eat from the Food Source</Original>
+			<English>You have grabbed a quick bite to eat from the Food Source</English>
+		</Key>
+		<Key ID="STR_CLI_GF_TAKE">
+			<Original>You have taken a %1 from the Food Source</Original>
+			<English>You have taken a %1 from the Food Source</English>
+		</Key>
+		<Key ID="STR_CLI_GF_NOHUNGER">
+			<Original>You aren't hungry at the moment</Original>
+			<English>You aren't hungry at the moment</English>
+		</Key>
+
+		<!-- PVEH.sqf (Client) -->
+		<Key ID="STR_CLI_PVEH_LOCKVEHGEAR">
+			<Original>You cannot access Gear inside a Locked Vehicle</Original>
+			<English>You cannot access Gear inside a Locked Vehicle</English>
+		</Key>
+
+		<!-- refillJerry.sqf -->
+		<Key ID="STR_CLI_RJ_NOHOSE">
+			<Original>You need a hose to syphon fuel</Original>
+			<English>You need a hose to syphon fuel.</English>
+		</Key>
+		<Key ID="STR_CLI_RJ_NOJERRY">
+			<Original>You do not have an Empty Jerry Can to refill!</Original>
+			<English>You do not have an Empty Jerry Can to refill!</English>
+		</Key>
+
+		<!-- vehicleHotwire.sqf -->
+		<Key ID="STR_CLI_VH_NOTOOLS">
+			<Original>You cannot Hotwire a Vehicle without a Toolkit</Original>
+			<English>You cannot Hotwire a Vehicle without a Toolkit</English>
+		</Key>
+		<Key ID="STR_CLI_VH_OWNER">
+			<Original>You cannot Hotwire your own Vehicle</Original>
+			<English>You cannot Hotwire your own Vehicle</English>
+		</Key>
+		<Key ID="STR_CLI_VH_BROKETOOLS">
+			<Original>You broke your Toolkit trying to Hotwire the Vehicle!</Original>
+			<English>You broke your Toolkit trying to Hotwire the Vehicle!</English>
+		</Key>
+		<Key ID="STR_CLI_VH_SUCCESS">
+			<Original>You have successfully Hotwired the Vehicle!</Original>
+			<English>You have successfully Hotwired the Vehicle!</English>
+		</Key>
+	</Package>
+
+	<Package name="DMDFunctions">
+		<!-- fn\Client -->
+			<!-- fn_earplugs.sqf -->
+			<Key ID="STR_CLI_EAR_REM">
+				<Original>Earplugs Removed</Original>
+				<English>Earplugs Removed</English>
+			</Key>
+			<Key ID="STR_CLI_EAR_SEV">
+				<Original>Earplugs: 75 Percent</Original>
+				<English>Earplugs: 75 Percent</English>
+			</Key>
+			<Key ID="STR_CLI_EAR_NIN">
+				<Original>Earplugs: 90 Percent</Original>
+				<English>Earplugs: 90 Percent</English>
+			</Key>
+
+			<!-- fn_locationSpam.sqf -->
+			<Key ID="STR_CLI_LS_JAN">
+				<Original>January</Original>
+				<English>January</English>
+				<German>Januar</German>
+			</Key>
+			<Key ID="STR_CLI_LS_FEB">
+				<Original>February</Original>
+				<English>February</English>
+				<German>Februar</German>
+			</Key>
+			<Key ID="STR_CLI_LS_MAR">
+				<Original>March</Original>
+				<English>March</English>
+				<German>März</German>
+			</Key>
+			<Key ID="STR_CLI_LS_APR">
+				<Original>April</Original>
+				<English>April</English>
+				<German>April</German>
+			</Key>
+			<Key ID="STR_CLI_LS_MAY">
+				<Original>May</Original>
+				<English>May</English>
+				<German>Mai</German>
+			</Key>
+			<Key ID="STR_CLI_LS_JUN">
+				<Original>June</Original>
+				<English>June</English>
+				<German>Juni</German>
+			</Key>
+			<Key ID="STR_CLI_LS_JUL">
+				<Original>July</Original>
+				<English>July</English>
+				<German>Juli</German>
+			</Key>
+			<Key ID="STR_CLI_LS_AUG">
+				<Original>August</Original>
+				<English>August</English>
+				<German>August</German>
+			</Key>
+			<Key ID="STR_CLI_LS_SEP">
+				<Original>September</Original>
+				<English>September</English>
+				<German>September</German>
+			</Key>
+			<Key ID="STR_CLI_LS_OCT">
+				<Original>October</Original>
+				<English>October</English>
+				<German>Oktober</German>
+			</Key>
+			<Key ID="STR_CLI_LS_NOV">
+				<Original>November</Original>
+				<English>November</English>
+				<German>November</German>
+			</Key>
+			<Key ID="STR_CLI_LS_DEC">
+				<Original>December</Original>
+				<English>December</English>
+				<German>Dezember</German>
+			</Key>
+
+			<!-- fn_safeZone.sqf -->
+			<Key ID="STR_CLI_SZ_ENTER">
+				<Original>You have entered a Safe Zone</Original>
+				<English>You have entered a Safe Zone</English>
+			</Key>
+			<Key ID="STR_CLI_SZ_LEAVE">
+				<Original>You have left a Safe Zone</Original>
+				<English>You have left a Safe Zone</English>
+			</Key>
+			<Key ID="STR_CLI_SZ_ACCDENY">
+				<Original>ACCESS DENIED</Original>
+				<English>ACCESS DENIED</English>
+			</Key>
+			
+			<!-- fn_vehicleService.sqf-->
+			<Key ID="STR_CLI_VS_NOVEH">
+				<Original>You are not in a Vehicle</Original>
+				<English>You are not in a Vehicle</English>
+			</Key>
+			<Key ID="STR_CLI_VS_NOREPAIRS">
+				<Original>This vehicle doesnt need repairs</Original>
+				<English>This vehicle doesnt need repairs</English>
+			</Key>
+			<Key ID="STR_CLI_VS_NOMONEY">
+				<Original>You do not have enough Money for Repairs - Repairs will cost $%1</Original>
+				<English>You do not have enough Money for Repairs - Repairs will cost $%1</English>
+			</Key>
+			<Key ID="STR_CLI_VS_REPAIRSOK">
+				<Original>Repairs will cost $%1 - Drive away at any time to cancel</Original>
+				<English>Repairs will cost $%1 - Drive away at any time to cancel</English>
+			</Key>
+			<Key ID="STR_CLI_VS_REPAIRCANCEL">
+				<Original>Repairing Cancelled</Original>
+				<English>Repairing Cancelled</English>
+			</Key>
+			<Key ID="STR_CLI_VS_REPAIRINGHIT">
+				<Original>Repairing %1...</Original>
+				<English>Repairing %1...</English>
+			</Key>
+			<Key ID="STR_CLI_VS_REPAIRCOMPLETE">
+				<Original>Repairs Complete.</Original>
+				<English>Repairs Complete.</English>
+			</Key>
+
+
+
+		<!-- fn\Missions -->
+			<!-- fn_missionBroadcast.sqf -->
+			<Key ID="STR_MIS_MB_PRIBROAD">
+				<Original>[PRIORITY BROADCAST]: %1 | %2</Original>
+				<English>[PRIORITY BROADCAST]: %1 | %2</English>
+			</Key>
+	</Package>
+
+	<Package name="AIunits">
+		<Key ID="STR_AI_NAME_RUSSIANFORCES">
+			<Original>Russian Soldiers</Original>
+			<English>Russian Soldiers</English>
+		</Key>
+		<Key ID="STR_AI_NAME_USFORCES">
+			<Original>US Marines</Original>
+			<English>US Marines</English>
+		</Key>
+		<Key ID="STR_AI_NAME_TAKISTANIS">
+			<Original>Takistani Rebels</Original>
+			<English>Takistani Rebels</English>
+		</Key>
+		<Key ID="STR_AI_NAME_BAFORCES">
+			<Original>Bandits</Original>
+			<English>Bandits</English>
+		</Key>
+	</Package>
+	
+	<Package name="AI_INVASIONS">
+
+		<Key ID="STR_AI_INV_HINTSTART">
+			<Original>Invasion Mission</Original>
+			<English>Invasion Mission</Original>
+		</Key>
+		<Key ID="STR_AI_INV_HINTFINISH">
+			<Original>Invasion Mission (COMPLETE)</Original>
+			<English>Invasion Mission (COMPLETE)</Original>
+		</Key>
+
+	    <Key ID="STR_AI_INVASION_NAME">
+			<Original>INVASION: %1</Original>
+			<English>INVASION: %1</English>
+		</Key>
+		
+		<Key ID="STR_AI_INVASION_START">
+			<Original>The City of %1 at %2 Has been overrun by %3. Clear them out for a Reward!</Original>
+			<English>The City of %1 at %2 Has been overrun by %3. Clear them out for a Reward!</English>
+		</Key>
+		
+		<Key ID="STR_AI_INVASION_END">
+			<Original>The City of %1 at %2 has been liberated, the %3 have been eliminated. Thanks for your Help!</Original>
+			<English>The City of %1 at %2 has been liberated, the %3 have been eliminated. Thanks for your Help!</English>
+		</Key>
+	</Package>
+
+	<Package name="RedZone">
+		<Key ID="STR_RZ_NAME">
+			<Original>RedZone</Original>
+			<English>RedZone</English>
+		</Key>
+		<Key ID="STR_RZ_HINTSTART">
+			<Original>Artillery Strike</Original>
+			<English>Artillery Strike</English>
+		</Key>
+		<Key ID="STR_RZ_HINTFINISH">
+			<Original>Artillery Strike (COMPLETE)</Original>
+			<English>Artillery Strike (COMPLETE)</English>
+		</Key>
+		<Key ID="STR_RZ_STARTTEXT">
+			<Original>!!!ALERT!!! %1 (GRID: %2) shelled again from neighbouring Taviana. Survivors are advised to leave the area immediately</Original>
+			<English>!!!ALERT!!! %1 (GRID: %2) shelled again from neighbouring Taviana. Survivors are advised to leave the area immediately</English>
+		</Key>
+		<Key ID="STR_RZ_ENDTEXT">
+			<Original>The bombardment of %1 (GRID: %2) has finished</Original>
+			<English>The bombardment of %1 (GRID: %2) has finished</English>
+		</Key>
+	</Package>
+
+	<Package name="Missions">
+		<!--
+			*** TEMPLATES ***
+			
+			<Key ID="STR_AI_XXXX_NAME">
+				<Original></Original>
+				<English></English>
+			</Key>
+			<Key ID="STR_AI_XXXX_START">
+				<Original></Original>
+				<English></English>
+			</Key>
+			<Key ID="STR_AI_XXXX_END">
+				<Original></Original>
+				<English></English>
+			</Key>
+		-->
+		<Key ID="STR_AI_MAINMISSION_NAME">
+			<Original>Main Mission</Original>
+			<English>Main Mission</English>
+		</Key>
+
+		<Key ID="STR_AI_MAINMISSION_HINTFINISH">
+			<Original>Main Mission (COMPLETE)</Original>
+			<English>Main Mission (COMPLETE)</English>
+		</Key>
+		
+		<!-- These are just in case someone forgets to set the text for a new mission -->
+		<Key ID="STR_AI_DEFAULT_NAME">
+			<Original>Unnamed Mission</Original>
+			<English>Unnamed Mission</English>
+		</Key>
+		<Key ID="STR_AI_DEFAULT_START">
+			<Original>%1 are patrolling %2. Wipe them out for a reward</Original>
+			<English>%1 are patrolling %2. Wipe them out for a reward</English>
+		</Key>
+		<Key ID="STR_AI_DEFAULT_END">
+			<Original>The %1 patrol at %2 have been killed, great work.</Original>
+			<English>The %1 patrol at %2 have been killed, great work.</English>
+		</Key>
+		
+		<!-- Mission Specific Texts -->
+        <Key ID="STR_AI_MEDICALCAMP_NAME">
+			<Original>Medical Camp</Original>
+			<English>Medical Camp</English>
+		</Key>
+		<Key ID="STR_AI_MEDICALCAMP_START">
+			<Original>%1 have overrun the Red Cross Medical Camp at %2, They have stolen much needed Medical Supplies. Kill them for a reward.</Original>
+			<English>%1 have overrun the Red Cross Medical Camp at %2, They have stolen much needed Medical Supplies. Kill them for a reward.</English>
+		</Key>
+		<Key ID="STR_AI_MEDICALCAMP_END">
+			<Original>The Medical Camp at %2 has been Secured, The %1 have been Routed.</Original>
+			<English>The Medical Camp at %2 has been Secured, The %1 have been Routed.</English>
+		</Key>
+		
+		<Key ID="STR_AI_LUCKY7_NAME">
+			<Original>OPERATION: Lucky Se7en</Original>
+			<English>OPERATION: Lucky Se7en</English>
+		</Key>
+		<Key ID="STR_AI_LUCKY7_START">
+			<Original>Heavily Armed %1 have Occupied the Tower Outpost at %2. Wipe them out for a Reward</Original>
+			<English>Heavily Armed %1 have Occupied the Tower Outpost at %2. Wipe them out for a Reward</English>
+		</Key>
+		<Key ID="STR_AI_LUCKY7_END">
+			<Original>Great Work! The %1 at Tower 7 %2 have been Defeated</Original>
+			<English>Great Work! The %1 at Tower 7 %2 have been Defeated</English>
+		</Key>
+
+		<Key ID="STR_AI_RADIOTOWER_NAME">
+			<Original>Pirate Signal</Original>
+			<English>Pirate Signal</English>
+		</Key>
+		<Key ID="STR_AI_RADIOTOWER_START">
+			<Original>%1 are broadcasting degenerate propaganda from the Radio Tower at %2. Put an end to this madness!</Original>
+			<English>%1 are broadcasting degenerate propaganda from the Radio Tower at %2. Put an end to this madness!</English>
+		</Key>
+		<Key ID="STR_AI_RADIOTOWER_END">
+			<Original>The %1 have been killed, and their disgusting propaganda is no longer polluting our airwaves. Great Work!</Original>
+			<English>The %1 have been killed, and their disgusting propaganda is no longer polluting our airwaves. Great Work!</English>
+		</Key>
+
+		<Key ID="STR_AI_AMMOBUNKER_NAME">
+			<Original>Munitions Depot</Original>
+			<English>Munitions Depot</English>
+		</Key>
+		<Key ID="STR_AI_AMMOBUNKER_START">
+			<Original>%1 have captured the Munitions Depot at %2. Wipe them out and secure the Weapons for yourself.</Original>
+			<English>%1 have captured the Munitions Depot at %2. Wipe them out and secure the Weapons for yourself.</English>
+		</Key>
+		<Key ID="STR_AI_AMMOBUNKER_END">
+			<Original>The Munitions Depot at %2 is now clear of %1</Original>
+			<English>The Munitions Depot at %2 is now clear of %1</English>
+		</Key>
+
+		<Key ID="STR_AI_DOWNEDBIRD_NAME">
+			<Original>Blackfoot Down</Original>
+			<English>Blackfoot Down</English>
+		</Key>
+		<Key ID="STR_AI_DOWNEDBIRD_START">
+			<Original>A small squad of %1 have shot down a Blackfoot carrying supplies at %2. Investigate the Crash</Original>
+			<English>A small squad of %1 have shot down a Blackfoot carrying supplies at %2. Investigate the Crash</English>
+		</Key>
+		<Key ID="STR_AI_DOWNEDBIRD_END">
+			<Original>The %1 who shot down the Blackfoot have been eliminated. The Wreckage at %2 is now secured.</Original>
+			<English>The %1 who shot down the Blackfoot have been eliminated. The Wreckage at %2 is now secured.</English>
+		</Key>
+
+		<Key ID="STR_AI_FOBDELTA_NAME">
+			<Original>Forward Operating Base: DELTA</Original>
+			<English>Forward Operating Base: DELTA</English>
+		</Key>
+		<Key ID="STR_AI_FOBDELTA_START">
+			<Original>Heavily Armed %1 have Established a Forward Operating Base at %2. Prevent them from expanding their influence in the Region.</Original>
+			<English>Heavily Armed %1 have Established a Forward Operating Base at %2. Prevent them from expanding their influence in the Region.</English>
+		</Key>
+		<Key ID="STR_AI_FOBDELTA_END">
+			<Original>The %1 at FOB DELTA %2 have been Killed. Chernarus thanks you for your service.</Original>
+			<English>The %1 at FOB DELTA %2 have been Killed. Chernarus thanks you for your service.</English>
+		</Key>
+
+		<Key ID="STR_AI_OUTPOST_NAME">
+			<Original>Captured Outpost</Original>
+			<English>Captured Outpost</English>
+		</Key>
+		<Key ID="STR_AI_OUTPOST_START">
+			<Original>%1 Have captured the Military Outpost at %2. A Reward will be offered for eliminating the Threat</Original>
+			<English>%1 Have captured the Military Outpost at %2. A Reward will be offered for eliminating the Threat</English>
+		</Key>
+		<Key ID="STR_AI_OUTPOST_END">
+			<Original>The Outpost at %2 has been liberated, Help yourself to the Weapons</Original>
+			<English>The Outpost at %2 has been liberated, Help yourself to the Weapons</English>
+		</Key>
+
+		<Key ID="STR_AI_PROPHET_NAME">
+			<Original>Operation: PROPHET</Original>
+			<English>Operation: PROPHET</English>
+		</Key>
+		<Key ID="STR_AI_PROPHET_START">
+			<Original>Theres something strange at %2, %1 have been spotted investigating the wreckage.</Original>
+			<English>Theres something strange at %2, %1 have been spotted investigating the wreckage.</English>
+		</Key>
+		<Key ID="STR_AI_PROPHET_END">
+			<Original>Crysis Averted! The %1 have been pushed back, and the Strange Wreckage at %2 has been secured.</Original>
+			<English>Crysis Averted! The %1 have been pushed back, and the Strange Wreckage at %2 has been secured.</English>
+		</Key>
+
+		<Key ID="STR_AI_BELLEND_NAME">
+			<Original>The Bellend Trench</Original>
+			<English>The Bellend Trench</English>
+		</Key>
+		<Key ID="STR_AI_BELLEND_START">
+			<Original>%1 have dug in at %2. Wipe them out and take their weapons</Original>
+			<English>%1 have dug in at %2. Wipe them out and take their weapons</English>
+		</Key>
+		<Key ID="STR_AI_BELLEND_END">
+			<Original>The %1 at the Bellend Trench %2 have been defeated</Original>
+			<English>The %1 at the Bellend Trench %2 have been defeated</English>
+		</Key>
+		
+		<Key ID="STR_AI_ARMEDBANDITS_NAME">
+			<Original>Armed Camp</Original>
+			<English>Armed Camp</English>
+		</Key>
+		<Key ID="STR_AI_ARMEDBANDITS_START">
+			<Original>A squad of armed %1 have setup camp at %2, Steal their supplies</Original>
+			<English>A squad of armed %1 have setup camp at %2, Steal their supplies</English>
+		</Key>
+		<Key ID="STR_AI_ARMEDBANDITS_END">
+			<Original>The %1 have been routed, and their camp at %2 has been taken over</Original>
+			<English>The %1 have been routed, and their camp at %2 has been taken over</English>
+		</Key>
+		
+		<Key ID="STR_AI_XERXES_NAME">
+			<Original>Xerxes Outpost</Original>
+			<English>Xerxes Outpost</English>
+		</Key>
+		<Key ID="STR_AI_XERXES_START">
+			<Original>%1 have built a Military Outpost at %2. A reward will be offered to anyone who can drive them out.</Original>
+			<English>%1 have built a Military Outpost at %2. A reward will be offered to anyone who can drive them out.</English>
+		</Key>
+		<Key ID="STR_AI_XERXES_END">
+			<Original>Xerxes Outpost at %2 has been cleared of the Hostile %1</Original>
+			<English>Xerxes Outpost at %2 has been cleared of the Hostile %1</English>
+		</Key>
+		
+		<Key ID="STR_AI_VTOL_NAME">
+			<Original>Vertibird Down</Original>
+			<English>Vertibird Down</English>
+		</Key>
+		<Key ID="STR_AI_VTOL_START">
+			<Original>%1 have brought down a VTOL at %2. Secure the crash site</Original>
+			<English>%1 have brought down a VTOL at %2. Secure the crash site</English>
+		</Key>
+		<Key ID="STR_AI_VTOL_END">
+			<Original>The Crashed VTOL at %2 has been secured, and the %1 have been eliminated. Great Work</Original>
+			<English>The Crashed VTOL at %2 has been secured, and the %1 have been eliminated. Great Work</English>
+		</Key>
+		
+		<Key ID="STR_AI_USBARRACKS_NAME">
+			<Original>Freedom Thwarted</Original>
+			<English>Freedom Thwarted</English>
+		</Key>
+		<Key ID="STR_AI_USBARRACKS_START">
+			<Original>%1 are attempting to establish a foothold in the region, they have constructed an FOB at %2</Original>
+			<English>%1 are attempting to establish a foothold in the region, they have constructed an FOB at %2</English>
+		</Key>
+		<Key ID="STR_AI_USBARRACKS_END">
+			<Original>Great work, the %1 at %2 have been wiped out.</Original>
+			<English>Great work, the %1 at %2 have been wiped out.</English>
+		</Key>
+		
+		<Key ID="STR_AI_DRUGLAB_NAME">
+			<Original>Operation Scarface</Original>
+			<English>Operation Scarface</English>
+		</Key>
+		<Key ID="STR_AI_DRUGLAB_START">
+			<Original>%1 have been trafficking cocaine and weapons out of a makeshift laboratory at %2</Original>
+			<English>%1 have been trafficking cocaine and weapons out of a makeshift laboratory at %2</English>
+		</Key>
+		<Key ID="STR_AI_DRUGLAB_END">
+			<Original>Mission Success. The %1 and their drug lab at %2 have been eliminated</Original>
+			<English>Mission Success. The %1 and their drug lab at %2 have been eliminated</English>
+		</Key>
+		
+		<Key ID="STR_AI_RADARDOME_NAME">
+			<Original>Radar Dome</Original>
+			<English>Radar Dome</English>
+		</Key>
+		<Key ID="STR_AI_RADARDOME_START">
+			<Original>%1 have taken control of the Radar Dome at %2. Eliminate them for a reward.</Original>
+			<English>%1 have taken control of the Radar Dome at %2. Eliminate them for a reward.</English>
+		</Key>
+		<Key ID="STR_AI_RADARDOME_END">
+			<Original>The %1 at the Radar Dome %2 have been cleared out.</Original>
+			<English>The %1 at the Radar Dome %2 have been cleared out.</English>
+		</Key>
+		
+		<Key ID="STR_AI_SOLARTRANSFORMER_NAME">
+			<Original>Operation Sunlight</Original>
+			<English>Operation Sunlight</English>
+		</Key>
+		<Key ID="STR_AI_SOLARTRANSFORMER_START">
+			<Original>%1 are attempting to sabotage the powergrid. They were last spotted at the solar farm %2</Original>
+			<English>%1 are attempting to sabotage the powergrid. They were last spotted at the solar farm %2</English>
+		</Key>
+		<Key ID="STR_AI_SOLARTRANSFORMER_END">
+			<Original>The %1 sabotaging the powergrid at %2 have been stopped</Original>
+			<English>The %1 sabotaging the powergrid at %2 have been stopped</English>
+		</Key>
+		
+		<Key ID="STR_AI_THUNDERDOME_NAME">
+			<Original>Operation Thunderdome</Original>
+			<English>Operation Thunderdome</English>
+		</Key>
+		<Key ID="STR_AI_THUNDERDOME_START">
+			<Original>%1 have constructed a Weapons Research facility at %2. Eliminate the threat</Original>
+			<English>%1 have constructed a Weapons Research facility at %2. Eliminate the threat</English>
+		</Key>
+		<Key ID="STR_AI_THUNDERDOME_END">
+			<Original>The %1 Research Facility at %2 has been secured.</Original>
+			<English>The %1 Research Facility at %2 has been secured.</English>
+		</Key>
+
+		<Key ID="STR_AI_PLANTATION_NAME">
+			<Original>Plantation 420</Original>
+			<English>Plantation 420</English>
+		</Key>
+		<Key ID="STR_AI_PLANTATION_START">
+			<Original>%1 are growing crops and trafficking weapons at %2 Wipe them out and take their loot</Original>
+			<English>%1 are growing crops and trafficking weapons at %2 Wipe them out and take their loot</English>
+		</Key>
+		<Key ID="STR_AI_PLANTATION_END">
+			<Original>The %1 at Plantation 420 %2 have been eliminated. Well done</Original>
+			<English>The %1 at Plantation 420 %2 have been eliminated. Well done</English>
+		</Key>
+		
+		<Key ID="STR_AI_SMALLFIREBASE_NAME">
+			<Original>Firebase Echo</Original>
+			<English>Firebase Echo</English>
+		</Key>
+		<Key ID="STR_AI_SMALLFIREBASE_START">
+			<Original>%1 have set up a Small Firebase at %2. Infiltrate the base and steal their weapons</Original>
+			<English>%1 have set up a Small Firebase at %2. Infiltrate the base and steal their weapons</English>
+		</Key>
+		<Key ID="STR_AI_SMALLFIREBASE_END">
+			<Original>Success, the %1 at Firebase Echo %2 have been cleared out.</Original>
+			<English>Success, the %1 at Firebase Echo %2 have been cleared out.</English>
+		</Key>
+		
+		<Key ID="STR_AI_SUPERMARKET_NAME">
+			<Original>Supermarket Smash</Original>
+			<English>Supermarket Smash</English>
+		</Key>
+		<Key ID="STR_AI_SUPERMARKET_START">
+			<Original>%1 are ransacking the Aldi at %2. Somebody stop them!</Original>
+			<English>%1 are ransacking the Aldi at %2. Somebody stop them!</English>
+		</Key>
+		<Key ID="STR_AI_SUPERMARKET_END">
+			<Original>Success, the %1 looting Aldi at %2 have been wiped out.</Original>
+			<English>Success, the %1 looting Aldi at %2 have been wiped out.</English>
+		</Key>
+		
+	</Package>
+</Project>
+
+<Project name="HALs_store">
+    <Package name="General">
+	    <Key ID="STR_HALS_STORE_ACTION">
+		    <Original>Store</Original>
+		    <English>Store</English>
+		    <German>Geschäft</German>
+		    <Spanish>Comprar</Spanish>
+		</Key>
+		<Key ID="STR_HALS_STORE_ITEM_UNAVALIABLE">
+		    <Original>Item unavaliable</Original>
+		    <English>Item unavaliable</English>
+		    <German>Gegenstand nicht verfügbar</German>
+		    <Spanish>Objeto no disponible</Spanish>
+		</Key>
+		<Key ID="STR_HALS_STORE_ITEM_OUTOFSTOCK">
+		    <Original>Insufficient stock</Original>
+		    <English>Insufficient stock</English>
+		    <German>Ausverkauft</German>
+		    <Spanish>Sin stock</Spanish>
+		</Key>
+		<Key ID="STR_HALS_STORE_ITEM_TOOEXPENSIVE">
+		    <Original>Insufficient funds</Original>
+		    <English>Insufficient funds</English>
+		    <German>Zu wenig Geld</German>
+		    <Spanish>Dinero insuficiente</Spanish>
+		</Key>
+		<KEY ID="STR_HALS_STORE_ITEM_NOEQUIP">
+		    <Original>Unable to equip</Original>
+		    <English>Unable to equip</English>
+		    <German>Ausrüsten fehlgeschlagen</German>
+		    <Spanish>Imposible equipar</Spanish>
+		  </Key>
+		<Key ID="STR_HALS_STORE_ITEM_NOCARGOSPACE">
+		    <Original>Insufficient cargo space</Original>
+		    <English>Insufficient cargo space</English>
+		    <German>Nicht genug Platz</German>
+		    <Spanish>Espacio insuficiente</Spanish>
+		</Key>
+		<Key ID="STR_HALS_STORE_ITEM_PURCHASED">
+		    <Original>purchased</Original>
+		    <English>purchased</English>
+		    <German>gekauft</German>
+		    <Spanish>comprado</Spanish>
+		</Key>
+		<!-- Sell Additions -->
+		<Key ID="STR_HALS_STORE_ITEM_SELL_NOTEMPTY">
+			<Original>You cannot sell your %1 (%2) because it is not empty</Original>
+			<English>You cannot sell your %1 (%2) because it is not empty</English>
+		</Key>
+		<Key ID="STR_HALS_STORE_ITEM_SELL_SOLD">
+			<Original>Sold x%1 %2(s) for $%3</Original>
+			<English>Sold x%1 %2(s) for $%3</English>
+		</Key>
+	</Package>
+	<Package name="Dialog">
+	    <Key ID="STR_HALS_STORE_CHECKBOX_AFFORD">
+		    <Original>Only show items which the player can afford</Original>
+		    <English>Only show items which the player can afford</English>
+		    <German>Zeige nur Gegenstände, die sich der Spieler leisten kann</German>
+		    <Spanish>Mostrar solo objetos que pueda comprar</Spanish>
+		</Key>
+	    <Key ID="STR_HALS_STORE_CHECKBOX_STOCK">
+		    <Original>Only show items which are in stock</Original>
+		    <English>Only show items which are in stock</English>
+		    <German>Zeige nur Gegenstände, die auf Lager sind</German>
+		    <Spanish>Mostrar solo objetos en stock</Spanish>
+		</Key>
+	    <Key ID="STR_HALS_STORE_CHECKBOX_COMPATIBLE">
+		    <Original>Only show items compatible with the player's equipped weapons</Original>
+		    <English>Only show items compatible with the player's equipped weapons</English>
+		    <German>Zeige nur Gegenstände, die mit der ausgerüsteten Waffe des Spielers kompatibel sind</German>
+		    <Spanish>Mostrar solo objetos compatibles con armas equipadas</Spanish>
+		</Key>
+		<!-- SELL BOX -->
+		<Key ID="STR_HALS_STORE_CHECKBOX_SELLFILTER">
+		    <Original>Only show items the player can sell</Original>
+		    <English>Only show items the player can sell</English>
+		</Key>
+		<!-- SELL BUTTON -->
+		<Key ID="STR_HALS_STORE_BUTTON_SELL">
+		    <Original>Sell</Original>
+		    <English>Sell</English>
+		</Key>
+
+	    <Key ID="STR_HALS_STORE_CHECKBOX_EQUIP">
+		    <Original>Equip item upon purchase (if possible)</Original>
+		    <English>Equip item upon purchase (if possible)</English>
+		    <German>Gegenstand beim Kauf ausrüsten (wenn möglich)</German>
+		    <Spanish>Equipar el articulo al comprar (si es posible)</Spanish>
+		</Key>
+	    <Key ID="STR_HALS_STORE_BUTTON_PURCHASE">
+		    <Original>Purchase</Original>
+		    <English>Purchase</English>
+		    <German>Kaufen</German>
+		    <Spanish>Compra</Spanish>
+		</Key>
+		<Key ID="STR_HALS_STORE_TEXT_PRICE">
+		    <Original>Price</Original>
+		    <English>Price</English>
+		    <German>Preis</German>
+		    <Spanish>Precio</Spanish>
+		</Key>
+		<Key ID="STR_HALS_STORE_TEXT_INSTOCK">
+		    <Original>IN STOCK</Original>
+		    <English>IN STOCK</English>
+		    <German>AUF LAGER</German>
+		    <Spanish>EN STOCK</Spanish>
+		</Key>
+		<Key ID="STR_HALS_STORE_TEXT_NOSTOCK">
+		    <Original>OUT OF STOCK</Original>
+		    <English>OUT OF STOCK</English>
+		    <German>AUSVERKAUFT</German>
+		    <Spanish>FUERA DE STOCK</Spanish>
+		</Key>
+		<Key ID="STR_HALS_STORE_LISTBOX_NOMONEY">
+		    <Original>$%1 more required</Original>
+		    <English>$%1 more required</English>
+		    <German>%1¢ mehr benötigt</German>
+		    <Spanish>Se necesitan %1¢</Spanish>
+		</Key>
+	</Package>
+</Project>
