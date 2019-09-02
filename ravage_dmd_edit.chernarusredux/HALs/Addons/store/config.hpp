@@ -1,3 +1,6 @@
+#define DMD_USE_RHS 1
+#define DMD_USE_CUP 1
+
 class cfgHALsStore {
 	containerTypes[] = {"LandVehicle", "Air", "Ship"};
 	containerRadius = 10;
@@ -9,30 +12,109 @@ class cfgHALsStore {
 		class headgear {
 			displayName = "Headgear";
 			picture = "";
+			// tier 1 headgear
+			#ifdef DMD_USE_CUP
+			class CUP_H_BAF_Officer_Beret		            { price = 10; stock = 100; };	
+			class CUP_H_BAF_Officer_Beret_PRR_O	            { price = 10; stock = 100; };
+			class CUP_H_BAF_Officer_Beret_PRR_U	            { price = 10; stock = 100; };
+			class CUP_H_C_Beanie_01           				{ price = 10; stock = 100; };
+			class CUP_H_C_Beanie_02							{ price = 10; stock = 100; };
+			class CUP_H_C_Beanie_03							{ price = 10; stock = 100; };
+			class CUP_H_C_Beanie_04							{ price = 10; stock = 100; };
+			class CUP_H_C_Beret_01							{ price = 10; stock = 100; };
+			class CUP_H_C_Beret_02							{ price = 10; stock = 100; };
+			class CUP_H_C_Beret_03							{ price = 10; stock = 100; };
+			class CUP_H_C_Beret_04							{ price = 10; stock = 100; };
+			class CUP_H_C_Fireman_Helmet_01					{ price = 10; stock = 100; };
+			class CUP_H_C_MAGA_01							{ price = 10; stock = 100; };
+			class CUP_H_C_Policecap_01						{ price = 10; stock = 100; };
+			class CUP_H_C_TrackIR_01						{ price = 10; stock = 100; };
+			class CUP_H_C_Ushanka_01						{ price = 10; stock = 100; };
+			class CUP_H_C_Ushanka_02						{ price = 10; stock = 100; };
+			class CUP_H_C_Ushanka_03						{ price = 10; stock = 100; };
+			class CUP_H_C_Ushanka_04						{ price = 10; stock = 100; };
+			class CUP_H_CDF_Beret_UN		            	{ price = 10; stock = 100; };
+			class CUP_H_CDF_OfficerCap_DST		            { price = 10; stock = 100; };
+			class CUP_H_CDF_OfficerCap_FST		            { price = 10; stock = 100; };
+			class CUP_H_CDF_OfficerCap_MNT		            { price = 10; stock = 100; };
+			class CUP_H_CDF_OfficerCap_UN		            { price = 10; stock = 100; };	
+			class CUP_H_ChDKZ_Beanie						{ price = 10; stock = 100; };
+			class CUP_H_ChDKZ_Beret							{ price = 10; stock = 100; };
+			class CUP_H_ChDKZ_Cap							{ price = 10; stock = 100; };
+			class CUP_H_FR_Bandana_Headset					{ price = 10; stock = 100; };
+			class CUP_H_FR_BandanaGreen						{ price = 10; stock = 100; };
+			class CUP_H_FR_BandanaWdl						{ price = 10; stock = 100; };
+			class CUP_H_FR_BeanieGreen						{ price = 10; stock = 100; };
+			class CUP_H_FR_BoonieMARPAT						{ price = 10; stock = 100; };
+			class CUP_H_FR_BoonieWDL						{ price = 10; stock = 100; };
+			class CUP_H_FR_Cap_Headset_Green				{ price = 10; stock = 100; };
+			class CUP_H_FR_Cap_Officer_Headset				{ price = 10; stock = 100; };
+			class CUP_H_FR_ECH								{ price = 10; stock = 100; };
+			class CUP_H_FR_Headband_Headset					{ price = 10; stock = 100; };
+			class CUP_H_FR_Headset							{ price = 10; stock = 100; };
+			class CUP_H_FR_PRR_BoonieWDL					{ price = 10; stock = 100; };
+			class CUP_H_GER_Boonie_desert					{ price = 10; stock = 100; };
+			class CUP_H_GER_Boonie_Flecktarn				{ price = 10; stock = 100; };
+			class CUP_H_NAPA_Fedora							{ price = 10; stock = 100; };
+			class CUP_H_PMC_Cap_Back_EP_Tan					{ price = 10; stock = 100; };
+			class CUP_H_PMC_Cap_Grey						{ price = 10; stock = 100; };
+			class CUP_H_PMC_Cap_PRR_Grey					{ price = 10; stock = 100; };
+			class CUP_H_PMC_Cap_PRR_Tan						{ price = 10; stock = 100; };
+			class CUP_H_PMC_Cap_Tan							{ price = 10; stock = 100; };
+			class CUP_H_PMC_EP_Headset          			{ price = 10; stock = 100; };
+			class CUP_H_PMC_PRR_Headset         			{ price = 10; stock = 100; };
+			class CUP_H_RACS_Beret_Blue         			{ price = 10; stock = 100; };
+			class CUP_H_RUS_Bandana_HS		            	{ price = 10; stock = 100; };
+			class CUP_H_RUS_Beret_Spetsnaz		            { price = 10; stock = 100; };
+			class CUP_H_RUS_Beret_VDV		            	{ price = 10; stock = 100; };
+			class CUP_H_SLA_BeanieGreen           			{ price = 10; stock = 100; };
+			class CUP_H_SLA_Beret               			{ price = 10; stock = 100; };
+			class CUP_H_SLA_Boonie              			{ price = 10; stock = 100; };
+			class CUP_H_SLA_OfficerCap          			{ price = 10; stock = 100; };
+			class CUP_H_SLA_SLCap               			{ price = 10; stock = 100; };
+			class CUP_H_TK_Beret              				{ price = 10; stock = 100; };
+			class CUP_H_TK_Lungee             				{ price = 10; stock = 100; };
+			class CUP_H_TKI_Lungee_01           			{ price = 10; stock = 100; };
+			class CUP_H_TKI_Lungee_02           			{ price = 10; stock = 100; };
+			class CUP_H_TKI_Lungee_03           			{ price = 10; stock = 100; };
+			class CUP_H_TKI_Lungee_04           			{ price = 10; stock = 100; };
+			class CUP_H_TKI_Lungee_05           			{ price = 10; stock = 100; };
+			class CUP_H_TKI_Lungee_06           			{ price = 10; stock = 100; };
+			class CUP_H_TKI_Lungee_Open_01      			{ price = 10; stock = 100; };
+			class CUP_H_TKI_Lungee_Open_02      			{ price = 10; stock = 100; };
+			class CUP_H_TKI_Lungee_Open_03      			{ price = 10; stock = 100; };
+			class CUP_H_TKI_Lungee_Open_04      			{ price = 10; stock = 100; };
+			class CUP_H_TKI_Lungee_Open_05      			{ price = 10; stock = 100; };
+			class CUP_H_TKI_Lungee_Open_06      			{ price = 10; stock = 100; };
+			class CUP_H_TKI_Pakol_1_01          			{ price = 10; stock = 100; };
+			class CUP_H_TKI_Pakol_1_02          			{ price = 10; stock = 100; };
+			class CUP_H_TKI_Pakol_1_03          			{ price = 10; stock = 100; };
+			class CUP_H_TKI_Pakol_1_04          			{ price = 10; stock = 100; };
+			class CUP_H_TKI_Pakol_1_05          			{ price = 10; stock = 100; };
+			class CUP_H_TKI_Pakol_1_06          			{ price = 10; stock = 100; };
+			class CUP_H_TKI_Pakol_2_01          			{ price = 10; stock = 100; };
+			class CUP_H_TKI_Pakol_2_02          			{ price = 10; stock = 100; };
+			class CUP_H_TKI_Pakol_2_03          			{ price = 10; stock = 100; };
+			class CUP_H_TKI_Pakol_2_04        				{ price = 10; stock = 100; };
+			class CUP_H_TKI_Pakol_2_05        				{ price = 10; stock = 100; };
+			class CUP_H_TKI_Pakol_2_06        				{ price = 10; stock = 100; };
+			class CUP_H_TKI_SkullCap_01       				{ price = 10; stock = 100; };
+			class CUP_H_TKI_SkullCap_02       				{ price = 10; stock = 100; };
+			class CUP_H_TKI_SkullCap_03       				{ price = 10; stock = 100; };
+			class CUP_H_TKI_SkullCap_04       				{ price = 10; stock = 100; };
+			class CUP_H_TKI_SkullCap_05       				{ price = 10; stock = 100; };
+			class CUP_H_TKI_SkullCap_06       				{ price = 10; stock = 100; };
+			class CUP_H_USMC_Officer_Cap      				{ price = 10; stock = 100; };
+			#endif
 
+			#ifdef DMD_USE_RHS
 			class rhs_Booniehat_marpatd						{ price = 10; stock = 100; };
 			class rhs_Booniehat_marpatwd					{ price = 10; stock = 100; };
 			class rhssaf_booniehat_digital				 	{ price = 10; stock = 100; };
 			class rhssaf_booniehat_md2camo				 	{ price = 10; stock = 100; };
 			class rhssaf_booniehat_woodland				 	{ price = 10; stock = 100; };
-			class H_Cap_Black_IDAP_F						{ price = 10; stock = 100; };
-			class H_Cap_Orange_IDAP_F						{ price = 10; stock = 100; };
-			class H_Cap_White_IDAP_F						{ price = 10; stock = 100; };
-			class H_EarProtectors_black_F					{ price = 10; stock = 100; };
-			class H_EarProtectors_red_F						{ price = 10; stock = 100; };
-			class H_EarProtectors_yellow_F					{ price = 10; stock = 100; };
-			class H_HeadBandage_clean_F						{ price = 10; stock = 100; };
-			class H_HeadBandage_stained_F					{ price = 10; stock = 100; };
-			class H_HeadBandage_bloody_F					{ price = 10; stock = 100; };
-			class H_HeadSet_black_F							{ price = 10; stock = 100; };
-			class H_HeadSet_orange_F						{ price = 10; stock = 100; };
-			class H_HeadSet_white_F							{ price = 10; stock = 100; };
-			class H_Hat_Safari_olive_F						{ price = 10; stock = 100; };
-			class H_Hat_Safari_sand_F						{ price = 10; stock = 100; };
-			class H_WirelessEarpiece_F						{ price = 10; stock = 100; };
-			class CUP_H_ChDKZ_Beret							{ price = 10; stock = 100; };
-			class CUP_H_ChDKZ_Beanie						{ price = 10; stock = 100; };
-			class CUP_H_ChDKZ_Cap							{ price = 10; stock = 100; };
+			#endif
+
 			class H_Bandanna_camo							{ price = 10; stock = 100; };
 			class H_Bandanna_cbr							{ price = 10; stock = 100; };
 			class H_Bandanna_gry							{ price = 10; stock = 100; };	
@@ -60,6 +142,7 @@ class cfgHALsStore {
 			class H_Booniehat_mcamo							{ price = 10; stock = 100; };
 			class H_Booniehat_tan							{ price = 10; stock = 100; };
 			class H_Booniehat_tna_F							{ price = 10; stock = 100; };
+			class H_Cap_Black_IDAP_F						{ price = 10; stock = 100; };
 			class H_Cap_blk									{ price = 10; stock = 100; };
 			class H_Cap_blk_Raven							{ price = 10; stock = 100; };
 			class H_Cap_blk_Syndikat_F						{ price = 10; stock = 100; };
@@ -71,95 +154,31 @@ class cfgHALsStore {
 			class H_Cap_khaki_specops_UK					{ price = 10; stock = 100; };
 			class H_Cap_oli									{ price = 10; stock = 100; };
 			class H_Cap_oli_Syndikat_F						{ price = 10; stock = 100; };
+			class H_Cap_Orange_IDAP_F						{ price = 10; stock = 100; };
 			class H_Cap_press								{ price = 10; stock = 100; };
 			class H_Cap_red									{ price = 10; stock = 100; };
 			class H_Cap_tan									{ price = 10; stock = 100; };
 			class H_Cap_tan_specops_US						{ price = 10; stock = 100; };
 			class H_Cap_tan_Syndikat_F						{ price = 10; stock = 100; };
+			class H_Cap_White_IDAP_F						{ price = 10; stock = 100; };
+			class H_EarProtectors_black_F					{ price = 10; stock = 100; };
+			class H_EarProtectors_red_F						{ price = 10; stock = 100; };
+			class H_EarProtectors_yellow_F					{ price = 10; stock = 100; };
 			class H_FakeHeadgear_Syndikat_F					{ price = 10; stock = 100; };
 			class H_Hat_blue								{ price = 10; stock = 100; };
 			class H_Hat_brown								{ price = 10; stock = 100; };
 			class H_Hat_camo								{ price = 10; stock = 100; };
 			class H_Hat_checker								{ price = 10; stock = 100; };
 			class H_Hat_grey								{ price = 10; stock = 100; };
+			class H_Hat_Safari_olive_F						{ price = 10; stock = 100; };
+			class H_Hat_Safari_sand_F						{ price = 10; stock = 100; };
 			class H_Hat_tan									{ price = 10; stock = 100; };
-			class CUP_H_C_Beanie_02							{ price = 10; stock = 100; };
-			class CUP_H_C_Beanie_03							{ price = 10; stock = 100; };
-			class CUP_H_C_Beanie_04							{ price = 10; stock = 100; };
-			class CUP_H_C_Beret_01							{ price = 10; stock = 100; };
-			class CUP_H_C_Beret_02							{ price = 10; stock = 100; };
-			class CUP_H_C_Beret_03							{ price = 10; stock = 100; };
-			class CUP_H_C_Beret_04							{ price = 10; stock = 100; };
-			class CUP_H_C_Ushanka_01						{ price = 10; stock = 100; };
-			class CUP_H_C_Ushanka_02						{ price = 10; stock = 100; };
-			class CUP_H_C_Ushanka_03						{ price = 10; stock = 100; };
-			class CUP_H_C_Ushanka_04						{ price = 10; stock = 100; };
-			class CUP_H_FR_BandanaGreen						{ price = 10; stock = 100; };
-			class CUP_H_FR_BandanaWdl						{ price = 10; stock = 100; };
-			class CUP_H_FR_Bandana_Headset					{ price = 10; stock = 100; };
-			class CUP_H_FR_BeanieGreen						{ price = 10; stock = 100; };
-			class CUP_H_FR_BoonieMARPAT						{ price = 10; stock = 100; };
-			class CUP_H_FR_BoonieWDL						{ price = 10; stock = 100; };
-			class CUP_H_FR_Cap_Headset_Green				{ price = 10; stock = 100; };
-			class CUP_H_FR_Cap_Officer_Headset				{ price = 10; stock = 100; };
-			class CUP_H_FR_ECH								{ price = 10; stock = 100; };
-			class CUP_H_FR_Headband_Headset					{ price = 10; stock = 100; };
-			class CUP_H_FR_Headset							{ price = 10; stock = 100; };
-			class CUP_H_FR_PRR_BoonieWDL					{ price = 10; stock = 100; };
-			class CUP_H_GER_Boonie_desert					{ price = 10; stock = 100; };
-			class CUP_H_GER_Boonie_Flecktarn				{ price = 10; stock = 100; };
-			class CUP_H_NAPA_Fedora							{ price = 10; stock = 100; };
-			class CUP_H_PMC_Cap_Grey						{ price = 10; stock = 100; };
-			class CUP_H_PMC_Cap_PRR_Grey					{ price = 10; stock = 100; };
-			class CUP_H_PMC_Cap_PRR_Tan						{ price = 10; stock = 100; };
-			class CUP_H_PMC_Cap_Tan							{ price = 10; stock = 100; };
-			class CUP_H_PMC_EP_Headset          			{ price = 10; stock = 100; };
-			class CUP_H_PMC_PRR_Headset         			{ price = 10; stock = 100; };
-			class CUP_H_RACS_Beret_Blue         			{ price = 10; stock = 100; };
-			class CUP_H_SLA_OfficerCap          			{ price = 10; stock = 100; };
-			class CUP_H_SLA_Beret               			{ price = 10; stock = 100; };
-			class CUP_H_SLA_Boonie              			{ price = 10; stock = 100; };
-			class CUP_H_SLA_SLCap               			{ price = 10; stock = 100; };
-			class CUP_H_SLA_BeanieGreen           			{ price = 10; stock = 100; };
-			class CUP_H_TKI_Lungee_01           			{ price = 10; stock = 100; };
-			class CUP_H_TKI_Lungee_02           			{ price = 10; stock = 100; };
-			class CUP_H_TKI_Lungee_03           			{ price = 10; stock = 100; };
-			class CUP_H_TKI_Lungee_04           			{ price = 10; stock = 100; };
-			class CUP_H_TKI_Lungee_05           			{ price = 10; stock = 100; };
-			class CUP_H_TKI_Lungee_06           			{ price = 10; stock = 100; };
-			class CUP_H_TKI_Lungee_Open_01      			{ price = 10; stock = 100; };
-			class CUP_H_TKI_Lungee_Open_02      			{ price = 10; stock = 100; };
-			class CUP_H_TKI_Lungee_Open_03      			{ price = 10; stock = 100; };
-			class CUP_H_TKI_Lungee_Open_04      			{ price = 10; stock = 100; };
-			class CUP_H_TKI_Lungee_Open_05      			{ price = 10; stock = 100; };
-			class CUP_H_TKI_Lungee_Open_06      			{ price = 10; stock = 100; };
-			class CUP_H_TKI_Pakol_1_01          			{ price = 10; stock = 100; };
-			class CUP_H_TKI_Pakol_1_02          			{ price = 10; stock = 100; };
-			class CUP_H_TKI_Pakol_1_03          			{ price = 10; stock = 100; };
-			class CUP_H_TKI_Pakol_1_04          			{ price = 10; stock = 100; };
-			class CUP_H_TKI_Pakol_1_05          			{ price = 10; stock = 100; };
-			class CUP_H_TKI_Pakol_1_06          			{ price = 10; stock = 100; };
-			class CUP_H_TKI_Pakol_2_01          			{ price = 10; stock = 100; };
-			class CUP_H_TKI_Pakol_2_02          			{ price = 10; stock = 100; };
-			class CUP_H_TKI_Pakol_2_03          			{ price = 10; stock = 100; };
-			class CUP_H_C_Beanie_01           				{ price = 10; stock = 100; };
-			class CUP_H_C_Fireman_Helmet_01					{ price = 10; stock = 100; };
-			class CUP_H_PMC_Cap_Back_EP_Tan					{ price = 10; stock = 100; };
-			class CUP_H_C_MAGA_01							{ price = 10; stock = 100; };
-			class CUP_H_C_Policecap_01						{ price = 10; stock = 100; };
-			class CUP_H_C_TrackIR_01						{ price = 10; stock = 100; };
-			class CUP_H_TKI_Pakol_2_04        				{ price = 10; stock = 100; };
-			class CUP_H_TKI_Pakol_2_05        				{ price = 10; stock = 100; };
-			class CUP_H_TKI_Pakol_2_06        				{ price = 10; stock = 100; };
-			class CUP_H_TKI_SkullCap_01       				{ price = 10; stock = 100; };
-			class CUP_H_TKI_SkullCap_02       				{ price = 10; stock = 100; };
-			class CUP_H_TKI_SkullCap_03       				{ price = 10; stock = 100; };
-			class CUP_H_TKI_SkullCap_04       				{ price = 10; stock = 100; };
-			class CUP_H_TKI_SkullCap_05       				{ price = 10; stock = 100; };
-			class CUP_H_TKI_SkullCap_06       				{ price = 10; stock = 100; };
-			class CUP_H_TK_Beret              				{ price = 10; stock = 100; };
-			class CUP_H_TK_Lungee             				{ price = 10; stock = 100; };
-			class CUP_H_USMC_Officer_Cap      				{ price = 10; stock = 100; };
+			class H_HeadBandage_bloody_F					{ price = 10; stock = 100; };
+			class H_HeadBandage_clean_F						{ price = 10; stock = 100; };
+			class H_HeadBandage_stained_F					{ price = 10; stock = 100; };
+			class H_HeadSet_black_F							{ price = 10; stock = 100; };
+			class H_HeadSet_orange_F						{ price = 10; stock = 100; };
+			class H_HeadSet_white_F							{ price = 10; stock = 100; };
 			class H_Helmet_Skate              				{ price = 10; stock = 100; };
 			class H_MilCap_blue 							{ price = 10; stock = 100; };
 			class H_MilCap_dgtl 							{ price = 10; stock = 100; };
@@ -170,12 +189,12 @@ class cfgHALsStore {
 			class H_MilCap_oucamo 							{ price = 10; stock = 100; };
 			class H_MilCap_rucamo 							{ price = 10; stock = 100; };
 			class H_MilCap_tna_F              				{ price = 10; stock = 100; };
-			class H_ShemagOpen_khk							{ price = 10; stock = 100; };
-			class H_ShemagOpen_tan							{ price = 10; stock = 100; };
 			class H_Shemag_khk								{ price = 10; stock = 100; };
 			class H_Shemag_olive							{ price = 10; stock = 100; };
 			class H_Shemag_olive_hs							{ price = 10; stock = 100; };
 			class H_Shemag_tan								{ price = 10; stock = 100; };
+			class H_ShemagOpen_khk							{ price = 10; stock = 100; };
+			class H_ShemagOpen_tan							{ price = 10; stock = 100; };
 			class H_StrawHat								{ price = 10; stock = 100; };
 			class H_StrawHat_dark							{ price = 10; stock = 100; };
 			class H_TurbanO_blk								{ price = 10; stock = 100; };
@@ -183,55 +202,22 @@ class cfgHALsStore {
 			class H_Watchcap_camo 							{ price = 10; stock = 100; };
 			class H_Watchcap_khk 							{ price = 10; stock = 100; };
 			class H_Watchcap_sgg 							{ price = 10; stock = 100; };
-			class CUP_H_BAF_Officer_Beret_PRR_U	            { price = 10; stock = 100; };
-			class CUP_H_BAF_Officer_Beret_PRR_O	            { price = 10; stock = 100; };
-			class CUP_H_BAF_Officer_Beret		            { price = 10; stock = 100; };	
-			class CUP_H_CDF_Beret_UN		            	{ price = 10; stock = 100; };
-			class CUP_H_CDF_OfficerCap_MNT		            { price = 10; stock = 100; };
-			class CUP_H_CDF_OfficerCap_DST		            { price = 10; stock = 100; };
-			class CUP_H_CDF_OfficerCap_FST		            { price = 10; stock = 100; };
-			class CUP_H_CDF_OfficerCap_UN		            { price = 10; stock = 100; };	
-			class CUP_H_RUS_Bandana_HS		            	{ price = 10; stock = 100; };
-			class CUP_H_RUS_Beret_VDV		            	{ price = 10; stock = 100; };
-			class CUP_H_RUS_Beret_Spetsnaz		            { price = 10; stock = 100; };
-				
-			class rhs_6b27m_digi_ess						{ price = 30; stock = 100; };
-			class rhs_6b27m_digi							{ price = 30; stock = 100; };
-			class rhs_6b27m_ess								{ price = 30; stock = 100; };
-			class rhs_6b27m									{ price = 30; stock = 100; };
-			class rhs_6b27m_ml								{ price = 30; stock = 100; };
-			class rhs_6b27m_ml_ess							{ price = 30; stock = 100; };
-			class rhs_6b27m_digi_bala						{ price = 30; stock = 100; };
-			class rhs_6b27m_digi_ess_bala					{ price = 30; stock = 100; };
-			class rhs_6b27m_bala							{ price = 30; stock = 100; };
-			class rhs_6b27m_ess_bala						{ price = 30; stock = 100; };
-			class rhs_6b27m_ml_bala							{ price = 30; stock = 100; };
-			class rhs_6b27m_ML_ess_bala						{ price = 30; stock = 100; };
-			class H_Construction_basic_black_F		        { price = 30; stock = 100; };
-			class H_Construction_earprot_orange_F		    { price = 30; stock = 100; };
-			class H_Construction_headset_red_F		        { price = 30; stock = 100; };
-			class H_Construction_earprot_white_F		    { price = 30; stock = 100; };
-			class H_Construction_earprot_yellow_F		    { price = 30; stock = 100; };
-			class H_PASGT_basic_blue_F		           		{ price = 30; stock = 100; };
-			class H_PASGT_basic_olive_F		           		{ price = 30; stock = 100; };
-			class H_PASGT_basic_white_F		           		{ price = 30; stock = 100; };
-			class H_PASGT_basic_blue_press_F		        { price = 30; stock = 100; };
-			class H_PASGT_neckprot_blue_press_F		        { price = 30; stock = 100; };
-			class CUP_H_CDF_H_PASGT_MNT		            	{ price = 30; stock = 100; };
+			class H_WirelessEarpiece_F						{ price = 10; stock = 100; };
+
+			// tier 2 headgear
+			#ifdef DMD_USE_CUP				
 			class CUP_H_CDF_H_PASGT_DST		            	{ price = 30; stock = 100; };
 			class CUP_H_CDF_H_PASGT_FST		            	{ price = 30; stock = 100; };
+			class CUP_H_CDF_H_PASGT_MNT		            	{ price = 30; stock = 100; };
 			class CUP_H_CDF_H_PASGT_UN		            	{ price = 30; stock = 100; };
+			class CUP_H_RACS_Helmet_Goggles_mech			{ price = 30; stock = 100; };
+			class CUP_H_RACS_Helmet_Headset_mech			{ price = 30; stock = 100; };
+			class CUP_H_RACS_Helmet_mech					{ price = 30; stock = 100; };
 			class CUP_H_RUS_TSH_4_Brown		            	{ price = 30; stock = 100; };	
-			class H_HelmetB_light							{ price = 30; stock = 100; };
-			class H_HelmetB_light_black						{ price = 30; stock = 100; };
-			class H_HelmetB_light_desert					{ price = 30; stock = 100; };
-			class H_HelmetB_light_grass						{ price = 30; stock = 100; };
-			class H_HelmetB_light_sand						{ price = 30; stock = 100; };
-			class H_HelmetB_light_snakeskin					{ price = 30; stock = 100; };
-			class H_HelmetB_Light_tna_F       				{ price = 30; stock = 100; };
-			class H_HelmetIA								{ price = 30; stock = 100; };
-			class H_HelmetIA_camo							{ price = 30; stock = 100; };
-			class H_HelmetIA_net							{ price = 30; stock = 100; };
+			class CUP_H_RUS_ZSH_1							{ price = 30; stock = 100; };	
+			class CUP_H_RUS_ZSH_1_Goggles					{ price = 30; stock = 100; };
+			class CUP_H_RUS_ZSH_Shield_Down					{ price = 30; stock = 100; };
+			class CUP_H_RUS_ZSH_Shield_Up					{ price = 30; stock = 100; };	
 			class CUP_H_SLA_Helmet                    		{ price = 30; stock = 100; };
 			class CUP_H_SLA_Pilot_Helmet                  	{ price = 30; stock = 100; };
 			class CUP_H_SLA_TankerHelmet                  	{ price = 30; stock = 100; };
@@ -242,14 +228,9 @@ class cfgHALsStore {
 			class CUP_H_USMC_Goggles_HelmetWDL            	{ price = 30; stock = 100; };
 			class CUP_H_USMC_HeadSet_GoggleW_HelmetWDL    	{ price = 30; stock = 100; };
 			class CUP_H_USMC_HeadSet_HelmetWDL            	{ price = 30; stock = 100; };
-			class CUP_H_USMC_HelmetWDL                   	{ price = 30; stock = 100; };
 			class CUP_H_USMC_Helmet_Pilot                 	{ price = 30; stock = 100; };
-			class CUP_H_RUS_ZSH_Shield_Down					{ price = 30; stock = 100; };
-			class CUP_H_RUS_ZSH_Shield_Up					{ price = 30; stock = 100; };	
-			class CUP_H_RUS_ZSH_1_Goggles					{ price = 30; stock = 100; };
-			class CUP_H_RUS_ZSH_1							{ price = 30; stock = 100; };	
+			class CUP_H_USMC_HelmetWDL                   	{ price = 30; stock = 100; };
 			class CUP_H_USMC_LWH_DES                 		{ price = 30; stock = 100; };
-			class CUP_H_USMC_LWH_WDL	              		{ price = 30; stock = 100; };
 			class CUP_H_USMC_LWH_ESS_DES					{ price = 30; stock = 100; };
 			class CUP_H_USMC_LWH_ESS_HS_DES					{ price = 30; stock = 100; };
 			class CUP_H_USMC_LWH_ESS_HS_WDL					{ price = 30; stock = 100; };
@@ -264,10 +245,136 @@ class cfgHALsStore {
 			class CUP_H_USMC_LWH_NVGMOUNT_ESS_LR_WDL		{ price = 30; stock = 100; };
 			class CUP_H_USMC_LWH_NVGMOUNT_ESS_WDL			{ price = 30; stock = 100; };
 			class CUP_H_USMC_LWH_NVGMOUNT_WDL	        	{ price = 30; stock = 100; };
-			class CUP_H_RACS_Helmet_mech					{ price = 30; stock = 100; };
-			class CUP_H_RACS_Helmet_Goggles_mech			{ price = 30; stock = 100; };
-			class CUP_H_RACS_Helmet_Headset_mech			{ price = 30; stock = 100; };
+			class CUP_H_USMC_LWH_WDL	              		{ price = 30; stock = 100; };
+			#endif
 
+			#ifdef DMD_USE_RHS
+			class rhs_6b27m									{ price = 30; stock = 100; };
+			class rhs_6b27m_bala							{ price = 30; stock = 100; };
+			class rhs_6b27m_digi							{ price = 30; stock = 100; };
+			class rhs_6b27m_digi_bala						{ price = 30; stock = 100; };
+			class rhs_6b27m_digi_ess						{ price = 30; stock = 100; };
+			class rhs_6b27m_digi_ess_bala					{ price = 30; stock = 100; };
+			class rhs_6b27m_ess								{ price = 30; stock = 100; };
+			class rhs_6b27m_ess_bala						{ price = 30; stock = 100; };
+			class rhs_6b27m_ml								{ price = 30; stock = 100; };
+			class rhs_6b27m_ml_bala							{ price = 30; stock = 100; };
+			class rhs_6b27m_ml_ess							{ price = 30; stock = 100; };
+			class rhs_6b27m_ML_ess_bala						{ price = 30; stock = 100; };
+			#endif
+
+			class H_Construction_basic_black_F		        { price = 30; stock = 100; };
+			class H_Construction_earprot_orange_F		    { price = 30; stock = 100; };
+			class H_Construction_earprot_white_F		    { price = 30; stock = 100; };
+			class H_Construction_earprot_yellow_F		    { price = 30; stock = 100; };
+			class H_Construction_headset_red_F		        { price = 30; stock = 100; };
+			class H_HelmetB_light							{ price = 30; stock = 100; };
+			class H_HelmetB_light_black						{ price = 30; stock = 100; };
+			class H_HelmetB_light_desert					{ price = 30; stock = 100; };
+			class H_HelmetB_light_grass						{ price = 30; stock = 100; };
+			class H_HelmetB_light_sand						{ price = 30; stock = 100; };
+			class H_HelmetB_light_snakeskin					{ price = 30; stock = 100; };
+			class H_HelmetB_Light_tna_F       				{ price = 30; stock = 100; };
+			class H_HelmetIA								{ price = 30; stock = 100; };
+			class H_HelmetIA_camo							{ price = 30; stock = 100; };
+			class H_HelmetIA_net							{ price = 30; stock = 100; };
+			class H_PASGT_basic_blue_F		           		{ price = 30; stock = 100; };
+			class H_PASGT_basic_blue_press_F		        { price = 30; stock = 100; };
+			class H_PASGT_basic_olive_F		           		{ price = 30; stock = 100; };
+			class H_PASGT_basic_white_F		           		{ price = 30; stock = 100; };
+			class H_PASGT_neckprot_blue_press_F		        { price = 30; stock = 100; };
+			
+			// tier 3 headgear 
+			#ifdef DMD_USE_CUP
+			class CUP_H_BAF_Crew_Helmet_DDPM						{ price = 75; stock = 100; };
+			class CUP_H_BAF_Crew_Helmet_DPM							{ price = 75; stock = 100; };
+			class CUP_H_BAF_Crew_Helmet_MTP							{ price = 75; stock = 100; };
+			class CUP_H_BAF_Helmet_1_DDPM							{ price = 75; stock = 100; };
+			class CUP_H_BAF_Helmet_1_DPM							{ price = 75; stock = 100; };
+			class CUP_H_BAF_Helmet_1_MTP							{ price = 75; stock = 100; };
+			class CUP_H_BAF_Helmet_2_DDPM							{ price = 75; stock = 100; };
+			class CUP_H_BAF_Helmet_2_DPM							{ price = 75; stock = 100; };
+			class CUP_H_BAF_Helmet_2_MTP							{ price = 75; stock = 100; };
+			class CUP_H_BAF_Helmet_3_DDPM							{ price = 75; stock = 100; };
+			class CUP_H_BAF_Helmet_3_DPM							{ price = 75; stock = 100; };
+			class CUP_H_BAF_Helmet_3_MTP							{ price = 75; stock = 100; };
+			class CUP_H_BAF_Helmet_4_DDPM							{ price = 75; stock = 100; };
+			class CUP_H_BAF_Helmet_4_DPM							{ price = 75; stock = 100; };
+			class CUP_H_BAF_Helmet_4_MTP							{ price = 75; stock = 100; };
+			class CUP_H_BAF_Helmet_Net_2_DDPM						{ price = 75; stock = 100; };
+			class CUP_H_BAF_Helmet_Net_2_DPM						{ price = 75; stock = 100; };
+			class CUP_H_BAF_Helmet_Net_2_MTP						{ price = 75; stock = 100; };
+			class CUP_H_BAF_Helmet_Pilot							{ price = 75; stock = 100; };
+			class CUP_H_Navy_CrewHelmet_Blue              			{ price = 75; stock = 100; };
+			class CUP_H_Navy_CrewHelmet_Brown             			{ price = 75; stock = 100; };
+			class CUP_H_Navy_CrewHelmet_Green             			{ price = 75; stock = 100; };
+			class CUP_H_Navy_CrewHelmet_Red               			{ price = 75; stock = 100; };
+			class CUP_H_Navy_CrewHelmet_Violet            			{ price = 75; stock = 100; };
+			class CUP_H_Navy_CrewHelmet_White             			{ price = 75; stock = 100; };
+			class CUP_H_Navy_CrewHelmet_Yellow            			{ price = 75; stock = 100; };	
+			class CUP_H_RACS_Helmet_Des                   			{ price = 75; stock = 100; };	
+			class CUP_H_RACS_Helmet_DPAT                  			{ price = 75; stock = 100; };
+			class CUP_H_RACS_Helmet_Goggles_Des           			{ price = 75; stock = 100; };
+			class CUP_H_RACS_Helmet_Goggles_DPAT          			{ price = 75; stock = 100; };
+			class CUP_H_RACS_Helmet_Headset_Des           			{ price = 75; stock = 100; };
+			class CUP_H_RACS_Helmet_Headset_DPAT          			{ price = 75; stock = 100; };
+			class CUP_H_RUS_6B27									{ price = 75; stock = 100; };
+			class CUP_H_RUS_6B27_NVG								{ price = 75; stock = 100; };
+			class CUP_H_RUS_6B27_NVG_olive							{ price = 75; stock = 100; };
+			class CUP_H_RUS_6B27_olive								{ price = 75; stock = 100; };	
+			class CUP_H_USArmy_Helmet_M1_btp               			{ price = 75; stock = 100; };
+			class CUP_H_USArmy_Helmet_M1_m81                		{ price = 75; stock = 100; };	
+			class CUP_H_USArmy_Helmet_M1_Olive             			{ price = 75; stock = 100; };
+			class CUP_H_USArmy_Helmet_M1_Vine              			{ price = 75; stock = 100; };
+			class CUP_H_USArmy_HelmetMICH							{ price = 75; stock = 100; };
+			class CUP_H_USArmy_HelmetMICH_earpro					{ price = 75; stock = 100; };
+			class CUP_H_USArmy_HelmetMICH_earpro_ess				{ price = 75; stock = 100; };
+			class CUP_H_USArmy_HelmetMICH_ESS						{ price = 75; stock = 100; };
+			class CUP_H_USArmy_HelmetMICH_headset					{ price = 75; stock = 100; };
+			class CUP_H_USArmy_HelmetMICH_headset_ess				{ price = 75; stock = 100; };
+			class CUP_H_USArmy_HelmetMICH_wdl						{ price = 75; stock = 100; };
+			class CUP_H_USMC_MICH2000_COMM_DES						{ price = 75; stock = 100; };
+			class CUP_H_USMC_MICH2000_COMM_WDL						{ price = 75; stock = 100; };
+			class CUP_H_USMC_MICH2000_DEF_DES						{ price = 75; stock = 100; };
+			class CUP_H_USMC_MICH2000_DEF_ESS_DES					{ price = 75; stock = 100; };
+			class CUP_H_USMC_MICH2000_DEF_ESS_WDL					{ price = 75; stock = 100; };
+			class CUP_H_USMC_MICH2000_DEF_WDL						{ price = 75; stock = 100; };
+			class CUP_H_USMC_MICH2000_DES							{ price = 75; stock = 100; };
+			class CUP_H_USMC_MICH2000_ESS_COMM_DES					{ price = 75; stock = 100; };
+			class CUP_H_USMC_MICH2000_ESS_COMM_WDL					{ price = 75; stock = 100; };
+			class CUP_H_USMC_MICH2000_WDL							{ price = 75; stock = 100; };
+			#endif
+
+			#ifdef DMD_USE_RHS
+			class rhs_6b26											{ price = 75; stock = 100; };
+			class rhs_6b26_bala										{ price = 75; stock = 100; };
+			class rhs_6b26_bala_green								{ price = 75; stock = 100; };
+			class rhs_6b26_ess										{ price = 75; stock = 100; };
+			class rhs_6b26_ess_bala									{ price = 75; stock = 100; };
+			class rhs_6b26_ess_bala_green							{ price = 75; stock = 100; };
+			class rhs_6b26_ess_green								{ price = 75; stock = 100; };
+			class rhs_6b26_green									{ price = 75; stock = 100; };
+			class rhs_6b27m_green									{ price = 75; stock = 100; };
+			class rhs_6b27m_green_ess								{ price = 75; stock = 100; };
+			class rhs_6b27m_green_ess_bala							{ price = 75; stock = 100; };
+			class rhs_6b28											{ price = 75; stock = 100; };
+			class rhs_6b28_bala										{ price = 75; stock = 100; };
+			class rhs_6b28_ess										{ price = 75; stock = 100; };
+			class rhs_6b28_ess_bala									{ price = 75; stock = 100; };
+			class rhs_6b28_flora									{ price = 75; stock = 100; };
+			class rhs_6b28_flora_bala								{ price = 75; stock = 100; };
+			class rhs_6b28_flora_ess								{ price = 75; stock = 100; };
+			class rhs_6b28_flora_ess_bala							{ price = 75; stock = 100; };
+			class rhs_6b28_green									{ price = 75; stock = 100; };
+			class rhs_6b28_green_bala								{ price = 75; stock = 100; };
+			class rhs_6b28_green_ess								{ price = 75; stock = 100; };
+			class rhs_6b28_green_ess_bala							{ price = 75; stock = 100; };
+			class rhs_Booniehat_digi								{ price = 75; stock = 100; };
+			class rhs_Booniehat_flora								{ price = 75; stock = 100; };
+			class rhs_Booniehat_m81									{ price = 75; stock = 100; };
+			class rhs_Booniehat_ocp									{ price = 75; stock = 100; };
+			class rhs_Booniehat_ucp									{ price = 75; stock = 100; };
+			class rhs_ssh68											{ price = 75; stock = 100; };
 			class rhsgref_6b27m										{ price = 75; stock = 100; };
 			class rhsgref_6b27m_ttsko_digi							{ price = 75; stock = 100; };
 			class rhsgref_6b27m_ttsko_forest						{ price = 75; stock = 100; };
@@ -286,64 +393,34 @@ class cfgHALsStore {
 			class rhsgref_ssh68_ttsko_forest						{ price = 75; stock = 100; };
 			class rhsgref_ssh68_ttsko_mountain						{ price = 75; stock = 100; };
 			class rhsgref_ssh68_un									{ price = 75; stock = 100; };	
+			class rhssaf_beret_black				 				{ price = 75; stock = 100; };
+			class rhssaf_beret_blue_un				 				{ price = 75; stock = 100; };
+			class rhssaf_beret_green				 				{ price = 75; stock = 100; };
+			class rhssaf_beret_red				 					{ price = 75; stock = 100; };
+			class rhssaf_helmet_hgu56p				 				{ price = 75; stock = 100; };
 			class rhssaf_helmet_m59_85_nocamo						{ price = 75; stock = 100; };
 			class rhssaf_helmet_m59_85_oakleaf				 		{ price = 75; stock = 100; };
-			class rhssaf_helmet_m97_olive_nocamo					{ price = 75; stock = 100; };
-			class rhssaf_helmet_m97_olive_nocamo_black_ess			{ price = 75; stock = 100; };
-			class rhssaf_helmet_m97_olive_nocamo_black_ess_bare	 	{ price = 75; stock = 100; };
 			class rhssaf_helmet_m97_black_nocamo				 	{ price = 75; stock = 100; };
 			class rhssaf_helmet_m97_black_nocamo_black_ess			{ price = 75; stock = 100; };
 			class rhssaf_helmet_m97_black_nocamo_black_ess_bare		{ price = 75; stock = 100; };
-			class rhssaf_Helmet_m97_woodland				 		{ price = 75; stock = 100; };
 			class rhssaf_Helmet_m97_digital				 			{ price = 75; stock = 100; };
+			class rhssaf_helmet_m97_digital_black_ess				{ price = 75; stock = 100; };
+			class rhssaf_helmet_m97_digital_black_ess_bare			{ price = 75; stock = 100; };
 			class rhssaf_Helmet_m97_md2camo				 			{ price = 75; stock = 100; };
-			class rhssaf_Helmet_m97_oakleaf							{ price = 75; stock = 100; };
+			class rhssaf_helmet_m97_md2camo_black_ess				{ price = 75; stock = 100; };
+			class rhssaf_helmet_m97_md2camo_black_ess_bare			{ price = 75; stock = 100; };
 			class rhssaf_helmet_m97_nostrap_blue				 	{ price = 75; stock = 100; };
 			class rhssaf_helmet_m97_nostrap_blue_tan_ess			{ price = 75; stock = 100; };
 			class rhssaf_helmet_m97_nostrap_blue_tan_ess_bare		{ price = 75; stock = 100; };
-			class rhssaf_helmet_m97_woodland_black_ess				{ price = 75; stock = 100; };
-			class rhssaf_helmet_m97_woodland_black_ess_bare			{ price = 75; stock = 100; };
-			class rhssaf_helmet_m97_digital_black_ess				{ price = 75; stock = 100; };
-			class rhssaf_helmet_m97_digital_black_ess_bare			{ price = 75; stock = 100; };
-			class rhssaf_helmet_m97_md2camo_black_ess				{ price = 75; stock = 100; };
-			class rhssaf_helmet_m97_md2camo_black_ess_bare			{ price = 75; stock = 100; };
+			class rhssaf_Helmet_m97_oakleaf							{ price = 75; stock = 100; };
 			class rhssaf_helmet_m97_oakleaf_black_ess				{ price = 75; stock = 100; };
 			class rhssaf_helmet_m97_oakleaf_black_ess_bare			{ price = 75; stock = 100; };
-			class rhssaf_helmet_hgu56p				 				{ price = 75; stock = 100; };
-			class rhssaf_beret_green				 				{ price = 75; stock = 100; };
-			class rhssaf_beret_red				 					{ price = 75; stock = 100; };
-			class rhssaf_beret_black				 				{ price = 75; stock = 100; };
-			class rhssaf_beret_blue_un				 				{ price = 75; stock = 100; };
-			class rhs_6b27m_green									{ price = 75; stock = 100; };
-			class rhs_6b27m_green_ess								{ price = 75; stock = 100; };
-			class rhs_6b27m_green_ess_bala							{ price = 75; stock = 100; };
-			class rhs_6b26_green									{ price = 75; stock = 100; };
-			class rhs_6b26_bala_green								{ price = 75; stock = 100; };
-			class rhs_6b26_ess_green								{ price = 75; stock = 100; };
-			class rhs_6b26_ess_bala_green							{ price = 75; stock = 100; };
-			class rhs_6b26											{ price = 75; stock = 100; };
-			class rhs_6b26_bala										{ price = 75; stock = 100; };
-			class rhs_6b26_ess										{ price = 75; stock = 100; };
-			class rhs_6b26_ess_bala									{ price = 75; stock = 100; };
-			class rhs_6b28_green									{ price = 75; stock = 100; };
-			class rhs_6b28_green_bala								{ price = 75; stock = 100; };
-			class rhs_6b28_green_ess								{ price = 75; stock = 100; };
-			class rhs_6b28_green_ess_bala							{ price = 75; stock = 100; };
-			class rhs_6b28											{ price = 75; stock = 100; };
-			class rhs_6b28_bala										{ price = 75; stock = 100; };
-			class rhs_6b28_ess										{ price = 75; stock = 100; };
-			class rhs_6b28_ess_bala									{ price = 75; stock = 100; };
-			class rhs_6b28_flora									{ price = 75; stock = 100; };
-			class rhs_6b28_flora_bala								{ price = 75; stock = 100; };
-			class rhs_6b28_flora_ess								{ price = 75; stock = 100; };
-			class rhs_6b28_flora_ess_bala							{ price = 75; stock = 100; };
-			class rhs_Booniehat_digi								{ price = 75; stock = 100; };
-			class rhs_Booniehat_flora								{ price = 75; stock = 100; };
-			class rhs_ssh68											{ price = 75; stock = 100; };
-			class rhs_Booniehat_m81									{ price = 75; stock = 100; };
-			class rhs_Booniehat_ocp									{ price = 75; stock = 100; };
-			class rhs_Booniehat_ucp									{ price = 75; stock = 100; };
-			class rhsusf_Bowman										{ price = 75; stock = 100; };
+			class rhssaf_helmet_m97_olive_nocamo					{ price = 75; stock = 100; };
+			class rhssaf_helmet_m97_olive_nocamo_black_ess			{ price = 75; stock = 100; };
+			class rhssaf_helmet_m97_olive_nocamo_black_ess_bare	 	{ price = 75; stock = 100; };
+			class rhssaf_Helmet_m97_woodland				 		{ price = 75; stock = 100; };
+			class rhssaf_helmet_m97_woodland_black_ess				{ price = 75; stock = 100; };
+			class rhssaf_helmet_m97_woodland_black_ess_bare			{ price = 75; stock = 100; };
 			class rhsusf_ach_bare									{ price = 75; stock = 100; };
 			class rhsusf_ach_bare_des								{ price = 75; stock = 100; };
 			class rhsusf_ach_bare_des_ess							{ price = 75; stock = 100; };
@@ -360,6 +437,7 @@ class cfgHALsStore {
 			class rhsusf_ach_helmet_ocp_norotos						{ price = 75; stock = 100; };
 			class rhsusf_ach_helmet_ucp								{ price = 75; stock = 100; };
 			class rhsusf_ach_helmet_ucp_norotos						{ price = 75; stock = 100; };
+			class rhsusf_Bowman										{ price = 75; stock = 100; };
 			class rhsusf_bowman_cap									{ price = 75; stock = 100; };
 			class rhsusf_lwh_helmet_M1942							{ price = 75; stock = 100; };
 			class rhsusf_lwh_helmet_marpatd							{ price = 75; stock = 100; };
@@ -387,16 +465,8 @@ class cfgHALsStore {
 			class rhsusf_mich_helmet_marpatwd						{ price = 75; stock = 100; };
 			class rhsusf_mich_helmet_marpatwd_norotos				{ price = 75; stock = 100; };
 			class rhsusf_mich_helmet_marpatwd_norotos_arc			{ price = 75; stock = 100; };
-			class CUP_H_USArmy_Helmet_M1_btp               			{ price = 75; stock = 100; };
-			class CUP_H_USArmy_Helmet_M1_Vine              			{ price = 75; stock = 100; };
-			class CUP_H_USArmy_Helmet_M1_Olive             			{ price = 75; stock = 100; };
-			class CUP_H_USArmy_Helmet_M1_m81                		{ price = 75; stock = 100; };	
-			class CUP_H_RACS_Helmet_Des                   			{ price = 75; stock = 100; };	
-			class CUP_H_RACS_Helmet_DPAT                  			{ price = 75; stock = 100; };
-			class CUP_H_RACS_Helmet_Goggles_Des           			{ price = 75; stock = 100; };
-			class CUP_H_RACS_Helmet_Goggles_DPAT          			{ price = 75; stock = 100; };
-			class CUP_H_RACS_Helmet_Headset_Des           			{ price = 75; stock = 100; };
-			class CUP_H_RACS_Helmet_Headset_DPAT          			{ price = 75; stock = 100; };
+			#endif
+
 			class H_HelmetB											{ price = 75; stock = 100; };
 			class H_HelmetB_black									{ price = 75; stock = 100; };
 			class H_HelmetB_camo									{ price = 75; stock = 100; };
@@ -407,54 +477,34 @@ class cfgHALsStore {
 			class H_HelmetB_sand									{ price = 75; stock = 100; };
 			class H_HelmetB_snakeskin								{ price = 75; stock = 100; };
 			class H_HelmetB_tna_F             						{ price = 75; stock = 100; };
-			class CUP_H_Navy_CrewHelmet_Blue              			{ price = 75; stock = 100; };
-			class CUP_H_Navy_CrewHelmet_Brown             			{ price = 75; stock = 100; };
-			class CUP_H_Navy_CrewHelmet_Green             			{ price = 75; stock = 100; };
-			class CUP_H_Navy_CrewHelmet_Red               			{ price = 75; stock = 100; };
-			class CUP_H_Navy_CrewHelmet_Violet            			{ price = 75; stock = 100; };
-			class CUP_H_Navy_CrewHelmet_White             			{ price = 75; stock = 100; };
-			class CUP_H_Navy_CrewHelmet_Yellow            			{ price = 75; stock = 100; };	
-			class CUP_H_RUS_6B27_NVG								{ price = 75; stock = 100; };
-			class CUP_H_RUS_6B27_NVG_olive							{ price = 75; stock = 100; };
-			class CUP_H_RUS_6B27									{ price = 75; stock = 100; };
-			class CUP_H_RUS_6B27_olive								{ price = 75; stock = 100; };	
-			class CUP_H_BAF_Crew_Helmet_DDPM						{ price = 75; stock = 100; };
-			class CUP_H_BAF_Crew_Helmet_DPM							{ price = 75; stock = 100; };
-			class CUP_H_BAF_Crew_Helmet_MTP							{ price = 75; stock = 100; };
-			class CUP_H_BAF_Helmet_1_DDPM							{ price = 75; stock = 100; };
-			class CUP_H_BAF_Helmet_1_DPM							{ price = 75; stock = 100; };
-			class CUP_H_BAF_Helmet_1_MTP							{ price = 75; stock = 100; };
-			class CUP_H_BAF_Helmet_2_DDPM							{ price = 75; stock = 100; };
-			class CUP_H_BAF_Helmet_2_DPM							{ price = 75; stock = 100; };
-			class CUP_H_BAF_Helmet_2_MTP							{ price = 75; stock = 100; };
-			class CUP_H_BAF_Helmet_3_DDPM							{ price = 75; stock = 100; };
-			class CUP_H_BAF_Helmet_3_DPM							{ price = 75; stock = 100; };
-			class CUP_H_BAF_Helmet_3_MTP							{ price = 75; stock = 100; };
-			class CUP_H_BAF_Helmet_4_DDPM							{ price = 75; stock = 100; };
-			class CUP_H_BAF_Helmet_4_DPM							{ price = 75; stock = 100; };
-			class CUP_H_BAF_Helmet_4_MTP							{ price = 75; stock = 100; };
-			class CUP_H_BAF_Helmet_Net_2_DDPM						{ price = 75; stock = 100; };
-			class CUP_H_BAF_Helmet_Net_2_DPM						{ price = 75; stock = 100; };
-			class CUP_H_BAF_Helmet_Net_2_MTP						{ price = 75; stock = 100; };
-			class CUP_H_BAF_Helmet_Pilot							{ price = 75; stock = 100; };
-			class CUP_H_USArmy_HelmetMICH_earpro_ess				{ price = 75; stock = 100; };
-			class CUP_H_USArmy_HelmetMICH_earpro					{ price = 75; stock = 100; };
-			class CUP_H_USArmy_HelmetMICH_ESS						{ price = 75; stock = 100; };
-			class CUP_H_USArmy_HelmetMICH_headset_ess				{ price = 75; stock = 100; };
-			class CUP_H_USArmy_HelmetMICH_headset					{ price = 75; stock = 100; };
-			class CUP_H_USArmy_HelmetMICH							{ price = 75; stock = 100; };
-			class CUP_H_USArmy_HelmetMICH_wdl						{ price = 75; stock = 100; };
-			class CUP_H_USMC_MICH2000_DES							{ price = 75; stock = 100; };
-			class CUP_H_USMC_MICH2000_WDL							{ price = 75; stock = 100; };
-			class CUP_H_USMC_MICH2000_COMM_DES						{ price = 75; stock = 100; };
-			class CUP_H_USMC_MICH2000_COMM_WDL						{ price = 75; stock = 100; };
-			class CUP_H_USMC_MICH2000_DEF_DES						{ price = 75; stock = 100; };
-			class CUP_H_USMC_MICH2000_DEF_WDL						{ price = 75; stock = 100; };
-			class CUP_H_USMC_MICH2000_DEF_ESS_DES					{ price = 75; stock = 100; };
-			class CUP_H_USMC_MICH2000_DEF_ESS_WDL					{ price = 75; stock = 100; };
-			class CUP_H_USMC_MICH2000_ESS_COMM_DES					{ price = 75; stock = 100; };
-			class CUP_H_USMC_MICH2000_ESS_COMM_WDL					{ price = 75; stock = 100; };
 			
+			// tier 4 headgear 
+			class H_CrewHelmetHeli_B								{ price = 125; stock = 20; };
+			class H_CrewHelmetHeli_I								{ price = 125; stock = 20; };
+			class H_CrewHelmetHeli_O								{ price = 125; stock = 20; };	
+			class H_HelmetB_Enh_tna_F         						{ price = 125; stock = 20; };
+			class H_HelmetB_TI_tna_F          						{ price = 125; stock = 20; };
+			class H_HelmetCrew_B									{ price = 125; stock = 20; };
+			class H_HelmetCrew_I									{ price = 125; stock = 20; };
+			class H_HelmetCrew_O									{ price = 125; stock = 20; };
+			class H_HelmetCrew_O_ghex_F       						{ price = 125; stock = 20; };
+			class H_HelmetO_ghex_F            						{ price = 125; stock = 20; };
+			class H_HelmetSpecB										{ price = 125; stock = 20; };
+			class H_HelmetSpecB_blk									{ price = 125; stock = 20; };
+			class H_HelmetSpecB_paint1								{ price = 125; stock = 20; };
+			class H_HelmetSpecB_paint2								{ price = 125; stock = 20; };
+			class H_HelmetSpecO_blk									{ price = 125; stock = 20; };
+			class H_HelmetSpecO_ghex_F        						{ price = 125; stock = 20; };
+			class H_HelmetSpecO_ocamo								{ price = 125; stock = 20; };
+			class H_PilotHelmetHeli_B								{ price = 125; stock = 20; };
+			class H_PilotHelmetHeli_I								{ price = 125; stock = 20; };
+			class H_PilotHelmetHeli_O								{ price = 125; stock = 20; };
+
+			#ifdef DMD_USE_RHS
+			class rhs_altyn_novisor 								{ price = 125; stock = 20; };
+			class rhs_altyn_novisor_bala							{ price = 125; stock = 20; };
+			class rhs_altyn_novisor_ess								{ price = 125; stock = 20; };
+			class rhs_altyn_novisor_ess_bala						{ price = 125; stock = 20; };
 			class rhsusf_ach_bare_des_headset						{ price = 125; stock = 20; };
 			class rhsusf_ach_bare_des_headset_ess					{ price = 125; stock = 20; };
 			class rhsusf_ach_bare_headset							{ price = 125; stock = 20; };
@@ -465,16 +515,16 @@ class cfgHALsStore {
 			class rhsusf_ach_bare_tan_headset_ess					{ price = 125; stock = 20; };
 			class rhsusf_ach_bare_wood_headset						{ price = 125; stock = 20; };
 			class rhsusf_ach_bare_wood_headset_ess					{ price = 125; stock = 20; };
-			class rhsusf_ach_helmet_M81								{ price = 125; stock = 20; };
 			class rhsusf_ach_helmet_camo_ocp						{ price = 125; stock = 20; };
 			class rhsusf_ach_helmet_headset_ess_ocp					{ price = 125; stock = 20; };
 			class rhsusf_ach_helmet_headset_ess_ucp					{ price = 125; stock = 20; };
 			class rhsusf_ach_helmet_headset_ocp						{ price = 125; stock = 20; };
 			class rhsusf_ach_helmet_headset_ucp						{ price = 125; stock = 20; };
+			class rhsusf_ach_helmet_M81								{ price = 125; stock = 20; };
 			class rhsusf_lwh_helmet_marpatd_headset					{ price = 125; stock = 20; };
 			class rhsusf_lwh_helmet_marpatwd_headset				{ price = 125; stock = 20; };
-			class rhsusf_mich_bare_norotos_alt_headset				{ price = 125; stock = 20; };
 			class rhsusf_mich_bare_headset							{ price = 125; stock = 20; };
+			class rhsusf_mich_bare_norotos_alt_headset				{ price = 125; stock = 20; };
 			class rhsusf_mich_bare_norotos_alt_semi_headset			{ price = 125; stock = 20; };
 			class rhsusf_mich_bare_norotos_alt_tan_headset			{ price = 125; stock = 20; };
 			class rhsusf_mich_bare_norotos_arc_alt_headset			{ price = 125; stock = 20; };
@@ -498,49 +548,41 @@ class cfgHALsStore {
 			class rhsusf_mich_helmet_marpatwd_headset				{ price = 125; stock = 20; };
 			class rhsusf_mich_helmet_marpatwd_norotos_arc_headset	{ price = 125; stock = 20; };
 			class rhsusf_mich_helmet_marpatwd_norotos_headset		{ price = 125; stock = 20; };
-			class rhs_altyn_novisor 								{ price = 125; stock = 20; };
-			class rhs_altyn_novisor_bala							{ price = 125; stock = 20; };
-			class rhs_altyn_novisor_ess								{ price = 125; stock = 20; };
-			class rhs_altyn_novisor_ess_bala						{ price = 125; stock = 20; };
-			class H_CrewHelmetHeli_B								{ price = 125; stock = 20; };
-			class H_CrewHelmetHeli_I								{ price = 125; stock = 20; };
-			class H_CrewHelmetHeli_O								{ price = 125; stock = 20; };	
-			class H_HelmetCrew_B									{ price = 125; stock = 20; };
-			class H_HelmetCrew_I									{ price = 125; stock = 20; };
-			class H_HelmetCrew_O									{ price = 125; stock = 20; };
-			class H_PilotHelmetHeli_B								{ price = 125; stock = 20; };
-			class H_PilotHelmetHeli_I								{ price = 125; stock = 20; };
-			class H_PilotHelmetHeli_O								{ price = 125; stock = 20; };
-			class H_HelmetO_ghex_F            						{ price = 125; stock = 20; };
-			class H_HelmetSpecB										{ price = 125; stock = 20; };
-			class H_HelmetSpecB_blk									{ price = 125; stock = 20; };
-			class H_HelmetSpecB_paint1								{ price = 125; stock = 20; };
-			class H_HelmetSpecB_paint2								{ price = 125; stock = 20; };
-			class H_HelmetCrew_O_ghex_F       						{ price = 125; stock = 20; };
-			class H_HelmetB_Enh_tna_F         						{ price = 125; stock = 20; };
-			class H_HelmetB_TI_tna_F          						{ price = 125; stock = 20; };
-			class H_HelmetSpecO_blk									{ price = 125; stock = 20; };
-			class H_HelmetSpecO_ghex_F        						{ price = 125; stock = 20; };
-			class H_HelmetSpecO_ocamo								{ price = 125; stock = 20; };
+			#endif
 			
-			class rhs_altyn_visordown								{ price = 250; stock = 4; };
+			// tier 5 headgear
+			class H_HelmetLeaderO_ghex_F							{ price = 250; stock = 2; };
+			class H_HelmetLeaderO_ocamo								{ price = 250; stock = 1; };
+			class H_HelmetLeaderO_oucamo							{ price = 250; stock = 1; };
+			class H_HelmetO_ocamo									{ price = 250; stock = 2; };
+			class H_HelmetO_oucamo									{ price = 250; stock = 1; };
+			class H_PilotHelmetFighter_B							{ price = 250; stock = 2; };
+			class H_PilotHelmetFighter_I							{ price = 250; stock = 1; };
+			class H_PilotHelmetFighter_O							{ price = 250; stock = 1; };
+
+			#ifdef DMD_USE_RHS
 			class rhs_altyn											{ price = 250; stock = 4; };
 			class rhs_altyn_bala									{ price = 250; stock = 4; };
-			class rhsusf_opscore_bk_pelt							{ price = 250; stock = 4; };
+			class rhs_altyn_visordown								{ price = 250; stock = 4; };
 			class rhsusf_opscore_bk									{ price = 250; stock = 4; };
+			class rhsusf_opscore_bk_pelt							{ price = 250; stock = 4; };
 			class rhsusf_opscore_coy_cover							{ price = 250; stock = 4; };
 			class rhsusf_opscore_coy_cover_pelt						{ price = 250; stock = 4; };
 			class rhsusf_opscore_fg									{ price = 250; stock = 4; };
 			class rhsusf_opscore_fg_pelt							{ price = 250; stock = 4; };
 			class rhsusf_opscore_fg_pelt_cam						{ price = 250; stock = 4; };
 			class rhsusf_opscore_fg_pelt_nsw						{ price = 250; stock = 4; };
+			class rhsusf_opscore_mar_fg								{ price = 250; stock = 4; };
+			class rhsusf_opscore_mar_fg_pelt						{ price = 250; stock = 4; };
+			class rhsusf_opscore_mar_ut								{ price = 250; stock = 4; };
+			class rhsusf_opscore_mar_ut_pelt						{ price = 250; stock = 4; };
 			class rhsusf_opscore_mc									{ price = 250; stock = 4; };
-			class rhsusf_opscore_mc_pelt							{ price = 250; stock = 4; };
-			class rhsusf_opscore_mc_pelt_nsw						{ price = 250; stock = 4; };
 			class rhsusf_opscore_mc_cover							{ price = 250; stock = 4; };
 			class rhsusf_opscore_mc_cover_pelt						{ price = 250; stock = 4; };
-			class rhsusf_opscore_mc_cover_pelt_nsw					{ price = 250; stock = 4; };
 			class rhsusf_opscore_mc_cover_pelt_cam					{ price = 250; stock = 4; };
+			class rhsusf_opscore_mc_cover_pelt_nsw					{ price = 250; stock = 4; };
+			class rhsusf_opscore_mc_pelt							{ price = 250; stock = 4; };
+			class rhsusf_opscore_mc_pelt_nsw						{ price = 250; stock = 4; };
 			class rhsusf_opscore_paint								{ price = 250; stock = 4; };
 			class rhsusf_opscore_paint_pelt							{ price = 250; stock = 4; };
 			class rhsusf_opscore_paint_pelt_nsw						{ price = 250; stock = 4; };
@@ -552,39 +594,20 @@ class cfgHALsStore {
 			class rhsusf_opscore_ut_pelt_cam						{ price = 250; stock = 4; };
 			class rhsusf_opscore_ut_pelt_nsw						{ price = 250; stock = 4; };
 			class rhsusf_opscore_ut_pelt_nsw_cam					{ price = 250; stock = 4; };
-			class rhsusf_opscore_mar_ut_pelt						{ price = 250; stock = 4; };
-			class rhsusf_opscore_mar_ut								{ price = 250; stock = 4; };
-			class rhsusf_opscore_mar_fg_pelt						{ price = 250; stock = 4; };
-			class rhsusf_opscore_mar_fg								{ price = 250; stock = 4; };
 			class rhsusf_protech_helmet								{ price = 250; stock = 4; };
 			class rhsusf_protech_helmet_ess							{ price = 250; stock = 4; };
 			class rhsusf_protech_helmet_rhino						{ price = 250; stock = 4; };
 			class rhsusf_protech_helmet_rhino_ess					{ price = 250; stock = 4; };
-			class H_HelmetLeaderO_ghex_F							{ price = 250; stock = 2; };
-			class H_HelmetLeaderO_ocamo								{ price = 250; stock = 1; };
-			class H_HelmetLeaderO_oucamo							{ price = 250; stock = 1; };
-			class H_HelmetO_ocamo									{ price = 250; stock = 2; };
-			class H_HelmetO_oucamo									{ price = 250; stock = 1; };
-			class H_PilotHelmetFighter_B							{ price = 250; stock = 2; };
-			class H_PilotHelmetFighter_I							{ price = 250; stock = 1; };
-			class H_PilotHelmetFighter_O							{ price = 250; stock = 1; };
+			#endif
 		};
 
 		class backpacks {
 			displayName = "Backpacks";
 			picture = "";
-
+			// Parachutes
 			class B_Parachute						{ price = 200; stock = 100; };
-			// LOW DLC
-			class B_LegStrapBag_black_F				{ price = 50; stock = 50; };
-			class B_LegStrapBag_coyote_F			{ price = 50; stock = 50; };
-			class B_LegStrapBag_olive_F				{ price = 50; stock = 50; };
-			class CUP_B_ACRScout_m95				{ price = 50; stock = 50; };
-			class CUP_B_AssaultPack_Coyote			{ price = 50; stock = 50; };
-			class B_HuntingBackpack					{ price = 50; stock = 50; };
-			class B_OutdoorPack_blk					{ price = 50; stock = 50; };
-			class B_OutdoorPack_blu					{ price = 50; stock = 50; };
-			class B_OutdoorPack_tan					{ price = 50; stock = 50; };
+
+			// tier 1
 			class B_AssaultPack_blk					{ price = 50; stock = 50; };
 			class B_AssaultPack_cbr					{ price = 50; stock = 50; };
 			class B_AssaultPack_dgtl				{ price = 50; stock = 50; };
@@ -593,50 +616,50 @@ class cfgHALsStore {
 			class B_AssaultPack_rgr					{ price = 50; stock = 50; };
 			class B_AssaultPack_sgg					{ price = 50; stock = 50; };
 			class B_AssaultPack_tna_F				{ price = 50; stock = 50; };
+			class B_HuntingBackpack					{ price = 50; stock = 50; };
+			class B_LegStrapBag_black_F				{ price = 50; stock = 50; };
+			class B_LegStrapBag_coyote_F			{ price = 50; stock = 50; };
+			class B_LegStrapBag_olive_F				{ price = 50; stock = 50; };
+			class B_OutdoorPack_blk					{ price = 50; stock = 50; };
+			class B_OutdoorPack_blu					{ price = 50; stock = 50; };
+			class B_OutdoorPack_tan					{ price = 50; stock = 50; };
+			#ifdef DMD_USE_CUP
+			class CUP_B_ACRScout_m95				{ price = 50; stock = 50; };
+			class CUP_B_AssaultPack_Coyote			{ price = 50; stock = 50; };
+			#endif
 
-			class B_FieldPack_oli 					{ price = 75; stock = 40; };
-			class rvg_messengerbag_4 				{ price = 75; stock = 40; };
-			class rvg_legstrappack_4 				{ price = 75; stock = 40; };
-			class B_Messenger_Black_F				{ price = 75; stock = 40; };
-			class B_Messenger_Coyote_F				{ price = 75; stock = 40; };
-			class B_Messenger_Gray_F				{ price = 75; stock = 40; };
-			class B_Messenger_Olive_F				{ price = 75; stock = 40; };
-			class B_Messenger_IDAP_F				{ price = 75; stock = 40; };
+			// tier 2
 			class B_FieldPack_blk					{ price = 75; stock = 40; };
 			class B_FieldPack_cbr					{ price = 75; stock = 40; };
 			class B_FieldPack_ghex_F				{ price = 75; stock = 40; };
 			class B_FieldPack_ocamo					{ price = 75; stock = 40; };
+			class B_FieldPack_oli 					{ price = 75; stock = 40; };
 			class B_FieldPack_oucamo				{ price = 75; stock = 40; };
+			class B_Messenger_Black_F				{ price = 75; stock = 40; };
+			class B_Messenger_Coyote_F				{ price = 75; stock = 40; };
+			class B_Messenger_Gray_F				{ price = 75; stock = 40; };
+			class B_Messenger_IDAP_F				{ price = 75; stock = 40; };
+			class B_Messenger_Olive_F				{ price = 75; stock = 40; };
 			class B_TacticalPack_blk				{ price = 75; stock = 40; };
 			class B_TacticalPack_mcamo				{ price = 75; stock = 40; };
 			class B_TacticalPack_ocamo				{ price = 75; stock = 40; };
 			class B_TacticalPack_oli				{ price = 75; stock = 40; };
 			class B_TacticalPack_rgr				{ price = 75; stock = 40; };
+			class rvg_legstrappack_4 				{ price = 75; stock = 40; };
+			class rvg_messengerbag_4 				{ price = 75; stock = 40; };
+			#ifdef DMD_USE_CUP
+			class CUP_B_GER_Medic_FLecktarn			{ price = 75; stock = 40; };			
 			class CUP_B_MedicPack_ACU				{ price = 75; stock = 40; };
 			class CUP_B_RUS_Backpack				{ price = 75; stock = 40; };
-			class CUP_B_GER_Medic_FLecktarn			{ price = 75; stock = 40; };			
+			#endif
+			#ifdef DMD_USE_RHS
 			class rhssaf_Kitbag_base				{ price = 75; stock = 40; };
-			class rhssaf_kitbag_md2camo				{ price = 75; stock = 40; };
 			class rhssaf_kitbag_digital				{ price = 75; stock = 40; };
+			class rhssaf_kitbag_md2camo				{ price = 75; stock = 40; };
 			class rhssaf_kitbag_smb					{ price = 75; stock = 40; };
+			#endif
 
-			class rhsusf_assault_eagleaiii_coy		{ price = 100; stock = 20; };
-			class rhsusf_assault_eagleaiii_ocp		{ price = 100; stock = 20; };
-			class rhsusf_assault_eagleaiii_ucp		{ price = 100; stock = 20; };
-			class rhsusf_falconii_coy				{ price = 100; stock = 20; };
-			class rhsusf_falconii_mc				{ price = 100; stock = 20; };
-			class rhsusf_falconii					{ price = 100; stock = 20; };
-			class rhs_assault_umbts					{ price = 100; stock = 20; };
-			class rhs_assault_umbts_engineer_empty	{ price = 100; stock = 20; };
-			class rhs_medic_bag						{ price = 100; stock = 20; };
-			class rhs_sidor							{ price = 100; stock = 20; };
-			class rhs_rpg_empty						{ price = 100; stock = 20; };			
-			class CUP_B_HikingPack_Civ				{ price = 100; stock = 20; };
-			class CUP_B_GER_Pack_Tropentarn			{ price = 100; stock = 20; };
-			class CUP_B_GER_Pack_Flecktarn			{ price = 100; stock = 20; };
-			class CUP_B_AlicePack_Khaki				{ price = 100; stock = 20; };
-			class CUP_B_AlicePack_Bedroll			{ price = 100; stock = 20; };	
-			class CUP_B_ACRPara_m95					{ price = 100; stock = 20; };	
+			// tier 3
 			class B_Bergen_blk						{ price = 100; stock = 20; };
 			class B_Bergen_mcamo					{ price = 100; stock = 20; };
 			class B_Bergen_rgr						{ price = 100; stock = 20; };
@@ -650,16 +673,29 @@ class cfgHALsStore {
 			class B_ViperLightHarness_hex_F         { price = 100; stock = 20; };
 			class B_ViperLightHarness_khk_F         { price = 100; stock = 20; };
 			class B_ViperLightHarness_oli_F         { price = 100; stock = 20; };
+			#ifdef DMD_USE_CUP
+			class CUP_B_ACRPara_m95					{ price = 100; stock = 20; };	
+			class CUP_B_AlicePack_Bedroll			{ price = 100; stock = 20; };	
+			class CUP_B_AlicePack_Khaki				{ price = 100; stock = 20; };
+			class CUP_B_GER_Pack_Flecktarn			{ price = 100; stock = 20; };
+			class CUP_B_GER_Pack_Tropentarn			{ price = 100; stock = 20; };
+			class CUP_B_HikingPack_Civ				{ price = 100; stock = 20; };
+			#endif
+			#ifdef DMD_USE_RHS
+			class rhs_assault_umbts					{ price = 100; stock = 20; };
+			class rhs_assault_umbts_engineer_empty	{ price = 100; stock = 20; };
+			class rhs_medic_bag						{ price = 100; stock = 20; };
+			class rhs_rpg_empty						{ price = 100; stock = 20; };			
+			class rhs_sidor							{ price = 100; stock = 20; };
+			class rhsusf_assault_eagleaiii_coy		{ price = 100; stock = 20; };
+			class rhsusf_assault_eagleaiii_ocp		{ price = 100; stock = 20; };
+			class rhsusf_assault_eagleaiii_ucp		{ price = 100; stock = 20; };
+			class rhsusf_falconii					{ price = 100; stock = 20; };
+			class rhsusf_falconii_coy				{ price = 100; stock = 20; };
+			class rhsusf_falconii_mc				{ price = 100; stock = 20; };
+			#endif
 
-			class rhsgref_ttsko_alicepack			{ price = 150; stock = 10; };
-			class rhsgref_wdl_alicepack				{ price = 150; stock = 10; };
-			class rhsgref_hidf_alicepack			{ price = 150; stock = 10; };
-			class B_ViperHarness_base_F				{ price = 150; stock = 10; };
-			class B_ViperHarness_blk_F				{ price = 150; stock = 10; };
-			class B_ViperHarness_ghex_F				{ price = 150; stock = 10; };
-			class B_ViperHarness_hex_F				{ price = 150; stock = 10; };
-			class B_ViperHarness_khk_F				{ price = 150; stock = 10; };
-			class B_ViperHarness_oli_F              { price = 150; stock = 10; };
+			// tier 4
 			class B_Carryall_cbr					{ price = 150; stock = 10; };
 			class B_Carryall_ghex_F					{ price = 150; stock = 10; };
 			class B_Carryall_khk					{ price = 150; stock = 10; };
@@ -667,7 +703,19 @@ class cfgHALsStore {
 			class B_Carryall_ocamo					{ price = 150; stock = 10; };
 			class B_Carryall_oli					{ price = 150; stock = 10; };
 			class B_Carryall_oucamo					{ price = 150; stock = 10; };
+			class B_ViperHarness_base_F				{ price = 150; stock = 10; };
+			class B_ViperHarness_blk_F				{ price = 150; stock = 10; };
+			class B_ViperHarness_ghex_F				{ price = 150; stock = 10; };
+			class B_ViperHarness_hex_F				{ price = 150; stock = 10; };
+			class B_ViperHarness_khk_F				{ price = 150; stock = 10; };
+			class B_ViperHarness_oli_F              { price = 150; stock = 10; };
+			#ifdef DMD_USE_RHS
+			class rhsgref_hidf_alicepack			{ price = 150; stock = 10; };
+			class rhsgref_ttsko_alicepack			{ price = 150; stock = 10; };
+			class rhsgref_wdl_alicepack				{ price = 150; stock = 10; };
+			#endif
 
+			// tier 5
 			class B_Bergen_Base_F					{ price = 200; stock = 5; };
 			class B_Bergen_dgtl_F					{ price = 200; stock = 5; };
 			class B_Bergen_hex_F					{ price = 200; stock = 5; };
@@ -678,7 +726,8 @@ class cfgHALsStore {
 		class vests {
 			displayName = "Vests";
 			picture = "";
-
+			// tier 1
+			#ifdef DMD_USE_CUP
 			class CUP_V_B_LHDVest_Blue        		{ price = 50; stock = 50; };
 			class CUP_V_B_LHDVest_Brown         	{ price = 50; stock = 50; };
 			class CUP_V_B_LHDVest_Green         	{ price = 50; stock = 50; };
@@ -719,6 +768,7 @@ class cfgHALsStore {
 			class CUP_V_OI_TKI_Jacket5_01 			{ price = 50; stock = 4; };
 			class CUP_V_RUS_Smersh_1        		{ price = 50; stock = 50; };
 			class CUP_V_RUS_Smersh_2        		{ price = 50; stock = 50; };
+			#endif
 			class rvg_tacvest_2 					{ price = 50; stock = 3; };
 			class V_BandollierB_blk					{ price = 50; stock = 50; };
 			class V_BandollierB_cbr					{ price = 50; stock = 50; };
@@ -747,7 +797,9 @@ class cfgHALsStore {
 			class V_TacChestrig_grn_F         		{ price = 50; stock = 50; };
 			class V_TacChestrig_oli_F         		{ price = 50; stock = 50; };
 			class V_TacVest_gen_F             		{ price = 50; stock = 50; };
-		
+
+			// tier 2
+			#ifdef DMD_USE_CUP		
 			class CUP_V_B_Eagle_SPC_AR								{ price = 100; stock = 40; };
 			class CUP_V_B_Eagle_SPC_AT								{ price = 100; stock = 40; };
 			class CUP_V_B_Eagle_SPC_Corpsman						{ price = 100; stock = 40; };
@@ -795,7 +847,10 @@ class cfgHALsStore {
 			class CUP_V_OI_TKI_Jacket4_03           				{ price = 100; stock = 40; };
 			class CUP_V_OI_TKI_Jacket4_04           				{ price = 100; stock = 40; };
 			class CUP_V_OI_TKI_Jacket4_05           				{ price = 100; stock = 40; };
-			class CUP_V_OI_TKI_Jacket4_06           				{ price = 100; stock = 40; };	
+			class CUP_V_OI_TKI_Jacket4_06           				{ price = 100; stock = 40; };
+			#endif
+
+			#ifdef DMD_USE_RHS
 			class rhs_6b23								    		{ price = 100; stock = 40; };
 			class rhs_6b23_6sh92									{ price = 100; stock = 40; };
 			class rhs_6b23_6sh92_headset							{ price = 100; stock = 40; };
@@ -864,6 +919,8 @@ class cfgHALsStore {
 			class rhssaf_vest_md99_woodland_rifleman				{ price = 100; stock = 40; };
 			class rhssaf_vest_otv_md2camo							{ price = 100; stock = 40; };
 			class rhsusf_spcs_ucp_crewman 							{ price = 100; stock = 40; };
+			#endif
+
 			class V_DeckCrew_blue_F         						{ price = 100; stock = 40; };
 			class V_DeckCrew_brown_F								{ price = 100; stock = 40; };
 			class V_DeckCrew_green_F								{ price = 100; stock = 40; };
@@ -888,7 +945,9 @@ class cfgHALsStore {
 			class V_TacVest_oli										{ price = 100; stock = 40; };	
 			class V_TacVestCamo_khk									{ price = 100; stock = 40; };
 			class V_TacVestIR_blk									{ price = 100; stock = 40; };
-	
+
+			// tier 3
+			#ifdef DMD_USE_CUP
 			class CUP_V_B_GER_Carrier_Vest        					{ price = 150; stock = 30; };
 			class CUP_V_B_GER_Carrier_Vest_2        				{ price = 150; stock = 30; };
 			class CUP_V_B_GER_Carrier_Vest_3        				{ price = 150; stock = 30; };
@@ -960,7 +1019,10 @@ class cfgHALsStore {
 			class CUP_V_RUS_6B3_1        							{ price = 150; stock = 30; };
 			class CUP_V_RUS_6B3_2        							{ price = 150; stock = 30; };
 			class CUP_V_RUS_6B3_3        							{ price = 150; stock = 30; };
-			class CUP_V_RUS_6B3_4        							{ price = 150; stock = 30; };			
+			class CUP_V_RUS_6B3_4        							{ price = 150; stock = 30; };
+			#endif
+
+			#ifdef DMD_USE_RHS			
 			class rhsgref_6b23_khaki								{ price = 150; stock = 30; };
 			class rhsgref_6b23_khaki_medic							{ price = 150; stock = 30; };
 			class rhsgref_6b23_khaki_nco							{ price = 150; stock = 30; };
@@ -983,6 +1045,8 @@ class cfgHALsStore {
 			class rhsgref_6b23_ttsko_mountain_sniper				{ price = 150; stock = 30; };
 			class rhsgref_otv_digi									{ price = 150; stock = 30; };
 			class rhsgref_otv_khaki									{ price = 150; stock = 30; };
+			#endif 
+
 			class rvg_platecarrier_3								{ price = 150; stock = 30; };
 			class V_EOD_blue_F       								{ price = 150; stock = 30; };
 			class V_EOD_coyote_F       								{ price = 150; stock = 30; };
@@ -1002,6 +1066,8 @@ class cfgHALsStore {
 			class V_PlateCarrierL_CTRG								{ price = 150; stock = 30; };
 			class V_PlateCarrierSpec_tna_F							{ price = 150; stock = 30; };	
 	
+			// tier 4
+			#ifdef DMD_USE_CUP
 			class CUP_V_B_MTV       						{ price = 250; stock = 20; };
 			class CUP_V_B_MTV_LegPouch        				{ price = 250; stock = 20; };
 			class CUP_V_B_MTV_Marksman      				{ price = 250; stock = 20; };
@@ -1032,6 +1098,9 @@ class cfgHALsStore {
 			class CUP_V_BAF_Osprey_Mk2_DPM_Scout			{ price = 250; stock = 20; };
 			class CUP_V_BAF_Osprey_Mk2_DPM_Soldier1			{ price = 250; stock = 20; };
 			class CUP_V_BAF_Osprey_Mk2_DPM_Soldier2			{ price = 250; stock = 20; };
+			#endif
+
+			#ifdef DMD_USE_RHS
 			class rhs_6b43									{ price = 250; stock = 20; };
 			class rhsusf_iotv_ocp							{ price = 250; stock = 20; };
 			class rhsusf_iotv_ocp_grenadier					{ price = 250; stock = 20; };
@@ -1061,17 +1130,23 @@ class cfgHALsStore {
 			class rhsusf_spcs_ocp_rifleman					{ price = 250; stock = 20; };
 			class rhsusf_spcs_ucp							{ price = 250; stock = 20; };
 			class rhsusf_spcs_ucp_rifleman					{ price = 250; stock = 20; };
+			#endif 
+
 			class V_PlateCarrierSpec_blk 					{ price = 250; stock = 20; };
 			class V_PlateCarrierSpec_mtp 					{ price = 250; stock = 20; };
 			class V_PlateCarrierSpec_rgr 					{ price = 250; stock = 20; };
 			class V_RebreatherB								{ price = 250; stock = 20; };
 			class V_RebreatherIA							{ price = 250; stock = 20; };
 			class V_RebreatherIR							{ price = 250; stock = 20; };
-	
+
+			// tier 5
+			#ifdef DMD_USE_CUP
 			class CUP_V_BAF_Osprey_Mk4_MTP_Grenadier		{ price = 350; stock = 5; };
 			class CUP_V_BAF_Osprey_Mk4_MTP_MachineGunner	{ price = 350; stock = 5; };
 			class CUP_V_BAF_Osprey_Mk4_MTP_Rifleman			{ price = 350; stock = 5; };
 			class CUP_V_BAF_Osprey_Mk4_MTP_SquadLeader		{ price = 350; stock = 5; };
+			#endif 
+
 			class V_PlateCarrierGL_blk 						{ price = 350; stock = 5; };
 			class V_PlateCarrierGL_mtp 						{ price = 350; stock = 5; };
 			class V_PlateCarrierGL_rgr 						{ price = 350; stock = 5; };
@@ -1084,16 +1159,38 @@ class cfgHALsStore {
 			displayName = "Uniforms";
 			picture = "";
 
-			class U_B_CombatUniform_mcam_tshirt				{ price = 50; stock = 10; };
-			class U_B_CTRG_3 								{ price = 50; stock = 10; };
-			class U_B_CTRG_2 								{ price = 50; stock = 10; };
-			class U_BG_Guerrilla_6_1 						{ price = 50; stock = 10; };
-			class U_BG_Guerilla1_1 							{ price = 50; stock = 10; };
-			class U_BG_Guerilla2_1 							{ price = 50; stock = 10; };
-			class U_BG_Guerilla2_3 							{ price = 50; stock = 10; };
+			#ifdef DMD_USE_CUP
+			class CUP_I_B_PMC_Unit_20 						{ price = 50; stock = 10; };
+			class CUP_I_B_PMC_Unit_23 						{ price = 50; stock = 10; };
+			class CUP_I_B_PMC_Unit_24 						{ price = 50; stock = 10; };
+			class CUP_I_B_PMC_Unit_29 						{ price = 50; stock = 10; };
+			class CUP_I_B_PMC_Unit_7 						{ price = 50; stock = 10; };
+			class CUP_U_B_BAF_DPM_GHILLIE 					{ price = 50; stock = 10; };
+			class CUP_U_B_CZ_WDL_TShirt 					{ price = 50; stock = 10; };
+			class CUP_U_B_US_BDU_OD 						{ price = 50; stock = 10; };
+			class CUP_U_C_Suit_01 							{ price = 50; stock = 10; };
+			class CUP_U_C_Woodlander_04 					{ price = 50; stock = 10; };
+			class CUP_U_I_GUE_Anorak_01 					{ price = 50; stock = 10; };
+			class CUP_U_I_GUE_Anorak_02 					{ price = 50; stock = 10; };
+			class CUP_U_I_GUE_Anorak_03 					{ price = 50; stock = 10; };
+			class CUP_U_I_GUE_Flecktarn2 					{ price = 50; stock = 10; };
+			class CUP_U_O_CHDKZ_Lopotev 					{ price = 50; stock = 10; };
+			class CUP_U_O_RUS_Gorka_Green 					{ price = 50; stock = 10; };
+			#endif
+
+			#ifdef DMD_USE_RHS
 			class rhs_uniform_FROG01_wd 					{ price = 50; stock = 10; };
+			class rhs_uniform_g3_aor2 						{ price = 50; stock = 10; };
 			class rhs_uniform_g3_blk 						{ price = 50; stock = 10; };
 			class rhs_uniform_g3_m81 						{ price = 50; stock = 10; };
+			class rhs_uniform_g3_mc							{ price = 50; stock = 10; };
+			class rhs_uniform_g3_rgr 						{ price = 50; stock = 10; };
+			class rhs_uniform_gorka_r_g 					{ price = 50; stock = 10; };
+			class rhs_uniform_gorka_r_y 					{ price = 50; stock = 10; };
+			class rhsgref_uniform_gorka_1_f 				{ price = 50; stock = 10; };
+			class rhsgref_uniform_olive 					{ price = 50; stock = 10; };
+			#endif
+
 			class rvg_bandit 								{ price = 50; stock = 10; };
 			class rvg_bandit_1 								{ price = 50; stock = 10; };
 			class rvg_camo_1 								{ price = 50; stock = 10; };
@@ -1114,30 +1211,14 @@ class cfgHALsStore {
 			class rvg_shirt_stripe 							{ price = 50; stock = 10; };
 			class rvg_survivor 								{ price = 50; stock = 10; };
 			class rvg_survivor_1 							{ price = 50; stock = 10; };
+			class U_B_CombatUniform_mcam_tshirt				{ price = 50; stock = 10; };
+			class U_B_CTRG_2 								{ price = 50; stock = 10; };
+			class U_B_CTRG_3 								{ price = 50; stock = 10; };
 			class U_B_Wetsuit_rvg 							{ price = 50; stock = 10; };
-			class rhsgref_uniform_gorka_1_f 				{ price = 50; stock = 10; };
-			class rhsgref_uniform_olive 					{ price = 50; stock = 10; };
-			class CUP_U_I_GUE_Anorak_01 					{ price = 50; stock = 10; };
-			class CUP_U_I_GUE_Anorak_03 					{ price = 50; stock = 10; };
-			class CUP_U_I_GUE_Anorak_02 					{ price = 50; stock = 10; };
-			class CUP_U_O_CHDKZ_Lopotev 					{ price = 50; stock = 10; };
-			class CUP_U_B_CZ_WDL_TShirt 					{ price = 50; stock = 10; };
-			class CUP_U_B_BAF_DPM_GHILLIE 					{ price = 50; stock = 10; };
-			class CUP_U_I_GUE_Flecktarn2 					{ price = 50; stock = 10; };
-			class CUP_I_B_PMC_Unit_20 						{ price = 50; stock = 10; };
-			class CUP_I_B_PMC_Unit_7 						{ price = 50; stock = 10; };
-			class CUP_I_B_PMC_Unit_24 						{ price = 50; stock = 10; };
-			class CUP_I_B_PMC_Unit_23 						{ price = 50; stock = 10; };
-			class CUP_I_B_PMC_Unit_29 						{ price = 50; stock = 10; };
-			class CUP_U_O_RUS_Gorka_Green 					{ price = 50; stock = 10; };
-			class CUP_U_C_Suit_01 							{ price = 50; stock = 10; };
-			class CUP_U_C_Woodlander_04 					{ price = 50; stock = 10; };
-			class rhs_uniform_g3_mc							{ price = 50; stock = 10; };
-			class rhs_uniform_g3_rgr 						{ price = 50; stock = 10; };
-			class rhs_uniform_g3_aor2 						{ price = 50; stock = 10; };
-			class CUP_U_B_US_BDU_OD 						{ price = 50; stock = 10; };
-			class rhs_uniform_gorka_r_g 					{ price = 50; stock = 10; };
-			class rhs_uniform_gorka_r_y 					{ price = 50; stock = 10; };
+			class U_BG_Guerilla1_1 							{ price = 50; stock = 10; };
+			class U_BG_Guerilla2_1 							{ price = 50; stock = 10; };
+			class U_BG_Guerilla2_3 							{ price = 50; stock = 10; };
+			class U_BG_Guerrilla_6_1 						{ price = 50; stock = 10; };
 
 			class U_B_FullGhillie_ard 						{ price = 200; stock = 3; };
 			class U_B_FullGhillie_lsh 						{ price = 250; stock = 1; };
@@ -1150,31 +1231,38 @@ class cfgHALsStore {
 			picture = "";
 
 			// pistol
-			class CUP_10Rnd_9x19_Compact 					{ price = 10; stock = 10; };
-			class 16Rnd_9x21_Mag 							{ price = 10; stock = 10; };
 			class 16Rnd_9x21_green_Mag 						{ price = 10; stock = 10; };
+			class 16Rnd_9x21_Mag 							{ price = 10; stock = 10; };
 			class 16Rnd_9x21_red_Mag 						{ price = 10; stock = 10; };
 			class 16Rnd_9x21_yellow_Mag 					{ price = 10; stock = 10; };
-			class CUP_18Rnd_9x19_Phantom 					{ price = 10; stock = 10; };
+
+			#ifdef DMD_USE_CUP
+			class CUP_10Rnd_9x19_Compact 					{ price = 10; stock = 10; };
+			class CUP_12Rnd_9x18_PMM_M 						{ price = 10; stock = 10; };
 			class CUP_17Rnd_9x19_glock17 					{ price = 10; stock = 10; };
-			class rhsusf_mag_7x45acp_MHP 					{ price = 10; stock = 10; };
-			class rhsusf_mag_15Rnd_9x19_JHP 				{ price = 10; stock = 10; };
-			class rhsusf_mag_15Rnd_9x19_FMJ 				{ price = 10; stock = 10; };
+			class CUP_18Rnd_9x19_Phantom 					{ price = 10; stock = 10; };
 			class CUP_30Rnd_9x19_UZI 						{ price = 10; stock = 10; };
-			class rhs_mag_9x19_17 							{ price = 10; stock = 10; };
+			class CUP_6Rnd_45ACP_M 							{ price = 10; stock = 10; };
 			class CUP_8Rnd_9x18_Makarov_M 					{ price = 10; stock = 10; };
 			class CUP_8Rnd_9x18_MakarovSD_M 				{ price = 10; stock = 10; };
-			class rhs_mag_9x18_8_57N181S 					{ price = 10; stock = 10; };
-			class CUP_12Rnd_9x18_PMM_M 						{ price = 10; stock = 10; };
-			class rhs_mag_9x19mm_7n21_20 					{ price = 10; stock = 10; };
-			class rhs_mag_9x19mm_7n31_20 					{ price = 10; stock = 10; };
-			class rhs_mag_9x19mm_7n21_44 					{ price = 10; stock = 10; };
-			class rhs_mag_9x19mm_7n31_44 					{ price = 10; stock = 10; };
-			class CUP_6Rnd_45ACP_M 							{ price = 10; stock = 10; };
-			class rhs_mag_762x25_8 							{ price = 10; stock = 10; };
+			#endif
+
+			#ifdef DMD_USE_RHS
 			class rhs_mag_6x8mm_mhp 						{ price = 10; stock = 10; };
+			class rhs_mag_762x25_8 							{ price = 10; stock = 10; };
+			class rhs_mag_9x18_8_57N181S 					{ price = 10; stock = 10; };
+			class rhs_mag_9x19_17 							{ price = 10; stock = 10; };
+			class rhs_mag_9x19mm_7n21_20 					{ price = 10; stock = 10; };
+			class rhs_mag_9x19mm_7n21_44 					{ price = 10; stock = 10; };
+			class rhs_mag_9x19mm_7n31_20 					{ price = 10; stock = 10; };
+			class rhs_mag_9x19mm_7n31_44 					{ price = 10; stock = 10; };
+			class rhsusf_mag_15Rnd_9x19_FMJ 				{ price = 10; stock = 10; };
+			class rhsusf_mag_15Rnd_9x19_JHP 				{ price = 10; stock = 10; };
+			class rhsusf_mag_7x45acp_MHP 					{ price = 10; stock = 10; };
+			#endif
 			
 			// shottys
+			#ifdef DMD_USE_CUP
 			class CUP_20Rnd_B_AA12_Pellets 					{ price = 20; stock = 10; };
 			class CUP_20Rnd_B_AA12_74Slug 					{ price = 20; stock = 10; };
 			class CUP_20Rnd_B_AA12_HE 						{ price = 20; stock = 10; };
@@ -1182,6 +1270,7 @@ class cfgHALsStore {
 			class CUP_8Rnd_B_Beneli_74Pellets 				{ price = 8; stock = 10; };
 			class CUP_8Rnd_B_Saiga12_74Slug_M 				{ price = 8; stock = 10; };
 			class CUP_8Rnd_B_Saiga12_74Pellets_M 			{ price = 8; stock = 10; };
+			#endif
 			// RHS SHOTGUNS RELOAD BROKEN - REMOVE ITEMS UNTIL FIXED
 			//  class rhsgref_1Rnd_00Buck 					{ price = 10; stock = 10; };
 			//  class rhsgref_1Rnd_Slug 					{ price = 10; stock = 10; };
@@ -1197,497 +1286,518 @@ class cfgHALsStore {
 			//  class rhsusf_5Rnd_FRAG 						{ price = 10; stock = 10; };		
 			
 			// pdws
-			class 50Rnd_570x28_SMG_03 						{ price = 50; stock = 10; };
-			class rhs_20rnd_9x39mm_SP5 						{ price = 20; stock = 10; };
-			class rhs_20rnd_9x39mm_SP6 						{ price = 20; stock = 10; };
-			class rhs_10rnd_9x39mm_SP5 						{ price = 10; stock = 10; };
-			class rhs_10rnd_9x39mm_SP6 						{ price = 10; stock = 10; };
-			class CUP_30Rnd_9x19_EVO 						{ price = 30; stock = 10; };
-			class 30Rnd_9x21_Mag 							{ price = 30; stock = 10; };
 			class 30Rnd_9x21_Green_Mag 						{ price = 30; stock = 10; };
+			class 30Rnd_9x21_Mag 							{ price = 30; stock = 10; };
+			class 30Rnd_9x21_Mag_SMG_02 					{ price = 30; stock = 10; };
+			class 30Rnd_9x21_Mag_SMG_02_Tracer_Green 		{ price = 30; stock = 10; };
+			class 30Rnd_9x21_Mag_SMG_02_Tracer_Red 			{ price = 30; stock = 10; };
+			class 30Rnd_9x21_Mag_SMG_02_Tracer_Yellow 		{ price = 30; stock = 10; };
 			class 30Rnd_9x21_Red_Mag 						{ price = 30; stock = 10; };
 			class 30Rnd_9x21_Yellow_Mag 					{ price = 30; stock = 10; };
-			class rhsgref_20rnd_765x17_vz61 				{ price = 20; stock = 10; };
-			class rhsgref_10rnd_765x17_vz61 				{ price = 10; stock = 10; };
-			class rhsusf_mag_40Rnd_46x30_FMJ 				{ price = 40; stock = 10; };
-			class rhsusf_mag_40Rnd_46x30_JHP 				{ price = 40; stock = 10; };
-			class rhsusf_mag_40Rnd_46x30_AP 				{ price = 40; stock = 10; };
-			class rhsgref_30rnd_1143x23_M1911B_SMG 			{ price = 30; stock = 10; };
-			class rhsgref_30rnd_1143x23_M1T_SMG 			{ price = 30; stock = 10; };
-			class rhsgref_30rnd_1143x23_M1911B_2mag_SMG 	{ price = 30; stock = 10; };
-			class rhsgref_30rnd_1143x23_M1T_2mag_SMG 		{ price = 30; stock = 10; };
+			class 50Rnd_570x28_SMG_03 						{ price = 50; stock = 10; };
+
+			#ifdef DMD_USE_CUP
+			class CUP_10Rnd_9x19_Saiga9 					{ price = 10; stock = 10; };
+			class CUP_30Rnd_9x19_EVO 						{ price = 30; stock = 10; };
+			class CUP_30Rnd_9x19_Vityaz 					{ price = 30; stock = 10; };
+			class CUP_30Rnd_9x19AP_Vityaz 					{ price = 30; stock = 10; };
 			class CUP_64Rnd_9x19_Bizon_M 					{ price = 50; stock = 10; };
 			class CUP_64Rnd_Green_Tracer_9x19_Bizon_M 		{ price = 50; stock = 10; };
 			class CUP_64Rnd_Red_Tracer_9x19_Bizon_M 		{ price = 50; stock = 10; };
 			class CUP_64Rnd_White_Tracer_9x19_Bizon_M 		{ price = 50; stock = 10; };
 			class CUP_64Rnd_Yellow_Tracer_9x19_Bizon_M 		{ price = 50; stock = 10; };
-			class CUP_10Rnd_9x19_Saiga9 					{ price = 10; stock = 10; };
-			class CUP_30Rnd_9x19_Vityaz 					{ price = 30; stock = 10; };
-			class CUP_30Rnd_9x19AP_Vityaz 					{ price = 30; stock = 10; };
-			class 30Rnd_9x21_Mag_SMG_02 					{ price = 30; stock = 10; };
-			class 30Rnd_9x21_Mag_SMG_02_Tracer_Red 			{ price = 30; stock = 10; };
-			class 30Rnd_9x21_Mag_SMG_02_Tracer_Yellow 		{ price = 30; stock = 10; };
-			class 30Rnd_9x21_Mag_SMG_02_Tracer_Green 		{ price = 30; stock = 10; };
+			#endif
+
+			#ifdef DMD_USE_RHS
+			class rhs_10rnd_9x39mm_SP5 						{ price = 10; stock = 10; };
+			class rhs_10rnd_9x39mm_SP6 						{ price = 10; stock = 10; };
+			class rhs_20rnd_9x39mm_SP5 						{ price = 20; stock = 10; };
+			class rhs_20rnd_9x39mm_SP6 						{ price = 20; stock = 10; };
+			class rhsgref_10rnd_765x17_vz61 				{ price = 10; stock = 10; };
+			class rhsgref_20rnd_765x17_vz61 				{ price = 20; stock = 10; };
+			class rhsgref_30rnd_1143x23_M1911B_2mag_SMG 	{ price = 30; stock = 10; };
+			class rhsgref_30rnd_1143x23_M1911B_SMG 			{ price = 30; stock = 10; };
+			class rhsgref_30rnd_1143x23_M1T_2mag_SMG 		{ price = 30; stock = 10; };
+			class rhsgref_30rnd_1143x23_M1T_SMG 			{ price = 30; stock = 10; };
+			class rhsusf_mag_40Rnd_46x30_AP 				{ price = 40; stock = 10; };
+			class rhsusf_mag_40Rnd_46x30_FMJ 				{ price = 40; stock = 10; };
+			class rhsusf_mag_40Rnd_46x30_JHP 				{ price = 40; stock = 10; };
+			#endif 
 
 			// assault rifles
-			class CUP_30Rnd_762x39_AK47_M 								{ price = 30; stock = 10; };
-			class CUP_30Rnd_762x39_AK47_bakelite_M 						{ price = 30; stock = 10; };
-			class CUP_30Rnd_762x39_AK103_bakelite_M 					{ price = 30; stock = 10; };
-			class CUP_30Rnd_762x39_AK47_TK_M 							{ price = 30; stock = 10; };
-			class CUP_20Rnd_762x39_AMD63_M 								{ price = 20; stock = 10; };
+			class 20Rnd_762x51_Mag 										{ price = 20; stock = 10; };
+			class 30Rnd_556x45_Stanag 									{ price = 30; stock = 10; };
+			class 30Rnd_556x45_Stanag_green 							{ price = 30; stock = 10; };
+			class 30Rnd_556x45_Stanag_red 								{ price = 30; stock = 10; };
+			class 30Rnd_556x45_Stanag_Tracer_Green 						{ price = 30; stock = 10; };
+			class 30Rnd_556x45_Stanag_Tracer_Red 						{ price = 30; stock = 10; };
+			class 30Rnd_556x45_Stanag_Tracer_Yellow 					{ price = 30; stock = 10; };
+			class 30Rnd_65x39_caseless_black_mag 						{ price = 30; stock = 10; };
+			class 30Rnd_65x39_caseless_green 							{ price = 30; stock = 10; };
+			class 30Rnd_65x39_caseless_green_mag_Tracer 				{ price = 30; stock = 10; };
+
+			#ifdef DMD_USE_CUP
 			class CUP_10Rnd_762x39_SaigaMk03_M 							{ price = 10; stock = 10; };
-			class CUP_40Rnd_TE4_LRT4_Green_Tracer_762x39_RPK_M 			{ price = 40; stock = 10; };
-			class CUP_75Rnd_TE4_LRT4_Green_Tracer_762x39_RPK_M 			{ price = 75; stock = 10; };
+			class CUP_20Rnd_545x39_AKSU_M 								{ price = 20; stock = 10; };
+			class CUP_20Rnd_556x45_Stanag 								{ price = 20; stock = 10; };
+			class CUP_20Rnd_762x39_AMD63_M 								{ price = 20; stock = 10; };
+			class CUP_20Rnd_762x51_B_SCAR 								{ price = 20; stock = 10; };
+			class CUP_20Rnd_762x51_B_SCAR_bkl 							{ price = 20; stock = 10; };
+			class CUP_20Rnd_762x51_B_SCAR_wdl 							{ price = 20; stock = 10; };
+			class CUP_20Rnd_762x51_CZ805B 								{ price = 20; stock = 10; };
+			class CUP_20Rnd_762x51_FNFAL_M 								{ price = 20; stock = 10; };
+			class CUP_20Rnd_762x51_HK417 								{ price = 20; stock = 10; };
+			class CUP_20Rnd_762x51_HK417_Camo_Desert 					{ price = 20; stock = 10; };
+			class CUP_20Rnd_762x51_HK417_Camo_Wood 						{ price = 20; stock = 10; };
+			class CUP_20Rnd_762x51_L129_M 								{ price = 20; stock = 10; };
+			class CUP_20Rnd_Subsonic_545x39_AKSU_M 						{ price = 20; stock = 10; };
+			class CUP_20Rnd_TE1_Green_Tracer_762x51_CZ805B 				{ price = 20; stock = 10; };
+			class CUP_20Rnd_TE1_Green_Tracer_762x51_HK417 				{ price = 20; stock = 10; };
+			class CUP_20Rnd_TE1_Green_Tracer_762x51_SCAR 				{ price = 20; stock = 10; };
+			class CUP_20Rnd_TE1_Green_Tracer_762x51_SCAR_bkl 			{ price = 20; stock = 10; };
+			class CUP_20Rnd_TE1_Green_Tracer_762x51_SCAR_wdl 			{ price = 20; stock = 10; };
+			class CUP_20Rnd_TE1_Red_Tracer_762x51_CZ805B 				{ price = 20; stock = 10; };
+			class CUP_20Rnd_TE1_Red_Tracer_762x51_HK417 				{ price = 20; stock = 10; };
+			class CUP_20Rnd_TE1_Red_Tracer_762x51_SCAR 					{ price = 20; stock = 10; };
+			class CUP_20Rnd_TE1_Red_Tracer_762x51_SCAR_bkl 				{ price = 20; stock = 10; };
+			class CUP_20Rnd_TE1_Red_Tracer_762x51_SCAR_wdl 				{ price = 20; stock = 10; };
+			class CUP_20Rnd_TE1_White_Tracer_762x51_CZ805B 				{ price = 20; stock = 10; };
+			class CUP_20Rnd_TE1_White_Tracer_762x51_SCAR 				{ price = 20; stock = 10; };
+			class CUP_20Rnd_TE1_White_Tracer_762x51_SCAR_bkl 			{ price = 20; stock = 10; };
+			class CUP_20Rnd_TE1_White_Tracer_762x51_SCAR_wdl 			{ price = 20; stock = 10; };
+			class CUP_20Rnd_TE1_Yellow_Tracer_762x51_CZ805B 			{ price = 20; stock = 10; };
+			class CUP_20Rnd_TE1_Yellow_Tracer_762x51_HK417 				{ price = 20; stock = 10; };
+			class CUP_20Rnd_TE1_Yellow_Tracer_762x51_SCAR 				{ price = 20; stock = 10; };
+			class CUP_20Rnd_TE1_Yellow_Tracer_762x51_SCAR_bkl 			{ price = 20; stock = 10; };
+			class CUP_20Rnd_TE1_Yellow_Tracer_762x51_SCAR_wdl 			{ price = 20; stock = 10; };
+			class CUP_30Rnd_545x39_AK_M 								{ price = 30; stock = 10; };
+			class CUP_30Rnd_545x39_AK74_plum_M 							{ price = 30; stock = 10; };
+			class CUP_30Rnd_545x39_AK74M_camo_M 						{ price = 30; stock = 10; };
+			class CUP_30Rnd_545x39_AK74M_M 								{ price = 30; stock = 10; };
 			class CUP_30Rnd_556x45_AK 									{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_Red_Tracer_556x45_AK 					{ price = 30; stock = 10; };
+			class CUP_30Rnd_556x45_Emag 								{ price = 30; stock = 10; };
+			class CUP_30Rnd_556x45_G36 									{ price = 30; stock = 10; };
+			class CUP_30Rnd_556x45_G36_camo 							{ price = 30; stock = 10; };
+			class CUP_30Rnd_556x45_G36_hex 								{ price = 30; stock = 10; };
+			class CUP_30Rnd_556x45_G36_wdl 								{ price = 30; stock = 10; };
+			class CUP_30Rnd_556x45_Stanag 								{ price = 30; stock = 10; };
+			class CUP_30Rnd_556x45_Stanag_L85 							{ price = 30; stock = 10; };
+			class CUP_30Rnd_556x45_Stanag_Mk16 							{ price = 30; stock = 10; };
+			class CUP_30Rnd_556x45_Stanag_Mk16_black 					{ price = 30; stock = 10; };
+			class CUP_30Rnd_556x45_Stanag_Mk16_woodland 				{ price = 30; stock = 10; };
+			class CUP_30Rnd_556x45_XM8 									{ price = 30; stock = 10; };
+			class CUP_30Rnd_762x39_AK103_bakelite_M 					{ price = 30; stock = 10; };
+			class CUP_30Rnd_762x39_AK47_bakelite_M 						{ price = 30; stock = 10; };
+			class CUP_30Rnd_762x39_AK47_M 								{ price = 30; stock = 10; };
+			class CUP_30Rnd_762x39_AK47_TK_M 							{ price = 30; stock = 10; };
+			class CUP_30Rnd_762x51_1_B_SCAR 							{ price = 30; stock = 10; };
+			class CUP_30Rnd_762x51_2_B_SCAR								{ price = 30; stock = 10; };
+			class CUP_30Rnd_Subsonic_545x39_AK_M 						{ price = 30; stock = 10; };
+			class CUP_30Rnd_Subsonic_545x39_AK74_plum_M 				{ price = 30; stock = 10; };
+			class CUP_30Rnd_Subsonic_545x39_AK74M_M 					{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_Green_Tracer_545x39_AK_M 				{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_Green_Tracer_545x39_AK74_plum_M 		{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_Green_Tracer_545x39_AK74M_M 			{ price = 30; stock = 10; };
 			class CUP_30Rnd_TE1_Green_Tracer_556x45_AK 					{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_Green_Tracer_556x45_G36 				{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_Green_Tracer_556x45_G36_camo 			{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_Green_Tracer_556x45_G36_hex 			{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_Green_Tracer_556x45_G36_wdl 			{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_Green_Tracer_556x45_XM8 				{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_Green_Tracer_762x51_1_SCAR 				{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_Green_Tracer_762x51_2_SCAR 				{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_Red_Tracer_545x39_AK_M 					{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_Red_Tracer_545x39_AK74_plum_M 			{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_Red_Tracer_545x39_AK74M_M 				{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_Red_Tracer_556x45_AK 					{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_Red_Tracer_556x45_G36 					{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_Red_Tracer_556x45_G36_camo 				{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_Red_Tracer_556x45_G36_hex 				{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_Red_Tracer_556x45_G36_wdl 				{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_Red_Tracer_556x45_XM8 					{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_Red_Tracer_762x51_1_SCAR 				{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_Red_Tracer_762x51_2_SCAR 				{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_White_Tracer_545x39_AK_M 				{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_White_Tracer_545x39_AK74_plum_M 		{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_White_Tracer_545x39_AK74M_M 			{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_White_Tracer_762x51_1_SCAR 				{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_White_Tracer_762x51_2_SCAR 				{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_Yellow_Tracer_545x39_AK_M 				{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_Yellow_Tracer_545x39_AK74_plum_M 		{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_Yellow_Tracer_545x39_AK74M_M 			{ price = 30; stock = 10; };
 			class CUP_30Rnd_TE1_Yellow_Tracer_556x45_AK 				{ price = 30; stock = 10; };
-			class rhs_30Rnd_762x39mm_polymer 							{ price = 30; stock = 10; };
-			class rhs_30Rnd_762x39mm_polymer_tracer 					{ price = 30; stock = 10; };
-			class rhs_30Rnd_762x39mm_polymer_89 						{ price = 30; stock = 10; };
-			class rhs_30Rnd_762x39mm_polymer_U 							{ price = 30; stock = 10; };
-			class rhs_30Rnd_762x39mm_bakelite 							{ price = 30; stock = 10; };
-			class rhs_30Rnd_762x39mm_bakelite_tracer 					{ price = 30; stock = 10; };
-			class rhs_30Rnd_762x39mm_bakelite_89 						{ price = 30; stock = 10; };
-			class rhs_30Rnd_762x39mm_bakelite_U 						{ price = 30; stock = 10; };
-			class rhs_30Rnd_762x39mm 									{ price = 30; stock = 10; };
-			class rhs_30Rnd_762x39mm_tracer 							{ price = 30; stock = 10; };
-			class rhs_30Rnd_762x39mm_89 								{ price = 30; stock = 10; };
-			class rhs_30Rnd_762x39mm_U 									{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_Yellow_Tracer_556x45_G36 				{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_Yellow_Tracer_556x45_G36_camo 			{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_Yellow_Tracer_556x45_G36_hex 			{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_Yellow_Tracer_556x45_G36_wdl 			{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_Yellow_Tracer_556x45_XM8 				{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_Yellow_Tracer_762x51_1_SCAR 			{ price = 30; stock = 10; };
+			class CUP_30Rnd_TE1_Yellow_Tracer_762x51_2_SCAR 			{ price = 30; stock = 10; };
+			class CUP_40Rnd_TE4_LRT4_Green_Tracer_762x39_RPK_M 			{ price = 40; stock = 10; };
+			class CUP_45Rnd_TE4_LRT4_Green_Tracer_545x39_RPK_M 			{ price = 45; stock = 10; };
+			class CUP_45Rnd_TE4_LRT4_Green_Tracer_545x39_RPK74M_M 		{ price = 45; stock = 10; };
+			class CUP_50Rnd_762x51_B_SCAR 								{ price = 50; stock = 10; };
+			class CUP_50Rnd_TE1_Green_Tracer_762x51_SCAR 				{ price = 50; stock = 10; };
+			class CUP_50Rnd_TE1_Red_Tracer_762x51_SCAR 					{ price = 50; stock = 10; };
+			class CUP_50Rnd_TE1_White_Tracer_762x51_SCAR 				{ price = 50; stock = 10; };
+			class CUP_50Rnd_TE1_Yellow_Tracer_762x51_SCAR 				{ price = 50; stock = 10; };
+			class CUP_60Rnd_545x39_AK74M_M 								{ price = 60; stock = 10; };
+			class CUP_60Rnd_556x45_SureFire 							{ price = 60; stock = 10; };
+			class CUP_60Rnd_TE1_Green_Tracer_545x39_AK74M_M 			{ price = 60; stock = 10; };
+			class CUP_60Rnd_TE1_Red_Tracer_545x39_AK74M_M 				{ price = 60; stock = 10; };
+			class CUP_60Rnd_TE1_White_Tracer_545x39_AK74M_M 			{ price = 60; stock = 10; };
+			class CUP_60Rnd_TE1_Yellow_Tracer_545x39_AK74M_M 			{ price = 60; stock = 10; };
+			class CUP_75Rnd_TE4_LRT4_Green_Tracer_762x39_RPK_M 			{ price = 75; stock = 10; };
+			#endif
+
+			#ifdef DMD_USE_RHS
 			class rhs_10Rnd_762x39mm 									{ price = 10; stock = 10; };
-			class rhs_10Rnd_762x39mm_tracer 							{ price = 10; stock = 10; };
 			class rhs_10Rnd_762x39mm_89 								{ price = 10; stock = 10; };
+			class rhs_10Rnd_762x39mm_tracer 							{ price = 10; stock = 10; };
 			class rhs_10Rnd_762x39mm_U 									{ price = 10; stock = 10; };
-			class rhs_75Rnd_762x39mm 									{ price = 75; stock = 10; };
-			class rhs_75Rnd_762x39mm_tracer 							{ price = 75; stock = 10; };
-			class rhs_75Rnd_762x39mm_89 								{ price = 75; stock = 10; };
+			class rhs_30Rnd_545x39_7N10_2mag_AK 						{ price = 30; stock = 10; };
+			class rhs_30Rnd_545x39_7N10_2mag_camo_AK 					{ price = 30; stock = 10; };
+			class rhs_30Rnd_545x39_7N10_2mag_desert_AK 					{ price = 30; stock = 10; };
+			class rhs_30Rnd_545x39_7N10_2mag_plum_AK 					{ price = 30; stock = 10; };
 			class rhs_30Rnd_545x39_7N10_AK 								{ price = 30; stock = 10; };
-			class rhs_30Rnd_545x39_7N10_plum_AK 						{ price = 30; stock = 10; };
-			class rhs_30Rnd_545x39_7N10_desert_AK 						{ price = 30; stock = 10; };
 			class rhs_30Rnd_545x39_7N10_camo_AK 						{ price = 30; stock = 10; };
+			class rhs_30Rnd_545x39_7N10_desert_AK 						{ price = 30; stock = 10; };
+			class rhs_30Rnd_545x39_7N10_plum_AK 						{ price = 30; stock = 10; };
+			class rhs_30Rnd_545x39_7N22_AK 								{ price = 30; stock = 10; };
+			class rhs_30Rnd_545x39_7N22_camo_AK 						{ price = 30; stock = 10; };
+			class rhs_30Rnd_545x39_7N22_desert_AK 						{ price = 30; stock = 10; };
+			class rhs_30Rnd_545x39_7N22_plum_AK 						{ price = 30; stock = 10; };
 			class rhs_30Rnd_545x39_7N6_AK 								{ price = 30; stock = 10; };
 			class rhs_30Rnd_545x39_7N6_green_AK 						{ price = 30; stock = 10; };
 			class rhs_30Rnd_545x39_7N6M_AK 								{ price = 30; stock = 10; };
 			class rhs_30Rnd_545x39_7N6M_green_AK 						{ price = 30; stock = 10; };
 			class rhs_30Rnd_545x39_7N6M_plum_AK 						{ price = 30; stock = 10; };
-			class rhs_30Rnd_545x39_7N10_2mag_AK 						{ price = 30; stock = 10; };
-			class rhs_30Rnd_545x39_7N10_2mag_plum_AK 					{ price = 30; stock = 10; };
-			class rhs_30Rnd_545x39_7N10_2mag_desert_AK 					{ price = 30; stock = 10; };
-			class rhs_30Rnd_545x39_7N10_2mag_camo_AK 					{ price = 30; stock = 10; };
-			class rhs_30Rnd_545x39_7N22_AK 								{ price = 30; stock = 10; };
-			class rhs_30Rnd_545x39_7N22_plum_AK 						{ price = 30; stock = 10; };
-			class rhs_30Rnd_545x39_7N22_desert_AK 						{ price = 30; stock = 10; };
-			class rhs_30Rnd_545x39_7N22_camo_AK 						{ price = 30; stock = 10; };
-			class rhs_30Rnd_545x39_AK_green 							{ price = 30; stock = 10; };
-			class rhs_30Rnd_545x39_AK_plum_green 						{ price = 30; stock = 10; };
 			class rhs_30Rnd_545x39_7U1_AK 								{ price = 30; stock = 10; };
-			class rhs_45Rnd_545x39_AK 									{ price = 45; stock = 10; };
-			class rhs_45Rnd_545x39_7N6_AK 								{ price = 45; stock = 10; };
+			class rhs_30Rnd_545x39_AK 									{ price = 30; stock = 10; };
+			class rhs_30Rnd_545x39_AK_green 							{ price = 30; stock = 10; };
+			class rhs_30Rnd_545x39_AK_no_tracers 						{ price = 30; stock = 10; };
+			class rhs_30Rnd_545x39_AK_plum_green 						{ price = 30; stock = 10; };
+			class rhs_30Rnd_762x39mm 									{ price = 30; stock = 10; };
+			class rhs_30Rnd_762x39mm_89 								{ price = 30; stock = 10; };
+			class rhs_30Rnd_762x39mm_bakelite 							{ price = 30; stock = 10; };
+			class rhs_30Rnd_762x39mm_bakelite_89 						{ price = 30; stock = 10; };
+			class rhs_30Rnd_762x39mm_bakelite_tracer 					{ price = 30; stock = 10; };
+			class rhs_30Rnd_762x39mm_bakelite_U 						{ price = 30; stock = 10; };
+			class rhs_30Rnd_762x39mm_polymer 							{ price = 30; stock = 10; };
+			class rhs_30Rnd_762x39mm_polymer_89 						{ price = 30; stock = 10; };
+			class rhs_30Rnd_762x39mm_polymer_tracer 					{ price = 30; stock = 10; };
+			class rhs_30Rnd_762x39mm_polymer_U 							{ price = 30; stock = 10; };
+			class rhs_30Rnd_762x39mm_tracer 							{ price = 30; stock = 10; };
+			class rhs_30Rnd_762x39mm_U 									{ price = 30; stock = 10; };
 			class rhs_45Rnd_545x39_7N10_AK 								{ price = 45; stock = 10; };
 			class rhs_45Rnd_545x39_7N22_AK 								{ price = 45; stock = 10; };
-			class rhs_45Rnd_545x39_AK_green 							{ price = 45; stock = 10; };
+			class rhs_45Rnd_545x39_7N6_AK 								{ price = 45; stock = 10; };
 			class rhs_45Rnd_545x39_7U1_AK 								{ price = 45; stock = 10; };
-			class rhs_30Rnd_545x39_AK 									{ price = 30; stock = 10; };
-			class rhs_30Rnd_545x39_AK_no_tracers 						{ price = 30; stock = 10; };
-			class CUP_30Rnd_545x39_AK74M_M 								{ price = 30; stock = 10; };
-			class CUP_30Rnd_Subsonic_545x39_AK74M_M 					{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_Green_Tracer_545x39_AK74M_M 			{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_Red_Tracer_545x39_AK74M_M 				{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_White_Tracer_545x39_AK74M_M 			{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_Yellow_Tracer_545x39_AK74M_M 			{ price = 30; stock = 10; };
-			class CUP_30Rnd_545x39_AK_M 								{ price = 30; stock = 10; };
-			class CUP_30Rnd_Subsonic_545x39_AK_M 						{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_Green_Tracer_545x39_AK_M 				{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_Red_Tracer_545x39_AK_M 					{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_White_Tracer_545x39_AK_M 				{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_Yellow_Tracer_545x39_AK_M 				{ price = 30; stock = 10; };
-			class CUP_30Rnd_545x39_AK74_plum_M 							{ price = 30; stock = 10; };
-			class CUP_30Rnd_Subsonic_545x39_AK74_plum_M 				{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_Green_Tracer_545x39_AK74_plum_M 		{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_Red_Tracer_545x39_AK74_plum_M 			{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_White_Tracer_545x39_AK74_plum_M 		{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_Yellow_Tracer_545x39_AK74_plum_M 		{ price = 30; stock = 10; };
-			class CUP_30Rnd_545x39_AK74M_camo_M 						{ price = 30; stock = 10; };
-			class CUP_20Rnd_545x39_AKSU_M 								{ price = 20; stock = 10; };
-			class CUP_20Rnd_Subsonic_545x39_AKSU_M 						{ price = 20; stock = 10; };
-			class CUP_45Rnd_TE4_LRT4_Green_Tracer_545x39_RPK_M 			{ price = 45; stock = 10; };
-			class CUP_45Rnd_TE4_LRT4_Green_Tracer_545x39_RPK74M_M 		{ price = 45; stock = 10; };
-			class CUP_60Rnd_545x39_AK74M_M 								{ price = 60; stock = 10; };
-			class CUP_60Rnd_TE1_Green_Tracer_545x39_AK74M_M 			{ price = 60; stock = 10; };
-			class CUP_60Rnd_TE1_Red_Tracer_545x39_AK74M_M 				{ price = 60; stock = 10; };
-			class CUP_60Rnd_TE1_White_Tracer_545x39_AK74M_M 			{ price = 60; stock = 10; };
-			class CUP_60Rnd_TE1_Yellow_Tracer_545x39_AK74M_M 			{ price = 60; stock = 10; };
-			class CUP_30Rnd_556x45_G36 									{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_Red_Tracer_556x45_G36 					{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_Green_Tracer_556x45_G36 				{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_Yellow_Tracer_556x45_G36 				{ price = 30; stock = 10; };
-			class CUP_20Rnd_762x51_CZ805B 								{ price = 20; stock = 10; };
-			class CUP_20Rnd_TE1_Yellow_Tracer_762x51_CZ805B 			{ price = 20; stock = 10; };
-			class CUP_20Rnd_TE1_Red_Tracer_762x51_CZ805B 				{ price = 20; stock = 10; };
-			class CUP_20Rnd_TE1_Green_Tracer_762x51_CZ805B 				{ price = 20; stock = 10; };
-			class CUP_20Rnd_TE1_White_Tracer_762x51_CZ805B 				{ price = 20; stock = 10; };
-			class CUP_20Rnd_762x51_FNFAL_M 								{ price = 20; stock = 10; };
-			class rhssaf_30rnd_556x45_EPR_G36 							{ price = 30; stock = 10; };
-			class rhssaf_30rnd_556x45_SOST_G36 							{ price = 30; stock = 10; };
-			class rhssaf_30rnd_556x45_SPR_G36 							{ price = 30; stock = 10; };
-			class rhssaf_30rnd_556x45_Tracers_G36 						{ price = 30; stock = 10; };
-			class rhssaf_30rnd_556x45_MDIM_G36 							{ price = 30; stock = 10; };
-			class rhssaf_30rnd_556x45_TDIM_G36 							{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855A1_Stanag 					{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red 		{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855_Stanag 						{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red 			{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_Mk318_Stanag 					{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_Mk262_Stanag 					{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M193_Stanag 						{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M196_Stanag_Tracer_Red 			{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull 				{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull_Tracer_Red 	{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855_Stanag_Pull 				{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855_Stanag_Pull_Tracer_Red 		{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_Mk318_Stanag_Pull 				{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_Mk262_Stanag_Pull 				{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger 			{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red 	{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855_Stanag_Ranger 				{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855_Stanag_Ranger_Tracer_Red 	{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_Mk318_Stanag_Ranger 				{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_Mk262_Stanag_Ranger 				{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855A1_EPM 						{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855A1_EPM_Tracer_Red 			{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855A1_EPM_Pull 					{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855A1_EPM_Pull_Tracer_Red 		{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855A1_EPM_Ranger 				{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855A1_EPM_Ranger_Tracer_Red 	{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_Mk318_SCAR 						{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_Mk318_SCAR_Pull 					{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_Mk318_SCAR_Ranger 				{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855A1_PMAG 						{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red 			{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855_PMAG 						{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855_PMAG_Tracer_Red 			{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_Mk318_PMAG 						{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_Mk262_PMAG 						{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan 					{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red 		{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855_PMAG_Tan 					{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855_PMAG_Tan_Tracer_Red 		{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_Mk318_PMAG_Tan 					{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_Mk262_PMAG_Tan 					{ price = 30; stock = 10; };
+			class rhs_45Rnd_545x39_AK 									{ price = 45; stock = 10; };
+			class rhs_45Rnd_545x39_AK_green 							{ price = 45; stock = 10; };
+			class rhs_75Rnd_762x39mm 									{ price = 75; stock = 10; };
+			class rhs_75Rnd_762x39mm_89 								{ price = 75; stock = 10; };
+			class rhs_75Rnd_762x39mm_tracer 							{ price = 75; stock = 10; };
+			class rhs_mag_20Rnd_556x45_M193_2MAG_Stanag 				{ price = 20; stock = 10; };
 			class rhs_mag_20Rnd_556x45_M193_Stanag 						{ price = 20; stock = 10; };
+			class rhs_mag_20Rnd_556x45_M196_2MAG_Stanag_Tracer_Red 		{ price = 20; stock = 10; };			
 			class rhs_mag_20Rnd_556x45_M196_Stanag_Tracer_Red 			{ price = 20; stock = 10; };
 			class rhs_mag_20Rnd_556x45_M855_Stanag 						{ price = 20; stock = 10; };
 			class rhs_mag_20Rnd_556x45_M855A1_Stanag 					{ price = 20; stock = 10; };
 			class rhs_mag_20Rnd_556x45_Mk262_Stanag 					{ price = 20; stock = 10; };
-			class rhs_mag_20Rnd_556x45_M193_2MAG_Stanag 				{ price = 20; stock = 10; };
-			class rhs_mag_20Rnd_556x45_M196_2MAG_Stanag_Tracer_Red 		{ price = 20; stock = 10; };			
-			class 30Rnd_556x45_Stanag 									{ price = 30; stock = 10; };
-			class 30Rnd_556x45_Stanag_Tracer_Red 						{ price = 30; stock = 10; };
-			class 30Rnd_556x45_Stanag_Tracer_Green 						{ price = 30; stock = 10; };
-			class 30Rnd_556x45_Stanag_Tracer_Yellow 					{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer 			{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Green 		{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Yellow 		{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Orange 		{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Green 		{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Yellow 		{ price = 30; stock = 10; };
-			class rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Orange 		{ price = 30; stock = 10; };
-			class CUP_20Rnd_762x51_HK417 								{ price = 20; stock = 10; };
-			class CUP_20Rnd_TE1_Red_Tracer_762x51_HK417 				{ price = 20; stock = 10; };
-			class CUP_20Rnd_TE1_Green_Tracer_762x51_HK417 				{ price = 20; stock = 10; };
-			class CUP_20Rnd_TE1_Yellow_Tracer_762x51_HK417 				{ price = 20; stock = 10; };
-			class CUP_20Rnd_762x51_HK417_Camo_Wood 						{ price = 20; stock = 10; };
-			class CUP_20Rnd_762x51_HK417_Camo_Desert 					{ price = 20; stock = 10; };
-			class 30Rnd_65x39_caseless_green 							{ price = 30; stock = 10; };
-			class 30Rnd_65x39_caseless_green_mag_Tracer 				{ price = 30; stock = 10; };
-			class CUP_20Rnd_762x51_L129_M 								{ price = 20; stock = 10; };
-			class 20Rnd_762x51_Mag 										{ price = 20; stock = 10; };
 			class rhs_mag_20Rnd_762x51_m80_fnfal 						{ price = 20; stock = 10; };
-			class CUP_30Rnd_556x45_Stanag_L85 							{ price = 30; stock = 10; };
-			class CUP_30Rnd_556x45_Stanag 								{ price = 30; stock = 10; };
-			class CUP_30Rnd_556x45_Emag 								{ price = 30; stock = 10; };
-			class CUP_30Rnd_556x45_Stanag_Mk16 							{ price = 30; stock = 10; };
-			class CUP_30Rnd_556x45_Stanag_Mk16_black 					{ price = 30; stock = 10; };
-			class CUP_30Rnd_556x45_Stanag_Mk16_woodland 				{ price = 30; stock = 10; };
-			class CUP_20Rnd_556x45_Stanag 								{ price = 20; stock = 10; };
-			class 30Rnd_556x45_Stanag_red 								{ price = 30; stock = 10; };
-			class 30Rnd_556x45_Stanag_green 							{ price = 30; stock = 10; };
-			class CUP_60Rnd_556x45_SureFire 							{ price = 60; stock = 10; };
-			class rhsgref_30rnd_556x45_m21 								{ price = 30; stock = 10; };
-			class rhsgref_30rnd_556x45_m21_t 							{ price = 30; stock = 10; };
-			class CUP_20Rnd_762x51_B_SCAR 								{ price = 20; stock = 10; };
-			class CUP_20Rnd_TE1_Yellow_Tracer_762x51_SCAR 				{ price = 20; stock = 10; };
-			class CUP_20Rnd_TE1_Red_Tracer_762x51_SCAR 					{ price = 20; stock = 10; };
-			class CUP_20Rnd_TE1_Green_Tracer_762x51_SCAR 				{ price = 20; stock = 10; };
-			class CUP_20Rnd_TE1_White_Tracer_762x51_SCAR 				{ price = 20; stock = 10; };
-			class CUP_20Rnd_762x51_B_SCAR_bkl 							{ price = 20; stock = 10; };
-			class CUP_20Rnd_TE1_Yellow_Tracer_762x51_SCAR_bkl 			{ price = 20; stock = 10; };
-			class CUP_20Rnd_TE1_Red_Tracer_762x51_SCAR_bkl 				{ price = 20; stock = 10; };
-			class CUP_20Rnd_TE1_Green_Tracer_762x51_SCAR_bkl 			{ price = 20; stock = 10; };
-			class CUP_20Rnd_TE1_White_Tracer_762x51_SCAR_bkl 			{ price = 20; stock = 10; };
-			class CUP_20Rnd_762x51_B_SCAR_wdl 							{ price = 20; stock = 10; };
-			class CUP_20Rnd_TE1_Yellow_Tracer_762x51_SCAR_wdl 			{ price = 20; stock = 10; };
-			class CUP_20Rnd_TE1_Red_Tracer_762x51_SCAR_wdl 				{ price = 20; stock = 10; };
-			class CUP_20Rnd_TE1_Green_Tracer_762x51_SCAR_wdl 			{ price = 20; stock = 10; };
-			class CUP_20Rnd_TE1_White_Tracer_762x51_SCAR_wdl 			{ price = 20; stock = 10; };
-			class CUP_30Rnd_762x51_1_B_SCAR 							{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_Yellow_Tracer_762x51_1_SCAR 			{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_Red_Tracer_762x51_1_SCAR 				{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_Green_Tracer_762x51_1_SCAR 				{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_White_Tracer_762x51_1_SCAR 				{ price = 30; stock = 10; };
-			class CUP_30Rnd_762x51_2_B_SCAR								{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_Yellow_Tracer_762x51_2_SCAR 			{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_Red_Tracer_762x51_2_SCAR 				{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_Green_Tracer_762x51_2_SCAR 				{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_White_Tracer_762x51_2_SCAR 				{ price = 30; stock = 10; };
-			class CUP_50Rnd_762x51_B_SCAR 								{ price = 50; stock = 10; };
-			class CUP_50Rnd_TE1_Yellow_Tracer_762x51_SCAR 				{ price = 50; stock = 10; };
-			class CUP_50Rnd_TE1_Red_Tracer_762x51_SCAR 					{ price = 50; stock = 10; };
-			class CUP_50Rnd_TE1_Green_Tracer_762x51_SCAR 				{ price = 50; stock = 10; };
-			class CUP_50Rnd_TE1_White_Tracer_762x51_SCAR 				{ price = 50; stock = 10; };
-			class rhsgref_30Rnd_792x33_SmE_StG 							{ price = 30; stock = 10; };
-			class rhsgref_25Rnd_792x33_SmE_StG 							{ price = 25; stock = 10; };
-			class 30Rnd_65x39_caseless_black_mag 						{ price = 30; stock = 10; };
-			class rhs_mag_20Rnd_SCAR_762x51_m80_ball_bk 				{ price = 20; stock = 10; };
+			class rhs_mag_20Rnd_SCAR_762x51_m118_special_bk 			{ price = 20; stock = 10; };
 			class rhs_mag_20Rnd_SCAR_762x51_m61_ap_bk 					{ price = 20; stock = 10; };
 			class rhs_mag_20Rnd_SCAR_762x51_m62_tracer_bk 				{ price = 20; stock = 10; };
+			class rhs_mag_20Rnd_SCAR_762x51_m80_ball_bk 				{ price = 20; stock = 10; };
 			class rhs_mag_20Rnd_SCAR_762x51_m80a1_epr_bk 				{ price = 20; stock = 10; };
-			class rhs_mag_20Rnd_SCAR_762x51_m118_special_bk 			{ price = 20; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M193_Stanag 						{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M196_Stanag_Tracer_Red 			{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855_PMAG 						{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855_PMAG_Tan 					{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855_PMAG_Tan_Tracer_Red 		{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855_PMAG_Tracer_Red 			{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855_Stanag 						{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855_Stanag_Pull 				{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855_Stanag_Pull_Tracer_Red 		{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855_Stanag_Ranger 				{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855_Stanag_Ranger_Tracer_Red 	{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Green 		{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Orange 		{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red 			{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Yellow 		{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855A1_EPM 						{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855A1_EPM_Pull 					{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855A1_EPM_Pull_Tracer_Red 		{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855A1_EPM_Ranger 				{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855A1_EPM_Ranger_Tracer_Red 	{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855A1_EPM_Tracer_Red 			{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855A1_PMAG 						{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan 					{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red 		{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red 			{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855A1_Stanag 					{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer 			{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull 				{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull_Tracer_Red 	{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger 			{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red 	{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Green 		{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Orange 		{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red 		{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Yellow 		{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_Mk262_PMAG 						{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_Mk262_PMAG_Tan 					{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_Mk262_Stanag 					{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_Mk262_Stanag_Pull 				{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_Mk262_Stanag_Ranger 				{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_Mk318_PMAG 						{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_Mk318_PMAG_Tan 					{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_Mk318_SCAR 						{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_Mk318_SCAR_Pull 					{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_Mk318_SCAR_Ranger 				{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_Mk318_Stanag 					{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_Mk318_Stanag_Pull 				{ price = 30; stock = 10; };
+			class rhs_mag_30Rnd_556x45_Mk318_Stanag_Ranger 				{ price = 30; stock = 10; };
+			class rhsgref_25Rnd_792x33_SmE_StG 							{ price = 25; stock = 10; };
+			class rhsgref_30rnd_556x45_m21 								{ price = 30; stock = 10; };
+			class rhsgref_30rnd_556x45_m21_t 							{ price = 30; stock = 10; };
 			class rhsgref_30rnd_556x45_vhs2 							{ price = 30; stock = 10; };
 			class rhsgref_30rnd_556x45_vhs2_t 							{ price = 30; stock = 10; };
-			class CUP_30Rnd_556x45_XM8 									{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_Red_Tracer_556x45_XM8 					{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_Green_Tracer_556x45_XM8 				{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_Yellow_Tracer_556x45_XM8 				{ price = 30; stock = 10; };
-			class CUP_30Rnd_556x45_G36_camo 							{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_Red_Tracer_556x45_G36_camo 				{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_Green_Tracer_556x45_G36_camo 			{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_Yellow_Tracer_556x45_G36_camo 			{ price = 30; stock = 10; };
-			class CUP_30Rnd_556x45_G36_wdl 								{ price = 30; stock = 10; };
-			class CUP_30Rnd_556x45_G36_hex 								{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_Red_Tracer_556x45_G36_wdl 				{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_Green_Tracer_556x45_G36_wdl 			{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_Yellow_Tracer_556x45_G36_wdl 			{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_Red_Tracer_556x45_G36_hex 				{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_Green_Tracer_556x45_G36_hex 			{ price = 30; stock = 10; };
-			class CUP_30Rnd_TE1_Yellow_Tracer_556x45_G36_hex 			{ price = 30; stock = 10; };
-			
-			class CUP_100Rnd_556x45_BetaCMag_camo						{ price = 100; stock = 10; };
-			class CUP_100Rnd_TE1_Red_Tracer_556x45_BetaCMag_camo 		{ price = 100; stock = 10; };
-			class CUP_100Rnd_TE1_Green_Tracer_556x45_BetaCMag_camo 		{ price = 100; stock = 10; };
-			class CUP_100Rnd_TE1_Yellow_Tracer_556x45_BetaCMag_camo 	{ price = 100; stock = 10; };
-			class 100Rnd_65x39_caseless_mag 							{ price = 100; stock = 10; };
+			class rhsgref_30Rnd_792x33_SmE_StG 							{ price = 30; stock = 10; };
+			class rhssaf_30rnd_556x45_EPR_G36 							{ price = 30; stock = 10; };
+			class rhssaf_30rnd_556x45_MDIM_G36 							{ price = 30; stock = 10; };
+			class rhssaf_30rnd_556x45_SOST_G36 							{ price = 30; stock = 10; };
+			class rhssaf_30rnd_556x45_SPR_G36 							{ price = 30; stock = 10; };
+			class rhssaf_30rnd_556x45_TDIM_G36 							{ price = 30; stock = 10; };
+			class rhssaf_30rnd_556x45_Tracers_G36 						{ price = 30; stock = 10; };
+			#endif		
 
 			// snipers
 			class 10Rnd_127x54_Mag 										{ price = 10; stock = 10; };
-			class 10Rnd_93x64_DMR_05_Mag 								{ price = 10; stock = 10; };
-			class CUP_5x_22_LR_17_HMR_M 								{ price = 10; stock = 10; };
-			class CUP_5Rnd_762x67_G22 									{ price = 10; stock = 10; };
-			class rhsgref_5Rnd_792x57_kar98k 							{ price = 10; stock = 10; };
-			class CUP_5Rnd_127x108_KSVK_M 								{ price = 10; stock = 10; };
-			class CUP_5Rnd_86x70_L115A1 								{ price = 10; stock = 10; };
-			class CUP_10x_303_M 										{ price = 10; stock = 10; };
-			class rhsgref_8Rnd_762x63_M2B_M1rifle 						{ price = 10; stock = 10; };
-			class rhsgref_8Rnd_762x63_Tracer_M1T_M1rifle 				{ price = 10; stock = 10; };
-			class rhsusf_mag_10Rnd_STD_50BMG_M33 						{ price = 10; stock = 10; };
-			class rhsusf_mag_10Rnd_STD_50BMG_mk211						{ price = 10; stock = 10; };
-			class CUP_20Rnd_762x51_B_M110 								{ price = 20; stock = 10; };
-			class CUP_20Rnd_TE1_Yellow_Tracer_762x51_M110 				{ price = 20; stock = 10; };
-			class CUP_20Rnd_TE1_Red_Tracer_762x51_M110 					{ price = 20; stock = 10; };
-			class CUP_20Rnd_TE1_Green_Tracer_762x51_M110 				{ price = 20; stock = 10; };
-			class CUP_20Rnd_TE1_White_Tracer_762x51_M110 				{ price = 20; stock = 10; };
-			class CUP_20Rnd_762x51_DMR 									{ price = 20; stock = 10; };
-			class CUP_20Rnd_TE1_Yellow_Tracer_762x51_DMR 				{ price = 20; stock = 10; };
-			class CUP_20Rnd_TE1_Red_Tracer_762x51_DMR 					{ price = 20; stock = 10; };
-			class CUP_20Rnd_TE1_Green_Tracer_762x51_DMR 				{ price = 20; stock = 10; };
-			class CUP_20Rnd_TE1_White_Tracer_762x51_DMR 				{ price = 20; stock = 10; };
-			class rhsusf_20Rnd_762x51_m118_special_Mag 					{ price = 20; stock = 10; };
-			class rhsusf_20Rnd_762x51_m993_Mag 							{ price = 20; stock = 10; };
-			class rhsusf_20Rnd_762x51_m62_Mag 							{ price = 20; stock = 10; };
-			class rhsusf_5Rnd_300winmag_xm2010 							{ price = 10; stock = 10; };
-			class rhsusf_5Rnd_762x51_m118_special_Mag 					{ price = 10; stock = 10; };
-			class rhsusf_5Rnd_762x51_m993_Mag 							{ price = 10; stock = 10; };
-			class rhsusf_5Rnd_762x51_m62_Mag 							{ price = 10; stock = 10; };
-			class 7Rnd_408_Mag 											{ price = 10; stock = 10; };
-			class rhsusf_5Rnd_762x51_AICS_m118_special_Mag 				{ price = 10; stock = 10; };
-			class rhsusf_5Rnd_762x51_AICS_m993_Mag 						{ price = 10; stock = 10; };
-			class rhsusf_5Rnd_762x51_AICS_m62_Mag 						{ price = 10; stock = 10; };
-			class rhsusf_10Rnd_762x51_m118_special_Mag 					{ price = 10; stock = 10; };
-			class rhsusf_10Rnd_762x51_m993_Mag 							{ price = 10; stock = 10; };
-			class rhsusf_10Rnd_762x51_m62_Mag 							{ price = 10; stock = 10; };
 			class 10Rnd_338_Mag 										{ price = 10; stock = 10; };			
-			class rhsusf_20Rnd_762x51_SR25_m118_special_Mag 			{ price = 20; stock = 10; };
-			class rhsusf_20Rnd_762x51_SR25_mk316_special_Mag 			{ price = 20; stock = 10; };
-			class rhsusf_20Rnd_762x51_SR25_m993_Mag 					{ price = 20; stock = 10; };
-			class rhsusf_20Rnd_762x51_SR25_m62_Mag 						{ price = 20; stock = 10; };			
-			class rhsgref_5Rnd_762x54_m38 								{ price = 10; stock = 10; };
 			class 10Rnd_762x54_Mag 										{ price = 10; stock = 10; };
+			class 10Rnd_93x64_DMR_05_Mag 								{ price = 10; stock = 10; };
+			class 7Rnd_408_Mag 											{ price = 10; stock = 10; };
+
+			#ifdef DMD_USE_CUP
+			class CUP_10x_303_M 										{ price = 10; stock = 10; };
+			class CUP_20Rnd_762x51_B_M110 								{ price = 20; stock = 10; };
+			class CUP_20Rnd_762x51_DMR 									{ price = 20; stock = 10; };
+			class CUP_20Rnd_TE1_Green_Tracer_762x51_DMR 				{ price = 20; stock = 10; };
+			class CUP_20Rnd_TE1_Green_Tracer_762x51_M110 				{ price = 20; stock = 10; };
+			class CUP_20Rnd_TE1_Red_Tracer_762x51_DMR 					{ price = 20; stock = 10; };
+			class CUP_20Rnd_TE1_Red_Tracer_762x51_M110 					{ price = 20; stock = 10; };
+			class CUP_20Rnd_TE1_White_Tracer_762x51_DMR 				{ price = 20; stock = 10; };
+			class CUP_20Rnd_TE1_White_Tracer_762x51_M110 				{ price = 20; stock = 10; };
+			class CUP_20Rnd_TE1_Yellow_Tracer_762x51_DMR 				{ price = 20; stock = 10; };
+			class CUP_20Rnd_TE1_Yellow_Tracer_762x51_M110 				{ price = 20; stock = 10; };
+			class CUP_5Rnd_127x108_KSVK_M 								{ price = 10; stock = 10; };
+			class CUP_5Rnd_762x67_G22 									{ price = 10; stock = 10; };
+			class CUP_5Rnd_86x70_L115A1 								{ price = 10; stock = 10; };
+			class CUP_5x_22_LR_17_HMR_M 								{ price = 10; stock = 10; };
+			#endif
+
+			#ifdef DMD_USE_RHS
 			class rhs_10Rnd_762x54mmR_7N1 								{ price = 10; stock = 10; };
 			class rhs_10Rnd_762x54mmR_7N14 								{ price = 10; stock = 10; };
 			class rhs_5Rnd_338lapua_t5000 								{ price = 10; stock = 10; };
+			class rhsgref_5Rnd_762x54_m38 								{ price = 10; stock = 10; };
+			class rhsgref_5Rnd_792x57_kar98k 							{ price = 10; stock = 10; };
+			class rhsgref_8Rnd_762x63_M2B_M1rifle 						{ price = 10; stock = 10; };
+			class rhsgref_8Rnd_762x63_Tracer_M1T_M1rifle 				{ price = 10; stock = 10; };
+			class rhsusf_10Rnd_762x51_m118_special_Mag 					{ price = 10; stock = 10; };
+			class rhsusf_10Rnd_762x51_m62_Mag 							{ price = 10; stock = 10; };
+			class rhsusf_10Rnd_762x51_m993_Mag 							{ price = 10; stock = 10; };
+			class rhsusf_20Rnd_762x51_m118_special_Mag 					{ price = 20; stock = 10; };
+			class rhsusf_20Rnd_762x51_m62_Mag 							{ price = 20; stock = 10; };
+			class rhsusf_20Rnd_762x51_m993_Mag 							{ price = 20; stock = 10; };
+			class rhsusf_20Rnd_762x51_SR25_m118_special_Mag 			{ price = 20; stock = 10; };
+			class rhsusf_20Rnd_762x51_SR25_m62_Mag 						{ price = 20; stock = 10; };			
+			class rhsusf_20Rnd_762x51_SR25_m993_Mag 					{ price = 20; stock = 10; };
+			class rhsusf_20Rnd_762x51_SR25_mk316_special_Mag 			{ price = 20; stock = 10; };
+			class rhsusf_5Rnd_300winmag_xm2010 							{ price = 10; stock = 10; };
+			class rhsusf_5Rnd_762x51_AICS_m118_special_Mag 				{ price = 10; stock = 10; };
+			class rhsusf_5Rnd_762x51_AICS_m62_Mag 						{ price = 10; stock = 10; };
+			class rhsusf_5Rnd_762x51_AICS_m993_Mag 						{ price = 10; stock = 10; };
+			class rhsusf_5Rnd_762x51_m118_special_Mag 					{ price = 10; stock = 10; };
+			class rhsusf_5Rnd_762x51_m62_Mag 							{ price = 10; stock = 10; };
+			class rhsusf_5Rnd_762x51_m993_Mag 							{ price = 10; stock = 10; };
+			class rhsusf_mag_10Rnd_STD_50BMG_M33 						{ price = 10; stock = 10; };
+			class rhsusf_mag_10Rnd_STD_50BMG_mk211						{ price = 10; stock = 10; };
+			#endif
 
 			// lmgs
-			class rhsusf_50Rnd_762x51 									{ price = 50; stock = 10; };
-			class rhsusf_50Rnd_762x51_m61_ap 							{ price = 50; stock = 10; };
-			class rhsusf_50Rnd_762x51_m62_tracer 						{ price = 50; stock = 10; };
-			class rhsusf_50Rnd_762x51_m80a1epr 							{ price = 50; stock = 10; };
-			class rhsusf_50Rnd_762x51_m993 								{ price = 50; stock = 10; };
-			class rhsgref_50Rnd_792x57_SmE_drum 						{ price = 50; stock = 10; };
-			class rhsgref_50Rnd_792x57_SmE_notracers_drum 				{ price = 50; stock = 10; };
-			class rhsgref_50Rnd_792x57_SmK_drum 						{ price = 50; stock = 10; };
-			class rhsgref_50Rnd_792x57_SmK_alltracers_drum 				{ price = 50; stock = 10; };
-
+			class 100Rnd_65x39_caseless_mag 							{ price = 100; stock = 10; };
+			class 130Rnd_338_Mag 										{ price = 130; stock = 10; };
+			class 150Rnd_556x45_Drum_Mag_F 								{ price = 150; stock = 10; };
+			class 150Rnd_556x45_Drum_Mag_Tracer_F 						{ price = 150; stock = 10; };
+			class 150Rnd_762x54_Box 									{ price = 150; stock = 10; };
+			class 150Rnd_762x54_Box_Tracer 								{ price = 150; stock = 10; };
+			class 150Rnd_93x64_Mag 										{ price = 150; stock = 10; };			
+			class 200Rnd_65x39_cased_Box 								{ price = 200; stock = 10; };
+			class 200Rnd_65x39_cased_Box_Red 							{ price = 200; stock = 10; };
+			class 200Rnd_65x39_cased_Box_Tracer 						{ price = 200; stock = 10; };
+			class 200Rnd_65x39_cased_Box_Tracer_Red 					{ price = 200; stock = 10; };
+			
+			#ifdef DMD_USE_CUP
 			class CUP_100Rnd_556x45_BetaCMag 							{ price = 100; stock = 10; };
-			class CUP_100Rnd_TE1_Red_Tracer_556x45_BetaCMag 			{ price = 100; stock = 10; };
-			class CUP_100Rnd_TE1_Green_Tracer_556x45_BetaCMag 			{ price = 100; stock = 10; };
-			class CUP_100Rnd_TE1_Yellow_Tracer_556x45_BetaCMag 			{ price = 100; stock = 10; };
-			class rhssaf_100rnd_556x45_EPR_G36 							{ price = 100; stock = 10; };
 			class CUP_100Rnd_556x45_BetaCMag_ar15 						{ price = 100; stock = 10; };
-			class CUP_100Rnd_TE1_Red_Tracer_556x45_BetaCMag_ar15 		{ price = 100; stock = 10; };
+			class CUP_100Rnd_556x45_BetaCMag_camo						{ price = 100; stock = 10; };
+			class CUP_100Rnd_556x45_BetaCMag_hex 						{ price = 100; stock = 10; };
+			class CUP_100Rnd_556x45_BetaCMag_wdl 						{ price = 100; stock = 10; };
+			class CUP_100Rnd_TE1_Green_Tracer_556x45_BetaCMag 			{ price = 100; stock = 10; };
 			class CUP_100Rnd_TE1_Green_Tracer_556x45_BetaCMag_ar15 		{ price = 100; stock = 10; };
+			class CUP_100Rnd_TE1_Green_Tracer_556x45_BetaCMag_camo 		{ price = 100; stock = 10; };
+			class CUP_100Rnd_TE1_Green_Tracer_556x45_BetaCMag_hex 		{ price = 100; stock = 10; };
+			class CUP_100Rnd_TE1_Green_Tracer_556x45_BetaCMag_wdl 		{ price = 100; stock = 10; };
+			class CUP_100Rnd_TE1_Red_Tracer_556x45_BetaCMag 			{ price = 100; stock = 10; };
+			class CUP_100Rnd_TE1_Red_Tracer_556x45_BetaCMag_ar15 		{ price = 100; stock = 10; };
+			class CUP_100Rnd_TE1_Red_Tracer_556x45_BetaCMag_camo 		{ price = 100; stock = 10; };
+			class CUP_100Rnd_TE1_Red_Tracer_556x45_BetaCMag_hex 		{ price = 100; stock = 10; };
+			class CUP_100Rnd_TE1_Red_Tracer_556x45_BetaCMag_wdl 		{ price = 100; stock = 10; };
+			class CUP_100Rnd_TE1_Yellow_Tracer_556x45_BetaCMag 			{ price = 100; stock = 10; };
 			class CUP_100Rnd_TE1_Yellow_Tracer_556x45_BetaCMag_ar15 	{ price = 100; stock = 10; };
-			class rhs_mag_100Rnd_556x45_M855A1_cmag 					{ price = 100; stock = 10; };
-			class rhs_mag_100Rnd_556x45_M855A1_cmag_mixed 				{ price = 100; stock = 10; };
-			class rhs_mag_100Rnd_556x45_M855_cmag 						{ price = 100; stock = 10; };
-			class rhs_mag_100Rnd_556x45_M855_cmag_mixed 				{ price = 100; stock = 10; };
-			class rhs_mag_100Rnd_556x45_Mk318_cmag 						{ price = 100; stock = 10; };
-			class rhs_mag_100Rnd_556x45_Mk262_cmag 						{ price = 100; stock = 10; };
-
-			class rhsusf_100Rnd_556x45_soft_pouch 						{ price = 100; stock = 10; };
-			class rhsusf_100Rnd_556x45_mixed_soft_pouch 				{ price = 100; stock = 10; };
-			class rhsusf_100Rnd_556x45_M855_soft_pouch 					{ price = 100; stock = 10; };
-			class rhsusf_100Rnd_556x45_M855_mixed_soft_pouch 			{ price = 100; stock = 10; };
-			class rhsusf_100Rnd_556x45_soft_pouch_ucp 					{ price = 100; stock = 10; };
-			class rhsusf_100Rnd_556x45_mixed_soft_pouch_ucp 			{ price = 100; stock = 10; };
-			class rhsusf_100Rnd_556x45_M855_soft_pouch_ucp 				{ price = 100; stock = 10; };
-			class rhsusf_100Rnd_556x45_M855_mixed_soft_pouch_ucp 		{ price = 100; stock = 10; };
-			class rhsusf_100Rnd_556x45_soft_pouch_coyote 				{ price = 100; stock = 10; };
-			class rhsusf_100Rnd_556x45_mixed_soft_pouch_coyote 			{ price = 100; stock = 10; };
-			class rhsusf_100Rnd_556x45_M855_soft_pouch_coyote 			{ price = 100; stock = 10; };
-			class rhsusf_100Rnd_556x45_M855_mixed_soft_pouch_coyote 	{ price = 100; stock = 10; };
+			class CUP_100Rnd_TE1_Yellow_Tracer_556x45_BetaCMag_camo 	{ price = 100; stock = 10; };
+			class CUP_100Rnd_TE1_Yellow_Tracer_556x45_BetaCMag_hex 		{ price = 100; stock = 10; };
+			class CUP_100Rnd_TE1_Yellow_Tracer_556x45_BetaCMag_wdl 		{ price = 100; stock = 10; };
 			class CUP_100Rnd_TE4_Green_Tracer_556x45_M249 				{ price = 100; stock = 10; };
+			class CUP_100Rnd_TE4_LRT4_Green_Tracer_762x51_Belt_M 		{ price = 100; stock = 10; };
+			class CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M 			{ price = 100; stock = 10; };
+			class CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M 		{ price = 100; stock = 10; };
+			class CUP_100Rnd_TE4_LRT4_Yellow_Tracer_762x51_Belt_M 		{ price = 100; stock = 10; };
 			class CUP_100Rnd_TE4_Red_Tracer_556x45_M249 				{ price = 100; stock = 10; };
 			class CUP_100Rnd_TE4_Yellow_Tracer_556x45_M249 				{ price = 100; stock = 10; };
-			class CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M 		{ price = 100; stock = 10; };
-			class CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M 			{ price = 100; stock = 10; };
-			class CUP_100Rnd_TE4_LRT4_Green_Tracer_762x51_Belt_M 		{ price = 100; stock = 10; };
-			class CUP_100Rnd_TE4_LRT4_Yellow_Tracer_762x51_Belt_M 		{ price = 100; stock = 10; };
+			class CUP_200Rnd_TE1_Red_Tracer_556x45_M249 				{ price = 200; stock = 10; };
+			class CUP_200Rnd_TE4_Green_Tracer_556x45_L110A1 			{ price = 200; stock = 10; };
+			class CUP_200Rnd_TE4_Red_Tracer_556x45_L110A1 				{ price = 200; stock = 10; };
+			class CUP_200Rnd_TE4_Red_Tracer_556x45_M249 				{ price = 200; stock = 10; };
+			class CUP_200Rnd_TE4_Yellow_Tracer_556x45_L110A1 			{ price = 200; stock = 10; };
+			class CUP_200Rnd_TE4_Yellow_Tracer_556x45_M249 				{ price = 200; stock = 10; };
+			#endif
+
+			#ifdef DMD_USE_RHS
+			class rhs_100Rnd_762x54mmR 									{ price = 100; stock = 10; };
+			class rhs_100Rnd_762x54mmR_7BZ3 							{ price = 100; stock = 10; };
+			class rhs_100Rnd_762x54mmR_7N13 							{ price = 100; stock = 10; };
+			class rhs_100Rnd_762x54mmR_7N26 							{ price = 100; stock = 10; };
+			class rhs_100Rnd_762x54mmR_green 							{ price = 100; stock = 10; };
+			class rhs_200rnd_556x45_B_SAW 								{ price = 200; stock = 10; };
+			class rhs_200rnd_556x45_M_SAW 								{ price = 200; stock = 10; };
+			class rhs_200rnd_556x45_T_SAW 								{ price = 200; stock = 10; };
+			class rhs_mag_100Rnd_556x45_M855_cmag 						{ price = 100; stock = 10; };
+			class rhs_mag_100Rnd_556x45_M855_cmag_mixed 				{ price = 100; stock = 10; };
+			class rhs_mag_100Rnd_556x45_M855A1_cmag 					{ price = 100; stock = 10; };
+			class rhs_mag_100Rnd_556x45_M855A1_cmag_mixed 				{ price = 100; stock = 10; };
+			class rhs_mag_100Rnd_556x45_Mk262_cmag 						{ price = 100; stock = 10; };
+			class rhs_mag_100Rnd_556x45_Mk318_cmag 						{ price = 100; stock = 10; };
+			class rhsgref_296Rnd_792x57_SmE_belt 						{ price = 300; stock = 10; };
+			class rhsgref_296Rnd_792x57_SmE_notracers_belt 				{ price = 300; stock = 10; };
+			class rhsgref_296Rnd_792x57_SmK_alltracers_belt				{ price = 300; stock = 10; };
+			class rhsgref_296Rnd_792x57_SmK_belt 						{ price = 300; stock = 10; };
+			class rhsgref_50Rnd_792x57_SmE_drum 						{ price = 50; stock = 10; };
+			class rhsgref_50Rnd_792x57_SmE_notracers_drum 				{ price = 50; stock = 10; };
+			class rhsgref_50Rnd_792x57_SmK_alltracers_drum 				{ price = 50; stock = 10; };
+			class rhsgref_50Rnd_792x57_SmK_drum 						{ price = 50; stock = 10; };
+			class rhssaf_100rnd_556x45_EPR_G36 							{ price = 100; stock = 10; };
+			class rhssaf_250Rnd_762x54R 								{ price = 250; stock = 10; };
+			class rhsusf_100Rnd_556x45_M855_mixed_soft_pouch 			{ price = 100; stock = 10; };
+			class rhsusf_100Rnd_556x45_M855_mixed_soft_pouch_coyote 	{ price = 100; stock = 10; };
+			class rhsusf_100Rnd_556x45_M855_mixed_soft_pouch_ucp 		{ price = 100; stock = 10; };
+			class rhsusf_100Rnd_556x45_M855_soft_pouch 					{ price = 100; stock = 10; };
+			class rhsusf_100Rnd_556x45_M855_soft_pouch_coyote 			{ price = 100; stock = 10; };
+			class rhsusf_100Rnd_556x45_M855_soft_pouch_ucp 				{ price = 100; stock = 10; };
+			class rhsusf_100Rnd_556x45_mixed_soft_pouch 				{ price = 100; stock = 10; };
+			class rhsusf_100Rnd_556x45_mixed_soft_pouch_coyote 			{ price = 100; stock = 10; };
+			class rhsusf_100Rnd_556x45_mixed_soft_pouch_ucp 			{ price = 100; stock = 10; };
+			class rhsusf_100Rnd_556x45_soft_pouch 						{ price = 100; stock = 10; };
+			class rhsusf_100Rnd_556x45_soft_pouch_coyote 				{ price = 100; stock = 10; };
+			class rhsusf_100Rnd_556x45_soft_pouch_ucp 					{ price = 100; stock = 10; };
 			class rhsusf_100Rnd_762x51 									{ price = 100; stock = 10; };
 			class rhsusf_100Rnd_762x51_m61_ap 							{ price = 100; stock = 10; };
 			class rhsusf_100Rnd_762x51_m62_tracer 						{ price = 100; stock = 10; };
 			class rhsusf_100Rnd_762x51_m80a1epr 						{ price = 100; stock = 10; };
 			class rhsusf_100Rnd_762x51_m993								{ price = 100; stock = 10; };
-			class rhs_100Rnd_762x54mmR 									{ price = 100; stock = 10; };
-			class rhs_100Rnd_762x54mmR_green 							{ price = 100; stock = 10; };
-			class rhs_100Rnd_762x54mmR_7N13 							{ price = 100; stock = 10; };
-			class rhs_100Rnd_762x54mmR_7N26 							{ price = 100; stock = 10; };
-			class rhs_100Rnd_762x54mmR_7BZ3 							{ price = 100; stock = 10; };
-			class CUP_100Rnd_556x45_BetaCMag_hex 						{ price = 100; stock = 10; };
-			class CUP_100Rnd_556x45_BetaCMag_wdl 						{ price = 100; stock = 10; };
-			class CUP_100Rnd_TE1_Red_Tracer_556x45_BetaCMag_wdl 		{ price = 100; stock = 10; };
-			class CUP_100Rnd_TE1_Green_Tracer_556x45_BetaCMag_wdl 		{ price = 100; stock = 10; };
-			class CUP_100Rnd_TE1_Yellow_Tracer_556x45_BetaCMag_wdl 		{ price = 100; stock = 10; };
-			class CUP_100Rnd_TE1_Red_Tracer_556x45_BetaCMag_hex 		{ price = 100; stock = 10; };
-			class CUP_100Rnd_TE1_Green_Tracer_556x45_BetaCMag_hex 		{ price = 100; stock = 10; };
-			class CUP_100Rnd_TE1_Yellow_Tracer_556x45_BetaCMag_hex 		{ price = 100; stock = 10; };
-
-			class 130Rnd_338_Mag { price = 130; stock = 10; };
-
-			class 150Rnd_556x45_Drum_Mag_F 								{ price = 150; stock = 10; };
-			class 150Rnd_556x45_Drum_Mag_Tracer_F 						{ price = 150; stock = 10; };
-			class 150Rnd_93x64_Mag 										{ price = 150; stock = 10; };			
-			class 150Rnd_762x54_Box 									{ price = 150; stock = 10; };
-			class 150Rnd_762x54_Box_Tracer 								{ price = 150; stock = 10; };
-
 			class rhsusf_200Rnd_556x45_box 								{ price = 200; stock = 10; };
-			class rhsusf_200rnd_556x45_mixed_box 						{ price = 200; stock = 10; };
 			class rhsusf_200rnd_556x45_M855_box 						{ price = 200; stock = 10; };
 			class rhsusf_200rnd_556x45_M855_mixed_box 					{ price = 200; stock = 10; };
-			class rhsusf_200Rnd_556x45_soft_pouch 						{ price = 200; stock = 10; };
-			class rhsusf_200Rnd_556x45_mixed_soft_pouch 				{ price = 200; stock = 10; };
-			class rhsusf_200Rnd_556x45_M855_soft_pouch 					{ price = 200; stock = 10; };
 			class rhsusf_200Rnd_556x45_M855_mixed_soft_pouch 			{ price = 200; stock = 10; };
-			class rhsusf_200Rnd_556x45_soft_pouch_ucp 					{ price = 200; stock = 10; };
-			class rhsusf_200Rnd_556x45_mixed_soft_pouch_ucp 			{ price = 200; stock = 10; };
-			class rhsusf_200Rnd_556x45_M855_soft_pouch_ucp 				{ price = 200; stock = 10; };
-			class rhsusf_200Rnd_556x45_M855_mixed_soft_pouch_ucp 		{ price = 200; stock = 10; };
-			class rhsusf_200Rnd_556x45_soft_pouch_coyote 				{ price = 200; stock = 10; };
-			class rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote 			{ price = 200; stock = 10; };
-			class rhsusf_200Rnd_556x45_M855_soft_pouch_coyote 			{ price = 200; stock = 10; };
 			class rhsusf_200Rnd_556x45_M855_mixed_soft_pouch_coyote 	{ price = 200; stock = 10; };
-			class rhs_200rnd_556x45_M_SAW 								{ price = 200; stock = 10; };
-			class rhs_200rnd_556x45_T_SAW 								{ price = 200; stock = 10; };
-			class rhs_200rnd_556x45_B_SAW 								{ price = 200; stock = 10; };
-			class CUP_200Rnd_TE4_Red_Tracer_556x45_M249 				{ price = 200; stock = 10; };
-			class CUP_200Rnd_TE4_Yellow_Tracer_556x45_M249 				{ price = 200; stock = 10; };
-			class CUP_200Rnd_TE1_Red_Tracer_556x45_M249 				{ price = 200; stock = 10; };
-			class CUP_200Rnd_TE4_Green_Tracer_556x45_L110A1 			{ price = 200; stock = 10; };
-			class CUP_200Rnd_TE4_Red_Tracer_556x45_L110A1 				{ price = 200; stock = 10; };
-			class CUP_200Rnd_TE4_Yellow_Tracer_556x45_L110A1 			{ price = 200; stock = 10; };
-			class 200Rnd_65x39_cased_Box 								{ price = 200; stock = 10; };
-			class 200Rnd_65x39_cased_Box_Tracer 						{ price = 200; stock = 10; };
-			class 200Rnd_65x39_cased_Box_Red 							{ price = 200; stock = 10; };
-			class 200Rnd_65x39_cased_Box_Tracer_Red 					{ price = 200; stock = 10; };
-
-			class rhssaf_250Rnd_762x54R 								{ price = 250; stock = 10; };		
-
-			class rhsgref_296Rnd_792x57_SmE_belt 						{ price = 300; stock = 10; };
-			class rhsgref_296Rnd_792x57_SmE_notracers_belt 				{ price = 300; stock = 10; };
-			class rhsgref_296Rnd_792x57_SmK_belt 						{ price = 300; stock = 10; };
-			class rhsgref_296Rnd_792x57_SmK_alltracers_belt				{ price = 300; stock = 10; };
-
+			class rhsusf_200Rnd_556x45_M855_mixed_soft_pouch_ucp 		{ price = 200; stock = 10; };
+			class rhsusf_200Rnd_556x45_M855_soft_pouch 					{ price = 200; stock = 10; };
+			class rhsusf_200Rnd_556x45_M855_soft_pouch_coyote 			{ price = 200; stock = 10; };
+			class rhsusf_200Rnd_556x45_M855_soft_pouch_ucp 				{ price = 200; stock = 10; };
+			class rhsusf_200rnd_556x45_mixed_box 						{ price = 200; stock = 10; };
+			class rhsusf_200Rnd_556x45_mixed_soft_pouch 				{ price = 200; stock = 10; };
+			class rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote 			{ price = 200; stock = 10; };
+			class rhsusf_200Rnd_556x45_mixed_soft_pouch_ucp 			{ price = 200; stock = 10; };
+			class rhsusf_200Rnd_556x45_soft_pouch 						{ price = 200; stock = 10; };
+			class rhsusf_200Rnd_556x45_soft_pouch_coyote 				{ price = 200; stock = 10; };
+			class rhsusf_200Rnd_556x45_soft_pouch_ucp 					{ price = 200; stock = 10; };
+			class rhsusf_50Rnd_762x51 									{ price = 50; stock = 10; };
+			class rhsusf_50Rnd_762x51_m61_ap 							{ price = 50; stock = 10; };
+			class rhsusf_50Rnd_762x51_m62_tracer 						{ price = 50; stock = 10; };
+			class rhsusf_50Rnd_762x51_m80a1epr 							{ price = 50; stock = 10; };
+			class rhsusf_50Rnd_762x51_m993 								{ price = 50; stock = 10; };
+			#endif 
 		};
 
 		class grenades_he {
 			displayName = "Grenades";
 			picture = "";
+			
+			class HandGrenade { price = 20; stock = 8; };
+			class MiniGrenade { price = 20; stock = 8; };
 
-			class rhs_VOG25 { price = 25; stock = 4; };
-			class rhs_mag_M441_HE { price = 25; stock = 4; };
+			#ifdef DMD_USE_CUP
 			class CUP_1Rnd_HE_M203 { price = 25; stock = 4; };
-
-			class rhs_mag_zarya2 { price = 20; stock = 8; };
-			class rhs_grenade_sthgr43_SSfrag_mag { price = 20; stock = 8; };
+			class CUP_HandGrenade_RGD5 { price = 20; stock = 8; };
+			class CUP_HandGrenade_RGO { price = 20; stock = 8; };
+			#endif
+			
+			#ifdef DMD_USE_RHS
+			class rhs_grenade_mki_mag { price = 20; stock = 8; };
+			class rhs_grenade_mkii_mag { price = 20; stock = 8; };
 			class rhs_grenade_sthgr43_heerfrag_mag { price = 20; stock = 8; };
 			class rhs_grenade_sthgr43_mag { price = 20; stock = 8; };
-			class HandGrenade { price = 20; stock = 8; };
-			class CUP_HandGrenade_RGO { price = 20; stock = 8; };
-			class rhs_mag_rgo { price = 20; stock = 8; };
-			class rhs_mag_rgn { price = 20; stock = 8; };
-			class rhs_mag_rgd5 { price = 20; stock = 8; };
-			class MiniGrenade { price = 20; stock = 8; };
-			class CUP_HandGrenade_RGD5 { price = 20; stock = 8; };
-			class rhs_grenade_mkii_mag { price = 20; stock = 8; };
-			class rhs_grenade_mki_mag { price = 20; stock = 8; };
-			class rhs_mag_m67 { price = 20; stock = 8; };
+			class rhs_grenade_sthgr43_SSfrag_mag { price = 20; stock = 8; };
 			class rhs_mag_f1 { price = 20; stock = 8; };
-			class rhssaf_mag_br_m84 { price = 20; stock = 8; };
+			class rhs_mag_M441_HE { price = 25; stock = 4; };
+			class rhs_mag_m67 { price = 20; stock = 8; };
+			class rhs_mag_rgd5 { price = 20; stock = 8; };
+			class rhs_mag_rgn { price = 20; stock = 8; };
+			class rhs_mag_rgo { price = 20; stock = 8; };
+			class rhs_mag_zarya2 { price = 20; stock = 8; };
+			class rhs_VOG25 { price = 25; stock = 4; };
 			class rhssaf_mag_br_m75 { price = 20; stock = 8; };
+			class rhssaf_mag_br_m84 { price = 20; stock = 8; };
+			#endif 
 		};
 
 		class grenades_smk {
 			displayName = "Smoke Grenades";
 			picture = "";
-
-			class SmokeShellYellow { price = 10; stock = 50; };
-			class SmokeShell { price = 10; stock = 50; };
-			class SmokeShellRed { price = 10; stock = 50; };
-			class SmokeShellPurple { price = 10; stock = 50; };
-			class SmokeShellOrange { price = 10; stock = 50; };
-			class SmokeShellGreen { price = 10; stock = 50; };
-			class SmokeShellBlue { price = 10; stock = 50; };
+			#ifdef DMD_USE_RHS
 			class rhs_grenade_anm8_mag { price = 10; stock = 50; };
-			class rhs_mag_m18_yellow { price = 10; stock = 50; };
-			class rhs_mag_m18_red { price = 10; stock = 50; };
-			class rhs_mag_m18_purple { price = 10; stock = 50; };
-			class rhs_mag_m18_green { price = 10; stock = 50; };
-			class rhssaf_mag_brd_m83_yellow { price = 10; stock = 50; };
-			class rhssaf_mag_brd_m83_white { price = 10; stock = 50; };
-			class rhssaf_mag_brd_m83_red { price = 10; stock = 50; };
-			class rhssaf_mag_brd_m83_orange { price = 10; stock = 50; };
-			class rhssaf_mag_brd_m83_green { price = 10; stock = 50; };
-			class rhssaf_mag_brd_m83_blue { price = 10; stock = 50; };
 			class rhs_mag_an_m8hc { price = 10; stock = 50; };
+			class rhs_mag_m18_green { price = 10; stock = 50; };
+			class rhs_mag_m18_purple { price = 10; stock = 50; };
+			class rhs_mag_m18_red { price = 10; stock = 50; };
+			class rhs_mag_m18_yellow { price = 10; stock = 50; };
+			class rhssaf_mag_brd_m83_blue { price = 10; stock = 50; };
+			class rhssaf_mag_brd_m83_green { price = 10; stock = 50; };
+			class rhssaf_mag_brd_m83_orange { price = 10; stock = 50; };
+			class rhssaf_mag_brd_m83_red { price = 10; stock = 50; };
+			class rhssaf_mag_brd_m83_white { price = 10; stock = 50; };
+			class rhssaf_mag_brd_m83_yellow { price = 10; stock = 50; };
+			#endif
+			class SmokeShell { price = 10; stock = 50; };
+			class SmokeShellBlue { price = 10; stock = 50; };
+			class SmokeShellGreen { price = 10; stock = 50; };
+			class SmokeShellOrange { price = 10; stock = 50; };
+			class SmokeShellPurple { price = 10; stock = 50; };
+			class SmokeShellRed { price = 10; stock = 50; };
+			class SmokeShellYellow { price = 10; stock = 50; };
 		};
 
 		class optics {
@@ -1706,7 +1816,8 @@ class cfgHALsStore {
 			//	class rhsusf_acc_SpecterDR_A_3d { price = 250; stock = 5; };
 			//	class rhsusf_acc_SpecterDR_CX_3D { price = 250; stock = 5; };
 			//	class rhsusf_acc_SpecterDR_D_3D { price = 250; stock = 5; };
-			//	class rhsusf_acc_SpecterDR_OD_3D { price = 250; stock = 5; };			
+			//	class rhsusf_acc_SpecterDR_OD_3D { price = 250; stock = 5; };
+			#ifdef DMD_USE_CUP
 			class CUP_optic_ACOG { price = 250; stock = 5; };
 			class CUP_optic_ACOG_Reflex_Desert { price = 250; stock = 5; };
 			class CUP_optic_ACOG_Reflex_Wood { price = 250; stock = 5; };
@@ -1785,6 +1896,8 @@ class cfgHALsStore {
 			class CUP_optic_TrijiconRx01_desert { price = 250; stock = 5; };
 			class CUP_optic_ZDDot { price = 250; stock = 5; };
 			class CUP_optic_ZeissZPoint { price = 250; stock = 5; };
+			#endif
+
 			class optic_aco { price = 250; stock = 5; };
 			class optic_Aco_broken { price = 250; stock = 5; };
 			class optic_ACO_grn { price = 250; stock = 5; };
@@ -1835,6 +1948,8 @@ class cfgHALsStore {
 			class optic_tws { price = 1000; stock = 0; };
 			class optic_tws_mg { price = 1200; stock = 0; };
 			class optic_Yorris { price = 250; stock = 5; };
+
+			#ifdef DMD_USE_RHS
 			class rhs_acc_1p29 { price = 250; stock = 5; };
 			class rhs_acc_1p29_3d { price = 250; stock = 5; };
 			class rhs_acc_1p29_asval { price = 250; stock = 5; };
@@ -2006,6 +2121,7 @@ class cfgHALsStore {
 			class rhsusf_acc_T1_low { price = 250; stock = 5; };
 			class rhsusf_acc_T1_low_fwd { price = 250; stock = 5; };
 			class rhsusf_acc_T1_low_fwd_ak { price = 250; stock = 5; };
+			#endif
 		};
 
 		class pointers {
@@ -2013,147 +2129,170 @@ class cfgHALsStore {
 			picture = "";
 			// pistol stuff
 			class acc_flashlight_pistol { price = 10; stock = 5; };
+
+			#ifdef DMD_USE_CUP
 			class CUP_acc_Glock17_Flashlight { price = 10; stock = 5; };
 			class CUP_acc_CZ_M3X { price = 10; stock = 5; };
 			class CUP_acc_CZ_M3X_L { price = 10; stock = 5; };
 			class CUP_acc_MLPLS_Laser { price = 10; stock = 5; };
+			#endif
+
 			// primary weapons
-			class rhs_acc_2dpZenit_ris { price = 10; stock = 5; };
-			class rhs_acc_perst1ik_ris { price = 10; stock = 5; };
-			class rhs_acc_perst3 { price = 10; stock = 5; };
-			class rhsusf_acc_wmx { price = 10; stock = 5; };
-			class rhsusf_acc_wmx_bk { price = 10; stock = 5; };
-			class rhsusf_acc_M952V { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq15A { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq15 { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq15_light { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq15_top { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq15_h { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq15_light_h { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq15_top_h { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq15_sc { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq15_light_sc { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq15_top_sc { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq15side { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq15_bk { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq15_bk_light { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq15_bk_top { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq15_bk_h { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq15_bk_light_h { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq15_bk_top_h { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq15_bk_sc { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq15_bk_light_sc { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq15_bk_top_sc { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq15side_bk { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq15_wmx { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq15_wmx_light { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq15_wmx_h { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq15_wmx_light_h { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq15_wmx_sc { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq15_wmx_light_sc { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq16a { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq16a_light { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq16a_top { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq16a_light_top { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq16a_top_h { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq16a_light_top_h { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq16a_top_sc { price = 10; stock = 5; };
-			class rhsusf_acc_anpeq16a_light_top_sc { price = 10; stock = 5; };
 			class acc_flashlight { price = 10; stock = 5; };
 			class acc_flashlight_broken { price = 4; stock = 0; };
 			class acc_pointer_IR { price = 10; stock = 5; };
 			class acc_pointer_IR_broken { price = 4; stock = 0; };
+			
+			#ifdef DMD_USE_CUP
 			class CUP_acc_ANPEQ_15 { price = 10; stock = 5; };
 			class CUP_acc_ANPEQ_15_Black { price = 10; stock = 5; };
-			class CUP_acc_ANPEQ_15_OD { price = 10; stock = 5; };
-			class CUP_acc_ANPEQ_15_Tan_Top { price = 10; stock = 5; };
 			class CUP_acc_ANPEQ_15_Black_Top { price = 10; stock = 5; };
+			class CUP_acc_ANPEQ_15_Flashlight_Black_F { price = 10; stock = 5; };
+			class CUP_acc_ANPEQ_15_Flashlight_Black_L { price = 10; stock = 5; };
+			class CUP_acc_ANPEQ_15_Flashlight_OD_F { price = 10; stock = 5; };
+			class CUP_acc_ANPEQ_15_Flashlight_OD_L { price = 10; stock = 5; };
+			class CUP_acc_ANPEQ_15_Flashlight_Tan_F { price = 10; stock = 5; };
+			class CUP_acc_ANPEQ_15_Flashlight_Tan_L { price = 10; stock = 5; };
+			class CUP_acc_ANPEQ_15_OD { price = 10; stock = 5; };
 			class CUP_acc_ANPEQ_15_OD_Top { price = 10; stock = 5; };
+			class CUP_acc_ANPEQ_15_Tan_Top { price = 10; stock = 5; };
+			class CUP_acc_ANPEQ_15_Top_Flashlight_Black_F { price = 10; stock = 5; };
+			class CUP_acc_ANPEQ_15_Top_Flashlight_Black_L { price = 10; stock = 5; };
+			class CUP_acc_ANPEQ_15_Top_Flashlight_OD_F { price = 10; stock = 5; };
+			class CUP_acc_ANPEQ_15_Top_Flashlight_OD_L { price = 10; stock = 5; };
+			class CUP_acc_ANPEQ_15_Top_Flashlight_Tan_F { price = 10; stock = 5; };
+			class CUP_acc_ANPEQ_15_Top_Flashlight_Tan_L { price = 10; stock = 5; };
 			class CUP_acc_ANPEQ_2 { price = 10; stock = 5; };
-			class CUP_acc_Flashlight { price = 10; stock = 5; };
-			class CUP_acc_Flashlight_wdl { price = 10; stock = 5; };
-			class CUP_acc_Flashlight_desert { price = 10; stock = 5; };
 			class CUP_acc_ANPEQ_2_camo { price = 10; stock = 5; };
 			class CUP_acc_ANPEQ_2_desert { price = 10; stock = 5; };
 			class CUP_acc_ANPEQ_2_grey { price = 10; stock = 5; };
-			class CUP_acc_XM8_light_module { price = 10; stock = 5; };
+			class CUP_acc_Flashlight { price = 10; stock = 5; };
+			class CUP_acc_Flashlight_desert { price = 10; stock = 5; };
+			class CUP_acc_Flashlight_wdl { price = 10; stock = 5; };
 			class CUP_acc_LLM { price = 10; stock = 5; };
 			class CUP_acc_LLM_Flashlight { price = 10; stock = 5; };
-			class CUP_acc_ANPEQ_15_Flashlight_Tan_L { price = 10; stock = 5; };
-			class CUP_acc_ANPEQ_15_Flashlight_Tan_F { price = 10; stock = 5; };
-			class CUP_acc_ANPEQ_15_Flashlight_OD_L { price = 10; stock = 5; };
-			class CUP_acc_ANPEQ_15_Flashlight_OD_F { price = 10; stock = 5; };
-			class CUP_acc_ANPEQ_15_Flashlight_Black_L { price = 10; stock = 5; };
-			class CUP_acc_ANPEQ_15_Flashlight_Black_F { price = 10; stock = 5; };
-			class CUP_acc_ANPEQ_15_Top_Flashlight_Tan_L { price = 10; stock = 5; };
-			class CUP_acc_ANPEQ_15_Top_Flashlight_Tan_F { price = 10; stock = 5; };
-			class CUP_acc_ANPEQ_15_Top_Flashlight_OD_L { price = 10; stock = 5; };
-			class CUP_acc_ANPEQ_15_Top_Flashlight_OD_F { price = 10; stock = 5; };
-			class CUP_acc_ANPEQ_15_Top_Flashlight_Black_L { price = 10; stock = 5; };
-			class CUP_acc_ANPEQ_15_Top_Flashlight_Black_F { price = 10; stock = 5; };
+			class CUP_acc_XM8_light_module { price = 10; stock = 5; };
+			#endif
+
+			#ifdef DMD_USE_RHS
 			class rhs_acc_2dpZenit { price = 10; stock = 5; };
+			class rhs_acc_2dpZenit_ris { price = 10; stock = 5; };
 			class rhs_acc_perst1ik { price = 10; stock = 5; };
+			class rhs_acc_perst1ik_ris { price = 10; stock = 5; };
+			class rhs_acc_perst3 { price = 10; stock = 5; };
+			class rhs_acc_perst3_2dp { price = 10; stock = 5; };
+			class rhs_acc_perst3_2dp_h { price = 10; stock = 5; };
+			class rhs_acc_perst3_2dp_light { price = 10; stock = 5; };
+			class rhs_acc_perst3_2dp_light_h { price = 10; stock = 5; };
 			class rhs_acc_perst3_top { price = 10; stock = 5; };
 			class rhs_acc_perst3_top_h { price = 10; stock = 5; };
-			class rhs_acc_perst3_2dp { price = 10; stock = 5; };
-			class rhs_acc_perst3_2dp_light { price = 10; stock = 5; };
-			class rhs_acc_perst3_2dp_h { price = 10; stock = 5; };
-			class rhs_acc_perst3_2dp_light_h { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq15 { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq15_bk { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq15_bk_h { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq15_bk_light { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq15_bk_light_h { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq15_bk_light_sc { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq15_bk_sc { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq15_bk_top { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq15_bk_top_h { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq15_bk_top_sc { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq15_h { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq15_light { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq15_light_h { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq15_light_sc { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq15_sc { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq15_top { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq15_top_h { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq15_top_sc { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq15_wmx { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq15_wmx_h { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq15_wmx_light { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq15_wmx_light_h { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq15_wmx_light_sc { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq15_wmx_sc { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq15A { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq15side { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq15side_bk { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq16a { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq16a_light { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq16a_light_top { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq16a_light_top_h { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq16a_light_top_sc { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq16a_top { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq16a_top_h { price = 10; stock = 5; };
+			class rhsusf_acc_anpeq16a_top_sc { price = 10; stock = 5; };
+			class rhsusf_acc_M952V { price = 10; stock = 5; };
+			class rhsusf_acc_wmx { price = 10; stock = 5; };
+			class rhsusf_acc_wmx_bk { price = 10; stock = 5; };
+			#endif
 		};
 
 		class bipods {
 			displayName = "Bipods";
 			picture = "";
 
+			class bipod_01_F_blk { price = 75; stock = 4; };
+			class bipod_01_F_khk { price = 75; stock = 4; };
+			class bipod_01_F_mtp { price = 75; stock = 4; };
+			class bipod_01_F_snd { price = 75; stock = 4; };
+			class bipod_02_F_arid { price = 75; stock = 4; };
+			class bipod_02_F_blk { price = 75; stock = 4; };
+			class bipod_02_F_hex { price = 75; stock = 4; };
+			class bipod_02_F_lush { price = 75; stock = 4; };
+			class bipod_02_F_tan { price = 75; stock = 4; };
+			class bipod_03_F_blk { price = 75; stock = 4; };
+			class bipod_03_F_oli { price = 75; stock = 4; };
+
+			#ifdef DMD_USE_CUP
+			class CUP_bipod_Harris_1A2_L { price = 75; stock = 4; };
+			class CUP_bipod_VLTOR_Modpod { price = 75; stock = 4; };
+			#endif
+
+			#ifdef DMD_USE_RHS
+			class rhs_acc_grip_ffg2 { price = 75; stock = 4; };
 			class rhs_acc_grip_rk2 { price = 75; stock = 4; };
 			class rhs_acc_grip_rk6 { price = 75; stock = 4; };
-			class rhs_acc_grip_ffg2 { price = 75; stock = 4; };
+			class rhs_acc_harris_swivel { price = 75; stock = 4; };
 			class rhsusf_acc_grip1 { price = 75; stock = 4; };
 			class rhsusf_acc_grip2 { price = 75; stock = 4; };
 			class rhsusf_acc_grip2_tan { price = 75; stock = 4; };
 			class rhsusf_acc_grip2_wd { price = 75; stock = 4; };
 			class rhsusf_acc_grip3 { price = 75; stock = 4; };
 			class rhsusf_acc_grip3_tan { price = 75; stock = 4; };
-			class rhsusf_acc_kac_grip { price = 75; stock = 4; };
-			class rhsusf_acc_rvg_blk { price = 75; stock = 4; };
-			class rhsusf_acc_rvg_de { price = 75; stock = 4; };
-			class rhsusf_acc_tacsac_blk { price = 75; stock = 4; };
-			class rhsusf_acc_tacsac_tan { price = 75; stock = 4; };
-			class rhsusf_acc_tacsac_blue { price = 75; stock = 4; };
-			class rhsusf_acc_tdstubby_blk { price = 75; stock = 4; };
-			class rhsusf_acc_tdstubby_tan { price = 75; stock = 4; };
-			class rhs_acc_harris_swivel { price = 75; stock = 4; };
-			class rhsusf_acc_harris_bipod { price = 75; stock = 4; };
-			class bipod_01_F_snd { price = 75; stock = 4; };
-			class bipod_01_F_blk { price = 75; stock = 4; };
-			class bipod_01_F_mtp { price = 75; stock = 4; };
-			class bipod_02_F_blk { price = 75; stock = 4; };
-			class bipod_02_F_tan { price = 75; stock = 4; };
-			class bipod_02_F_hex { price = 75; stock = 4; };
-			class bipod_03_F_blk { price = 75; stock = 4; };
-			class bipod_03_F_oli { price = 75; stock = 4; };
-			class bipod_01_F_khk { price = 75; stock = 4; };
-			class bipod_02_F_arid { price = 75; stock = 4; };
-			class bipod_02_F_lush { price = 75; stock = 4; };
-			class CUP_bipod_Harris_1A2_L { price = 75; stock = 4; };
-			class CUP_bipod_VLTOR_Modpod { price = 75; stock = 4; };
-			class rhsusf_acc_harris_swivel { price = 75; stock = 4; };
 			class rhsusf_acc_grip4 { price = 75; stock = 4; };
 			class rhsusf_acc_grip4_bipod { price = 75; stock = 4; };
-			class rhsusf_acc_saw_lw_bipod { price = 75; stock = 4; };
+			class rhsusf_acc_harris_bipod { price = 75; stock = 4; };
+			class rhsusf_acc_harris_swivel { price = 75; stock = 4; };
+			class rhsusf_acc_kac_grip { price = 75; stock = 4; };
 			class rhsusf_acc_kac_grip_saw_bipod { price = 75; stock = 4; };
+			class rhsusf_acc_rvg_blk { price = 75; stock = 4; };
+			class rhsusf_acc_rvg_de { price = 75; stock = 4; };
 			class rhsusf_acc_saw_bipod { price = 75; stock = 4; };
+			class rhsusf_acc_saw_lw_bipod { price = 75; stock = 4; };
+			class rhsusf_acc_tacsac_blk { price = 75; stock = 4; };
+			class rhsusf_acc_tacsac_blue { price = 75; stock = 4; };
+			class rhsusf_acc_tacsac_tan { price = 75; stock = 4; };
+			class rhsusf_acc_tdstubby_blk { price = 75; stock = 4; };
+			class rhsusf_acc_tdstubby_tan { price = 75; stock = 4; };
+			#endif
 		};
 
 		class muzzles {
 			displayName = "Muzzles and Suppressors";
 			picture = "";
 			// pistol silencers
+			#ifdef DMD_USE_CUP
 			class CUP_muzzle_PB6P9 { price = 70; stock = 8; };
 			class CUP_muzzle_snds_M9 { price = 70; stock = 8; };
 			class CUP_muzzle_snds_MicroUzi { price = 70; stock = 8; };
+			#endif
+
+			#ifdef DMD_USE_RHS
 			class rhsusf_acc_omega9k { price = 70; stock = 8; };
+			#endif
+
 			// primary silencers
+			#ifdef DMD_USE_CUP
 			class CUP_acc_bfa { price = 125; stock = 5; };
 			class CUP_acc_sffh { price = 125; stock = 5; };
 			class CUP_muzzle_Bizon { price = 125; stock = 5; };
@@ -2187,6 +2326,8 @@ class cfgHALsStore {
 			class CUP_muzzle_snds_SCAR_L { price = 125; stock = 5; };
 			class CUP_muzzle_snds_XM8 { price = 125; stock = 5; };
 			class CUP_muzzle_TGPA { price = 125; stock = 5; };
+			#endif
+
 			class muzzle_snds_338_black { price = 125; stock = 5; };
 			class muzzle_snds_338_green { price = 125; stock = 5; };
 			class muzzle_snds_338_sand { price = 125; stock = 5; };
@@ -2212,6 +2353,8 @@ class cfgHALsStore {
 			class muzzle_snds_M { price = 125; stock = 5; };
 			class muzzle_snds_m_khk_F { price = 125; stock = 5; };
 			class muzzle_snds_m_snd_F { price = 125; stock = 5; };
+
+			#ifdef DMD_USE_RHS
 			class rhs_acc_ak5 { price = 125; stock = 5; };
 			class rhs_acc_dtk { price = 125; stock = 5; };
 			class rhs_acc_dtk1 { price = 125; stock = 5; };
@@ -2258,14 +2401,17 @@ class cfgHALsStore {
 			class rhsusf_acc_rotex5_tan { price = 125; stock = 5; };
 			class rhsusf_acc_SF3P556 { price = 125; stock = 5; };
 			class rhsusf_acc_SFMB556 { price = 125; stock = 5; };
+			#endif
 		};
 		
 		class shotguns {
 			displayName = "Shotguns";
-		    picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		    picture = "";
+			#ifdef DMD_USE_CUP
 			class CUP_sgun_AA12 { price = 670; stock = 5; };
 			class CUP_sgun_M1014 { price = 570; stock = 5; };
 			class CUP_sgun_Saiga12K { price = 470; stock = 5; };
+			#endif 
 			
 			// RHS SHOTGUNS CURRENTLY BROKEN WHEN RELOADING
 			//  class rhs_weap_Izh18 { price = 170; stock = 5; };
@@ -2275,16 +2421,22 @@ class cfgHALsStore {
 
 		class pdw {
 			displayName = "PDWs and SMGs";
-		    picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		    picture = "";
 
+			#ifdef DMD_USE_CUP
 			class CUP_smg_bizon { price = 290; stock = 4; };
 			class CUP_smg_EVO { price = 290; stock = 4; };
 			class CUP_smg_saiga9 { price = 290; stock = 4; };
-			class hgun_PDW2000_F { price = 290; stock = 4; };
+			#endif
+
+			#ifdef DMD_USE_RHS
 			class rhs_weap_m3a1 { price = 290; stock = 4; };
 			class rhs_weap_m3a1_specops { price = 290; stock = 4; };
 			class rhs_weap_scorpion { price = 290; stock = 4; };
 			class rhsusf_weap_MP7A2_desert { price = 290; stock = 4; };
+			#endif
+
+			class hgun_PDW2000_F { price = 290; stock = 4; };
 			class SMG_02_F { price = 290; stock = 4; };
 			class SMG_03_camo { price = 290; stock = 4; };
 			class SMG_03_TR_black { price = 290; stock = 4; };
@@ -2295,12 +2447,17 @@ class cfgHALsStore {
 		class rifles {
 			displayName = "Assault Rifles";
 			picture = "";
+
 			class arifle_Katiba_C_F { price = 350; stock = 6; };
 			class arifle_Katiba_F { price = 350; stock = 6; };
 			class arifle_Mk20C_plain_F { price = 350; stock = 6; };
 			class arifle_MX_Black_F { price = 350; stock = 6; };
 			class arifle_MX_SW_F { price = 350; stock = 6; };
 			class arifle_TRG21_F { price = 350; stock = 6; };
+			class arifle_MXM_Black_F			{ price = 900; stock = 5; };
+			class arifle_MXM_F 					{ price = 900; stock = 5; };
+
+			#ifdef DMD_USE_CUP
 			class CUP_arifle_AK101 { price = 350; stock = 6; };
 			class CUP_arifle_AK102 { price = 350; stock = 6; };
 			class CUP_arifle_AK107 { price = 350; stock = 6; };
@@ -2329,6 +2486,9 @@ class cfgHALsStore {
 			class CUP_arifle_SBR_black { price = 350; stock = 6; };
 			class CUP_arifle_XM8_Carbine { price = 350; stock = 6; };
 			class CUP_arifle_XM8_Compact { price = 350; stock = 6; };
+			#endif
+
+			#ifdef DMD_USE_RHS
 			class rhs_weap_ak103_2_npz { price = 350; stock = 6; };
 			class rhs_weap_ak103_zenitco01_b33 { price = 350; stock = 6; };
 			class rhs_weap_ak104_npz { price = 350; stock = 6; };
@@ -2368,50 +2528,60 @@ class cfgHALsStore {
 			class rhs_weap_SCARH_FDE_LB { price = 350; stock = 6; };
 			class rhs_weap_vhsd2_ct15x { price = 350; stock = 6; };
 			class rhs_weap_vhsk2 { price = 350; stock = 6; };
+			#endif
 		};
 
 		class marksman {
 			displayName = "Long Rifles and DMRs";
 			picture = "";	
 
-			class CUP_srifle_LeeEnfield			{ price = 220; stock = 25; };
-			class rhs_weap_m38					{ price = 220; stock = 25; };
-
+			#ifdef DMD_USE_CUP
+			class CUP_srifle_AS50				{ price = 1500; stock = 2; };
+			class CUP_srifle_AWM_des			{ price = 1200; stock = 2; };
+			class CUP_srifle_AWM_wdl			{ price = 1200; stock = 2; };
 			class CUP_srifle_CZ550				{ price = 600; stock = 15; };
 			class CUP_srifle_CZ550_rail			{ price = 600; stock = 15; };
-			class CUP_srifle_LeeEnfield_rail	{ price = 600; stock = 15; };
-			class CUP_srifle_Mk12SPR 			{ price = 600; stock = 15; };
-			class rhs_weap_asval_grip 			{ price = 600; stock = 15; };
-			class rhs_weap_asval_grip_npz 		{ price = 600; stock = 15; };
-			class rhs_weap_kar98k				{ price = 600; stock = 15; };
-			class rhs_weap_m1garand_sa43 		{ price = 600; stock = 15; };
-			class rhs_weap_m38_rail				{ price = 600; stock = 15; };
-			class rhs_weap_mosin_sbr			{ price = 600; stock = 15; };
-
-			class arifle_MXM_Black_F			{ price = 900; stock = 5; };
-			class arifle_MXM_F 					{ price = 900; stock = 5; };
 			class CUP_srifle_CZ750				{ price = 900; stock = 5; };
 			class CUP_srifle_DMR				{ price = 900; stock = 5; };
 			class CUP_srifle_G22_des			{ price = 900; stock = 5; };
 			class CUP_srifle_G22_wdl 			{ price = 900; stock = 5; };
+			class CUP_srifle_ksvk				{ price = 1500; stock = 2; };
 			class CUP_srifle_L129A1				{ price = 900; stock = 5; };
 			class CUP_srifle_L129A1_HG			{ price = 900; stock = 5; };
+			class CUP_srifle_LeeEnfield			{ price = 220; stock = 25; };
+			class CUP_srifle_LeeEnfield_rail	{ price = 600; stock = 15; };
+			class CUP_srifle_M107_Base			{ price = 1500; stock = 2; };
 			class CUP_srifle_M110				{ price = 900; stock = 5; };
 			class CUP_srifle_M14				{ price = 900; stock = 5; };
 			class CUP_srifle_M14_DMR			{ price = 900; stock = 5; };
 			class CUP_srifle_M24_des			{ price = 900; stock = 5; };
 			class CUP_srifle_M24_wdl			{ price = 900; stock = 5; };
 			class CUP_srifle_M40A3				{ price = 900; stock = 5; };
+			class CUP_srifle_Mk12SPR 			{ price = 600; stock = 15; };
 			class CUP_srifle_SVD 				{ price = 900; stock = 5; };
 			class CUP_srifle_SVD_des 			{ price = 900; stock = 5; };
 			class CUP_srifle_VSSVintorez		{ price = 900; stock = 5; };
+			#endif
+
+			#ifdef DMD_USE_RHS
+			class rhs_weap_asval_grip 			{ price = 600; stock = 15; };
+			class rhs_weap_asval_grip_npz 		{ price = 600; stock = 15; };
+			class rhs_weap_kar98k				{ price = 600; stock = 15; };
+			class rhs_weap_M107					{ price = 1500; stock = 2; };
+			class rhs_weap_M107_d				{ price = 1500; stock = 2; };
+			class rhs_weap_M107_w				{ price = 1500; stock = 2; };
 			class rhs_weap_m14ebrri 			{ price = 900; stock = 5; };
+			class rhs_weap_m1garand_sa43 		{ price = 600; stock = 15; };
 			class rhs_weap_m24sws 				{ price = 900; stock = 5; };
 			class rhs_weap_m24sws_blk 			{ price = 900; stock = 5; };
 			class rhs_weap_m24sws_ghillie 		{ price = 900; stock = 5; };
+			class rhs_weap_m38					{ price = 220; stock = 25; };
+			class rhs_weap_m38_rail				{ price = 600; stock = 15; };
 			class rhs_weap_m40a5 				{ price = 900; stock = 5; };
 			class rhs_weap_m40a5_wd 			{ price = 900; stock = 5; };
 			class rhs_weap_m76	 				{ price = 900; stock = 5; };
+			class rhs_weap_m82a1				{ price = 1500; stock = 2; };
+			class rhs_weap_mosin_sbr			{ price = 600; stock = 15; };
 			class rhs_weap_sr25 				{ price = 900; stock = 5; };
 			class rhs_weap_sr25_d 				{ price = 900; stock = 5; };
 			class rhs_weap_sr25_ec_wd 			{ price = 900; stock = 5; };
@@ -2420,100 +2590,104 @@ class cfgHALsStore {
 			class rhs_weap_svdp_wd_npz 			{ price = 900; stock = 5; };
 			class rhs_weap_svds 				{ price = 900; stock = 5; };
 			class rhs_weap_svds_npz				{ price = 900; stock = 5; };
+			class rhs_weap_t5000				{ price = 1500; stock = 2; };
 			class rhs_weap_vss	 				{ price = 900; stock = 5; };
 			class rhs_weap_vss_grip_npz	 		{ price = 900; stock = 5; };
+			class rhs_weap_XM2010				{ price = 1200; stock = 2; };
+			class rhs_weap_XM2010_wd			{ price = 1200; stock = 2; };
+			#endif
+
 			class Rusty_DMR_05_base_F 			{ price = 900; stock = 5; };
 			class Rusty_srifle_DMR_02_F 		{ price = 900; stock = 5; };
 			class Rusty_srifle_DMR_03_F 		{ price = 900; stock = 5; };
 			class Rusty_srifle_DMR_04_F 		{ price = 900; stock = 5; };
+
 			class srifle_DMR_01_F 				{ price = 900; stock = 5; };
+			class srifle_DMR_02_camo_F 			{ price = 1200; stock = 2; };
+			class srifle_DMR_02_F 				{ price = 1200; stock = 2; };
+			class srifle_DMR_02_sniper_F 		{ price = 1200; stock = 2; };
 			class srifle_DMR_03_F 				{ price = 900; stock = 5; };
 			class srifle_DMR_03_khaki_F 		{ price = 900; stock = 5; };
 			class srifle_DMR_03_multicam_F 		{ price = 900; stock = 5; };
 			class srifle_DMR_03_tan_F 			{ price = 900; stock = 5; };
 			class srifle_DMR_03_woodland_F 		{ price = 900; stock = 5; };
+			class srifle_DMR_04_F 				{ price = 1200; stock = 2; };
+			class srifle_DMR_04_Tan_F 			{ price = 1200; stock = 2; };
+			class srifle_DMR_05_blk_F 			{ price = 1200; stock = 2; };
+			class srifle_DMR_05_hex_F 			{ price = 1200; stock = 2; };
+			class srifle_DMR_05_tan_f 			{ price = 1200; stock = 2; };
 			class srifle_DMR_06_camo_F 			{ price = 900; stock = 5; };
 			class srifle_DMR_06_olive_F 		{ price = 900; stock = 5; };
 			class srifle_DMR_07_blk_F			{ price = 900; stock = 5; };
 			class srifle_DMR_07_ghex_F			{ price = 900; stock = 5; };
 			class srifle_DMR_07_hex_F			{ price = 900; stock = 5; };
 			class srifle_EBR_F 					{ price = 900; stock = 5; };
-
-			class CUP_srifle_AWM_des			{ price = 1200; stock = 2; };
-			class CUP_srifle_AWM_wdl			{ price = 1200; stock = 2; };
-			class rhs_weap_XM2010				{ price = 1200; stock = 2; };
-			class rhs_weap_XM2010_wd			{ price = 1200; stock = 2; };
-			class srifle_DMR_02_camo_F 			{ price = 1200; stock = 2; };
-			class srifle_DMR_02_F 				{ price = 1200; stock = 2; };
-			class srifle_DMR_02_sniper_F 		{ price = 1200; stock = 2; };
-			class srifle_DMR_04_F 				{ price = 1200; stock = 2; };
-			class srifle_DMR_04_Tan_F 			{ price = 1200; stock = 2; };
-			class srifle_DMR_05_blk_F 			{ price = 1200; stock = 2; };
-			class srifle_DMR_05_hex_F 			{ price = 1200; stock = 2; };
-			class srifle_DMR_05_tan_f 			{ price = 1200; stock = 2; };
-			class srifle_LRR_camo_F				{ price = 1200; stock = 2; };
-			class srifle_LRR_F					{ price = 1200; stock = 2; };
-			class srifle_LRR_tna_F				{ price = 1200; stock = 2; };
-
-			class CUP_srifle_AS50				{ price = 1500; stock = 2; };
-			class CUP_srifle_ksvk				{ price = 1500; stock = 2; };
-			class CUP_srifle_M107_Base			{ price = 1500; stock = 2; };
-			class rhs_weap_M107					{ price = 1500; stock = 2; };
-			class rhs_weap_M107_d				{ price = 1500; stock = 2; };
-			class rhs_weap_M107_w				{ price = 1500; stock = 2; };
-			class rhs_weap_m82a1				{ price = 1500; stock = 2; };
-			class rhs_weap_t5000				{ price = 1500; stock = 2; };
 			class srifle_GM6_camo_F				{ price = 1500; stock = 2; };
 			class srifle_GM6_F					{ price = 1500; stock = 2; };
 			class srifle_GM6_ghex_F				{ price = 1500; stock = 2; };
+			class srifle_LRR_camo_F				{ price = 1200; stock = 2; };
+			class srifle_LRR_F					{ price = 1200; stock = 2; };
+			class srifle_LRR_tna_F				{ price = 1200; stock = 2; };
 		};
 
 		class lmg {
 			displayName = "Support Weapons / LMGs";
 			picture = "";
 
-			class rhs_weap_minimi_para_railed 	{ price = 800; stock = 1; };
+			#ifdef DMD_USE_CUP
+			class CUP_arifle_MG36_hex { price = 600; stock = 1; };
+			class CUP_arifle_MG36_wdl { price = 600; stock = 1; };			
+			class CUP_arifle_xm8_SAW { price = 500; stock = 6; };
 			class CUP_lmg_L110A1 { price = 800; stock = 1; };
 			class CUP_lmg_L7A2 { price = 800; stock = 1; };
+			class CUP_lmg_Mk48_wdl { price = 850; stock = 1; };
+			#endif
+
+			#ifdef DMD_USE_RHS
 			class rhs_weap_m240B { price = 800; stock = 1; };
 			class rhs_weap_m249 { price = 800; stock = 1; };
 			class rhs_weap_m249_pip_S_para { price = 800; stock = 2; };
 			class rhs_weap_m84 { price = 800; stock = 1; };
-			class CUP_arifle_MG36_hex { price = 600; stock = 1; };
-			class CUP_arifle_MG36_wdl { price = 600; stock = 1; };			
 			class rhs_weap_mg42 { price = 700; stock = 1; };
-			class CUP_lmg_Mk48_wdl { price = 850; stock = 1; };
-			class LMG_Mk200_F { price = 900; stock = 1; };
+			class rhs_weap_minimi_para_railed 	{ price = 800; stock = 1; };
 			class rhs_weap_pkm { price = 700; stock = 3; };
 			class rhs_weap_pkp { price = 900; stock = 2; };
+			#endif
+
+			class LMG_Mk200_F { price = 900; stock = 1; };
+			class Rusty_LMG_Zafir_F { price = 750; stock = 1; };
 			class Rusty_MMG_01_tan_F { price = 650; stock = 0; };
 			class Rusty_MMG_02_black_F { price = 750; stock = 0; };
-			class Rusty_LMG_Zafir_F { price = 750; stock = 1; };
-			class CUP_arifle_xm8_SAW { price = 500; stock = 6; };
 		};
 
 		class handguns {
 			displayName = "Sidearms";
 			picture = "";
 
+			class hgun_Rook40_F { price = 60; stock = 10; };
+
+			#ifdef DMD_USE_CUP
 			class CUP_hgun_Compact { price = 60; stock = 10; };
 			class CUP_hgun_Duty { price = 60; stock = 10; };
-			class CUP_hgun_Phantom { price = 60; stock = 10; };
 			class CUP_hgun_Glock17 { price = 60; stock = 10; };
-			class rhsusf_weap_m1911a1 { price = 60; stock = 10; };
-			class rhsusf_weap_m9 { price = 60; stock = 10; };
-			class rhs_weap_pya { price = 60; stock = 10; };
+			class CUP_hgun_MicroUzi { price = 80; stock = 2; };
 			class CUP_hgun_PB6P9 { price = 60; stock = 10; };
-			class rhs_weap_makarov_pm { price = 60; stock = 10; };
+			class CUP_hgun_Phantom { price = 60; stock = 10; };
 			class CUP_hgun_PMM { price = 60; stock = 10; };
 			class CUP_hgun_TaurusTracker455 { price = 60; stock = 10; };
+			class CUP_hgun_TaurusTracker455_gold { price = 250; stock = 0; };
+			#endif
+
+			#ifdef DMD_USE_RHS
+			class rhs_weap_makarov_pm { price = 60; stock = 10; };
+			class rhs_weap_pp2000_folded { price = 70; stock = 5; };
+			class rhs_weap_pya { price = 60; stock = 10; };
+			class rhs_weap_savz61_folded { price = 70; stock = 5; };
 			class rhs_weap_tt33 { price = 60; stock = 10; };
 			class rhs_weap_type94_new { price = 60; stock = 10; };
-
-			class rhs_weap_pp2000_folded { price = 70; stock = 5; };
-			class rhs_weap_savz61_folded { price = 70; stock = 5; };
-			class CUP_hgun_MicroUzi { price = 80; stock = 2; };
-			class CUP_hgun_TaurusTracker455_gold { price = 250; stock = 0; };
+			class rhsusf_weap_m1911a1 { price = 60; stock = 10; };
+			class rhsusf_weap_m9 { price = 60; stock = 10; };
+			#endif
 		};
 
 		class fooddrink {
@@ -2564,16 +2738,22 @@ class cfgHALsStore {
 			class MineDetector { price = 80; stock = 2; };
 			class Medikit { price = 60; stock = 3; };
 
-			class rhsusf_bino_m24_ARD { price = 40; stock = 20; };
 			class Binocular { price = 40; stock = 20; };
-			class rhsusf_bino_lerca_1200_black { price = 80; stock = 5; };
-			class rhsusf_bino_lrf_Vector21 { price = 80; stock = 5; };
 
 			class NVGoggles_INDEP { price = 300; stock = 5; };
+
+			#ifdef DMD_USE_CUP
 			class CUP_NVG_PVS7 { price = 300; stock = 5; };
-			class rhs_1PN138 { price = 300; stock = 5; };
 			class CUP_NVG_GPNVG_black { price = 300; stock = 5; };
+			#endif
+
+			#ifdef DMD_USE_RHS
+			class rhsusf_bino_m24_ARD { price = 40; stock = 20; };
+			class rhsusf_bino_lerca_1200_black { price = 80; stock = 5; };
+			class rhsusf_bino_lrf_Vector21 { price = 80; stock = 5; };
+			class rhs_1PN138 { price = 300; stock = 5; };
 			class rhsusf_ANPVS_15 { price = 300; stock = 5; };
+			#endif
 
 			class ItemGPS { price = 150; stock = 5; };
 		    

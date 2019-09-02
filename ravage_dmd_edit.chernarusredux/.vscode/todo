@@ -6,6 +6,8 @@ some vehicles have fuck all space. need to fix that.
 
 get some other cunt to help me test in a dedicated environ
 
+#ifdef for easy toggling of mods in cfg - have created a basic template, anyone who edits the mission should be able to figure it out
+
 
 run through TADST and test solo
 

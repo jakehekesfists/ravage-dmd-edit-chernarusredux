@@ -38,7 +38,7 @@ It has not been published on the Steam Workshop at this point.
 * CBA_A3
 * Ravage
 * CUP Weapons
-* CUP Unites
+* CUP Units
 * CUP Terrains - Core
 * CUP Vehicles
 * Chernarus Redux

@@ -9,7 +9,7 @@ class dmd_cfg_settings {
 
         // an array of positions along the coast where player may spawn first time they join. 
         // the script will pick a spot along the coast within a 500m radius of any of these predefined positions. 
-        spawnLocations[] = {
+        spawnLocations[] = { 
             {1809,2093},
             {3580,2128},
             {4669,2145},

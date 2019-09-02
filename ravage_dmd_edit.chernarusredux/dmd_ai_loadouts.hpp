@@ -6,6 +6,8 @@ class dmd_ai_loadouts {
         in dmd_ai_missions.hpp
         
         remember to add any additional weapons to the traders list if its not already there  (HALs\Addons\store\config.hpp)
+
+        TODO: Add more classes. allow hosts to easily enable rhs/cup/a3 type ai. 
     */
 
     // BANDITS 
