@@ -7,8 +7,6 @@ some vehicles have fuck all space. need to fix that.
 get some other cunt to help me test in a dedicated environ
 
 
-
-
 run through TADST and test solo
 
 - later versions
@@ -22,11 +20,5 @@ run through TADST and test solo
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
 
--- upload to github
-use the MIT license
-
-https://www.freecodecamp.org/news/how-open-source-licenses-work-and-how-to-add-them-to-your-projects-34310c3cf94/
-
-
-bugs:
+known bugs:
 Ravage repair script does not seem to work with the BTR 40
