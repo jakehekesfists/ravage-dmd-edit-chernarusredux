@@ -1,13 +1,12 @@
 learn french and remove 90% of the R3F stuff. i only need it for moving objects
 maybe find a better logi script. maybe write a new one.. attachto and stuff isnt THAT hard surely.
 
-get some other cunt to help me test in a dedicated environ
+plan weekend testing session in dedicated environment
 
-#ifdef for easy toggling of mods in cfg - have created a basic template, anyone who edits the mission should be able to figure it out
-    - bandits and russians done with cup/rhs/vanilla configs. complete this for us and takistanis
+create new loot spawn system. ravage is far too sparse
 
 
-run through TADST and test solo
+
 
 - later versions
     once rhs updates and fixes the broken shotgun reloading. add them back in to the mission
