@@ -150,62 +150,139 @@ class dmd_ai_loadouts {
 
     // GUERILLAS
             // RHS VARIANTS
-            class gu_leader_rhs {};
-            class gu_lightinf_rhs {};
-            class gu_rifleman_rhs {};
-            class gu_support_rhs {};
-            class gu_sniper_rhs {};
+            class gu_leader_rhs {
+                uniformClass = "rhs_uniform_gorka_r_g";
+                backpack = "";
+                weapons[] = {"rhs_weap_l1a1_wood","rhs_pdu4","Throw","Put"};
+                magazines[] = {"rhs_mag_20Rnd_762x51_m80_fnfal","rhs_mag_20Rnd_762x51_m80_fnfal","rhs_mag_20Rnd_762x51_m80_fnfal","rhs_mag_20Rnd_762x51_m80_fnfal"};
+                items[] = {};
+                linkedItems[] = {"rhsgref_6b23_ttsko_mountain_nco","rhs_beanie_green","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+            };
+
+            class gu_lightinf_rhs {
+                uniformClass = "U_I_C_Soldier_Para_4_F";
+                backpack = "";
+                weapons[] = {"rhs_weap_m3a1_specops","Throw","Put"};
+                magazines[] = {"rhsgref_30rnd_1143x23_M1911B_SMG","rhsgref_30rnd_1143x23_M1911B_SMG","rhsgref_30rnd_1143x23_M1911B_SMG","rhsgref_30rnd_1143x23_M1911B_SMG"};
+                items[] = {};
+                linkedItems[] = {"rvg_legstrapbag_1","rhssaf_helmet_m97_woodland_black_ess_bare","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+            };
+
+            class gu_rifleman_rhs {
+                uniformClass = "U_BG_Guerrilla_6_1";
+                backpack = "";
+                weapons[] = {"Rangefinder","rhs_weap_vhsd2_bg_ct15x","Throw","Put"};
+                magazines[] = {"rhsgref_30rnd_556x45_vhs2","rhs_mag_M441_HE","rhsgref_30rnd_556x45_vhs2","rhsgref_30rnd_556x45_vhs2","rhs_mag_M441_HE","rhs_mag_M441_HE"};
+                items[] = {};
+                linkedItems[] = {"rhsgref_otv_khaki","rhsusf_protech_helmet_rhino","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS","rhsusf_ANPVS_14"};
+            };
+
+            class gu_support_rhs {
+                uniformClass = "U_I_E_CBRN_Suit_01_EAF_F";
+                backpack = "rhs_sidor";
+                weapons[] = {"Rangefinder","rhs_weap_mg42","Throw","Put"};
+                magazines[] = {"rhsgref_50Rnd_792x57_SmE_drum","rhsgref_50Rnd_792x57_SmE_drum","rhsgref_50Rnd_792x57_SmE_drum","rhsgref_50Rnd_792x57_SmE_drum","rhsgref_50Rnd_792x57_SmE_drum","rhsgref_50Rnd_792x57_SmE_drum","rhsgref_50Rnd_792x57_SmE_drum"};
+                items[] = {};
+                linkedItems[] = {"rhsusf_spcs_ocp_machinegunner","rhsusf_ihadss","G_Balaclava_oli","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+            };
+
+            class gu_sniper_rhs {
+                uniformClass = "U_B_CBRN_Suit_01_Wdl_F";
+                backpack = "rhsusf_falconii";
+                weapons[] = {"Rangefinder","rhs_weap_XM2010_wd","Throw","Put"};
+                magazines[] = {"rhsusf_5Rnd_300winmag_xm2010","rhsusf_5Rnd_300winmag_xm2010","rhsusf_5Rnd_300winmag_xm2010","rhsusf_5Rnd_300winmag_xm2010","rhsusf_5Rnd_300winmag_xm2010","rhsusf_5Rnd_300winmag_xm2010","rhsusf_5Rnd_300winmag_xm2010","rhsusf_5Rnd_300winmag_xm2010","rhsusf_5Rnd_300winmag_xm2010","rhsusf_5Rnd_300winmag_xm2010","rhsusf_5Rnd_300winmag_xm2010","rhsusf_5Rnd_300winmag_xm2010","rhsusf_5Rnd_300winmag_xm2010","rhsusf_5Rnd_300winmag_xm2010"};
+                items[] = {};
+                linkedItems[] = {"G_Balaclava_oli","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS","rhsusf_ANPVS_15"};
+            };
             
             // CUP VARIANTS
-            class gu_leader_cup {};
-            class gu_lightinf_cup {};
-            class gu_rifleman_cup {};
-            class gu_support_cup {};
-            class gu_sniper_cup {};
+            class gu_leader_cup {
+                uniformClass = "CUP_U_I_GUE_Anorak_03";
+                backpack = "CUP_B_ACRScout_m95";
+                weapons[] = {"CUP_arifle_M16A2","Throw","Put"};
+                magazines[] = {"CUP_30Rnd_556x45_Stanag","CUP_30Rnd_556x45_Stanag","CUP_30Rnd_556x45_Stanag","CUP_30Rnd_556x45_Stanag"};
+                items[] = {};
+                linkedItems[] = {"CUP_V_B_ALICE","H_Cap_blk","CUP_G_PMC_RadioHeadset_Glasses","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+            };
+
+            class gu_lightinf_cup {
+                uniformClass = "CUP_U_I_GUE_Anorak_02";
+                backpack = "CUP_B_ACRScout_m95";
+                weapons[] = {"CUP_smg_MP5A5_flashlight","Throw","Put"};
+                magazines[] = {"CUP_30Rnd_9x19_MP5","CUP_30Rnd_9x19_MP5","CUP_30Rnd_9x19_MP5","CUP_30Rnd_9x19_MP5"};
+                items[] = {};
+                linkedItems[] = {"CUP_V_B_GER_Vest_2","CUP_H_PMC_Cap_PRR_Grey","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+            };
+
+            class gu_rifleman_cup {
+                uniformClass = "CUP_U_B_BAF_DPM_UBACSTSHIRTKNEE";
+                backpack = "CUP_B_AlicePack_OD";
+                weapons[] = {"CUP_arifle_L85A2_NG","Throw","Put"};
+                magazines[] = {"CUP_30Rnd_556x45_Stanag_L85","CUP_30Rnd_556x45_Stanag_L85","CUP_30Rnd_556x45_Stanag_L85","CUP_30Rnd_556x45_Stanag_L85"};
+                items[] = {};
+                linkedItems[] = {"CUP_V_CZ_vest04","CUP_H_SLA_Boonie","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+            };
+
+            class gu_support_cup {
+                uniformClass = "U_O_R_Gorka_01_black_F";
+                backpack = "CUP_B_AlicePack_OD";
+                weapons[] = {"CUP_arifle_RPK74","Throw","Put"};
+                magazines[] = {"CUP_75Rnd_TE4_LRT4_Green_Tracer_762x39_RPK_M","CUP_75Rnd_TE4_LRT4_Green_Tracer_762x39_RPK_M","CUP_75Rnd_TE4_LRT4_Green_Tracer_762x39_RPK_M","CUP_75Rnd_TE4_LRT4_Green_Tracer_762x39_RPK_M"};
+                items[] = {};
+                linkedItems[] = {"V_PlateCarrier1_blk","H_RacingHelmet_1_black_F","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+            };
+            class gu_sniper_cup {
+                uniformClass = "U_B_CBRN_Suit_01_Wdl_F";
+                backpack = "CUP_B_GER_Pack_Flecktarn";
+                weapons[] = {"CUP_srifle_SVD_wdl","Throw","Put"};
+                magazines[] = {"CUP_10Rnd_762x54_SVD_M","CUP_10Rnd_762x54_SVD_M","CUP_10Rnd_762x54_SVD_M","CUP_10Rnd_762x54_SVD_M"};
+                items[] = {};
+                linkedItems[] = {"G_Balaclava_oli","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio"};                
+            };
 
     class gu_leader {
-        uniformClass = "CUP_U_O_TK_Officer";
-        backpack = "rvg_messengerbag_4";
-        weapons[] = {"rhs_weap_ak74_3","Binocular","Throw","Put"};
-        magazines[] = {"rhs_30Rnd_545x39_7N6_green_AK","rhs_30Rnd_545x39_7N6_green_AK","rhs_30Rnd_545x39_7N6_green_AK","rhs_30Rnd_545x39_7N6_green_AK","rhs_30Rnd_545x39_7N6_green_AK","rhs_30Rnd_545x39_7N6_green_AK","rhs_mag_rgo"};
-        items[] = {"FirstAidKit"};
-        linkedItems[] = {"CUP_V_O_TK_CrewBelt","CUP_H_TKI_SkullCap_03","L_Shemagh_Tan","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+        uniformClass = "rvg_survivor";
+        backpack = "";
+        weapons[] = {"arifle_TRG21_GL_F","Throw","Put"};
+        magazines[] = {"30Rnd_556x45_Stanag","1Rnd_HE_Grenade_shell","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell"};
+        items[] = {};
+        linkedItems[] = {"V_BandollierB_blk","H_Bandanna_khk_hs","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio"};
     };
 
     class gu_lightinf {
-        uniformClass = "CUP_U_O_TK_Green";
-        backpack = "rhs_sidor";
-        weapons[] = {"Binocular","rhs_weap_asval_grip_npz","Throw","Put"};
-        magazines[] = {"rhs_20rnd_9x39mm_SP5","rhs_20rnd_9x39mm_SP5","rhs_20rnd_9x39mm_SP5","rhs_20rnd_9x39mm_SP5","rhs_mag_rgo"};
-        items[] = {"Medikit"};
-        linkedItems[] = {"CUP_V_OI_TKI_Jacket5_01","CUP_H_TKI_Pakol_1_02","rhsusf_shemagh2_grn","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+        uniformClass = "U_B_CBRN_Suit_01_Wdl_F";
+        backpack = "";
+        weapons[] = {"Binocular","SMG_03_TR_khaki","Throw","Put"};
+        magazines[] = {"50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03"};
+        items[] = {};
+        linkedItems[] = {"V_BandollierB_oli","G_Balaclava_TI_G_blk_F","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
     };
 
     class gu_rifleman {
-        uniformClass = "CUP_U_O_TK_MixedCamo";
-        backpack = "rhs_assault_umbts";
-        weapons[] = {"Binocular","rhs_weap_ak103_zenitco01_b33","Throw","Put"};
-        magazines[] = {"rhs_30Rnd_762x39mm_polymer","rhs_30Rnd_762x39mm_polymer","rhs_30Rnd_762x39mm_polymer","rhs_mag_rgo","rhs_mag_rgo"};
-        items[] = {"MineDetector","FirstAidKit","FirstAidKit"};
-        linkedItems[] = {"CUP_V_OI_TKI_Jacket4_02","CUP_H_TKI_Lungee_Open_03","G_Aviator","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+        uniformClass = "U_I_L_Uniform_01_deserter_F";
+        backpack = "";
+        weapons[] = {"Binocular","arifle_SPAR_03_blk_F","Throw","Put"};
+        magazines[] = {"20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag"};
+        items[] = {};
+        linkedItems[] = {"V_PlateCarrierIA1_dgtl","G_Balaclava_TI_G_blk_F","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
     };
 
     class gu_support {
-        uniformClass = "CUP_U_O_TK_Green";
-        backpack = "rhs_rpg_empty";
-        weapons[] = {"Binocular","rhs_weap_m84","rhs_weap_rpg7","Throw","Put"};
-        magazines[] = {"rhs_100Rnd_762x54mmR","rhs_rpg7_PG7V_mag","rhs_mag_rgo","rhs_100Rnd_762x54mmR","rhs_100Rnd_762x54mmR","rhs_rpg7_PG7V_mag"};
-        items[] = {"MineDetector","FirstAidKit","FirstAidKit"};
-        linkedItems[] = {"CUP_V_PMC_IOTV_Black_AR","rhssaf_helmet_m97_black_nocamo","G_Balaclava_blk","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+        uniformClass = "U_O_R_Gorka_01_camo_F";
+        backpack = "B_Carryall_oli";
+        weapons[] = {"Binocular","arifle_CTARS_blk_F","Throw","Put"};
+        magazines[] = {"100Rnd_580x42_Mag_F","100Rnd_580x42_Mag_F","100Rnd_580x42_Mag_F","100Rnd_580x42_Mag_F","100Rnd_580x42_Mag_F","100Rnd_580x42_Mag_F"};
+        items[] = {};
+        linkedItems[] = {"V_PlateCarrierSpec_wdl","H_Watchcap_blk","G_AirPurifyingRespirator_01_F","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
     };
 
     class gu_sniper {
-        uniformClass = "CUP_U_I_Ghillie_Top";
-        backpack = "rvg_legstrappack_4";
-        weapons[] = {"Binocular","rhs_weap_svds_npz","Throw","Put"};
-        magazines[] = {"rhs_10Rnd_762x54mmR_7N1","rhs_10Rnd_762x54mmR_7N1","rhs_10Rnd_762x54mmR_7N1","rhs_10Rnd_762x54mmR_7N1","rhs_mag_an_m14_th3","rhs_mag_an_m14_th3","rhs_10Rnd_762x54mmR_7N1","rhs_10Rnd_762x54mmR_7N1","rhs_10Rnd_762x54mmR_7N1","rhs_10Rnd_762x54mmR_7N1","rhs_10Rnd_762x54mmR_7N1","rhs_10Rnd_762x54mmR_7N14","rhs_10Rnd_762x54mmR_7N14"};
-        items[] = {"FirstAidKit","FirstAidKit","FirstAidKit"};
-        linkedItems[] = {"CUP_V_CDF_OfficerBelt","rhs_balaclava1_olive","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+        uniformClass = "U_I_GhillieSuit";
+        backpack = "";
+        weapons[] = {"Binocular","srifle_GM6_F","Throw","Put"};
+        magazines[] = {"5Rnd_127x108_Mag","5Rnd_127x108_Mag","5Rnd_127x108_Mag","5Rnd_127x108_Mag","5Rnd_127x108_Mag","5Rnd_127x108_Mag"};
+        items[] = {};
+        linkedItems[] = {"V_Rangemaster_belt","H_Watchcap_blk","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS","NVGoggles_INDEP"};
     };
 
     
@@ -257,19 +334,96 @@ class dmd_ai_loadouts {
             };
             
             // CUP VARIANTS
-            class us_leader_cup {};
-            class us_lightinf_cup {};
-            class us_rifleman_cup {};
-            class us_support_cup {};
-            class us_sniper_cup {};
-            
+            class us_leader_cup {
+                uniformClass = "CUP_U_B_US_BDU";
+                backpack = "";
+                weapons[] = {"Binocular","CUP_arifle_G36K","Throw","Put"};
+                magazines[] = {"CUP_30Rnd_556x45_G36","CUP_30Rnd_556x45_G36","CUP_30Rnd_556x45_G36","CUP_30Rnd_556x45_G36"};
+                items[] = {};
+                linkedItems[] = {"CUP_V_I_RACS_Carrier_Rig_wdl_3","CUP_H_USMC_CAP_WDL","G_Aviator","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+            };
+
+            class us_lightinf_cup {
+                uniformClass = "CUP_U_B_USArmy_Soft";
+                backpack = "";
+                weapons[] = {"Binocular","CUP_smg_MP5SD6","Throw","Put"};
+                magazines[] = {"CUP_30Rnd_9x19_MP5","CUP_30Rnd_9x19_MP5","CUP_30Rnd_9x19_MP5","CUP_30Rnd_9x19_MP5"};
+                items[] = {};
+                linkedItems[] = {"CUP_V_B_BAF_DPM_Osprey_Mk3_Medic","H_Bandanna_gry","PU_shemagh_GryBLK","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+            };
+
+            class us_rifleman_cup {
+                uniformClass = "CUP_U_B_USMC_MARPAT_WDL_RolledUp";
+                backpack = "CUP_B_USMC_MOLLE";
+                weapons[] = {"Binocular","CUP_arifle_XM8_Carbine","Throw","Put"};
+                magazines[] = {"CUP_30Rnd_556x45_XM8","CUP_30Rnd_556x45_XM8","CUP_30Rnd_556x45_XM8","CUP_30Rnd_556x45_XM8","CUP_HandGrenade_RGO","CUP_HandGrenade_RGO"};
+                items[] = {};
+                linkedItems[] = {"CUP_V_B_GER_Vest_2","CUP_H_BAF_MTP_Mk7_PRR_SCRIM_A","CUP_TK_NeckScarf","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio","CUP_NVG_GPNVG_black"};
+            };
+
+            class us_support_cup {
+                uniformClass = "CUP_I_B_PMC_Unit_23";
+                backpack = "CUP_B_USPack_Black";
+                weapons[] = {"Binocular","CUP_lmg_m249_para","Throw","Put"};
+                magazines[] = {"CUP_200Rnd_TE4_Red_Tracer_556x45_M249","CUP_HandGrenade_RGO","CUP_HandGrenade_RGO","CUP_200Rnd_TE4_Red_Tracer_556x45_M249","CUP_200Rnd_TE4_Red_Tracer_556x45_M249","CUP_200Rnd_TE4_Red_Tracer_556x45_M249"};
+                items[] = {};
+                linkedItems[] = {"CUP_V_CZ_vest11","CUP_H_BAF_PILOT","CUP_PMC_Facewrap_Skull","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+            };
+
+            class us_sniper_cup {
+                uniformClass = "CUP_U_B_CZ_WDL_Ghillie";
+                backpack = "";
+                weapons[] = {"Binocular","CUP_srifle_M24_wdl","Throw","Put"};
+                magazines[] = {"CUP_5Rnd_762x51_M24","CUP_5Rnd_762x51_M24","CUP_5Rnd_762x51_M24","CUP_5Rnd_762x51_M24","CUP_5Rnd_762x51_M24","CUP_5Rnd_762x51_M24","CUP_5Rnd_762x51_M24","CUP_5Rnd_762x51_M24","CUP_5Rnd_762x51_M24","CUP_5Rnd_762x51_M24","CUP_5Rnd_762x51_M24"};
+                items[] = {};
+                linkedItems[] = {"CUP_V_B_RRV_Light","CUP_PMC_Facewrap_Smilie","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+            };            
             
             // VANILLA A3 ONLY
-            class us_leader {};
-            class us_lightinf {};
-            class us_rifleman {};
-            class us_support {};
-            class us_sniper {};
+            class us_leader {
+                uniformClass = "U_B_CTRG_Soldier_urb_2_F";
+                backpack = "";
+                weapons[] = {"arifle_MX_GL_Black_F","Throw","Put"};
+                magazines[] = {"30Rnd_65x39_caseless_black_mag","1Rnd_HE_Grenade_shell","30Rnd_65x39_caseless_black_mag","30Rnd_65x39_caseless_black_mag","30Rnd_65x39_caseless_black_mag","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell"};
+                items[] = {};
+                linkedItems[] = {"V_PlateCarrier1_rgr","H_Beret_blk","G_Tactical_Clear","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+            };
+
+            class us_lightinf {
+                uniformClass = "U_B_CombatUniform_mcam_tshirt";
+                backpack = "";
+                weapons[] = {"SMG_05_F","Binocular","Throw","Put"};
+                magazines[] = {"30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02"};
+                items[] = {"FirstAidKit"};
+                linkedItems[] = {"V_TacVest_camo","H_HelmetB_light_black","G_Bandanna_beast","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
+            };
+
+            class us_rifleman {
+                uniformClass = "U_B_CombatUniform_mcam";
+                backpack = "B_Kitbag_rgr";
+                weapons[] = {"Binocular","arifle_Mk20C_F","Throw","Put"};
+                magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag"};
+                items[] = {"FirstAidKit"};
+                linkedItems[] = {"V_PlateCarrier_Kerry","H_HelmetSpecB_paint1","G_Bandanna_beast","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGogglesB_grn_F"};
+            };
+
+            class us_support {
+                uniformClass = "U_B_CTRG_Soldier_3_F";
+                backpack = "B_ViperHarness_oli_F";
+                weapons[] = {"Binocular","LMG_Mk200_F","Throw","Put"};
+                magazines[] = {"200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box"};
+                items[] = {"FirstAidKit"};
+                linkedItems[] = {"V_PlateCarrier_Kerry","H_PilotHelmetHeli_B","G_Balaclava_TI_blk_F","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+            };
+
+            class us_sniper {
+                uniformClass = "U_B_CTRG_Soldier_F";
+                backpack = "";
+                weapons[] = {"srifle_DMR_06_olive_F","Rangefinder","Throw","Put"};
+                magazines[] = {"20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag"};
+                items[] = {"FirstAidKit"};
+                linkedItems[] = {"V_PlateCarrier2_rgr_noflag_F","H_Booniehat_oli","G_Bandanna_oli","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+            };
     
     // RUSSIAN ARMY
         // RHS VARIANTS

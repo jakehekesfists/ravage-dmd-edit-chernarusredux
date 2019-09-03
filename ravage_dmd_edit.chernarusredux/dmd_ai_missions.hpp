@@ -451,13 +451,6 @@ class AI_Missions {
             displayName = "STR_AI_NAME_USFORCES";
             defaultColour = "colorBLUFOR";
             loadouts[] = {
-                "us_leader_rhs",
-                "us_rifleman_rhs",
-                "us_lightinf_rhs",
-                "us_support_rhs",
-                "us_sniper_rhs"
-            /*
-                //          uncomment when ready
                 #ifdef DMD_USE_RHS
                     "us_leader_rhs",
                     "us_rifleman_rhs",
@@ -479,7 +472,6 @@ class AI_Missions {
                 "us_lightinf",
                 "us_support",
                 "us_sniper"
-            */
             };
         };
 
@@ -487,7 +479,6 @@ class AI_Missions {
             displayName = "STR_AI_NAME_GUERILLAS";
             defaultColour = "ColorOPFOR";
             loadouts[] = {
-                /*
                 #ifdef DMD_USE_RHS
                     "gu_leader_rhs",
                     "gu_lightinf_rhs",
@@ -503,7 +494,7 @@ class AI_Missions {
                     "gu_support_cup",
                     "gu_sniper_cup",
                 #endif
-                */
+                
                 "gu_leader",
                 "gu_lightinf",
                 "gu_rifleman",
