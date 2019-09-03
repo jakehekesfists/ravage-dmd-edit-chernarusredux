@@ -3,7 +3,7 @@
 <Project name="DMD_Server">
 	<!--
 		This will be an open source project on Github and Published on Steam Workshop
-		Any Translations will be welcomed and added to the main branch if submitted. 
+		Any Translations will be welcomed and added to the main branch if submitted.
 	-->
 
 	<Package name="AddActions">
@@ -286,9 +286,9 @@
 			<Original>US Marines</Original>
 			<English>US Marines</English>
 		</Key>
-		<Key ID="STR_AI_NAME_TAKISTANIS">
-			<Original>Takistani Rebels</Original>
-			<English>Takistani Rebels</English>
+		<Key ID="STR_AI_NAME_GUERILLAS">
+			<Original>Guerillas</Original>
+			<English>Guerillas</English>
 		</Key>
 		<Key ID="STR_AI_NAME_BAFORCES">
 			<Original>Bandits</Original>

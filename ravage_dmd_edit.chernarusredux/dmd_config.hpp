@@ -7,9 +7,9 @@ class dmd_cfg_settings {
         objectDist = 1600;      // object draw distance
         shadowDist = 100;       // distance that shadows are rendered
 
-        // an array of positions along the coast where player may spawn first time they join. 
-        // the script will pick a spot along the coast within a 500m radius of any of these predefined positions. 
-        spawnLocations[] = { 
+        // an array of positions along the coast where player may spawn first time they join.
+        // the script will pick a spot along the coast within a 500m radius of any of these predefined positions.
+        spawnLocations[] = {
             {1809,2093},
             {3580,2128},
             {4669,2145},
@@ -32,8 +32,8 @@ class dmd_cfg_settings {
         hotwireFailureChance = 66;     // 66% chance of hotwire attempt failing
 
         // Spooky Night Fog :  NOTE: this has nothing to do with the weather, this is a fog effect created around players to add atmosphere
-        enableFog = 1;                                                  // enable spooky night fog. 1 for on / 0 for off. 
-        fogHours[] = {0,1,2,3,4,23};                                    // spooky fog may appear between these hours. 11pm - 4am by default. 
+        enableFog = 1;                                                  // enable spooky night fog. 1 for on / 0 for off.
+        fogHours[] = {0,1,2,3,4,23};                                    // spooky fog may appear between these hours. 11pm - 4am by default.
         fogDays[] = { 1,2,5,7,8,10,14,15,16,17,20,21,24,28,29,30 };     // spooky fog can only appear on these ingame dates. I dont want fog every night.
         //  fogDays[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31};      // debug setting - fog every night.
         
@@ -48,7 +48,7 @@ class dmd_cfg_settings {
             "rhsusf_100Rnd_556x45_M200_soft_pouch_coyote"
         };
 
-        // smoke shell colours - these are used across a few scripts. just call/edit them from here. 
+        // smoke shell colours - these are used across a few scripts. just call/edit them from here.
         smokeShellColours[] = {"SmokeShell","SmokeShellYellow","SmokeShellRed","SmokeShellGreen","SmokeShellPurple","SmokeShellBlue","SmokeShellOrange"};
 
         exclusionZones[] = {"Guglovo", "Chernogorsk", "Elektrozavodsk"};        // exclude these cities from being used for missions and base object spawn.
@@ -258,4 +258,4 @@ class dmd_cfg_settings {
     #include "dmd_ai_missions.hpp"
 };
 /***    PRESET AI LOADOUTS (no shit, sherlock)      ***/
-#include "dmd_ai_loadouts.hpp"          
+#include "dmd_ai_loadouts.hpp"

@@ -3,8 +3,23 @@
 class AI_Missions {
     
     class lootSettings {
-        // use large crates only. can fit more shit in them
-        crateTypes[] = { "CUP_RUVehicleBox","CUP_TKVehicleBox_EP1","CUP_USVehicleBox_EP1","CUP_USVehicleBox", "B_Slingload_01_Cargo_F" };
+
+        crateTypes[] = {
+            #ifdef DMD_USE_RHS
+            "rhs_weapon_crate",
+            "rhsusf_mags_crate",
+            #endif
+            #ifdef DMD_USE_CUP
+            "CUP_RUVehicleBox",
+            "CUP_TKVehicleBox_EP1",
+            "CUP_USVehicleBox_EP1",
+            "CUP_USVehicleBox",
+            #endif
+            "Box_NATO_AmmoVeh_F",
+            "Box_IND_AmmoVeh_F",
+            "C_supplyCrate_F",
+            "B_Slingload_01_Cargo_F"
+        };
         
         // loot that can spawn in AI mission crates
         rifles[] = {
@@ -379,25 +394,122 @@ class AI_Missions {
         class russianForces {
             displayName = "STR_AI_NAME_RUSSIANFORCES";
             defaultColour = "ColorOPFOR";
-            loadouts[] = {"ru_leader", "ru_rifleman", "ru_lightinf", "ru_support", "ru_sniper"};
+            loadouts[] = {
+                #ifdef DMD_USE_RHS
+                    "ru_leader_rhs",
+                    "ru_rifleman_rhs",
+                    "ru_lightinf_rhs",
+                    "ru_support_rhs",
+                    "ru_sniper_rhs",
+                #endif
+                
+                #ifdef DMD_USE_CUP
+                    "ru_leader_cup",
+                    "ru_rifleman_cup",
+                    "ru_lightinf_cup",
+                    "ru_support_cup",
+                    "ru_sniper_cup",
+                #endif
+                
+                "ru_leader",
+                "ru_rifleman",
+                "ru_lightinf",
+                "ru_support",
+                "ru_sniper"
+            };
+        };
+
+        class baForces {
+            displayName = "STR_AI_NAME_BAFORCES";
+            defaultColour = "ColorGUER";
+            loadouts[] = {
+                #ifdef DMD_USE_RHS
+                    "ba_leader_rhs",
+                    "ba_rifleman_rhs",
+                    "ba_lightinf_rhs",
+                    "ba_support_rhs",
+                    "ba_sniper_rhs",
+                #endif
+                
+                #ifdef DMD_USE_CUP
+                    "ba_leader_cup",
+                    "ba_rifleman_cup",
+                    "ba_lightinf_cup",
+                    "ba_support_cup",
+                    "ba_sniper_cup",
+                #endif
+                
+                "ba_leader",
+                "ba_rifleman",
+                "ba_lightinf",
+                "ba_support",
+                "ba_sniper"
+            };
         };
 
         class usForces {
             displayName = "STR_AI_NAME_USFORCES";
             defaultColour = "colorBLUFOR";
-            loadouts[] = {"us_leader", "us_rifleman", "us_lightinf", "us_support", "us_sniper"};
+            loadouts[] = {
+                "us_leader_rhs",
+                "us_rifleman_rhs",
+                "us_lightinf_rhs",
+                "us_support_rhs",
+                "us_sniper_rhs"
+            /*
+                //          uncomment when ready
+                #ifdef DMD_USE_RHS
+                    "us_leader_rhs",
+                    "us_rifleman_rhs",
+                    "us_lightinf_rhs",
+                    "us_support_rhs",
+                    "us_sniper_rhs",
+                #endif
+                
+                #ifdef DMD_USE_CUP
+                    "us_leader_cup",
+                    "us_lightinf_cup",
+                    "us_rifleman_cup",
+                    "us_support_cup",
+                    "us_sniper_cup",
+                #endif
+                
+                "us_leader",
+                "us_rifleman",
+                "us_lightinf",
+                "us_support",
+                "us_sniper"
+            */
+            };
         };
 
-        class takistanis {
-            displayName = "STR_AI_NAME_TAKISTANIS";
+        class guerillas {
+            displayName = "STR_AI_NAME_GUERILLAS";
             defaultColour = "ColorOPFOR";
-            loadouts[] = {"tk_leader", "tk_rifleman", "tk_lightinf", "tk_support", "tk_sniper"};
-        };
-        
-        class baForces {
-            displayName = "STR_AI_NAME_BAFORCES";
-            defaultColour = "ColorGUER";
-            loadouts[] = {"ba_leader", "ba_rifleman", "ba_lightinf", "ba_support", "ba_sniper"};
+            loadouts[] = {
+                /*
+                #ifdef DMD_USE_RHS
+                    "gu_leader_rhs",
+                    "gu_lightinf_rhs",
+                    "gu_rifleman_rhs",
+                    "gu_support_rhs",
+                    "gu_sniper_rhs",
+                #endif
+                
+                #ifdef DMD_USE_CUP
+                    "gu_leader_cup",
+                    "gu_lightinf_cup",
+                    "gu_rifleman_cup",
+                    "gu_support_cup",
+                    "gu_sniper_cup",
+                #endif
+                */
+                "gu_leader",
+                "gu_lightinf",
+                "gu_rifleman",
+                "gu_support",
+                "gu_sniper"
+            };
         };
     };
     
@@ -435,7 +547,7 @@ class AI_Missions {
         txtStart = "STR_AI_INVASION_START";
         txtEnd = "STR_AI_INVASION_END";
         
-        aiTypes[] = { "russianForces", "usForces", "takistanis" };
+        aiTypes[] = { "russianForces", "usForces", "guerillas" };
         randDelay[] = {1800, 3600};     // min/max (delay between invasion missions)
         //  randDelay[] = {20, 30};     // debug settings
         minPlayers = 1;                 // minimum players online before mission will start - recommend 1 for single player fun
@@ -476,7 +588,7 @@ class AI_Missions {
             missions are defined in subclasses below.
             mission text is defined in the stringtable.xml file
             
-            note:            
+            note:
                 the objectcompositions were created years ago for my old epoch and exile servers using an addon that no longer works properly .(m3deditor).
                 i would like to make a better way of dynamic firebase spawning, using relative positions.
                 future updates perhaps?
@@ -508,7 +620,7 @@ class AI_Missions {
         class defaultMission {
             // Default Mission Settings - Will be used if not overwritten below.
             missionName = "STR_AI_MAINMISSION_NAME";
-            aiTypes[] = { "russianForces", "usForces", "takistanis", "baForces" };
+            aiTypes[] = { "russianForces", "usForces", "guerillas", "baForces" };
 
             txtName = "STR_AI_DEFAULT_NAME";
             txtStart = "STR_AI_DEFAULT_START";
@@ -599,7 +711,7 @@ class AI_Missions {
                     "CUP_O_UAZ_MG_CSAT",
                     "CUP_O_Ural_RU",
                     "CUP_O_V3S_Refuel_TKM",
-                    "CUP_V3S_Open_NAPA",                
+                    "CUP_V3S_Open_NAPA",
                 #endif
 
                 #ifdef DMD_USE_RHS
@@ -1088,7 +1200,7 @@ class AI_Missions {
             };
             paradropVehicle = 0;
 
-            aiTypes[] = { "takistanis", "baForces" };
+            aiTypes[] = { "guerillas", "baForces" };
             unts[] = {12, 15};
             grps[] = {2, 3};
             rifleMinMax[] = {8,10};
@@ -1261,7 +1373,7 @@ class AI_Missions {
             txtStart = "STR_AI_THUNDERDOME_START";
             txtEnd = "STR_AI_THUNDERDOME_END";
 
-            aiTypes[] = { "russianForces", "usForces", "takistanis" };
+            aiTypes[] = { "russianForces", "usForces", "guerillas" };
             objComposition[] = {
                 { "Land_Dome_Big_F", { 0, 0, 0 }, 45, { true, true } },
                 { "Land_Dome_Small_F", { 0, 40, 0 }, 0, { true, true } },
@@ -1284,7 +1396,7 @@ class AI_Missions {
             txtStart = "STR_AI_SOLARTRANSFORMER_START";
             txtEnd = "STR_AI_SOLARTRANSFORMER_END";
 
-            aiTypes[] = { "takistanis", "baForces" };
+            aiTypes[] = { "guerillas", "baForces" };
 
             objComposition[] = {
                 {"Land_spp_Transformer_F",{0.183594,-2.02478,0},0,{true,true}},
@@ -1354,7 +1466,7 @@ class AI_Missions {
             vehicle = 1;
             paradropVehicle = 1;
 
-            aiTypes[] = { "takistanis", "baForces" };
+            aiTypes[] = { "guerillas", "baForces" };
             objComposition[] = {
                 {"RU_WarfareBUAVterminal",{5.25293,-1.0354,0},0,{true,true}},
                 {"Land_CampingTable_F",{1.68555,-2.23584,0},269.009,{false,false}},
@@ -1417,7 +1529,7 @@ class AI_Missions {
             txtStart = "STR_AI_VTOL_START";
             txtEnd = "STR_AI_VTOL_END";
 
-            aiTypes[] = { "russianForces", "takistanis", "baForces" };
+            aiTypes[] = { "russianForces", "guerillas", "baForces" };
             objComposition[] = {
                 {"Land_UWreck_MV22_F",{-2.78638,0.692383,0},0,{true,false}},
                 {"Land_PortableLight_double_F",{-4.1272,17.3423,0},180.215,{true,false}},

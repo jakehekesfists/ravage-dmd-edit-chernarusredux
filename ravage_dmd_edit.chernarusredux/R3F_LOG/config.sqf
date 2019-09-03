@@ -104,45 +104,7 @@ R3F_LOG_CFG_can_be_lifted = [];
  * List of class names of vehicles or cargo objects which can transport objects.
  * The second element of the nested arrays is the load capacity (in relation with the capacity cost of the objects).
  */
-R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
-[
-	// e.g. : ["MyTransporterClassName1", itsCapacity], ["MyTransporterClassName2", itsCapacity]
-	["Quadbike_01_base_F", 5],
-	["UGV_01_base_F", 10],
-	["Hatchback_01_base_F", 10],
-	["SUV_01_base_F", 20],
-	["Offroad_01_base_F", 30],
-	["Offroad_02_base_F", 20],
-	["Van_01_base_F", 40],
-	["LSV_01_base_F", 30],
-	["LSV_02_base_F", 30],
-	["MRAP_01_base_F", 35],
-	["MRAP_02_base_F", 35],
-	["MRAP_03_base_F", 35],
-	["B_Truck_01_box_F", 150],
-	["Truck_F", 75],
-	["Wheeled_APC_F", 30],
-	["Tank_F", 30],
-	["APC", 30],
-	["Scooter_Transport_01_base_F", 5],
-	["Rubber_duck_base_F", 10],
-	["Boat_Civil_01_base_F", 10],
-	["Boat_Transport_02_base_F", 15],
-	["Boat_Armed_01_base_F", 20],
-	["Heli_Light_01_base_F", 10],
-	["Heli_Light_02_base_F", 20],
-	["Heli_light_03_base_F", 20],
-	["Heli_Transport_01_base_F", 25],
-	["Heli_Transport_02_base_F", 30],
-	["Heli_Transport_03_base_F", 30],
-	["Heli_Transport_04_base_F", 30],
-	["Heli_Attack_01_base_F", 10],
-	["Heli_Attack_02_base_F", 20],
-	["Plane_Civil_01_base_F", 5],
-	["VTOL_01_base_F", 50],
-	["VTOL_02_base_F", 30],
-	["LandVehicle", 30]
-];
+R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo + ([] call dmd_fnc_vehicleCargoCapacity);
 
 /**
  * List of class names of objects which can be loaded in transport vehicle/cargo.

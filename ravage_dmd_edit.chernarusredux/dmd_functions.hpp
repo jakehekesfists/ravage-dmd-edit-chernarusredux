@@ -93,5 +93,6 @@ class dmd {
 		class sanitiseMags {};
 		class findSafeMissionPos {};
 		class positionFilter {};
+		class vehicleCargoCapacity {};
 	};
 };
