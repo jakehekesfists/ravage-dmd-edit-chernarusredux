@@ -22,9 +22,13 @@ if (_classname in (primaryWeaponItems _container)) exitWith { _container removeP
 if (_classname in (secondaryWeaponItems _container)) exitWith { _container removeSecondaryWeaponItem _classname; };
 
 // check if the player is wearing the item
-if (_classname isEqualTo (vest _unit)) exitWith {  removeVest _container; };
-if (_classname isEqualTo (uniform _unit)) exitWith {  removeUniform _container; };
-if (_classname isEqualTo (backpack _unit)) exitWith {  removeBackpack _container; };
+if (_classname isEqualTo (vest _container)) exitWith {  removeVest _container; };
+if (_classname isEqualTo (uniform _container)) exitWith {  removeUniform _container; };
+if (_classname isEqualTo (backpack _container)) exitWith {  removeBackpack _container; };
+if (_classname isEqualTo (headgear _container)) exitWith { removeHeadgear _container; };
+if (_classname isEqualTo (goggles _container)) exitWith { removeGoggles _container; };
+if (_classname isEqualTo (binocular _container)) exitWith { _container removeWeapon _classname; };
+if ((_classname in (assignedItems _container)) || (_classname isEqualTo (hmd _container))) exitWith { _container unassignItem _classname; _container removeItem _classname; };
 
 switch ([_classname] call HALs_store_fnc_getItemType) do {
 	case 1: {_container removeMagazineGlobal _classname };
