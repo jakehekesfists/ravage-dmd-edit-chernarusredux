@@ -27,3 +27,5 @@ for "_ii" from 5 to (count _cityPosArray)-1 do { _invadeCities pushBack (_cityPo
 [] execVM "Server\advancedTowing.sqf";
 
 ["Initialize"] call BIS_fnc_dynamicGroups;
+
+[] spawn dmd_fnc_lootCleanLoop;

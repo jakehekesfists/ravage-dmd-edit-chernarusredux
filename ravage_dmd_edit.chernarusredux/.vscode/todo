@@ -3,15 +3,18 @@ maybe find a better logi script. maybe write a new one.. attachto and stuff isnt
 
 plan weekend testing session in dedicated environment
 
-create new loot spawn system. ravage is far too sparse
+LOOT SYSTEM - 
+    VERY BASIC AT THE MOMENT - TOO MANY HATS, THIS ISNT FUCKIN TF2 M8
+
+
+MANUALLY CREATE A LOCKING FEATURE FOR MOVED OBJECTS - 2EZ 
+
 
 
 - later versions
     once rhs updates and fixes the broken shotgun reloading. add them back in to the mission
 
 	the big city up near pobeda dam needs to become a radiated zone with roaming, gasmask wearing ai.
-
-    - re-do the status bar icons. 
 
 /* -----------------------------------
     File: filename.sqf

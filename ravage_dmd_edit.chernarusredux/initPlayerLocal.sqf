@@ -29,3 +29,5 @@ player triggerDynamicSimulation true;       // this mission relies on dynamic si
 [] execVM "Client\locationSpam.sqf";
 [] execVM "Client\credits.sqf";
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
+
+[] spawn dmd_fnc_lootLoop; 

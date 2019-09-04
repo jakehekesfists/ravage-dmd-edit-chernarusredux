@@ -1,4 +1,5 @@
 class dmd_cfg_settings {
+    #include "DMD_LootSpawn\dmd_lootTables.hpp"
 
     class ServerSettings {
         

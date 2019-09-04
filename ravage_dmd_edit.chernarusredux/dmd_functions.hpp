@@ -1,4 +1,12 @@
 class dmd {
+    
+    class LootSpawn {
+        file = "DMD_LootSpawn\fn";
+        class getlootpos {};
+		class lootCleanLoop {};
+		class lootLoop {};        
+    };
+    
 	class AI {
 		file = "fn\AI";
 		class aiGear {};
