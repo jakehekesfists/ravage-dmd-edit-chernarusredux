@@ -164,6 +164,21 @@ player createDiaryRecord ["Features",
 	And Jets and Civilian Aircraft doing Flybys<br/>
 	"
 ]];
+player createDiaryRecord ["Features",
+[
+	"Custom Loot Spawn",
+	"
+	This Mission features BOTH the default Ravage loot spawn<br/>
+	and a Custom written, ground loot spawn system<br/>
+	<br/>
+	One of the major complaints about Ravage mod is the scarcity of loot<br/>
+	I have attempted to balance this out a little<br/>
+	People can edit the loot tables and drop rates in the DMD_LootSpawn folder<br/>
+	This system will work on any map, as it dynamically creates lootspawns for any nearby buildings<br/>
+	<br/>
+	I plan to release this as a standalone system in future<br/>
+	"
+]];
 
 player createDiaryRecord ["Credits",
 [
