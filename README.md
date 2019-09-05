@@ -1,14 +1,10 @@
 # ravage-dmd-edit-chernarusredux
 ## Arma 3 - Ravage Mod - Sandbox Mission by JakeHekesFists[DMD]
-## _Not Ready for Use - Use at your own risk_
+## _This has not been tested in a dedicated server environment, so server admins.... Use at your own risk_
 
 An Arma 3 Ravage mission created initially for personal use by myself and some friends, I have decided to release this to the public. 
 I have put this mission under the MIT license so people are free to edit/use the sections of this mission created by me however they see fit.
 
-Please note: this mission has not been tested in a dedicated environment, so some features may not work as intended. 
-
-There will be future updates made to this mission,
-It has not been published on the Steam Workshop at this point.
 
 ## Mission Features
 
