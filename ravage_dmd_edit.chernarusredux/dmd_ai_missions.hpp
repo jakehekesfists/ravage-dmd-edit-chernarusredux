@@ -1,4 +1,4 @@
-#include "dmd_defines.h"
+//  #include "dmd_defines.h"
 
 class AI_Missions {
     
@@ -6,15 +6,17 @@ class AI_Missions {
 
         crateTypes[] = {
             #ifdef DMD_USE_RHS
-            "rhs_weapon_crate",
-            "rhsusf_mags_crate",
+                "rhs_weapon_crate",
+                "rhsusf_mags_crate",
             #endif
+            
             #ifdef DMD_USE_CUP
-            "CUP_RUVehicleBox",
-            "CUP_TKVehicleBox_EP1",
-            "CUP_USVehicleBox_EP1",
-            "CUP_USVehicleBox",
+                "CUP_RUVehicleBox",
+                "CUP_TKVehicleBox_EP1",
+                "CUP_USVehicleBox_EP1",
+                "CUP_USVehicleBox",
             #endif
+            
             "Box_NATO_AmmoVeh_F",
             "Box_IND_AmmoVeh_F",
             "C_supplyCrate_F",
@@ -23,10 +25,6 @@ class AI_Missions {
         
         // loot that can spawn in AI mission crates
         rifles[] = {
-            // RHS SHOTGUNS BROKEN ON RELOAD    - re-add if they fix it
-            //  "rhs_weap_Izh18",
-            //  "rhs_weap_M590_8RD",
-            //  "rhs_weap_M590_5RD",
 
             #ifdef DMD_USE_CUP
                 "CUP_arifle_AK101",
@@ -78,6 +76,10 @@ class AI_Missions {
             #endif
 
             #ifdef DMD_USE_RHS
+                // RHS SHOTGUNS BROKEN ON RELOAD    - re-add if they fix it
+                //  "rhs_weap_Izh18",
+                //  "rhs_weap_M590_8RD",
+                //  "rhs_weap_M590_5RD",
                 "rhs_weap_ak103_2_npz",
                 "rhs_weap_ak104_npz",
                 "rhs_weap_ak105_zenitco01_b33",
@@ -172,26 +174,26 @@ class AI_Missions {
         handguns[] = {
 
             #ifdef DMD_USE_CUP
-            "CUP_hgun_Compact",
-            "CUP_hgun_Duty",
-            "CUP_hgun_Glock17",
-            "CUP_hgun_MicroUzi",
-            "CUP_hgun_PB6P9",
-            "CUP_hgun_Phantom",
-            "CUP_hgun_PMM",
-            "CUP_hgun_TaurusTracker455_gold",
-            "CUP_hgun_TaurusTracker455",
+                "CUP_hgun_Compact",
+                "CUP_hgun_Duty",
+                "CUP_hgun_Glock17",
+                "CUP_hgun_MicroUzi",
+                "CUP_hgun_PB6P9",
+                "CUP_hgun_Phantom",
+                "CUP_hgun_PMM",
+                "CUP_hgun_TaurusTracker455_gold",
+                "CUP_hgun_TaurusTracker455",
             #endif
 
             #ifdef DMD_USE_RHS
-            "rhs_weap_makarov_pm",
-            "rhs_weap_pp2000_folded",
-            "rhs_weap_pya",
-            "rhs_weap_savz61_folded",
-            "rhs_weap_tt33",
-            "rhs_weap_type94_new",
-            "rhsusf_weap_m1911a1",
-            "rhsusf_weap_m9",
+                "rhs_weap_makarov_pm",
+                "rhs_weap_pp2000_folded",
+                "rhs_weap_pya",
+                "rhs_weap_savz61_folded",
+                "rhs_weap_tt33",
+                "rhs_weap_type94_new",
+                "rhsusf_weap_m1911a1",
+                "rhsusf_weap_m9",
             #endif
 
             "hgun_Rook40_F"

@@ -1,3 +1,4 @@
+#include "dmd_defines.h"
 #include "R3F_LOG\desc_include.h"
 
 #define HALs_DEF_INIT

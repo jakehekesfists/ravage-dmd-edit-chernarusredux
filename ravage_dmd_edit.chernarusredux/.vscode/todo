@@ -1,20 +1,26 @@
-learn french and remove 90% of the R3F stuff. i only need it for moving objects
-maybe find a better logi script. maybe write a new one.. attachto and stuff isnt THAT hard surely.
+MANUALLY CREATE A LOCKING FEATURE FOR MOVED OBJECTS - 2EZ, setvar/getvar. pretty little progress bar maybe. 
 
 plan weekend testing session in dedicated environment
 
-LOOT SYSTEM - 
-    VERY BASIC AT THE MOMENT - TOO MANY HATS, THIS ISNT FUCKIN TF2 M8
-
-
-MANUALLY CREATE A LOCKING FEATURE FOR MOVED OBJECTS - 2EZ 
-
+After Testing on Dedi
+- release on steam workshop and publish on bis forums
 
 
 - later versions
     once rhs updates and fixes the broken shotgun reloading. add them back in to the mission
 
 	the big city up near pobeda dam needs to become a radiated zone with roaming, gasmask wearing ai.
+
+    cleanup and fix broken shit in r3f? - maybe
+
+    - create a new function for createbldrelative.
+
+    - once completed, convert to work on other maps. 
+        * ideas
+            - Tanoa (RHS only)
+            - Malden (RHS only)
+            - 
+        
 
 /* -----------------------------------
     File: filename.sqf
