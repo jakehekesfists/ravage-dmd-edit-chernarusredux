@@ -5,6 +5,8 @@
 An Arma 3 Ravage mission created initially for personal use by myself and some friends, I have decided to release this to the public. 
 I have put this mission under the MIT license so people are free to edit/use the sections of this mission created by me however they see fit.
 
+BI Forums Thread: https://forums.bohemia.net/forums/topic/221503-missions/?tab=comments#comment-3376719
+Steam Workshop Link: https://steamcommunity.com/sharedfiles/filedetails/?id=1854589233
 
 ## Mission Features
 
