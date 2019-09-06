@@ -137,7 +137,6 @@ player createDiaryRecord ["Features",
 	Players data, gear and bank accounts are saved to a database<br/>
 	Players can also choose to save vehicles they find to the database<br/>
 	Saved vehicles are then made lockable/unlockable by the owner<br/>
-	A hotwiring ability will be added in the near future<br/>
 	<br/>
 	The Mission also saves the ingame date and time between restarts<br/>
 	<br/>

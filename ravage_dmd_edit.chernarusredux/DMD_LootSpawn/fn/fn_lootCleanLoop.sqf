@@ -9,6 +9,7 @@ for "_i" from 0 to 1 step 0 do {
 				if (!_nearby) then {
 					{ deleteVehicle _x } forEach _all;
 					_obj setVariable ["lootSpawn",0,true];
+					DMD_LootCleanUp deleteAt _forEachIndex;
 				};
 			};
 		} forEach DMD_LootCleanup;

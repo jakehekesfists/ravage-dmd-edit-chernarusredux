@@ -1,5 +1,3 @@
-//  #include "dmd_defines.h"
-
 class AI_Missions {
     
     class lootSettings {
@@ -856,8 +854,7 @@ class AI_Missions {
             handgunMinMax[] = {4,4};
             itemMinMax[] = {5,10};
             
-            hedgehogs = 1;
-            
+            hedgehogs = 1;           
 
 			objComposition[] = {
 				{"Land_Garaz_s_tankem",{-9.7915,-13.364,0},0,{true,false}},
@@ -1176,20 +1173,22 @@ class AI_Missions {
 
             vehicle = 1;
             vehicleTypes[] = {
+                #ifdef DMD_USE_CUP
+                    "CUP_I_SUV_Armored_ION",
+                    "CUP_I_FENNEK_ION",
+                    "CUP_I_MATV_ION",
+                    "CUP_I_4WD_LMG_ION",
+                    "CUP_I_4WD_unarmed_ION",
+                    "CUP_I_LSV_02_Minigun_ION",
+                    "CUP_I_LSV_02_unarmed_ION",
+                    "CUP_I_RG31_M2_ION",
+                    "CUP_I_RG31_M2_GC_ION",
+                    "CUP_I_RG31E_M2_ION",
+                    "CUP_I_SUV_ION",
+                #endif
                 "I_G_Van_01_fuel_F",
                 "I_G_Offroad_01_armed_F",
-                "I_G_Van_01_transport_F",
-                "CUP_I_SUV_Armored_ION",
-                "CUP_I_FENNEK_ION",
-                "CUP_I_MATV_ION",
-                "CUP_I_4WD_LMG_ION",
-                "CUP_I_4WD_unarmed_ION",
-                "CUP_I_LSV_02_Minigun_ION",
-                "CUP_I_LSV_02_unarmed_ION",
-                "CUP_I_RG31_M2_ION",
-                "CUP_I_RG31_M2_GC_ION",
-                "CUP_I_RG31E_M2_ION",
-                "CUP_I_SUV_ION"
+                "I_G_Van_01_transport_F"
             };
             paradropVehicle = 0;
 
@@ -1562,41 +1561,47 @@ class AI_Missions {
             vehicle = 1;
             paradropVehicle = 1;
             vehicleTypes[] = {
-                "CUP_B_LR_MG_CZ_W",
-                "CUP_B_Mastiff_HMG_GB_W",
-                "CUP_B_Ridgback_LMG_GB_W",
-                "CUP_B_Wolfhound_LMG_GB_W",
-                "B_G_Offroad_01_F",
-                "B_G_Offroad_01_AT_F",
+                #ifdef DMD_USE_CUP
+                    "CUP_B_LR_MG_CZ_W",
+                    "CUP_B_M1151_Deploy_NATO_T",
+                    "CUP_B_M1151_Deploy_USMC",
+                    "CUP_B_M1152_NATO_T",
+                    "CUP_B_Mastiff_HMG_GB_W",
+                    "CUP_B_RG31E_M2_OD_USMC",
+                    "CUP_B_RG31E_M2_USA",
+                    "CUP_B_Ridgback_LMG_GB_W",
+                    "CUP_B_Wolfhound_LMG_GB_W",
+                    "CUP_I_4WD_LMG_ION",
+                    "CUP_I_4WD_unarmed_ION",
+                    "CUP_I_FENNEK_ION",
+                    "CUP_I_LSV_02_Minigun_ION",
+                    "CUP_I_LSV_02_unarmed_ION",
+                    "CUP_I_MATV_ION",
+                    "CUP_I_RG31_M2_GC_ION",
+                    "CUP_I_RG31_M2_ION",
+                    "CUP_I_RG31E_M2_ION",
+                    "CUP_I_SUV_Armored_ION",
+                    "CUP_I_SUV_ION",
+                    "CUP_I_Van_ammo_ION",
+                    "CUP_O_Datsun_PK",
+                    "CUP_O_Kamaz_Refuel_RU",
+                #endif
+
+                #ifdef DMD_USE_RHS
+                    "rhsgref_hidf_m1025_m2",
+                    "rhsgref_hidf_M998_2dr_halftop",
+                    "rhsgref_hidf_M998_4dr_fulltop",
+                    "rhsusf_m998_d_4dr",
+                    "rhsusf_m998_w_2dr_halftop",
+                    "rhsusf_m998_w_4dr_halftop",
+                    "rhsusf_m998_w_4dr",
+                #endif
+
                 "B_G_Offroad_01_armed_F",
-                "rhsgref_hidf_m1025_m2",
-                "rhsgref_hidf_M998_2dr_halftop",
-                "rhsgref_hidf_M998_4dr_fulltop",
-                "CUP_B_M1151_Deploy_NATO_T",
-                "CUP_B_M1152_NATO_T",
-                "CUP_B_RG31E_M2_USA",
-                "CUP_B_M1151_Deploy_USMC",
-                "CUP_B_RG31E_M2_OD_USMC",
-                "rhsusf_m998_d_4dr",
-                "rhsusf_m998_w_2dr_halftop",
-                "rhsusf_m998_w_4dr_halftop",
-                "rhsusf_m998_w_4dr",
-                "CUP_O_Kamaz_Refuel_RU",
-                "CUP_O_Datsun_PK",
+                "B_G_Offroad_01_AT_F",
+                "B_G_Offroad_01_F",
                 "O_G_Offroad_01_armed_F",
-                "O_G_Offroad_01_repair_F",
-                "CUP_I_SUV_Armored_ION",
-                "CUP_I_FENNEK_ION",
-                "CUP_I_MATV_ION",
-                "CUP_I_4WD_LMG_ION",
-                "CUP_I_4WD_unarmed_ION",
-                "CUP_I_LSV_02_Minigun_ION",
-                "CUP_I_LSV_02_unarmed_ION",
-                "CUP_I_RG31_M2_ION",
-                "CUP_I_RG31_M2_GC_ION",
-                "CUP_I_RG31E_M2_ION",
-                "CUP_I_SUV_ION",
-                "CUP_I_Van_ammo_ION"
+                "O_G_Offroad_01_repair_F"
             };
 
             objComposition[] = {

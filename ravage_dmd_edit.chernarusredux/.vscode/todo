@@ -2,9 +2,6 @@ MANUALLY CREATE A LOCKING FEATURE FOR MOVED OBJECTS - 2EZ, setvar/getvar. pretty
 
 plan weekend testing session in dedicated environment
 
-After Testing on Dedi
-- release on steam workshop and publish on bis forums
-
 
 - later versions
     once rhs updates and fixes the broken shotgun reloading. add them back in to the mission
@@ -19,8 +16,7 @@ After Testing on Dedi
         * ideas
             - Tanoa (RHS only)
             - Malden (RHS only)
-            - 
-        
+            -         
 
 /* -----------------------------------
     File: filename.sqf
