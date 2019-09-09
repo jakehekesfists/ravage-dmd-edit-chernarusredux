@@ -479,19 +479,6 @@
 			<English>The Outpost at %2 has been liberated, Help yourself to the Weapons</English>
 		</Key>
 
-		<Key ID="STR_AI_PROPHET_NAME">
-			<Original>Operation: PROPHET</Original>
-			<English>Operation: PROPHET</English>
-		</Key>
-		<Key ID="STR_AI_PROPHET_START">
-			<Original>Theres something strange at %2, %1 have been spotted investigating the wreckage.</Original>
-			<English>Theres something strange at %2, %1 have been spotted investigating the wreckage.</English>
-		</Key>
-		<Key ID="STR_AI_PROPHET_END">
-			<Original>Crysis Averted! The %1 have been pushed back, and the Strange Wreckage at %2 has been secured.</Original>
-			<English>Crysis Averted! The %1 have been pushed back, and the Strange Wreckage at %2 has been secured.</English>
-		</Key>
-
 		<Key ID="STR_AI_BELLEND_NAME">
 			<Original>The Bellend Trench</Original>
 			<English>The Bellend Trench</English>
