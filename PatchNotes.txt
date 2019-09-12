@@ -1,4 +1,13 @@
 -----------------------------------------------------------------------------------------------------------------------
+September 12th 2019 - hotfix
+-----------------------------------------------------------------------------------------------------------------------
++ Params option to change Time Multipliers recommended by Steam user Rundown    
+    Rundown [2 hours ago] 
+    I'd kill for an option to decrease/increase the rate at which time passes ingame, feels like day and night are way too short.
+
+* Moved patch notes file out of mission directory (whoops. idiot lol)
+
+-----------------------------------------------------------------------------------------------------------------------
 September 12th 2019
 -----------------------------------------------------------------------------------------------------------------------
 A quick word: 

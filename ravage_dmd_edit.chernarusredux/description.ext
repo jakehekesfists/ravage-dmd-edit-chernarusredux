@@ -25,8 +25,24 @@ class Header {
 	maxPlayers = 50;			// maximum number of players the mission supports
 };
 
+class params {
+	class daytimeMultiplier {
+		title = "Daytime Multiplier";
+		values[] = { 1, 2, 4, 8, 10, 20, 60 };
+		texts[] = {"Realtime", "2x", "4x", "8x", "10x", "20x", "60x"};
+		default = 4;
+	};
+
+	class nighttimeMultiplier {
+		title = "Nighttime Multiplier";
+		values[] = { 1, 2, 4, 8, 10, 20, 60 };
+		texts[] = {"Realtime", "2x", "4x", "8x", "10x", "20x", "60x"};
+		default = 10;
+	};
+};
+
 scriptedPlayer = 1;
-skipLobby = 1;
+skipLobby = 0;
 respawn = "BASE";
 respawnButton = 0;
 respawnDelay = 10;

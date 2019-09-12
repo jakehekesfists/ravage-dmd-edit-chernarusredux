@@ -2,7 +2,9 @@
     File: timeCycle.sqf
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
-( [	[ "ServerSettings", "timeCycle" ], [ "dayMultiplier", "nightMultiplier" ] ] call dmd_fnc_getMissionCfg ) params [ "_day", "_night" ];
+// config moved to params so regular players can change it for themselves in lobby - if running on dedi. just change the default value in description.ext 
+_day = "daytimeMultiplier" call BIS_fnc_getParamValue;
+_night = "nighttimeMultiplier" call BIS_fnc_getParamValue;
 
 // chernarus redux daylight settings - from editor
 fn_getDaylightHours = {
@@ -18,7 +20,6 @@ fn_getDaylightHours = {
 
 private _startingMonth = (date select 1);
 private _seasonal = (call fn_getDaylightHours);
-
 for "_i" from 0 to 1 step 0 do {
 	// if the month changes while server running. update the daylight hours.
 	if !(_startingMonth isEqualTo (date select 1)) then { _seasonal = call fn_getDaylightHours; _startingMonth = (date select 1); };

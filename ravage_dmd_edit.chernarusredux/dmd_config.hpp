@@ -111,13 +111,6 @@ class dmd_cfg_settings {
             };
         };
 
-        class timeCycle {
-            // note: ravage respawns loot every 24 hrs ingame, keep this high
-            // consider adding a persistent date/time system. can do easily with inidbi2.
-            dayMultiplier = 20;
-            nightMultiplier = 60;               // 60 = 1 ingame hour every minute. max 12 minute night cycle
-        };
-
         // spawn base parts around the map
         class objectSpawner {
             radius[] = {350, 600};          // min/max - radius around city marker to spawn objects
