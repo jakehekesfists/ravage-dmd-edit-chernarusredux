@@ -13,25 +13,25 @@ class LootSettings {
     
     class LootTypes {
         class defaultloottype {
-            // percentages - these are set 0 by default. edit in the civ / mil / ind categorys.
-            qtyBP = 0;
-            qtyHG = 0;
-            qtyAM = 0;
-            qtySM = 0;
-            qtyWP = 0;
-            qtyVS = 0;
-            qtyAT = 0;
-            qtyJK = 0;
-            qtyFD = 0;
-            qtyIT = 0;
-            qtyUN = 0;
-            qtyEX = 0;
-            
+            // percentages - these are set 0 by default. do not change them here. 
+            // edit in the below civ / mil / ind categories.
+            qtyBP = 0;      // backpacks
+            qtyHG = 0;      // headgear
+            qtyAM = 0;      // ammo (magazines)
+            qtySM = 0;      // smoke grenades and flares
+            qtyWP = 0;      // weapons
+            qtyVS = 0;      // vests
+            qtyAT = 0;      // attachments, scopes, optics, bipods, etc
+            qtyJK = 0;      // junk loot
+            qtyFD = 0;      // food items
+            qtyIT = 0;      // generic items (tires, geiger counter etc)
+            qtyUN = 0;      // uniforms
+            qtyEX = 0;      // explosives
+                        
             // tables
             backpacks[] = {};
             headgear[] = {};
             ammo[] = {};
-
             // smokenades set by default to share across loot tables
             smokenades[] = {
                 #ifdef DMD_USE_RHS

@@ -2,8 +2,13 @@
     File: locationSpam.sqf
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
-waitUntil {!(isNull (findDisplay 46))};
-sleep 5; 
+waitUntil {
+	sleep 0.1;
+	if (!(isNull (findDisplay 46)) && (missionNamespace getVariable "DMD_Respawned")) exitWith { true };
+	false
+};
+
+sleep 5;
 
 private _ln1 = [(getPosATL player)] call dmd_fnc_findLocName;
 [_ln1] spawn dmd_fnc_locationSpam;

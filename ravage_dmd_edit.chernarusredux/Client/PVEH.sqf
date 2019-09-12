@@ -3,40 +3,7 @@
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
 
-// player eventhandlers
-player addEventHandler ["InventoryOpened", {
-    params ["_unit","_container"];
-	private _cancel = false;
-	try {
-
-		if (_container getVariable "DMD_IsLocked") then {
-			hint (localize "STR_CLI_PVEH_LOCKVEHGEAR");
-			throw true;
-		};
-
-		if ((locked _container) isEqualTo 2) then {
-			hint (localize "STR_CLI_PVEH_LOCKVEHGEAR");
-			throw true;
-		};
-
-		if (inSafeZone) then {
-			private _allUnitBpks = allUnits select {alive _x} apply {backpackContainer _x};
-			if (_container in _allUnitBpks OR !(crew _container select {alive _x} isEqualTo [])) then {
-				hint (localize "STR_CLI_SZ_ACCDENY");
-				throw true;
-			};
-		};
-	} catch {
-		_cancel = _exception;
-	};
-_cancel
-}];
-
-"dmd_db_load" addPublicVariableEventHandler {
-	private _data = _this select 1;
-	_data params ["_readpos", "_readdir", "_readdamage", "_readloadout", "_readHunger", "_readThirst"];
-	_null = _data call dmd_fnc_persistLoadData;
-};
+"dmd_db_load" addPublicVariableEventHandler { _null = (_this select 1) call dmd_fnc_persistLoadData; };
 
 "dmd_db_bank" addPublicVariableEventHandler {
 	private _pack = _this select 1;

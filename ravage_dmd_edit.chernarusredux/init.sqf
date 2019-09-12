@@ -4,8 +4,13 @@ setTerrainGrid _tgr;
 setViewDistance _vwd;
 setObjectViewDistance [_obd,_shd];
 
+enableSaving [false, false];
+
 SA_MAX_TOWED_CARGO = _mvt;
 enableDynamicSimulationSystem true;
 player linkItem "rvg_itemMap";
 { [west, _x] call BIS_fnc_addRespawnInventory; } forEach _rsp;
 [] execVM "R3F_LOG\init.sqf";
+
+// attempt to make server only stuff load on either player host or dedi. 
+if ((isDedicated) || (hasInterface && isServer)) then { [] execVM "serverScripts.sqf"; };

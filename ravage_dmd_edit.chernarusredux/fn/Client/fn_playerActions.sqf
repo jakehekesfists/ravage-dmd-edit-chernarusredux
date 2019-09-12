@@ -2,7 +2,6 @@
     File: fn_playerActions.sqf
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
-( [[ "AI_Missions", "lootSettings" ],[ "crateTypes" ]] call dmd_fnc_getMissionCfg ) params ["_crateTypes" ];
 
 // define icon types
 private _icoDestCrate = "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_forceRespawn_ca.paa";	// Destroy Crate 
@@ -15,12 +14,30 @@ private _icoLock = 		"images\icon_lock.paa";													// Lock Vehicle
 private _icoUnlock = 	"images\icon_unlock.paa";												// Unlock Vehicle
 private _icoHotwire = 	"images\icon_pliers.paa";												// Hotwire Vehicle
 
+
+// Define the kinds of Objects to use for adding actions
+// ATMs
+private _atmClasses = ['Land_ATM_01_malden_F'];
+
+// Water Sources 
+private _wsClasses = ['Land_BarrelWater_F','Land_Barrel_water','Land_WaterTank_F','Land_stand_waterl_EP1','Land_WaterBarrel_F','Land_BarrelWater_grey_F','Land_StallWater_F'];
+
+// Food Sources
+private _fdClasses = ['Land_Sacks_goods_F','Land_FoodContainer_01_F','Land_FoodContainer_01_White_F','Land_FoodSacks_01_large_white_idap_F','Land_FoodSacks_01_cargo_brown_idap_F','Land_FoodSacks_01_cargo_white_idap_F','Land_FoodSacks_01_large_brown_F'];
+
+// Fuel Sources (for Refilling Jerry Cans)
+private _fsClasses = ['Land_fs_feed_F','Land_FuelStation_Feed_F','Land_Ind_TankSmall2','Land_Ind_TankSmall2_EP1','Land_A_FuelStation_Feed','Land_fuelstation','Land_Ind_FuelStation_Feed_EP1','Land_Fuel_tank_stairs'];
+
+
 // add these actions to the player - only needs doing once.
 ///////////////////////////// REPAIR ACTIONS /////////////////////////////
 fn_nearFuelPumps = {
 	params ["_obj"];
 	private _near = false;
-	_fuelPumps = (nearestObjects [_obj, ['Land_fs_feed_F','Land_FuelStation_Feed_F','Land_A_FuelStation_Feed','Land_Ind_FuelStation_Feed_EP1'], 15]);
+	// Fuel Pumps (for vehicle repairs)
+	private _rfClasses = ['Land_fs_feed_F','Land_FuelStation_Feed_F','Land_A_FuelStation_Feed','Land_Ind_FuelStation_Feed_EP1'];
+	
+	_fuelPumps = (nearestObjects [_obj, _rfClasses, 15]);
 	if (count _fuelPumps > 0) then { _near = true; } else { _near = false; };
 	_near
 };
@@ -43,7 +60,7 @@ for "_i" from 0 to 1 step 0 do {
 	if (isNull objectParent player) then {
 
 		///////////////////////////// REFUEL ACTIONS /////////////////////////////
-		_building = (nearestObjects [player, ['Land_fs_feed_F','Land_FuelStation_Feed_F','Land_Ind_TankSmall2','Land_Ind_TankSmall2_EP1','Land_A_FuelStation_Feed','Land_fuelstation','Land_Ind_FuelStation_Feed_EP1','Land_Fuel_tank_stairs'], 5]) select 0;		
+		_building = (nearestObjects [player, _fsClasses, 5]) select 0;
 		if (!isNil "_building" && {isNil {_building getVariable "fuel_action"}}) then {
 			[
 				_building,
@@ -58,7 +75,7 @@ for "_i" from 0 to 1 step 0 do {
 		};
 
 		///////////////////////////// CRATE ACTIONS /////////////////////////////
-		_crate = (nearestObjects [player, _crateTypes, 5]) select 0;
+		_crate = (nearestObjects [player, ["ReammoBox_f"], 5]) select 0;
 		if (!isNil "_crate" && {isNil {_crate getVariable "demo_action"}}) then {
 			[
 				_crate,
@@ -74,7 +91,7 @@ for "_i" from 0 to 1 step 0 do {
 		};
 
 		///////////////////////////// FOOD ACTIONS /////////////////////////////
-		_foodBarrel = (nearestObjects [player, ["Land_Sacks_goods_F","Land_FoodContainer_01_F","Land_FoodContainer_01_White_F","Land_FoodSacks_01_large_white_idap_F"], 5]) select 0;
+		_foodBarrel = (nearestObjects [player, _fdClasses, 5]) select 0;
 		if (!isNil "_foodBarrel" && {isNil {_foodBarrel getVariable "food_action"}}) then {
 			[
 				_foodBarrel,
@@ -92,7 +109,7 @@ for "_i" from 0 to 1 step 0 do {
 		};
 
 		///////////////////////////// DRINK ACTIONS /////////////////////////////
-		_waterBarrel = (nearestObjects [player, ["Land_BarrelWater_F","Land_Barrel_water","Land_WaterTank_F","Land_stand_waterl_EP1","Land_WaterBarrel_F"], 5]) select 0;
+		_waterBarrel = (nearestObjects [player, _wsClasses, 5]) select 0;
 		if (!isNil "_waterBarrel" && {isNil {_waterBarrel getVariable "drink_action"}}) then {
 			[
 				_waterBarrel,
@@ -108,7 +125,7 @@ for "_i" from 0 to 1 step 0 do {
 		};
 
 		///////////////////////////// ATM ACTIONS /////////////////////////////
-		_atm = (nearestObjects [player, ["Land_ATM_01_malden_F"], 5]) select 0;
+		_atm = (nearestObjects [player, _atmClasses, 5]) select 0;
 		if (!isNil "_atm" && {isNil {_atm getVariable "atm_action"}}) then {
 			[
 				_atm,
@@ -121,7 +138,10 @@ for "_i" from 0 to 1 step 0 do {
 				{ [_this, "Client\depositFunds.sqf"] remoteExec ["execVM", (owner (_this select 1))]; },
 				{},[],2,0,false,false
 			] remoteExec ["BIS_fnc_holdActionAdd", 0, _atm];
+
+			_atm setVariable ["atm_action", true, true];
 		};
+		
 
 		///////////////////////////// VEHICLE ACTIONS /////////////////////////////
 		_vehicle = (nearestObjects [player, ["LandVehicle", "Air", "Ship"], 5]) select 0;

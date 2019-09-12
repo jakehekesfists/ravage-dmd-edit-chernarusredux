@@ -6,7 +6,6 @@ params ["_pos", "_class", "_paradrop"];
 
 private _veh = _class createVehicle [0,0,0];
 _veh allowDamage false;
-_veh enableDynamicSimulation true; 
 [_veh] call dmd_fnc_cleanLootCrate; 	// empty the gear
 _veh setFuel 0.75;
 _veh setVariable ["rvg_owned", true, true];			// prevent ravage deleting the vehicle
@@ -25,4 +24,5 @@ if (_paradrop) then {
 	params ["_veh"];
 	waitUntil { sleep 1; if (isTouchingGround _veh) exitWith { true }; false };
 	_veh allowDamage true; 
+	_veh enableDynamicSimulation true;
 };

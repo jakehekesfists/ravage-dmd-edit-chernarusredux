@@ -1235,6 +1235,10 @@ class cfgHALsStore {
 			class 16Rnd_9x21_Mag 							{ price = 10; stock = 10; };
 			class 16Rnd_9x21_red_Mag 						{ price = 10; stock = 10; };
 			class 16Rnd_9x21_yellow_Mag 					{ price = 10; stock = 10; };
+			class 9Rnd_45ACP_Mag 							{ price = 10; stock = 10; };
+			class 10Rnd_9x21_Mag 							{ price = 10; stock = 10; };
+			class 11Rnd_45ACP_Mag 							{ price = 10; stock = 10; };
+			class 6Rnd_45ACP_Cylinder						{ price = 10; stock = 10; };		
 
 			#ifdef DMD_USE_CUP
 			class CUP_10Rnd_9x19_Compact 					{ price = 10; stock = 10; };
@@ -1271,6 +1275,10 @@ class cfgHALsStore {
 			class CUP_8Rnd_B_Saiga12_74Slug_M 				{ price = 8; stock = 10; };
 			class CUP_8Rnd_B_Saiga12_74Pellets_M 			{ price = 8; stock = 10; };
 			#endif
+
+			class 2Rnd_12Gauge_Pellets			 			{ price = 4; stock = 10; };
+			class 2Rnd_12Gauge_Slug 						{ price = 4; stock = 10; };
+
 			// RHS SHOTGUNS RELOAD BROKEN - REMOVE ITEMS UNTIL FIXED
 			//  class rhsgref_1Rnd_00Buck 					{ price = 10; stock = 10; };
 			//  class rhsgref_1Rnd_Slug 					{ price = 10; stock = 10; };
@@ -1288,6 +1296,7 @@ class cfgHALsStore {
 			// pdws
 			class 30Rnd_9x21_Green_Mag 						{ price = 30; stock = 10; };
 			class 30Rnd_9x21_Mag 							{ price = 30; stock = 10; };
+			class 30Rnd_45ACP_Mag_SMG_01 					{ price = 30; stock = 10; };
 			class 30Rnd_9x21_Mag_SMG_02 					{ price = 30; stock = 10; };
 			class 30Rnd_9x21_Mag_SMG_02_Tracer_Green 		{ price = 30; stock = 10; };
 			class 30Rnd_9x21_Mag_SMG_02_Tracer_Red 			{ price = 30; stock = 10; };
@@ -1337,6 +1346,9 @@ class cfgHALsStore {
 			class 30Rnd_65x39_caseless_green_mag_Tracer 				{ price = 30; stock = 10; };
 			class 30Rnd_65x39_caseless_mag                              { price = 30; stock = 10; };
             class 30Rnd_65x39_caseless_mag_Tracer                       { price = 30; stock = 10; };
+
+            class 30Rnd_762x39_AK12_Mag_F                       		{ price = 30; stock = 10; };
+            class 30Rnd_762x39_Mag_F                       				{ price = 30; stock = 10; };
 
 			#ifdef DMD_USE_CUP
 			class CUP_10Rnd_762x39_SaigaMk03_M 							{ price = 10; stock = 10; };
@@ -1576,6 +1588,7 @@ class cfgHALsStore {
 			#endif
 
 			// snipers
+			class 5Rnd_127x108_Mag 										{ price = 10; stock = 10; };
 			class 10Rnd_127x54_Mag 										{ price = 10; stock = 10; };
 			class 10Rnd_338_Mag 										{ price = 10; stock = 10; };
 			class 10Rnd_762x54_Mag 										{ price = 10; stock = 10; };
@@ -1630,6 +1643,8 @@ class cfgHALsStore {
 			#endif
 
 			// lmgs
+			class 100Rnd_580x42_ghex_Mag_F 								{ price = 100; stock = 10; };
+			class 100Rnd_580x42_Mag_F	 								{ price = 100; stock = 10; };
 			class 100Rnd_65x39_caseless_mag 							{ price = 100; stock = 10; };
 			class 130Rnd_338_Mag 										{ price = 130; stock = 10; };
 			class 150Rnd_556x45_Drum_Mag_F 								{ price = 150; stock = 10; };
@@ -1641,7 +1656,8 @@ class cfgHALsStore {
 			class 200Rnd_65x39_cased_Box_Red 							{ price = 200; stock = 10; };
 			class 200Rnd_65x39_cased_Box_Tracer 						{ price = 200; stock = 10; };
 			class 200Rnd_65x39_cased_Box_Tracer_Red 					{ price = 200; stock = 10; };
-			
+			class 200Rnd_556x45_Box_F				 					{ price = 200; stock = 10; };
+
 			#ifdef DMD_USE_CUP
 			class CUP_100Rnd_556x45_BetaCMag 							{ price = 100; stock = 10; };
 			class CUP_100Rnd_556x45_BetaCMag_ar15 						{ price = 100; stock = 10; };
@@ -1783,10 +1799,13 @@ class cfgHALsStore {
 			class CUP_HandGrenade_RGD5                      { price = 20; stock = 8; };
 			class CUP_HandGrenade_RGO                       { price = 20; stock = 8; };
 			#endif
-			
+
 			#ifdef DMD_USE_RHS
+            class rhs_weap_smaw                             { price = 1000; stock = 0; };
             class rhs_weap_rpg7                             { price = 1000; stock = 0; };
             class rhs_rpg7_PG7V_mag                         { price = 200; stock = 0; };
+            class rhs_mag_smaw_HEAA                         { price = 200; stock = 0; };
+            class rhs_mag_smaw_SR                         { price = 200; stock = 0; };
 			class rhs_grenade_mki_mag                       { price = 20; stock = 8; };
 			class rhs_grenade_mkii_mag                      { price = 20; stock = 8; };
 			class rhs_grenade_sthgr43_heerfrag_mag          { price = 20; stock = 8; };
@@ -2467,9 +2486,11 @@ class cfgHALsStore {
 		    picture = "";
 			#ifdef DMD_USE_CUP
 			class CUP_sgun_AA12 					{ price = 670; stock = 5; };
-			class CUP_sgun_M1014 					{ price = 570; stock = 5; };
+			class CUP_sgun_M1014 					{ price = 470; stock = 5; };
 			class CUP_sgun_Saiga12K 				{ price = 470; stock = 5; };
 			#endif
+
+			class sgun_HunterShotgun_01_sawedoff_F	{ price = 470; stock = 5; };
 			
 			// RHS SHOTGUNS CURRENTLY BROKEN WHEN RELOADING
 			//  class rhs_weap_Izh18				{ price = 170; stock = 5; };
@@ -2482,6 +2503,9 @@ class cfgHALsStore {
 		    picture = "";
 
 			#ifdef DMD_USE_CUP
+			class CUP_smg_MP5A5_flashlight				{ price = 290; stock = 4; };
+			class CUP_smg_MP5SD6						{ price = 290; stock = 4; };
+			class CUP_smg_vityaz_vfg_front_rail			{ price = 290; stock = 4; };
 			class CUP_smg_bizon							{ price = 290; stock = 4; };
 			class CUP_smg_EVO							{ price = 290; stock = 4; };
 			class CUP_smg_saiga9						{ price = 290; stock = 4; };
@@ -2492,13 +2516,18 @@ class cfgHALsStore {
 			class rhs_weap_m3a1_specops					{ price = 290; stock = 4; };
 			class rhs_weap_scorpion						{ price = 290; stock = 4; };
 			class rhsusf_weap_MP7A2_desert				{ price = 290; stock = 4; };
+			class rhsusf_weap_MP7A2_winter				{ price = 290; stock = 4; };		
 			#endif
 
+			class SMG_01_F								{ price = 290; stock = 4; };
+			class SMG_05_F								{ price = 290; stock = 4; };
 			class hgun_PDW2000_F						{ price = 290; stock = 4; };
 			class SMG_02_F								{ price = 290; stock = 4; };
 			class SMG_03_camo							{ price = 290; stock = 4; };
 			class SMG_03_TR_black						{ price = 290; stock = 4; };
+			class SMG_03_TR_khaki						{ price = 290; stock = 4; };
 			class SMG_03C_black							{ price = 290; stock = 4; };
+			class SMG_03C_camo							{ price = 290; stock = 4; };
 			class SMG_03C_hex							{ price = 290; stock = 4; };
 		};
 
@@ -2512,17 +2541,31 @@ class cfgHALsStore {
 			class arifle_MX_Black_F                     { price = 350; stock = 6; };
 			class arifle_MX_SW_F                        { price = 350; stock = 6; };
 			class arifle_TRG21_F                        { price = 350; stock = 6; };
-			class arifle_MXM_Black_F			        { price = 900; stock = 5; };
-			class arifle_MXM_F 					        { price = 900; stock = 5; };
+			class arifle_MXM_Black_F			        { price = 500; stock = 5; };
+			class arifle_MXM_F 					        { price = 500; stock = 5; };
+			class arifle_MX_GL_Black_F					{ price = 500; stock = 5; };
+			class arifle_AK12_GL_F						{ price = 500; stock = 5; };
+			class arifle_AKM_F 					        { price = 500; stock = 5; };
+			class arifle_CTARS_blk_F					{ price = 500; stock = 5; };
+			class arifle_CTARS_ghex_F					{ price = 500; stock = 5; };
+			class arifle_Mk20C_F 					    { price = 500; stock = 5; };
+			class arifle_SPAR_03_blk_F					{ price = 500; stock = 5; };
+			class arifle_TRG21_GL_F						{ price = 500; stock = 5; };
 
 			#ifdef DMD_USE_CUP
+			class CUP_arifle_AK107_GL_railed			{ price = 500; stock = 5; };
+			class CUP_arifle_AK109						{ price = 350; stock = 5; };
+			class CUP_arifle_G36K						{ price = 350; stock = 5; };
+			class CUP_arifle_L85A2_NG					{ price = 350; stock = 5; };
+			class CUP_arifle_RPK74						{ price = 350; stock = 5; };
+			class CUP_arifle_RPK74_top_rail				{ price = 350; stock = 5; };
 			class CUP_arifle_AK101                      { price = 350; stock = 6; };
 			class CUP_arifle_AK102                      { price = 350; stock = 6; };
 			class CUP_arifle_AK107                      { price = 350; stock = 6; };
 			class CUP_arifle_AK108                      { price = 350; stock = 6; };
 			class CUP_arifle_AK109_railed               { price = 350; stock = 6; };
 			class CUP_arifle_AK47_Early                 { price = 350; stock = 6; };
-			class CUP_arifle_AKS_Gold                   { price = 350; stock = 6; };
+			class CUP_arifle_AKS_Gold                   { price = 900; stock = 6; };
 			class CUP_arifle_Colt727_M203               { price = 350; stock = 6; };
 			class CUP_arifle_CZ805_A1                   { price = 350; stock = 6; };
 			class CUP_arifle_CZ805_B                    { price = 350; stock = 6; };
@@ -2582,8 +2625,10 @@ class cfgHALsStore {
 			class rhs_weap_m4_carryhandle_mstock		{ price = 350; stock = 6; };
 			class rhs_weap_m4a1_blockII					{ price = 350; stock = 6; };
 			class rhs_weap_m4a1_carryhandle				{ price = 350; stock = 6; };
+			class rhs_weap_mk18							{ price = 350; stock = 6; };			
 			class rhs_weap_MP44							{ price = 350; stock = 6; };
 			class rhs_weap_SCARH_FDE_LB					{ price = 350; stock = 6; };
+			class rhs_weap_vhsd2_bg_ct15x				{ price = 350; stock = 6; };
 			class rhs_weap_vhsd2_ct15x					{ price = 350; stock = 6; };
 			class rhs_weap_vhsk2						{ price = 350; stock = 6; };
 			#endif
@@ -2693,6 +2738,8 @@ class cfgHALsStore {
 			picture = "";
 
 			#ifdef DMD_USE_CUP
+			class CUP_lmg_m249_para  	         	{ price = 800; stock = 1; };
+			class CUP_lmg_Pecheneg		           	{ price = 800; stock = 1; };
 			class CUP_arifle_MG36_hex           	{ price = 600; stock = 1; };
 			class CUP_arifle_MG36_wdl           	{ price = 600; stock = 1; };
 			class CUP_arifle_xm8_SAW            	{ price = 500; stock = 6; };
@@ -2705,6 +2752,7 @@ class cfgHALsStore {
 			class rhs_weap_m240B                	{ price = 800; stock = 1; };
 			class rhs_weap_m249                 	{ price = 800; stock = 1; };
 			class rhs_weap_m249_pip_S_para      	{ price = 800; stock = 2; };
+			class rhs_weap_m249_light_L		      	{ price = 800; stock = 2; };
 			class rhs_weap_m84                  	{ price = 800; stock = 1; };
 			class rhs_weap_mg42                 	{ price = 700; stock = 1; };
 			class rhs_weap_minimi_para_railed   	{ price = 800; stock = 1; };
@@ -2716,13 +2764,19 @@ class cfgHALsStore {
 			class Rusty_LMG_Zafir_F             	{ price = 750; stock = 1; };
 			class Rusty_MMG_01_tan_F            	{ price = 650; stock = 0; };
 			class Rusty_MMG_02_black_F          	{ price = 750; stock = 0; };
+			class LMG_03_F   			          	{ price = 750; stock = 1; };
 		};
 
 		class handguns {
 			displayName = "Sidearms";
 			picture = "";
 
-			class hgun_Rook40_F                     { price = 60; stock = 10; };
+			class hgun_Rook40_F						{ price = 60; stock = 10; };
+			class hgun_ACPC2_F                     	{ price = 60; stock = 10; };
+			class hgun_Pistol_01_F                  { price = 60; stock = 10; };
+			class hgun_Pistol_heavy_01_green_F      { price = 60; stock = 10; };
+			class hgun_Pistol_heavy_01_F            { price = 60; stock = 10; };
+			class hgun_Pistol_heavy_02_F            { price = 60; stock = 10; };
 
 			#ifdef DMD_USE_CUP
 			class CUP_hgun_Compact                  { price = 60; stock = 10; };

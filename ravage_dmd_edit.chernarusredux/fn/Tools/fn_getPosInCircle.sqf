@@ -13,7 +13,8 @@ for "_i" from 0 to 5000 do {
 	private _rRad = random _rad;
 	private _offX = _rRad * (cos _rDir);
 	private _offY = _rRad * (sin _rDir);
-	_ba pushBack [_cXX + _offX, _cYY + _offY, 0];
+	private _newPos = [_cXX + _offX, _cYY + _offY, 0];
+	if !(surfaceIsWater _newPos) then { _ba pushBack _newPos; };
 };
 
 if (_hse) then {

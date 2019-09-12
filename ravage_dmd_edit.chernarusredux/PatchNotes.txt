@@ -1,0 +1,35 @@
+-----------------------------------------------------------------------------------------------------------------------
+September 12th 2019
+-----------------------------------------------------------------------------------------------------------------------
+A quick word: 
+Upon first spawn, if you don't have a saved character in the database. your character will briefly spawn and then die.
+This is expected behaviour.
+Have tested this mission both as player hosted multiplayer on LAN, and as a dedicated server using TADST.
+Persistence seems functional on both. But will require further testing to be certain. 
+I still do not recommend this for use on a dedicated server unless you know what you are doing. 
+-----------------------------------------------------------------------------------------------------------------------
+Patch Notes:
++ Add New Respawn Loadouts for APEX / CONTACT DLC owners
++ onPlayerKilled script added to fix inventory eventhandlers on death/respawn on dedi.
++ Add more object types to get food/drink from
++ Added more weapons and ammo to the traders
+
+* Moved Respawn Locations to be better placed along the Coast
+* Changed fn_playerActions for easier editing
+* Changed the Base Objects to only use vanilla A3 Items 
+* Renamed Lumber Mill spawn to Berezino Docks and moved approx 1km North
+* Updated Ravage Gear Pool to use only Vanilla Items in the Arrays
+* Clearer notation on loottables file
+* Changed player spawn/save system to hopefully better work with dedicated on first spawn.
+* Moved initserver into init.sqf with isdedicated / player server if check to work with dedi
+* Fixed ATM addaction so it only adds once
+* locationSpam function changed so text should not display until player has correctly spawned in
+* client PVEH rewrite for player database load. 
+* Inventory eventhandler moved into onplayerrespawn.sqf
+* Changed R3F Item Cargo values
+* Base Object spawner will no longer spawn objects in the ocean
+* Base Object spawner will align most objects to the terrain
+
+- Removed CUP / RHS Items from Respawn Loadouts
+- Removed setupplayer & randomspawn functions as no longer needed
+- Removed unused params from the cfg

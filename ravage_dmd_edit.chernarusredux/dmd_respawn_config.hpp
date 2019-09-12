@@ -1,17 +1,17 @@
 
 class CfgRoles {
 	class Survivalist {
-		displayName = "Survivalist";
+		displayName = "01 - Survivalist";
 		icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\run_ca.paa";
 	};
 
 	class Mechanic {
-		displayName = "Mechanic";
+		displayName = "02 - Mechanic";
 		icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\repair_ca.paa";
 	};
 
 	class Bandit {
-		displayName = "Bandit";
+		displayName = "03 - Bandit";
 		icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\kill_ca.paa";
 	};
 };
@@ -30,12 +30,12 @@ class CfgRespawnInventory {
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\private_gs.paa";
 		role = "Survivalist";
 
-		uniformClass = "rvg_hoodie_kabeiroi";
-		backpack = "rvg_assault";
-		weapons[] = {"rhs_weap_makarov_pm","Throw","Put"};
-		magazines[] = {"rhs_mag_9x18_8_57N181S","rhs_mag_9x18_8_57N181S","rhs_mag_9x18_8_57N181S","Chemlight_blue","Chemlight_blue","Chemlight_blue","Chemlight_blue","rvg_flare","rvg_flare"};
+		uniformClass = "U_C_Poloshirt_blue";
+		backpack = "B_AssaultPack_rgr";
+		weapons[] = {"hgun_Pistol_heavy_01_F","Throw","Put"};
+		magazines[] = {"11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","Chemlight_blue","Chemlight_blue","Chemlight_green","Chemlight_green","rvg_flare","rvg_flare"};
 		items[] = {"FirstAidKit","FirstAidKit"};
-		linkedItems[] = {"rvg_hat_brown","rvg_ItemMap","ItemCompass","ItemWatch"};
+		linkedItems[] = {"H_Cap_grn","rvg_ItemMap","ItemCompass","ItemWatch"};
 	};
 
 	class Survivor02 {
@@ -43,12 +43,12 @@ class CfgRespawnInventory {
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\private_gs.paa";
 		role = "Survivalist";
 
-		uniformClass = "rvg_hoodie_blue";
+		uniformClass = "rvg_retro_grey";
 		backpack = "rvg_assault";
-		weapons[] = {"rhs_weap_pya","Throw","Put"};
-		magazines[] = {"rhs_mag_9x19_17","rhs_mag_9x19_17","Chemlight_blue","Chemlight_blue","Chemlight_blue","Chemlight_blue","rvg_flare","rvg_flare"};
+		weapons[] = {"hgun_ACPC2_F","Throw","Put"};
+		magazines[] = {"9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","Chemlight_blue","Chemlight_blue","Chemlight_green","Chemlight_green","rvg_flare","rvg_flare"};
 		items[] = {"FirstAidKit","FirstAidKit"};
-		linkedItems[] = {"rvg_safari_1","rvg_ItemMap","ItemCompass","ItemWatch"};
+		linkedItems[] = {"H_Cap_usblack","rvg_ItemMap","ItemCompass","ItemWatch"};
 	};
 
 	class Survivor03 {
@@ -56,25 +56,51 @@ class CfgRespawnInventory {
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\private_gs.paa";
 		role = "Survivalist";
 
-		uniformClass = "CUP_U_O_CHDKZ_Lopotev";
-		backpack = "rvg_field";
-		weapons[] = {"rhsusf_weap_m9","Throw","Put"};
-		magazines[] = {"rhsusf_mag_15Rnd_9x19_JHP","rhsusf_mag_15Rnd_9x19_JHP","rhsusf_mag_15Rnd_9x19_JHP","rhsusf_mag_15Rnd_9x19_JHP","Chemlight_blue","Chemlight_blue","Chemlight_blue","Chemlight_blue","rvg_flare","rvg_flare"};
+		uniformClass = "rvg_hoodie_kabeiroi";
+		backpack = "rvg_assault";
+		weapons[] = {"hgun_Rook40_F","Throw","Put"};
+		magazines[] = {"16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","Chemlight_blue","Chemlight_blue","Chemlight_green","Chemlight_green","rvg_flare","rvg_flare"};
 		items[] = {"FirstAidKit","FirstAidKit"};
-		linkedItems[] = {"rhs_beanie_green","G_Aviator","rvg_ItemMap","ItemCompass","ItemWatch"};
+		linkedItems[] = {"H_Booniehat_khk","rvg_ItemMap","ItemCompass","ItemWatch"};
 	};
 
+	class Survivor04 {
+		displayName = "Survivor 04 (APEX DLC)";
+		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\private_gs.paa";
+		role = "Survivalist";
+
+		uniformClass = "U_I_C_Soldier_Bandit_5_F";
+		backpack = "B_AssaultPack_tna_F";
+		weapons[] = {"hgun_Pistol_01_F","Throw","Put"};
+		magazines[] = {"10Rnd_9x21_Mag","10Rnd_9x21_Mag","10Rnd_9x21_Mag","10Rnd_9x21_Mag","Chemlight_blue","Chemlight_blue","Chemlight_green","Chemlight_green","rvg_flare","rvg_flare"};
+		items[] = {"FirstAidKit","FirstAidKit"};
+		linkedItems[] = {"H_Booniehat_tna_F","rvg_ItemMap","ItemCompass","ItemWatch"};
+	};
+
+	class Survivor05 {
+		displayName = "Survivor 05 (CONTACT DLC)";
+		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\private_gs.paa";
+		role = "Survivalist";
+
+		uniformClass = "U_C_Uniform_Farmer_01_F";
+		backpack = "B_FieldPack_green_F";
+		weapons[] = {"hgun_Pistol_heavy_01_green_F","Throw","Put"};
+		magazines[] = {"11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","Chemlight_blue","Chemlight_blue","Chemlight_green","Chemlight_green","rvg_flare","rvg_flare","11Rnd_45ACP_Mag"};
+		items[] = {"FirstAidKit","FirstAidKit"};
+		linkedItems[] = {"H_Booniehat_eaf","rvg_ItemMap","ItemCompass","ItemWatch"};				
+	};
+	////////////////////////////////////////////////////
 	class Mechanic01 {
 		displayName = "Mechanic 01";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\private_gs.paa";
 		role = "Mechanic";
 
-		uniformClass = "rvg_shirt_check";
-		backpack = "rvg_field";
-		weapons[] = {"rhsusf_weap_m9","Throw","Put"};
-		magazines[] = {"rhsusf_mag_15Rnd_9x19_JHP","rhsusf_mag_15Rnd_9x19_JHP","rhsusf_mag_15Rnd_9x19_JHP","Chemlight_blue","Chemlight_blue","Chemlight_blue","Chemlight_blue","rvg_flare","rvg_flare"};
+		uniformClass = "U_C_WorkerCoverallsBlack";
+		backpack = "B_FieldPack_blk";
+		weapons[] = {"hgun_Pistol_heavy_02_F","Throw","Put"};
+		magazines[] = {"6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","Chemlight_blue","rvg_flare","rvg_flare","Chemlight_blue","Chemlight_yellow","Chemlight_yellow"};
 		items[] = {"FirstAidKit","ToolKit"};
-		linkedItems[] = {"rhs_altyn","rvg_ItemMap","ItemCompass","ItemWatch"};
+		linkedItems[] = {"H_Bandanna_gry","rvg_ItemMap","ItemCompass","ItemWatch"};
 	};
 
 	class Mechanic02 {
@@ -82,12 +108,12 @@ class CfgRespawnInventory {
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\private_gs.paa";
 		role = "Mechanic";
 
-		uniformClass = "U_C_WorkerCoverallsBlack";
-		backpack = "rvg_field";
-		weapons[] = {"rhsusf_weap_m1911a1","Throw","Put"};
-		magazines[] = {"rhsusf_mag_7x45acp_MHP","rhsusf_mag_7x45acp_MHP","rhsusf_mag_7x45acp_MHP","rhsusf_mag_7x45acp_MHP","Chemlight_blue","Chemlight_blue","Chemlight_blue","Chemlight_blue","rvg_flare","rvg_flare"};
+		uniformClass = "U_C_Driver_3";
+		backpack = "B_FieldPack_cbr";
+		weapons[] = {"hgun_Rook40_F","Throw","Put"};
+		magazines[] = {"16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","Chemlight_blue","rvg_flare","rvg_flare","Chemlight_blue","Chemlight_yellow","Chemlight_yellow"};
 		items[] = {"FirstAidKit","ToolKit"};
-		linkedItems[] = {"rvg_construction_2","rvg_ItemMap","ItemCompass","ItemWatch"};
+		linkedItems[] = {"H_RacingHelmet_1_red_F","rvg_ItemMap","ItemCompass","ItemWatch"};
 	};
 
 	class Mechanic03 {
@@ -95,25 +121,52 @@ class CfgRespawnInventory {
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\private_gs.paa";
 		role = "Mechanic";
 
-		uniformClass = "CUP_U_C_Fireman_01";
-		backpack = "CUP_B_RUS_Backpack";
-		weapons[] = {"rhs_weap_pb_6p9","Throw","Put"};
-		magazines[] = {"rhs_mag_9x18_8_57N181S","rhs_mag_9x18_8_57N181S","rhs_mag_9x18_8_57N181S","rhs_mag_9x18_8_57N181S","Chemlight_blue","Chemlight_blue","Chemlight_blue","Chemlight_blue","rvg_flare","rvg_flare"};
+		uniformClass = "rvg_retro_grey";
+		backpack = "B_FieldPack_cbr";
+		weapons[] = {"hgun_P07_F","Throw","Put"};
+		magazines[] = {"16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","Chemlight_blue","rvg_flare","rvg_flare","Chemlight_blue","Chemlight_yellow","Chemlight_yellow"};
 		items[] = {"FirstAidKit","ToolKit"};
-		linkedItems[] = {"CUP_H_C_Fireman_Helmet_01","rvg_ItemMap","ItemCompass","ItemWatch"};
+		linkedItems[] = {"rvg_construction_1","rvg_ItemMap","ItemCompass","ItemWatch"};		
 	};
 
+	class Mechanic04 {
+		displayName = "Mechanic 04 (APEX DLC)";
+		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\private_gs.paa";
+		role = "Mechanic";
+
+		uniformClass = "U_B_GEN_Soldier_F";
+		backpack = "B_FieldPack_ghex_F";
+		weapons[] = {"hgun_Pistol_01_F","Throw","Put"};
+		magazines[] = {"10Rnd_9x21_Mag","10Rnd_9x21_Mag","10Rnd_9x21_Mag","10Rnd_9x21_Mag","Chemlight_blue","rvg_flare","rvg_flare","Chemlight_blue","Chemlight_yellow","Chemlight_yellow"};
+		items[] = {"FirstAidKit","ToolKit"};
+		linkedItems[] = {"H_Helmet_Skate","G_Lowprofile","rvg_ItemMap","ItemCompass","ItemWatch"};		
+	};
+
+	class Mechanic05 {
+		displayName = "Mechanic 05 (CONTACT DLC)";
+		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\private_gs.paa";
+		role = "Mechanic";
+
+		uniformClass = "U_O_R_Gorka_01_black_F";
+		backpack = "B_RadioBag_01_black_F";
+		weapons[] = {"hgun_Pistol_01_F","Throw","Put"};
+		magazines[] = {"10Rnd_9x21_Mag","10Rnd_9x21_Mag","10Rnd_9x21_Mag","10Rnd_9x21_Mag","Chemlight_blue","rvg_flare","rvg_flare","Chemlight_blue","Chemlight_yellow","Chemlight_yellow"};
+		items[] = {"FirstAidKit"};
+		linkedItems[] = {"H_Tank_eaf_F","rvg_eyeprotector","rvg_ItemMap","ItemCompass","ItemWatch"};
+	};
+
+	////////////////////////////////////////////////////
 	class Bandit01 {
 		displayName = "Bandit 01";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\private_gs.paa";
 		role = "Bandit";
 
-		uniformClass = "rvg_retro_bandit";
-		backpack = "rvg_messengerbag_1";
-		weapons[] = {"rhs_weap_m1garand_sa43","Throw","Put"};
-		magazines[] = {"rhsgref_8Rnd_762x63_M2B_M1rifle","rhsgref_8Rnd_762x63_M2B_M1rifle","rhsgref_8Rnd_762x63_M2B_M1rifle","rhsgref_8Rnd_762x63_M2B_M1rifle","rvg_flare","rvg_flare","Chemlight_red","Chemlight_red","Chemlight_red","Chemlight_red"};
+		uniformClass = "U_I_G_resistanceLeader_F";
+		backpack = "B_FieldPack_blk";
+		weapons[] = {"SMG_01_F","Throw","Put"};
+		magazines[] = {"30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","rvg_flare","rvg_flare","Chemlight_red","Chemlight_red","Chemlight_red","Chemlight_red"};
 		items[] = {};
-		linkedItems[] = {"PU_shemagh_TanCLR","rvg_ItemMap","ItemCompass","ItemWatch"};
+		linkedItems[] = {"H_ShemagOpen_khk","rvg_ItemMap","ItemCompass","ItemWatch"};
 	};
 
 	class Bandit02 {
@@ -121,12 +174,12 @@ class CfgRespawnInventory {
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\private_gs.paa";
 		role = "Bandit";
 
-		uniformClass = "rvg_shirt_bandit";
-		backpack = "rvg_messengerbag_1";
-		weapons[] = {"rhs_weap_m3a1","Throw","Put"};
-		magazines[] = {"rhsgref_30rnd_1143x23_M1911B_SMG","rhsgref_30rnd_1143x23_M1911B_2mag_SMG","rhsgref_30rnd_1143x23_M1911B_2mag_SMG","rvg_flare","rvg_flare","Chemlight_red","Chemlight_red","Chemlight_red","Chemlight_red"};
+		uniformClass = "rvg_hoodie_bandit";
+		backpack = "B_FieldPack_khk";
+		weapons[] = {"hgun_PDW2000_F","Throw","Put"};
+		magazines[] = {"30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","rvg_flare","rvg_flare","Chemlight_red","Chemlight_red","Chemlight_red","Chemlight_red"};
 		items[] = {};
-		linkedItems[] = {"rvg_balaclava_3","rvg_ItemMap","ItemCompass","ItemWatch"};
+		linkedItems[] = {"H_ShemagOpen_tan","rvg_ItemMap","ItemCompass","ItemWatch"};
 	};
 
 	class Bandit03 {
@@ -134,11 +187,37 @@ class CfgRespawnInventory {
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\private_gs.paa";
 		role = "Bandit";
 
-		uniformClass = "CUP_U_I_GUE_Anorak_03";
-		backpack = "rvg_messengerbag_3";
-		weapons[] = {"rhs_weap_m38","Throw","Put"};
-		magazines[] = {"rhsgref_5Rnd_762x54_m38","rhsgref_30rnd_1143x23_M1911B_2mag_SMG","rhsgref_30rnd_1143x23_M1911B_2mag_SMG","rhsgref_5Rnd_762x54_m38","rvg_flare","rvg_flare","Chemlight_red","Chemlight_red","Chemlight_red","Chemlight_red","rhsgref_5Rnd_762x54_m38","rhsgref_5Rnd_762x54_m38"};
+		uniformClass = "rvg_bandit";
+		backpack = "B_FieldPack_khk";
+		weapons[] = {"SMG_03_TR_black","Throw","Put"};
+		magazines[] = {"50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","rvg_flare","rvg_flare","Chemlight_red","Chemlight_red","Chemlight_red","Chemlight_red"};
 		items[] = {};
-		linkedItems[] = {"rvg_balaclavaCombat_4","rvg_ItemMap","ItemCompass","ItemWatch"};
+		linkedItems[] = {"H_Shemag_olive","rvg_ItemMap","ItemCompass","ItemWatch"};
+	};
+
+	class Bandit04 {
+		displayName = "Bandit 04 (APEX DLC)";
+		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\private_gs.paa";
+		role = "Bandit";
+
+		uniformClass = "U_I_C_Soldier_Para_1_F";
+		backpack = "B_FieldPack_ghex_F";
+		weapons[] = {"SMG_05_F","Throw","Put"};
+		magazines[] = {"30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","rvg_flare","rvg_flare","Chemlight_red","Chemlight_red","Chemlight_red","Chemlight_red"};
+		items[] = {};
+		linkedItems[] = {"G_Balaclava_TI_blk_F","rvg_ItemMap","ItemCompass","ItemWatch"};
+	};
+
+	class Bandit05 {
+		displayName = "Bandit 05 (CONTACT DLC)";
+		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\private_gs.paa";
+		role = "Bandit";
+
+		uniformClass = "U_O_R_Gorka_01_F";
+		backpack = "B_FieldPack_green_F";
+		weapons[] = {"sgun_HunterShotgun_01_sawedoff_F","Throw","Put"};
+		magazines[] = {"2Rnd_12Gauge_Pellets","2Rnd_12Gauge_Pellets","2Rnd_12Gauge_Pellets","2Rnd_12Gauge_Pellets","2Rnd_12Gauge_Pellets","2Rnd_12Gauge_Pellets","rvg_flare","rvg_flare","Chemlight_red","Chemlight_red","Chemlight_red","Chemlight_red","2Rnd_12Gauge_Slug","2Rnd_12Gauge_Slug","2Rnd_12Gauge_Slug","2Rnd_12Gauge_Slug","2Rnd_12Gauge_Slug"};
+		items[] = {};
+		linkedItems[] = {"G_AirPurifyingRespirator_02_olive_F","rvg_ItemMap","ItemCompass","ItemWatch"};
 	};
 };

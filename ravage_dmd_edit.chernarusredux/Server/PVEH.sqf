@@ -2,35 +2,45 @@
     File: PVEH.sqf (Server)
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
- 
 "dmd_db_check" addPublicVariableEventHandler {
 	private _packet = _this select 1;
 	_packet params ["_dataplayrowner", "_dataplayrname", "_dataplayruid"];
-	_inidbiReq = ["new", _dataplayruid] call OO_INIDBI;
-	_databasefind = "exists" call _inidbiReq;
 
-	if (!_databasefind) then {
-		["write", ["Account", "Name", _dataplayrname]] call _inidbiReq;
-		["write", ["Account", "UID", _dataplayruid]] call _inidbiReq;
-	};
-	
-	if (_databasefind) then {
-		_readpos = ["read", ["Account", "Position", []]] call _inidbiReq;
-		_readdir = ["read", ["Account", "Direction", ""]] call _inidbiReq;
-		_readAni = ["read", ["Account", "Anim", ""]] call _inidbiReq;
-		_readdamage = ["read", ["Account", "Health", ""]] call _inidbiReq;
-		_readloadout = ["read", ["Account", "Loadout", []]] call _inidbiReq;
-		_readHunger = ["read", ["Account", "Hunger", ""]] call _inidbiReq;
-		_readThirst = ["read", ["Account", "Thirst", ""]] call _inidbiReq;
-		
-		dmd_db_load = [_readpos, _readdir, _readAni, _readdamage, _readloadout, _readHunger, _readThirst];
-		_dataplayrowner publicVariableClient "dmd_db_load";
-	};
-
+	// SETUP BANK ACCOUNTS 
 	_inidbiBank = ["new", "DMD_BANK_ACCOUNTS"] call OO_INIDBI;
 	_readCash = ["read", [_dataplayruid, "Balance", 0]] call _inidbiBank;
 	dmd_db_bank = [_readCash];
 	_dataplayrowner publicVariableClient "dmd_db_bank";
+
+	// DEAL WITH CHARACTER DATA 
+	_inidbiReq = ["new", _dataplayruid] call OO_INIDBI;
+	_databasefind = "exists" call _inidbiReq;
+
+	private "_handler";
+	private _dataArray = []; 
+
+	// set up a new account if doesn't exist
+	if (!_databasefind) then {
+		["write", ["Account", "Name", _dataplayrname]] call _inidbiReq;
+		["write", ["Account", "UID", _dataplayruid]] call _inidbiReq;
+		_handler = "newplayer";
+	};
+
+	if (_databasefind) then {
+		_dataArray = [
+			(["read", ["Account", "Position", []]] call _inidbiReq),
+			(["read", ["Account", "Direction", ""]] call _inidbiReq),
+			(["read", ["Account", "Anim", ""]] call _inidbiReq),
+			(["read", ["Account", "Health", ""]] call _inidbiReq),
+			(["read", ["Account", "Loadout", []]] call _inidbiReq),
+			(["read", ["Account", "Hunger", ""]] call _inidbiReq),
+			(["read", ["Account", "Thirst", ""]] call _inidbiReq)
+		];
+		_handler = "load";	
+	};
+
+	dmd_db_load = [_handler,_dataArray];
+	_dataplayrowner publicVariableClient "dmd_db_load";
 
 	dmd_db_check = nil;
 };

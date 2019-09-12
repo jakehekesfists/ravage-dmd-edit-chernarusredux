@@ -22,11 +22,9 @@ class dmd {
 	class Client {
 		file = "fn\Client";
 		class locationSpam {};
-		class setupPlayer {};
 		class jumpScript {};
 		class earplugs {};
 		class playerActions {};
-		class randomSpawn {};
 		class safezone {};
 		class createFire {};
 		class spookyFog {};

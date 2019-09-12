@@ -1,10 +1,4 @@
-MANUALLY CREATE A LOCKING FEATURE FOR MOVED OBJECTS - 2EZ, setvar/getvar. pretty little progress bar maybe. 
-
----- https://forums.bohemia.net/forums/topic/183264-ravage/?do=findComment&comment=3376815
-tourist from biforums has given me a bug report from a dedi. 
-work through and try to solve these problems. 
-
-
+MANUALLY CREATE A LOCKING FEATURE FOR MOVED OBJECTS - 2EZ, setvar/getvar. pretty little progress bar maybe.
 
 - later versions
     once rhs updates and fixes the broken shotgun reloading. add them back in to the mission
@@ -20,6 +14,10 @@ work through and try to solve these problems.
             - Tanoa (RHS only)
             - Malden (RHS only)
             -         
+    
+    ---- https://forums.bohemia.net/forums/topic/183264-ravage/?do=findComment&comment=3376815
+        tourist from biforums has given me a bug report from a dedi. 
+        work through and try to solve these problems. 
 
 /* -----------------------------------
     File: filename.sqf
@@ -28,9 +26,3 @@ work through and try to solve these problems.
 
 known bugs:
 Ravage repair script does not seem to work with the BTR 40
-
-Patch Notes: 
-* dmd_fnc_createbldrelative script reworked
-* zombie bolters reduced from 15% to 5%
-+ created all new mission compositions with no cup/rhs items for max compatability across maps/mods
-- removed operation prophet because impossible to recreate without cup items.
