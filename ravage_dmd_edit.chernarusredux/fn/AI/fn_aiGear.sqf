@@ -2,11 +2,18 @@
     File: fn_aiGear.sqf
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
-params ["_unit", "_loadouts"]; 
+params [
+    ["_unit", objNull],
+    ["_loadouts", []]
+];
+
+if (isNull _unit) exitwith { diag_log __FILE__ + "ERROR: No Unit"; };
+if (_loadouts isEqualTo []) exitWith { diag_log __FILE__ + "ERROR: No Loadouts"; };
+
 ([[ "AI_Missions", "AISettings" ],[ "items" ]] call dmd_fnc_getMissionCfg ) params ["_itemsArray"];
 
-_addToUnit = [];
-_selected = selectRandom _loadouts;
+private _addToUnit = [];
+private _selected = selectRandom _loadouts;
 [_unit] call dmd_fnc_cleanUnit;
 _unit setUnitLoadout (missionConfigFile >> "dmd_ai_loadouts" >> _selected);
 
@@ -30,5 +37,4 @@ if ((_rand > 20) && (_rand < 35)) then {
 };
 
 for "_i" from 0 to (_rand) step 3 do { _unit addItemToUniform "rvg_money"; };
-
 _unit enablegunlights "forceOn";

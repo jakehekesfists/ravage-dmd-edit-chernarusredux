@@ -4,11 +4,18 @@
 
 	adapted from BIS_fnc_findSafePos
 -------------------------------------- */
-params ["_pos", "_mnDst", "_mxDst", "_obDst", "_wtrMode", "_mxGrad", "_shrMode", "_vehTyp"];
-
+params [
+	"_pos",
+	["_mnDst",0],
+	["_mxDst",100],
+	["_obDst",1],
+	["_wtrMode",0],
+	["_mxGrad",999],
+	["_shrMode",0],
+	["_vehTyp",""]
+];
 
 if (_shrMode == 0) then {_shrMode = false} else {_shrMode = true};
-if (isNil "_vehTyp") then { _vehTyp = "" } else { _vehTyp };
 //See if default world values should be used.
 if (count _pos == 0) then { _pos = getArray (configFile >> "CfgWorlds" >> worldName >> "safePositionAnchor"); };
 if (count _pos == 0) exitWith {debugLog "Log: [findSafePos] No center position was passed!"; []};

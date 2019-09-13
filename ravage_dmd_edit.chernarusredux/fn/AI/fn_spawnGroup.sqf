@@ -2,7 +2,15 @@
     File: fn_spawnGroup.sqf
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
-params ["_pos", "_gCnt", "_uCnt", "_rad", "_loadouts"];
+params [
+    "_pos",
+    ["_gCnt", 2],
+    ["_uCnt", 4],
+    ["_rad", 200],
+    ["_loadouts", []]
+];
+
+if (_loadouts isEqualTo []) exitWith { diag_log __FILE__ + "ERROR: NO LOADOUTS"; };
 
 private _return = [[],[]];
 private _posArr = [_pos, _rad, _gCnt, false ] call dmd_fnc_getPosInCircle;

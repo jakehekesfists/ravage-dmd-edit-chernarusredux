@@ -27,6 +27,7 @@ for "_i" from 0 to (count _cities)-1 do {
 	_selected params ["_name", "_pos"];
 
 	private _aiSelected = selectRandom _aiTypes;
+	private _allMissionObjects = [];
 
 	waitUntil {
 		sleep 10;
@@ -77,6 +78,8 @@ for "_i" from 0 to (count _cities)-1 do {
 	[_missionText, _formatEndMessage, (localize "STR_AI_INV_HINTFINISH"), "\A3\ui_f\data\igui\cfg\simpleTasks\types\radio_ca.paa"] spawn dmd_fnc_missionBroadcast;
 	private _box = [_pos, _rflMinMax, _hgnMinMax, _itmMinMax, true] call dmd_fnc_lootCrate;
 
-	[_markers] spawn dmd_fnc_delMissionMarker;
+	// CLEANUP
+	[_markers, _allUnits, _allMissionObjects, 300] spawn dmd_fnc_missionCleanup;
+	
 	[ _pos, _missionText, _formatEndMessage, "SUCCEEDED" ] call dmd_fnc_taskHandle;
 };

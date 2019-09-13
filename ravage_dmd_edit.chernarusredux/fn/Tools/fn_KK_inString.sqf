@@ -1,15 +1,15 @@
 /*
     Author: Killzone_Kid
     http://killzonekid.com/arma-scripting-tutorials-how-to-find-a-string-within-a-string/
+	params rewritten by JakeHekesFists[DMD]
 */
-
-private ["_needles", "_haystack", "_caseSensitive", "_found", "_testArray", "_testStr"];
-_needles = param [0, [], ["",[]]];
-_haystack = param [1, "", [""]];
-_caseSensitive = param [2, false, [false]];
-
+params [
+	["_needles", [], ["",[]]],
+	["_haystack", "", [""]],
+	["_caseSensitive", false, [false]]
+];
 if (typeName _needles != "ARRAY") then { _needles = [_needles]; };
-_found = false;
+private _found = false;
 
 if (_caseSensitive) then {
 	{

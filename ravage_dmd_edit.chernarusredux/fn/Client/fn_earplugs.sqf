@@ -11,5 +11,5 @@ private _earplugs = call {
 _earplugs params ["_nxtVal", "_fadesound", "_string"];
 
 1 fadeSound _fadesound;
-hint (localize _string);			// use something nicer looking than hint. maybe dynamic text?
-player setVariable ["DMD_Earplugs", _nxtVal, true]; 
+titleText [(localize _string), "PLAIN DOWN"];
+player setVariable ["DMD_Earplugs", _nxtVal, true];

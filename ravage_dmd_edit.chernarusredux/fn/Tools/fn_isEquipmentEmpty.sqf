@@ -2,7 +2,11 @@
     File: fn_isEquipmentEmpty.sqf
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
-params ["_unit", "_classname"];
+params [
+	"_unit",
+	["_classname",""]
+];
+if (_classname isEqualTo "") exitWith {};
 ([_classname] call BIS_fnc_itemType) params ["_itemCategory", "_itemType"];
 private _ret = call {
 	if !(_itemCategory isEqualTo "Equipment") exitWith { true };

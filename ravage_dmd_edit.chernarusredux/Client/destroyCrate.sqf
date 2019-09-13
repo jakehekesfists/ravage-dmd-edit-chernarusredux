@@ -17,7 +17,8 @@ waitUntil {
 	false
 };
 
-private _fire = [(getPos _target), "largeFire", 15] spawn dmd_fnc_createFire;
-sleep 15;
-_target setDamage 1;
-deleteVehicle _target;
+private _fires = [_target] call dmd_fnc_createFire;
+private _array = [_target];
+{ _array pushBack _x; } foreach _fires;
+
+[15, _array, false] spawn dmd_fnc_delayDelete;

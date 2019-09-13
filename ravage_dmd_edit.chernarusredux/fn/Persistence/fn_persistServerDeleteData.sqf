@@ -3,5 +3,5 @@
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
 params ["_uid"];
-_inidbiUN = ["new", _uid] call OO_INIDBI;
-"delete" call _inidbiUN;
+private _inidbQry = ["new", _uid] call OO_INIDBI;
+"delete" call _inidbQry;

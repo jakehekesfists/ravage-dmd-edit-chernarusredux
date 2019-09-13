@@ -1,12 +1,12 @@
 /* -----------------------------------
-    File: fn_safeZone.sqf 
+    File: fn_safeZone.sqf
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
 ( [	[ "ServerSettings", "safeZones" ], [ "positions" ] ] call dmd_fnc_getMissionCfg ) params [ "_sz" ];
 
 fn_enter = {
 	params ["_pos"];
-	hint (localize "STR_CLI_SZ_ENTER");
+	titleText [(localize "STR_CLI_SZ_ENTER"), "PLAIN DOWN"];
 	protThread = true;
 	canspawnzeds = false;
 	waitUntil {
@@ -15,11 +15,11 @@ fn_enter = {
 		if (!inSafeZone) exitWith {true};
 		false
 	};
-	[] call fn_exit; 
+	[] call fn_exit;
 };
 
 fn_exit = {
-	hint (localize "STR_CLI_SZ_LEAVE");
+	titleText [(localize "STR_CLI_SZ_LEAVE"), "PLAIN DOWN"];
 	protThread = false;
 	canspawnzeds = true;
 	inSafeZone = false;
@@ -28,7 +28,7 @@ fn_exit = {
 
 [_sz] spawn {
 	params ["_sz"];
-	inSafeZone = false; 
+	inSafeZone = false;
 	protThread = false;
 
 	for "_i" from 0 to 1 step 0 do {
@@ -40,7 +40,7 @@ fn_exit = {
 				_za = _pos nearEntities ["zombie", _rad];
 				{ deleteVehicle _x; } count _za;
 			} else { inSafeZone = false; };
-		} forEach _sz; 
+		} forEach _sz;
 		if (inSafeZone) then { if (!protThread) then { [] spawn fn_enter; }; };
 		sleep 2;
 	};

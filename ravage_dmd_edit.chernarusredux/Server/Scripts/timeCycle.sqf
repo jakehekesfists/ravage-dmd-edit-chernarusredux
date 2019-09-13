@@ -2,7 +2,7 @@
     File: timeCycle.sqf
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
-// config moved to params so regular players can change it for themselves in lobby - if running on dedi. just change the default value in description.ext 
+// config moved to params so regular players can change it for themselves in lobby - if running on dedi. just change the default value in description.ext
 _day = "daytimeMultiplier" call BIS_fnc_getParamValue;
 _night = "nighttimeMultiplier" call BIS_fnc_getParamValue;
 
@@ -14,8 +14,9 @@ fn_getDaylightHours = {
 		if (_month in [4,5,8,9]) exitWith { [6,18] };
 		if (_month in [6,7]) exitWith { [5,19] };
 		if (_month in [1,12]) exitWith { [8,16] };
+		[8,20]
 	};
-	_ret	
+	_ret
 };
 
 private _startingMonth = (date select 1);

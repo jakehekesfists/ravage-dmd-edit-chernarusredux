@@ -2,14 +2,21 @@
     File: fn_missionVehicleSetup.sqf
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
-params ["_pos", "_class", "_paradrop"];
+params [
+	["_pos",[]],
+	["_class",""],
+	["_paradrop", false]
+];
 
-private _veh = _class createVehicle [0,0,0];
+if (_pos isEqualTo []) exitWith { diag_log __FILE__ + "ERROR: NO POS"; };
+if (_class isEqualTo "") exitWith { diag_log __FILE__ + "ERROR: NO CLASS SUPPLIED"; };
+
+private _veh = _class createVehicle [(_pos select 0), (_pos select 1), 2000];
 _veh allowDamage false;
 [_veh] call dmd_fnc_cleanLootCrate; 	// empty the gear
 _veh setFuel 0.75;
 _veh setVariable ["rvg_owned", true, true];			// prevent ravage deleting the vehicle
-_veh setVariable ["R3F_LOG_disabled", true, true];	// disable logistics. will be enabled once a player looks at the vehicle. 
+_veh setVariable ["R3F_LOG_disabled", true, true];	// disable logistics. will be enabled once a player looks at the vehicle.
 
 if (_paradrop) then {
 	_pos set [2,150];
@@ -20,9 +27,5 @@ if (_paradrop) then {
 	_veh setPosATL _pos; 
 };
 
-[_veh] spawn {
-	params ["_veh"];
-	waitUntil { sleep 1; if (isTouchingGround _veh) exitWith { true }; false };
-	_veh allowDamage true; 
-	_veh enableDynamicSimulation true;
-};
+_veh allowDamage true;
+_veh enableSimulationGlobal true;

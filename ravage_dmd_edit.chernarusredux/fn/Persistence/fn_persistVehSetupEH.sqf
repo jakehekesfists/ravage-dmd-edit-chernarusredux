@@ -2,7 +2,8 @@
     File: fn_persistVehSetupEH.sqf
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
-params ["_veh"];
+params [ ["_veh", objNull] ];
+if (_veh isEqualTo objNull) exitWith {};
 
 _veh addMPEventHandler ["MPKilled", {
     params ["_obj" ];    

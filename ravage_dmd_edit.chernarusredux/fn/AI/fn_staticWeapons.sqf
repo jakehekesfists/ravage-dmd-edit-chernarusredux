@@ -2,7 +2,14 @@
     File: fn_staticWeapons.sqf
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
-params ["_center", "_posArray", "_loadouts"];
+params [
+    "_center",
+    ["_posArray",[]],
+    ["_loadouts",[]]
+];
+
+if (_posArray isEqualTo []) exitWith { diag_log __FILE__ + "ERROR: NO POSITION ARRAY"; };
+if (_loadouts isEqualTo []) exitWith { diag_log __FILE__ + "ERROR: NO LOADOUTS"; };
 
 private _return = [[],[],[]];
 ( [[ "AI_Missions", "AISettings"],["emplacedTypes"]] call dmd_fnc_getMissionCfg ) params ["_hmgTypes"];
@@ -19,7 +26,7 @@ for "_i" from 0 to (count _posArray)-1 do {
 	_hmg setPosATL _hmgPos;
 
 	private _group = createGroup EAST;
-	private _unit = [_spwnPs, _group, _loadouts] call dmd_fnc_createUnit; 
+	private _unit = [_spwnPs, _group, _loadouts] call dmd_fnc_createUnit;
 
 	// this should make them quite angry
 	_group allowFleeing 0;

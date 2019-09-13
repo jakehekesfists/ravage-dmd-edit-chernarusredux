@@ -1,8 +1,32 @@
 -----------------------------------------------------------------------------------------------------------------------
+September 13th 2019
+-----------------------------------------------------------------------------------------------------------------------
+SO MANY CHANGES, BUT FEW PLAYERS WILL EVEN NOTICE :'( 
+
+51 files changed, but not much functional difference. 
+
++ lamps added to green mountain
++ edited Haleks breathfog script. now only foggy breath at night.
++ ai mission difficulty settings now can be set by host in mission params
++ more skills settings for ai missions added.
++ fn_delayDelete function
+
+* fixed for non-driveable mission vehicles. spawning at [0,0,0] was spawning in water and killing the engine! 
+* fn_createFire re-written to enable attaching flames to objects. will be used in missions later
+* destroyCrate function optimised to use new functions
+* vehicle paradrop script optimised
+* default vals added to many functions
+* fn_getPosInCircle updated to ensure enough positions are provided on coastal towns
+* failsafes added to functions
+* zeds type changed to walkers, with 5% chance of bolters.
+    looked at ravage zombie init, walkers will produce mostly walking zombies with a small percentage as bolters.
+    whereas type "both" will generate runners 40% of the time. which is too much.
+
+-----------------------------------------------------------------------------------------------------------------------
 September 12th 2019 - hotfix
 -----------------------------------------------------------------------------------------------------------------------
-+ Params option to change Time Multipliers recommended by Steam user Rundown    
-    Rundown [2 hours ago] 
++ Params option to change Time Multipliers recommended by Steam user Rundown
+    Rundown [2 hours ago]
     I'd kill for an option to decrease/increase the rate at which time passes ingame, feels like day and night are way too short.
 
 * Moved patch notes file out of mission directory (whoops. idiot lol)
@@ -10,12 +34,12 @@ September 12th 2019 - hotfix
 -----------------------------------------------------------------------------------------------------------------------
 September 12th 2019
 -----------------------------------------------------------------------------------------------------------------------
-A quick word: 
+A quick word:
 Upon first spawn, if you don't have a saved character in the database. your character will briefly spawn and then die.
 This is expected behaviour.
 Have tested this mission both as player hosted multiplayer on LAN, and as a dedicated server using TADST.
-Persistence seems functional on both. But will require further testing to be certain. 
-I still do not recommend this for use on a dedicated server unless you know what you are doing. 
+Persistence seems functional on both. But will require further testing to be certain.
+I still do not recommend this for use on a dedicated server unless you know what you are doing.
 -----------------------------------------------------------------------------------------------------------------------
 Patch Notes:
 + Add New Respawn Loadouts for APEX / CONTACT DLC owners
@@ -25,7 +49,7 @@ Patch Notes:
 
 * Moved Respawn Locations to be better placed along the Coast
 * Changed fn_playerActions for easier editing
-* Changed the Base Objects to only use vanilla A3 Items 
+* Changed the Base Objects to only use vanilla A3 Items
 * Renamed Lumber Mill spawn to Berezino Docks and moved approx 1km North
 * Updated Ravage Gear Pool to use only Vanilla Items in the Arrays
 * Clearer notation on loottables file
@@ -33,7 +57,7 @@ Patch Notes:
 * Moved initserver into init.sqf with isdedicated / player server if check to work with dedi
 * Fixed ATM addaction so it only adds once
 * locationSpam function changed so text should not display until player has correctly spawned in
-* client PVEH rewrite for player database load. 
+* client PVEH rewrite for player database load.
 * Inventory eventhandler moved into onplayerrespawn.sqf
 * Changed R3F Item Cargo values
 * Base Object spawner will no longer spawn objects in the ocean

@@ -2,9 +2,13 @@
     File: fn_spawnObjects.sqf
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
-if (!isServer) exitWith {};
 if (isNil "dmd_objID") then { ["get", nil, "object"] call dmd_fnc_persistIDCount; };
-params ["_objPos", "_objList"];
+params [
+	"_objPos",
+	["_objList",[]]
+];
+
+if ((count _objList) isEqualTo 0) exitWith {};
 
 private _objClass = selectRandom _objList;
 private _obj = _objClass createVehicle _objPos;

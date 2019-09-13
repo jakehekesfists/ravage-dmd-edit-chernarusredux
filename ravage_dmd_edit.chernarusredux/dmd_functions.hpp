@@ -4,7 +4,7 @@ class dmd {
         file = "DMD_LootSpawn\fn";
         class getlootpos {};
 		class lootCleanLoop {};
-		class lootLoop {};        
+		class lootLoop {};
     };
     
 	class AI {
@@ -29,6 +29,7 @@ class dmd {
 		class createFire {};
 		class spookyFog {};
 		class vehicleService {};
+		class breathFog {};
 	};
 
 	class Missions {
@@ -87,6 +88,7 @@ class dmd {
 		class KK_inString {};
 		class arrayShuffle {};
 		class cleanUnit {};
+		class delayDelete {};
 		class findLocName {};
 		class findSafePos {};
 		class getCfgType {};

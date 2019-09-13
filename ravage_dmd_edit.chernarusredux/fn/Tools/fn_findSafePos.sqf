@@ -4,12 +4,20 @@
 
 	adapted from BIS_fnc_findSafePos
 -------------------------------------- */
-params ["_pos", "_minDist", "_maxDist", "_objDist", "_waterMode", "_maxGradient", "_shoreMode", "_vehicleType"];
+params [
+	"_pos",
+	["_minDist",0],
+	["_maxDist",100],
+	["_objDist",1],
+	["_waterMode",0],
+	["_maxGradient",999],
+	["_shoreMode",0],
+	["_vehicleType",""]
+];
 
 ([[ "ServerSettings"],[ "exclusionZones" ]] call dmd_fnc_getMissionCfg ) params ["_excl"];
 
 if (_shoreMode == 0) then {_shoreMode = false} else {_shoreMode = true};
-if (isNil "_vehicleType") then { _vehicleType = "" } else { _vehicleType }; 
 //See if default world values should be used.
 if (count _pos == 0) then { _pos = getArray (configFile >> "CfgWorlds" >> worldName >> "safePositionAnchor"); };
 if (count _pos == 0) exitWith {debugLog "Log: [findSafePos] No center position was passed!"; []};

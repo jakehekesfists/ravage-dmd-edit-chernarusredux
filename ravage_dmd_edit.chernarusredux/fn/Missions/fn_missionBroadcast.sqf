@@ -2,9 +2,13 @@
     File: fn_missionBroadcast.sqf
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
-params ["_header", "_msg", "_missionType", "_image"];
+params [
+    ["_header","HEADER NOT SUPPLIED"],
+    ["_msg","FILL IN YOUR MESSAGE TEXT DUMBASS"],
+    ["_missionType","WHOOPS"],
+    ["_image","\A3\ui_f\data\igui\cfg\simpleTasks\types\attack_ca.paa"]
+];
 
-if (isNil "_image") then { _image = "\A3\ui_f\data\igui\cfg\simpleTasks\types\attack_ca.paa"; } else { _image };
 private _headerColor = (selectRandom ['#e30e63','#f23005','#ff9500','#faee05','#4afa05','#80cc06','#10cc7e','#11bcf0','#1a63d9','#970be3']);
 private _separator = "----------------------------------";
 private _structuredText = parseText format[
@@ -24,4 +28,4 @@ private _structuredText = parseText format[
 ];
 
 [_structuredText] remoteExec ["hint", 0];
-systemChat format [(localize "STR_MIS_MB_PRIBROAD"), _header, _msg]; 
+systemChat format [(localize "STR_MIS_MB_PRIBROAD"), _header, _msg];

@@ -26,6 +26,13 @@ class Header {
 };
 
 class params {
+	class aiskillsettings {
+		title = "AI Mission Difficulty";
+		values[] = {0,1,2,3};
+		texts[] = {"Very Easy","Easy","Medium","Hard"};
+		default = 2;
+	};
+
 	class daytimeMultiplier {
 		title = "Daytime Multiplier";
 		values[] = { 1, 2, 4, 8, 10, 20, 60 };

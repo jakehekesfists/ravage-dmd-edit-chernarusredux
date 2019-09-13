@@ -3,14 +3,19 @@
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
 
-params ["_type", "_dataArray"];     
+params [
+    ["_type",""],
+    ["_dataArray",[]]
+];
+
+if (_type isEqualTo "") exitWith { diag_log __FILE__ + "ERROR: NO TYPE SUPPLIED"; };
 
 if (_type isEqualTo "newplayer") exitWith {
     _forceRespawn = missionNamespace getVariable ["DMD_Respawned", false];
     if !(_forceRespawn) then { forceRespawn player; };
     missionNamespace setVariable ["DMD_Respawned", true];
     dmd_db_load = nil;
-    publicVariable "dmd_db_load"; 
+    publicVariable "dmd_db_load";
 };
 
 if (count _dataArray > 0) then {
@@ -28,4 +33,4 @@ if (count _dataArray > 0) then {
 
 dmd_db_load = nil;
 missionNamespace setVariable ["DMD_Respawned", true];
-publicVariable "dmd_db_load"; 
+publicVariable "dmd_db_load";

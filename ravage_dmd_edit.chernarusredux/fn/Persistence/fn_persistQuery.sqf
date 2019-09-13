@@ -5,9 +5,6 @@
 if (!isNil "dmd_db_check") then { dmd_db_check = nil; };
 sleep 0.5;
 if (isNil "dmd_db_check") then {
-	_owner = clientOwner;
-	_pName = profileName;
-	_plUID = getPlayerUID player;	
-	dmd_db_check = [_owner,_pName,_plUID];
+	dmd_db_check = [clientOwner, profileName, (getPlayerUID player)];
 	publicVariableServer "dmd_db_check";
 };

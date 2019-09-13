@@ -2,8 +2,13 @@
     File: fn_taskHandle.sqf
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
-params [ "_taskPosition", "_taskTitle", "_taskDescription", "_taskState", "_taskIcon" ];
-if !(isNil "_taskIcon") then { _taskIcon } else { _taskIcon = "attack"; };
+params [
+	"_taskPosition",
+	"_taskTitle",
+	"_taskDescription",
+	"_taskState",
+	["_taskIcon", "attack"]
+];
 _taskID = format["Task_%1",_taskTitle];
 if ([_taskID] call BIS_fnc_taskExists) then { 
 	[_taskID,[_taskDescription, _taskTitle, ""]] call BIS_fnc_taskSetDescription;

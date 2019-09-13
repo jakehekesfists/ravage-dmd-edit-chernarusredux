@@ -48,7 +48,16 @@ class dmd_cfg_settings {
 
         // Zombie Loot
         zombieLoot[] = {"rvg_plasticBottleEmpty","rvg_canteenEmpty","rvg_canOpener","rvg_plasticBottle","rvg_plasticBottlePurified","rvg_spirit","rvg_franta","rvg_beans","rvg_bacon","rvg_milk","rvg_rice","rvg_rustyCan","rvg_hose","rvg_guttingKnife","rvg_tire","rvg_purificationTablets","rvg_flare","rvg_rustyCanEmpty","rvg_beansEmpty","rvg_baconEmpty","rvg_spiritEmpty","rvg_frantaEmpty","rvg_beansEmpty","rvg_baconEmpty","rvg_matches","rvg_antiRad","rvg_foldedTent","rvg_money","rvg_notepad"};
-        zombieVests[] = {"V_LegStrapBag_black_F","CUP_V_CDF_CrewBelt","rvg_rangemaster_1","rhsgref_alice_webbing"};
+        zombieVests[] = {
+            #ifdef DMD_USE_CUP
+            "CUP_V_CDF_CrewBelt",
+            #endif
+            #ifdef DMD_USE_RHS
+            "rhsgref_alice_webbing",
+            #endif
+            "rvg_rangemaster_1",
+            "V_LegStrapBag_black_F"
+        };
 
         // Vehicle Repair Stations
         class vehRepairs {
@@ -68,18 +77,18 @@ class dmd_cfg_settings {
             // types of helicopters that can spawn.
             heliTypes[] = {
                 #ifdef DMD_USE_CUP
-                "CUP_B_MH6J_OBS_USA",
-                "CUP_B_MH6M_USA",
+                    "CUP_B_MH6J_OBS_USA",
+                    "CUP_B_MH6M_USA",
                 #endif
                 #ifdef DMD_USE_RHS
-                "RHS_CH_47F_10",
-                "RHS_Mi8t_civilian",
-                "RHS_Mi8T_vvsc",
-                "rhs_uh1h_hidf",
-                "rhs_uh1h_idap",
-                "rhs_uh1h_un",
-                "RHS_UH60M2_d",
-                "rhssaf_airforce_o_ht40",
+                    "RHS_CH_47F_10",
+                    "RHS_Mi8t_civilian",
+                    "RHS_Mi8T_vvsc",
+                    "rhs_uh1h_hidf",
+                    "rhs_uh1h_idap",
+                    "rhs_uh1h_un",
+                    "RHS_UH60M2_d",
+                    "rhssaf_airforce_o_ht40",
                 #endif
                 "C_Heli_Light_01_civil_F"
             };

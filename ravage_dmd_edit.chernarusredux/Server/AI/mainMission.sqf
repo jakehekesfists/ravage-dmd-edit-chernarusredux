@@ -109,7 +109,7 @@ for "_i" from 0 to (count _misList)-1 do {
 	};
 
 	// CLEANUP
-	[_lp, _markers, _allUnits, _allMissionObjects] spawn dmd_fnc_missionCleanup;
+	[_markers, _allUnits, _allMissionObjects, 300] spawn dmd_fnc_missionCleanup;
 	
 	// RESET THE LOOP
 	if (_i isEqualTo (count _misList)-1) then { _i = 0; };

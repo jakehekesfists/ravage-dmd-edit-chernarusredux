@@ -352,8 +352,34 @@ class AI_Missions {
     };
     
     class AISettings {
+        // AI SKILLS CAN BE SET IN MISSION PARAMS ON STARTUP BY HOST. OR BY EDITING THE DEFAULT VALUE IN DESCRIPTION.EXT        
+        class aiSkillVeryEasy {
+            accuracy = 0.3;
+            aimingShake = 0.3;
+            aimingSpeed = 0.25;
+            endurance = 0.5;
+            spotDistance = 0.3;
+            spotTime = 0.3;
+            courage = 1;
+            reloadSpeed = 0.2;
+            commanding = 1;
+            general = 0.25;
+        };
 
-        class aiSkill {
+        class aiSkillEasy {
+            accuracy = 0.4;
+            aimingShake = 0.5;
+            aimingSpeed = 0.3;
+            endurance = 0.7;
+            spotDistance = 0.4;
+            spotTime = 0.5;
+            courage = 1;
+            reloadSpeed = 0.4;
+            commanding = 1;
+            general = 0.4;
+        };
+
+        class aiSkillMedium {
             accuracy = 0.6;
             aimingShake = 0.5;
             aimingSpeed = 0.45;
@@ -364,6 +390,19 @@ class AI_Missions {
             reloadSpeed = 0.5;
             commanding = 1;
             general = 0.6;
+        };
+
+        class aiSkillHard {
+            accuracy = 0.8;
+            aimingShake = 0.7;
+            aimingSpeed = 0.6;
+            endurance = 0.9;
+            spotDistance = 0.7;
+            spotTime = 0.8;
+            courage = 1;
+            reloadSpeed = 0.8;
+            commanding = 1;
+            general = 0.75;
         };
 
         // Types of Emplaced Weapon AI can use
@@ -1431,7 +1470,7 @@ class AI_Missions {
             objComposition[] = {
                 {"CargoNet_01_barrels_F",{-8.0293,5.85059,-9.53674e-007},0.000648001,1,0,{},"","",true,false}, 
                 {"MetalBarrel_burning_F",{-7.18066,10.1733,0},0,1,0,{},"","",true,false}, 
-                {"O_CargoNet_01_ammo_F",{-13.0762,2.91455,-4.76837e-007},0.00128477,1,0,{},"","",true,false}, 
+                //  {"O_CargoNet_01_ammo_F",{-13.0762,2.91455,-4.76837e-007},0.00128477,1,0,{},"","",true,false}, 
                 {"CargoNet_01_barrels_F",{-9.59375,9.80908,0},5.22926e-005,1,0,{},"","",true,false}, 
                 {"Land_Radar_Small_F",{5.75635,13.9927,0},0,1,0,{},"","",true,false}, 
                 {"Land_Cargo20_blue_F",{-14.8711,15.272,-4.76837e-007},360,1,0,{},"","",true,false}, 

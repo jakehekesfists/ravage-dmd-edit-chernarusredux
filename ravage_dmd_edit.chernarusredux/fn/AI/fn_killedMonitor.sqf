@@ -2,7 +2,10 @@
     File: fn_killedMonitor.sqf
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
-params ["_allUnits","_kpr"];
+params [
+	["_allUnits",[]],
+	["_kpr",0.9]
+];
 private _untCount = (count _allUnits);
 if (_untCount > 0) then {
 	_k = 0;

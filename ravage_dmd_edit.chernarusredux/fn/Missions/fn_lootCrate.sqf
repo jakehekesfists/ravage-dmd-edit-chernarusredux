@@ -2,9 +2,15 @@
     File: fn_lootCrate.sqf
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
-params ["_pos", "_rflMinMax", "_hgnMinMax", "_itmMinMax", "_paradrop"];
+params [
+	["_pos",[]],
+	["_rflMinMax", [4,8]],
+	["_hgnMinMax", [2,4]],
+	["_itmMinMax", [6,9]],
+	["_paradrop", false]
+];
 
-if (isNil "_paradrop") then { _paradrop = false; } else { _paradrop };
+if (_pos isEqualTo []) exitWith { diag_log __FILE__ + "ERROR: NO POS"; };
 
 ( [[ "AI_Missions", "lootSettings" ],[ "crateTypes", "rifles", "handguns", "items" ]] call dmd_fnc_getMissionCfg ) params ["_crateTypes", "_rifles", "_handguns", "_itemsArray"];
 
@@ -66,11 +72,11 @@ for "_p" from 0 to (_pstCnt)-1 do {
 for "_i" from 0 to (_itmCnt)-1 do { _box addItemCargoGlobal [(selectRandom _itemsArray), 1]; };
 _box setVariable ["R3F_LOG_disabled", false, true];
 
-dmd_objID = dmd_objID + 0.001; 
+dmd_objID = dmd_objID + 0.001;
 ["set", dmd_objID, "object"] call dmd_fnc_persistIDCount;
 _box setVariable ["unique_id", dmd_objID, true];
 
-[_box, _boxPos] call dmd_fnc_crateMarkers; 
+[_box, _boxPos] call dmd_fnc_crateMarkers;
 
 _box allowDamage true;
 _box

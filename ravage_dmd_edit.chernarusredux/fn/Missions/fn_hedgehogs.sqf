@@ -2,7 +2,11 @@
     File: fn_hedgehogs.sqf
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
-params ["_pos", "_rad"];
+params [
+	["_pos",[]],
+	["_rad", 150]
+];
+if (_pos isEqualTo []) exitWith { diag_log __FILE__ + "ERROR: NO POS"; };
 private _objects = [];
 {
     private _radius = _x;
