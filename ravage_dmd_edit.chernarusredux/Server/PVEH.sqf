@@ -45,6 +45,7 @@
 	dmd_db_check = nil;
 };
 
+// SAVES THE PLAYER WHEN THEY PRESS ESCAPE 
 "dmd_db_esc_save" addPublicVariableEventHandler {
 	private _packet = _this select 1;
 	_packet params ["_myUID", "_myPos","_myDir","_myAni","_myDmg","_myGear","_hunger","_thirst"];
@@ -53,6 +54,7 @@
 	dmd_db_esc_save = nil;
 };
 
+// SAVES BASE OBJECTS (WHEN THEY GET MOVED)
 "dmd_save_this_object" addPublicVariableEventHandler {
 	_pack = _this select 1;
 	_pack params ["_obj", "_objID"];
@@ -60,12 +62,14 @@
 	[_obj, _objID] call dmd_fnc_persistObjSetupEH;
 };
 
+// DELETES OBJECTS FROM DB IF THEY GET DESTROYED
 "dmd_delete_this_object" addPublicVariableEventHandler {
     _pack = _this select 1;
     _pack params ["_obj", "_objID"];
     [_obj,_objID] call dmd_fnc_persistObjDelete;
 };
 
+// SAVES AND SETS EVENTHANDLERS WHEN PLAYERS MANUALLY CLAIM VEHICLES
 "dmd_save_my_car_pls" addPublicVariableEventHandler {
 	_pack = _this select 1;
 	_pack params ["_vehicle", "_puid"];
@@ -83,12 +87,14 @@
 	["set", dmd_vehID, "vehicle"] call dmd_fnc_persistIDCount;
 };
 
+// EVERY TIME A PLAYER UPDATES THEIR CURRENCY - SAVE IT TO DB 
 "dmd_save_bank" addPublicVariableEventHandler {
 	_pack = _this select 1;
 	_pack params ["_uid", "_amt"];
 	[_uid, _amt] call dmd_fnc_bank_update;
 };
 
+// HOTWIRING REQUEST - CHANGE OWNERSHIP OF VEHICLE AND UPDATE DB
 "dmd_hotwire_vehicle" addPublicVariableEventHandler {
 	_pack = _this select 1; 
 	_pack params ["_vehicle", "_vehicleID", "_playerUID"];

@@ -3,10 +3,9 @@
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
 params ["_testPos"];
-([
-    [ "ServerSettings"],
-    [ "exclusionZones", "exclusionPos", "exclusionDist", "playerDist" ]
-] call dmd_fnc_getMissionCfg ) params ["_excl", "_exPos", "_exDst", "_plyDist"];
+([[ "ServerSettings"], [ "exclusionDist", "playerDist" ]] call dmd_fnc_getMissionCfg ) params ["_exDst", "_plyDist"];
+([["ServerSettings", "exclusionZones"],[worldName]] call dmd_fnc_getMissionCfg) params ["_excl"];
+([["ServerSettings", "exclusionPos"],[worldName]] call dmd_fnc_getMissionCfg) params ["_exPos"];
 
 private _foundBad = false;
 

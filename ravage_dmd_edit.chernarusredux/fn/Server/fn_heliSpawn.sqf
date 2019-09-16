@@ -2,7 +2,8 @@
     File: fn_heliSpawn.sqf
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
-([[ "ServerSettings", "HeliSpawn" ],[ "heliQty", "heliFuel", "heliFuelEmptyChance", "heliTypes", "heliSpawnLoc", "debugMarkers", "enable" ]] call dmd_fnc_getMissionCfg ) params ["_qty", "_fuel", "_emptyChance", "_types", "_posArray", "_debug", "_enable" ];
+([[ "ServerSettings", "HeliSpawn" ],[ "heliQty", "heliFuel", "heliFuelEmptyChance", "heliTypes", "debugMarkers", "enable" ]] call dmd_fnc_getMissionCfg ) params ["_qty", "_fuel", "_emptyChance", "_types", "_debug", "_enable" ];
+([["ServerSettings","HeliSpawn","locations"],[worldName]] call dmd_fnc_getMissionCfg) params ["_posArray"];
 
 if (_enable != 1) exitWith {};
 

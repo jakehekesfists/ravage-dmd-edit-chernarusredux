@@ -2,7 +2,7 @@
     File: fn_safeZoneMarkers.sqf
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
-( [	[ "ServerSettings", "safeZones" ], [ "positions" ] ] call dmd_fnc_getMissionCfg ) params [ "_sz" ];
+( [	[ "ServerSettings", "safeZones" ], [ worldName ] ] call dmd_fnc_getMissionCfg ) params [ "_sz" ];
 
 if (isServer) then {
 	_texture =  "#(rgb,8,8,3)color(0,1,0.25,1)";

@@ -21,6 +21,7 @@ addMissionEventHandler ["EntityKilled", {
 	}
 ];
 
+// save player on disconnect. uses a non-player object. wont save hunger/thirst but should already have that from player pressing escape last time. 
 addMissionEventHandler ["HandleDisconnect", {
 	params ["_unit", "_id", "_uid", "_name"];
 	_getData = [_unit] call dmd_fnc_persistServerGetPlayerData;

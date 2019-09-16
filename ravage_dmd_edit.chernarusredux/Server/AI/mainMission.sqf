@@ -2,18 +2,21 @@
     File: mainMission.sqf
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
-( [[ "AI_Missions","mainMission" ],["enable","randDelay","minPlayers","missionList"]] call dmd_fnc_getMissionCfg ) params ["_enable","_rd","_minP","_misList"];
-if (_enable != 1) exitWith {};
-private _counter = 0;
 
-_misList = _misList call dmd_fnc_arrayShuffle;
+// mission settings are defined in dmd_ai_missions.hpp 
+( [[ "AI_Missions","mainMission" ],["enable","randDelay","minPlayers","missionList"]] call dmd_fnc_getMissionCfg ) params ["_enable","_rd","_minP","_misList"];
+if (_enable != 1) exitWith {};			// exit if disabled 
+private _counter = 0;					// set a counter to enumerate the tasks. 
+
+_misList = _misList call dmd_fnc_arrayShuffle;		// shuffle the array of available missions. 
 
 for "_i" from 0 to (count _misList)-1 do {
 	_counter = _counter + 1;
 	private _cntFmt = _counter;
-	if (_counter < 10) then { _cntFmt = format ["0%1",_counter]; };
+	if (_counter < 10) then { _cntFmt = format ["0%1",_counter]; };		// make it so the counter shows 01 instead of 1. looks better, orders nicer. etc. 
 	private _selected = (_misList select _i);
 
+	// get all the unique settings for the selected mission. 
 	( [
 		[ "AI_Missions","mainMission", _selected ],
 		[
@@ -27,6 +30,7 @@ for "_i" from 0 to (count _misList)-1 do {
 		"_vehicle","_vehTypes","_vehDrop","_hedgehogs","_useHMG"
 	];
 
+	// calculate the wait times, get a safe position to spawn the mission
 	private _time = diag_tickTime;
 	private _rDly = floor(random (_rd select 1)) max (_rd select 0);
 	private _startTime = _time + _rDly;
@@ -44,6 +48,7 @@ for "_i" from 0 to (count _misList)-1 do {
 		false
 	};
 
+	// get the AI settings to use with this mission 
 	([[ "AI_Missions","AISettings",(selectRandom _aiTypes)],[ "displayName","defaultColour","loadouts" ]] call dmd_fnc_getMissionCfg ) params ["_aiDispName","_defColour","_loadouts"];
 
 	// MISSION TEXT - DEFINED IN STRINGTABLE.XML
@@ -84,7 +89,7 @@ for "_i" from 0 to (count _misList)-1 do {
 	private _allSpawned = [_lp, _grpCnt, _uPrGrp, (_outerRadius) * 0.7, _loadouts ] call dmd_fnc_spawnGroup;
 	_allSpawned params ["_allGrps","_allUnits"];
 
-	// HMGS
+	// HMGS / .50cals / emplaced static weapons.
 	if (_useHMG > 0) then {
 		_allHMGs = [_lp, _staticWeps, _loadouts] call dmd_fnc_staticWeapons;
 		_allHMGs params ["_hmgUnits", "_hmgGroups", "_hmgVehicles"];		// we wont add the HMGs to the cleanup so players can take/save them
@@ -99,9 +104,10 @@ for "_i" from 0 to (count _misList)-1 do {
 	[_str_name, _str_end, (localize "STR_AI_MAINMISSION_HINTFINISH"), "\A3\ui_f\data\igui\cfg\simpleTasks\types\radio_ca.paa"] spawn dmd_fnc_missionBroadcast;
 	[ _lp, _taskTitle, _str_end, "SUCCEEDED" ] call dmd_fnc_taskHandle;
 
-	// SPAWN REWARDS
+	// SPAWN LOOT REWARDS
 	_box = [_lp, _rflMinMax, _hgnMinMax, _itmMinMax] call dmd_fnc_lootCrate;
 
+	// SPAWN VEHICLE REWARDS IF APPLICABLE TO MISSION (warning, sometimes vehicles dont work. i dont know why yet)
 	if (_vehicle isEqualTo 1) then {
 		private _class = selectRandom _vehTypes;
 		if (_vehDrop isEqualTo 1) then { _vehDrop = true; } else { _vehDrop = false; };
@@ -111,6 +117,6 @@ for "_i" from 0 to (count _misList)-1 do {
 	// CLEANUP
 	[_markers, _allUnits, _allMissionObjects, 300] spawn dmd_fnc_missionCleanup;
 	
-	// RESET THE LOOP
+	// IF ALL MISSIONS HAVE BEEN CYCLED THROUGH, LETS RESTART THE LOOP AGAIN.
 	if (_i isEqualTo (count _misList)-1) then { _i = 0; };
 };

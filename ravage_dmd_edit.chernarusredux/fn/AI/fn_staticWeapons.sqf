@@ -3,11 +3,12 @@
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
 params [
-    "_center",
+    ["_center",[]],
     ["_posArray",[]],
     ["_loadouts",[]]
 ];
 
+if (_center isEqualTo []) exitWith { diag_log __FILE__ + "ERROR: NO POSITION"; };
 if (_posArray isEqualTo []) exitWith { diag_log __FILE__ + "ERROR: NO POSITION ARRAY"; };
 if (_loadouts isEqualTo []) exitWith { diag_log __FILE__ + "ERROR: NO LOADOUTS"; };
 

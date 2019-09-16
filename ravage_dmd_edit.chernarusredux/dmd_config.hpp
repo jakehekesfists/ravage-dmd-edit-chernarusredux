@@ -1,3 +1,47 @@
+// SETTINGS EASILY CHANGED BY PLAYER HOST THROUGH PARAMETERS ON STARTUP
+// IF RUNNING IN DEDI, JUST CHANGE THE DEFAULT VALUE
+class params {
+	class aiskillsettings {
+		title = "AI Mission Difficulty";
+		values[] = {0,1,2,3};
+		texts[] = {"Very Easy","Easy","Medium","Hard"};
+		default = 2;
+	};
+
+    // speed that time passes during the day
+	class daytimeMultiplier {
+		title = "Daytime Multiplier";
+		values[] = { 1, 2, 4, 8, 10, 20, 60 };
+		texts[] = {"Realtime", "2x", "4x", "8x", "10x", "20x", "60x"};
+		default = 4;
+	};
+
+    // speed that time passes at night
+	class nighttimeMultiplier {
+		title = "Nighttime Multiplier";
+		values[] = { 1, 2, 4, 8, 10, 20, 60 };
+		texts[] = {"Realtime", "2x", "4x", "8x", "10x", "20x", "60x"};
+		default = 10;
+	};
+
+    // spooky night time fog FX - does not effect weather. 
+    class spookyNightFog {
+        title = "Spooky Night Fog";
+        values[] = { 0, 1, 2 };
+        texts[] = { "OFF", "ON (Every Night)", "ON (Some Nights)" };
+        default = 2; 
+    };
+
+    // percent at which items are sold at. default = 3 is 75%   - sell $100 item for $75
+    class salePriceCoef {
+        title = "Sale Price Factor";
+        values[] = { 0, 1, 2, 3, 4 };
+        texts[] = { "10%", "25%", "50%", "75%", "100%" };
+        default = 3;
+    };
+};
+
+// SETTINGS DEFINED ELSEWHERE
 class dmd_cfg_settings {
     #include "DMD_LootSpawn\dmd_lootTables.hpp"
 
@@ -9,12 +53,6 @@ class dmd_cfg_settings {
         shadowDist = 100;       // distance that shadows are rendered
 
         hotwireFailureChance = 66;     // 66% chance of hotwire attempt failing
-
-        // Spooky Night Fog :  NOTE: this has nothing to do with the weather, this is a fog effect created around players to add atmosphere
-        enableFog = 1;                                                  // enable spooky night fog. 1 for on / 0 for off.
-        fogHours[] = {0,1,2,3,4,23};                                    // spooky fog may appear between these hours. 11pm - 4am by default.
-        fogDays[] = { 1,2,5,7,8,10,14,15,16,17,20,21,24,28,29,30 };     // spooky fog can only appear on these ingame dates. I dont want fog every night.
-        //  fogDays[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31};      // debug setting - fog every night.
         
         // used to stop blank ammunition spawning on AI / Loot Crates
         blackListMags[] = {
@@ -30,13 +68,20 @@ class dmd_cfg_settings {
         // smoke shell colours - these are used across a few scripts. just call/edit them from here.
         smokeShellColours[] = {"SmokeShell","SmokeShellYellow","SmokeShellRed","SmokeShellGreen","SmokeShellPurple","SmokeShellBlue","SmokeShellOrange"};
 
-        exclusionZones[] = {"Guglovo", "Chernogorsk", "Elektrozavodsk"};        // exclude these cities from being used for missions and base object spawn.
+        // exclude these cities from being used for missions and base object spawn. (automatically switches based on map name)
+        class exclusionZones {
+            chernarusredux[] = {"Guglovo", "Chernogorsk", "Elektrozavodsk"};
+        };
+
+        // {{position},radius}  eg. {{2000,2000,0},100}     // missions wont spawn radius meters from position. 
+        class exclusionPos {
+            chernarusredux[] = {};
+        };
+
         exclusionDist = 1000;       // missions wont spawn 1000 meters  from the above locations.
-        exclusionPos[] = {};        // {{position},radius}  eg. {{2000,2000,0},100}     // missions wont spawn radius meters from position.
         playerDist = 800;           // missions wont spawn within this distance of any players
         
         cleanupDays = 21;               // if an item/vehicle is more than X days since last used it will be cleaned up.
-        salePriceCoef = 0.75;           // any items will be sold at 75% percent of their purchase price.
         maxVehiclesTowed = 4;           // maximum vehicles to chain together. sethduda advanced towing slows down if vehicles too heavy anyways.
         
         // Respawn classes to use - these are defined in dmd_respawn_config.hpp
@@ -93,31 +138,24 @@ class dmd_cfg_settings {
                 "C_Heli_Light_01_civil_F"
             };
             
-            // just using an array of preset locations for now.
-            heliSpawnLoc[] = {
-                {12226.1,12603.7,0},
-                {4117.85,10579.7,0},
-                {4691.25,2492.7,0},
-                {6370.2,7790.87,0},
-                {2569.73,5115.78,0},
-                {12248.9,9735.88,0},
-                {12782.7,9766.24,0},
-                {12243.1,12597.8,0},
-                {11938.5,12788.4,0},
-                {12897.4,12772.3,0},
-                {8746.95,13310.3,0},
-                {4515.08,10798.5,0},
-                {4806.65,10124.3,0},
-                {4824.92,10060.1,0},
-                {4872.19,10015.3,0}
+            // just using an array of preset locations for now. this will switch automatically based on map 
+            class locations {
+
+                // CHERNARUS REDUX 
+                chernarusredux[] = {{12226.1,12603.7,0},{4117.85,10579.7,0},{4691.25,2492.7,0},{6370.2,7790.87,0},{2569.73,5115.78,0},{12248.9,9735.88,0},{12782.7,9766.24,0},{12243.1,12597.8,0},{11938.5,12788.4,0},{12897.4,12772.3,0},{8746.95,13310.3,0},{4515.08,10798.5,0},{4806.65,10124.3,0},{4824.92,10060.1,0},{4872.19,10015.3,0}};
+
+                // TODO: ADD MORE MAPS LATER 
             };
         };
 
+        // safezones will switch automatically based on map. 
         class safeZones {
-            // {{posX, posY, posZ}, radius},
-            positions[] = {
+            // format is {{position}, radius}
+            // CHERNARUS REDUX - TODO: ADD MORE MAPS LATER
+            chernarusredux[] = {
                 {{8309, 6685, 0}, 75}
             };
+
         };
 
         // spawn base parts around the map

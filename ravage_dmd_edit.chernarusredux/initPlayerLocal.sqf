@@ -1,13 +1,13 @@
-player linkItem "rvg_itemMap";
-cutText ["","BLACK OUT",0.1];
+player linkItem "rvg_itemMap";			// map so players can see respawn screen on first connect.
+cutText ["","BLACK OUT",0.1];			
 
-[] execVM "Client\PVEH.sqf";
-[] execVM "Client\keyDownEH.sqf";
-[] execVM "Client\nightFogLoop.sqf";
-[] spawn dmd_fnc_breathFog;
+[] execVM "Client\PVEH.sqf";			// PublicVariableEventHandlers for server communication (saving etc)
+[] execVM "Client\keyDownEH.sqf";		// custom keybinds
+[] execVM "Client\nightFogLoop.sqf";	// creepy night time loop
+[] spawn dmd_fnc_breathFog;				// hijacked haleks breathfog script to only work at night/early morning (personal preference. doesnt make sense to have foggy breath on a sunny day imo)
 
-[] execVM "StatusBar\statusBar.sqf";
-[] execVM "Client\locationSpam.sqf";
-[] execVM "Client\credits.sqf";
+[] execVM "StatusBar\statusBar.sqf";	// player hud (obviously)
+[] execVM "Client\locationSpam.sqf";	// little message popup with location and date when you enter new areas. 
+[] execVM "Client\credits.sqf";			// adds credits/thanks/shoutouts to the diary on map screen.
 
-["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
+["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;			// groups system

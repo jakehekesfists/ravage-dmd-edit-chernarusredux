@@ -2,16 +2,21 @@
     File: fn_getlootpos.sqf
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
-
 params ["_building"];
+
+// Pull the loot settings from dmd_lootTables.hpp
 ([
     ["LootSettings"],
     ["exclusionTypes","buildingChance","lootPosChance","rareLootMil","rareLootCiv"]
 ] call dmd_fnc_getMissionCfg ) params ["_exc","_bch","_lch","_rch","_rlc"];
 
+// check if the building has been selected previously to spawn loot. 
 if ((_building getVariable ["lootSpawn",0]) isEqualTo 0) then {
-    private _endTime = diag_tickTime + 300;
+    // 300 second timer before building can be cleaned/spawn loot once again
+    private _endTime = diag_tickTime + 300;          
     _building setVariable ["lootSpawn",_endTime,true];
+
+    // get all of the positions inside the building. BIS fnc for finding garisson positions for AI units. 
     private _positions = [_building] call BIS_fnc_buildingPositions;
     private _allGWHolders = [];
     private _posCount = (count _positions);
@@ -22,6 +27,8 @@ if ((_building getVariable ["lootSpawn",0]) isEqualTo 0) then {
         if (random 100 < _bch) then {
             
             // check the building type. pulls from the editor subcategory, easy way to identify if military, industrial, etc.
+            // this way we dont have to individually specify which class of building spawns which kind of loot. 
+            // may add an override for this in future versions. 
             private _cat = (getText(configFile >> "CfgVehicles" >> _classname >> "editorSubcategory"));
             _cat = _cat splitString "_";
             
@@ -33,6 +40,7 @@ if ((_building getVariable ["lootSpawn",0]) isEqualTo 0) then {
             };
             _editorSubcat params ["_cfgStr", "_addRare"];
 
+            // select the building category and add the loot arrays 
             ([
                 ["LootSettings","LootTypes", _cfgStr],
                 [
@@ -44,6 +52,7 @@ if ((_building getVariable ["lootSpawn",0]) isEqualTo 0) then {
                 "_qtybp","_qtyhg","_qtyam","_qtysmk","_qtywp","_qtyvs","_qtyat","_qtyjk","_qtyfd","_qtyit","_qtyuf","_qtyxp"
             ];
             
+            // if passes check. add rare loot to the loot arrays
             if (_addRare) then {
                 ([
                     ["LootSettings","LootTypes", "rare"],

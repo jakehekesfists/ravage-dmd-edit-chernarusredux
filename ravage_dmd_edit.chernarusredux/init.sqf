@@ -4,7 +4,7 @@ setTerrainGrid _tgr;
 setViewDistance _vwd;
 setObjectViewDistance [_obd,_shd];
 
-enableSaving [false, false];
+enableSaving [false, false];			// disable arma 3 saving system on player hosted. we use inidbi2 round here yknow
 
 SA_MAX_TOWED_CARGO = _mvt;
 enableDynamicSimulationSystem true;

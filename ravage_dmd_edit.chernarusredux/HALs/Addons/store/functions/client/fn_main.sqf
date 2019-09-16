@@ -23,8 +23,15 @@ params [
 ];
 
 private _trader = player getVariable ["HALs_store_trader_current", objNull];
-
-( [	[ "ServerSettings" ], [ "salePriceCoef" ] ] call dmd_fnc_getMissionCfg ) params [ "_salePriceCoef" ];
+_spSwitch = "salePriceCoef" call BIS_fnc_getParamValue;
+private _salePriceCoef = call {
+	if (_spSwitch isEqualTo 0) exitWith { 0.10 };
+	if (_spSwitch isEqualTo 1) exitWith { 0.25 };
+	if (_spSwitch isEqualTo 2) exitWith { 0.50 };
+	if (_spSwitch isEqualTo 3) exitWith { 0.75 };
+	if (_spSwitch isEqualTo 4) exitWith { 1.00 };
+	0.75
+};
 
 switch (_mode) do {
 	case ("onLoad"): {

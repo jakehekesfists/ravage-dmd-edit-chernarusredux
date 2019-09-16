@@ -3,13 +3,14 @@
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
 params [
-    "_pos",
+    ["_pos",[]],
     ["_gCnt", 2],
     ["_uCnt", 4],
     ["_rad", 200],
     ["_loadouts", []]
 ];
 
+if (_pos isEqualTo []) exitWith { diag_log __FILE__ + "ERROR: NO POSITION"; };
 if (_loadouts isEqualTo []) exitWith { diag_log __FILE__ + "ERROR: NO LOADOUTS"; };
 
 private _return = [[],[]];

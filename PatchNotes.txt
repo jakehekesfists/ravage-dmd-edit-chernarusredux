@@ -1,4 +1,23 @@
 -----------------------------------------------------------------------------------------------------------------------
+September 16th 2019
+-----------------------------------------------------------------------------------------------------------------------
++ code annotation/comments 
+    I am going to try and put better notes in my code for others to work with.
+    I have always been really bad at this. sorry
++ sale price coefficient added to player host config params - default setting 75%
+
+* config changed for automatic world switching (this is for future compatability on other maps. coming soonTM)
+* Night Fog Loop Settings moved to player changable params 
+* description.ext params moved to top of dmd_config.hpp
+
+- removed some junk code from invasion missions
+
+Note: Default ravage loot spawner will only do vanilla items, my ground loot spawner will use VANILLA/RHS & CUP items. 
+I haven't quite worked out how to dynamically change the ravage spawner via script.
+I wanna keep the module as vanilla as possible to make it easier to port to other maps. 
+This will be the last script update for a little while, I'm about to begin porting this to other maps. 
+
+-----------------------------------------------------------------------------------------------------------------------
 September 13th 2019
 -----------------------------------------------------------------------------------------------------------------------
 SO MANY CHANGES, BUT FEW PLAYERS WILL EVEN NOTICE :'( 

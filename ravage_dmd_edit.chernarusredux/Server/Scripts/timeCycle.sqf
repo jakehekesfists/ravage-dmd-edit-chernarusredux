@@ -2,7 +2,7 @@
     File: timeCycle.sqf
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
-// config moved to params so regular players can change it for themselves in lobby - if running on dedi. just change the default value in description.ext
+// config moved to params so regular players can change it for themselves in lobby - if running on dedi. just change the default value in dmd_config.hpp
 _day = "daytimeMultiplier" call BIS_fnc_getParamValue;
 _night = "nighttimeMultiplier" call BIS_fnc_getParamValue;
 

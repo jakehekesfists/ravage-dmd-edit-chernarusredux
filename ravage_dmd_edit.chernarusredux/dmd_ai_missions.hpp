@@ -352,7 +352,7 @@ class AI_Missions {
     };
     
     class AISettings {
-        // AI SKILLS CAN BE SET IN MISSION PARAMS ON STARTUP BY HOST. OR BY EDITING THE DEFAULT VALUE IN DESCRIPTION.EXT        
+        // AI SKILLS CAN BE SET IN MISSION PARAMS ON STARTUP BY HOST. OR BY EDITING THE DEFAULT VALUE IN dmd_config.hpp
         class aiSkillVeryEasy {
             accuracy = 0.3;
             aimingShake = 0.3;

@@ -1,5 +1,6 @@
 class LootSettings {
 
+    // these types of buildings wont be used to spawn loot 
     exclusionTypes[] = {
         "Land_Brana02nodoor","Land_Wall_CBrk_5_D"
     };

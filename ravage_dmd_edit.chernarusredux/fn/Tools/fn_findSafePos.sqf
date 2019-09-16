@@ -15,7 +15,7 @@ params [
 	["_vehicleType",""]
 ];
 
-([[ "ServerSettings"],[ "exclusionZones" ]] call dmd_fnc_getMissionCfg ) params ["_excl"];
+([[ "ServerSettings", "exclusionZones"],[ worldName ]] call dmd_fnc_getMissionCfg ) params ["_excl"];
 
 if (_shoreMode == 0) then {_shoreMode = false} else {_shoreMode = true};
 //See if default world values should be used.
