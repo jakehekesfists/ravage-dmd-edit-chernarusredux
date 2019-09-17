@@ -1,14 +1,12 @@
 # ravage-dmd-edit-chernarusredux
 ## Arma 3 - Ravage Mod - Sandbox Mission by JakeHekesFists[DMD]
-## _This has not been tested in a dedicated server environment, so server admins.... Use at your own risk_
-Note: This mission does have several problems in a dedicated environment, reported on BIForums by Tourist.
-https://forums.bohemia.net/forums/topic/183264-ravage/?do=findComment&comment=3376815 
-I will attempt to address these in future. 
-
+## _This has not been properly tested in a dedicated server environment, so server admins.... Use at your own risk_
 --------------------------------------------------------------------------------------
 
 An Arma 3 Ravage mission created initially for personal use by myself and some friends, I have decided to release this to the public. 
 I have put this mission under the MIT license so people are free to edit/use the sections of this mission created by me however they see fit.
+
+Simply download and copy the .pbo files to your MPMissions folder and Run as Multiplayer (Multiplayer > Host > LAN)
 
 BI Forums Thread: https://forums.bohemia.net/forums/topic/221503-missions/?tab=comments#comment-3376719
 Steam Workshop Link: https://steamcommunity.com/sharedfiles/filedetails/?id=1854589233
@@ -37,7 +35,7 @@ Steam Workshop Link: https://steamcommunity.com/sharedfiles/filedetails/?id=1854
 2. R3F Logistics : https://forums.bohemia.net/forums/topic/170033-r3f-logistics/
 3. Advanced Towing : https://github.com/sethduda/AdvancedTowing
 
-**This Mission requires the following Mods**
+**The Chernarus Redux Mission requires the following Mods**
 
 * CBA_A3
 * Ravage
