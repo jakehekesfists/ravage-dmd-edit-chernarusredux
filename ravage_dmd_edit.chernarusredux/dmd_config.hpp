@@ -110,14 +110,12 @@ class dmd_cfg_settings {
             class Altis : defaultMap {
                 friendlyName = "Altis";
                 safeZones[] = {
-                    {{20587, 15873,0},75},
                     {{9264, 13780,0},125}
                 };
 
                 exclusionZones[] = {"Kavala","Pyrgos"};
 
                 exclusionPos[] = {
-                    {{20587,15873,0},1200},
                     {{9264, 13780,0},1200}
                 };
             };

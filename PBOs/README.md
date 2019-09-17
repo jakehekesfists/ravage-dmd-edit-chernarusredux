@@ -23,7 +23,7 @@ MOD REQUIREMENTS
 * RHSUSAF
 * RHSGREF
 * RHSSAF
-
+--------------------------
 ##ravage-dmd-edit.chernarusredux.pbo
 * CBA_A3
 * Ravage
@@ -37,3 +37,4 @@ MOD REQUIREMENTS
 * RHSGREF
 * RHSSAF
 * INIDBI2 - Official Extension (Host/Server only)
+--------------------------

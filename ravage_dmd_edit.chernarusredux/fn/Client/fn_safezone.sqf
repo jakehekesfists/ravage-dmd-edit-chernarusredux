@@ -5,43 +5,37 @@
 ( [	[ "ServerSettings", "worldSettings", worldName ], [ "safeZones" ] ] call dmd_fnc_getMissionCfg ) params [ "_sz" ];
 
 fn_enter = {
-	params ["_pos"];
+	params ["_trigger"];
+	private _trigVars = _trigger getVariable "params";
+	_trigVars params ["_pos","_rad"];
+	insafezone = true;
+
 	titleText [(localize "STR_CLI_SZ_ENTER"), "PLAIN DOWN"];
-	protThread = true;
 	canspawnzeds = false;
-	waitUntil {
+	// this waituntil operates as a loop.
+	for "_i" from 0 to 1 step 0 do {
+		// check for nearby zombies and delete them.
+		private _za = _pos nearEntities ["zombie", _rad];
+		if !(_za isEqualTo []) then { { deleteVehicle _x; } count _za; }; 
+		// give player god mode
 		(vehicle player) allowDamage false;
-		sleep 2;
-		if (!inSafeZone) exitWith {true};
-		false
+		if !(insafezone) exitWith { _i = 2; };
+		sleep 1;
 	};
-	[] call fn_exit;
 };
 
 fn_exit = {
 	titleText [(localize "STR_CLI_SZ_LEAVE"), "PLAIN DOWN"];
-	protThread = false;
 	canspawnzeds = true;
-	inSafeZone = false;
+	insafezone = false; 
 	(vehicle player) allowDamage true;
 };
 
-[_sz] spawn {
-	params ["_sz"];
-	inSafeZone = false;
-	protThread = false;
-
-	for "_i" from 0 to 1 step 0 do {
-		{
-			_x params ["_pos", "_rad"];
-			_dist = player distance2D _pos;
-			if (_dist <= _rad) then {
-				inSafeZone = true;
-				_za = _pos nearEntities ["zombie", _rad];
-				{ deleteVehicle _x; } count _za;
-			} else { inSafeZone = false; };
-		} forEach _sz;
-		if (inSafeZone) then { if (!protThread) then { [] spawn fn_enter; }; };
-		sleep 2;
-	};
-};
+{
+	_x params ["_pos", "_rad"];
+	private _sztrg = createTrigger ["EmptyDetector", _pos];
+	_sztrg setVariable ["params",_x];
+	_sztrg setTriggerArea [_rad, _rad, 0, false];
+	_sztrg setTriggerActivation ["ANYPLAYER", "PRESENT", true];
+	_sztrg setTriggerStatements ["(vehicle player) in thisList","[thisTrigger] spawn fn_enter","[] call fn_exit"];
+} forEach _sz;
