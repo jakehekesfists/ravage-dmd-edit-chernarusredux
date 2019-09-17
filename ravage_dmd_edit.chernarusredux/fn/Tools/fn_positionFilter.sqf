@@ -3,12 +3,9 @@
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
 params ["_testPos"];
-([[ "ServerSettings"], [ "exclusionDist", "playerDist" ]] call dmd_fnc_getMissionCfg ) params ["_exDst", "_plyDist"];
-([["ServerSettings", "exclusionZones"],[worldName]] call dmd_fnc_getMissionCfg) params ["_excl"];
-([["ServerSettings", "exclusionPos"],[worldName]] call dmd_fnc_getMissionCfg) params ["_exPos"];
+([[ "ServerSettings", "worldSettings", worldName],[ "exclusionZones", "exclusionPos", "exclusionDist", "playerDist" ]] call dmd_fnc_getMissionCfg ) params ["_excl", "_exPos","_exDst", "_plyDist"];
 
 private _foundBad = false;
-
 try {
     // Make sure its not near a player
     private _plBad = false;
@@ -27,8 +24,10 @@ try {
     // Check Postions
     private _psBad = false;
     if ((count _exPos) > 0) then {
-        private _dst = (_x select 0) distance2d _testPos;
-        if (_dst < (_x select 1)) then { _psBad = true; };
+        {
+            private _dst = (_x select 0) distance2d _testPos;
+            if (_dst < (_x select 1)) then { _psBad = true; };
+        } forEach _exPos;
     };
     if (_psBad) then { throw true; };
     

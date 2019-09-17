@@ -4,7 +4,10 @@
 -------------------------------------- */
 params ["_vehicle", "_vehicleID", "_puid"];
 
-private _inidbSave = ["new", "Vehicle_DB"] call OO_INIDBI;
+private _vehfilename = "Vehicle_DB";
+if !((toLower worldName) isEqualTo "chernarusredux") then { _vehfilename = format["%1_%2","Vehicle_DB",worldName]; };
+
+private _inidbSave = ["new", _vehfilename] call OO_INIDBI;
 private _sysTime = "getTimeStamp" call _inidbSave;
 
 private ["_position"];

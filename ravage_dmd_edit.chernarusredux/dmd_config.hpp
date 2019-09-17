@@ -41,6 +41,9 @@ class params {
     };
 };
 
+// SETTINGS FOR RAVAGE MODULES - THIS ALLOWS ADDITION/REMOVAL OF CUP/RHS ITEMS BY EDITING dmd_defines.h
+#include "dmd_ravageModuleSettings.hpp"
+
 // SETTINGS DEFINED ELSEWHERE
 class dmd_cfg_settings {
     #include "DMD_LootSpawn\dmd_lootTables.hpp"
@@ -65,21 +68,118 @@ class dmd_cfg_settings {
             "rhsusf_100Rnd_556x45_M200_soft_pouch_coyote"
         };
 
+        // World Specific Settings (this should make it easier for people to port this mission to other maps - many scripts will switch values based on worldName 
+        class worldSettings {
+
+            class defaultMap {
+                friendlyName = "";
+                safeZones[] = {};           // format is {{position}, radius} --- eg. {{2000,2000,0},100}
+                exclusionZones[] = {};      // {"Guglovo"} missions wont spawn within 1000m of guglovo, and base objects wont spawn there either.
+                exclusionPos[] = {};        // {{position},radius}  eg. {{2000,2000,0},100}     // missions wont spawn radius meters from position. 
+
+                exclusionDist = 1000;       // missions wont spawn x meters  from the exclusionZones locations.
+                playerDist = 800;           // missions wont spawn within this distance of any players
+
+                boatSpawner = 0;            // use the boatspawner script
+            };
+
+            // CHERNARUS REDUX 
+            class chernarusredux : defaultMap {
+                friendlyName = "Chernarus Redux";
+                safeZones[] = {
+                    {{8309, 6685, 0}, 75}
+                };
+                exclusionZones[] = {"Guglovo", "Chernogorsk", "Elektrozavodsk"};
+            };
+
+            // ISLA DUALA A3
+            class isladuala3 : defaultMap {
+                friendlyName = "Isla Duala";
+                safeZones[] = {
+                    {{3593,9267,0}, 75},
+                    {{8795,1522,0}, 75}
+                };
+                exclusionPos[] = {
+                    {{3593,9267,0}, 1200},
+                    {{8795,1522,0}, 1200}
+                };
+                boatSpawner = 1;
+            };
+
+            // VANILLA TERRAINS
+            class Altis : defaultMap {
+                friendlyName = "Altis";
+                safeZones[] = {
+                    {{20587, 15873,0},75},
+                    {{9264, 13780,0},125}
+                };
+
+                exclusionZones[] = {"Kavala","Pyrgos"};
+
+                exclusionPos[] = {
+                    {{20587,15873,0},1200},
+                    {{9264, 13780,0},1200}
+                };
+            };
+
+            class Malden : defaultMap {
+                friendlyName = "Malden";
+                safeZones[] = {
+                    {{7076, 6699,0},75}
+                };
+                exclusionPos[] = {
+                    {{7076, 6699,0},1200}
+                };
+                boatSpawner = 1;
+            };
+
+            class Tanoa : defaultMap {
+                friendlyName = "Tanoa";
+            };
+
+            class Stratis : defaultMap {
+                friendlyName = "Stratis";
+            };
+
+            // CUP Terrains
+            class sara : defaultMap {
+                friendlyName = "Sahrani";
+            };
+
+            class saralite : defaultMap {
+                friendlyName = "Southern Sahrani";
+            };
+
+            class sara_dbe1 : defaultMap {
+                friendlyName = "United Sahrani";
+            };
+
+            class chernarus : defaultMap {
+                friendlyName = "Chernarus";
+            };
+
+            class chernarus_summer : defaultMap {
+                friendlyName = "Chernarus (Summer)";
+            };
+
+            class Chernarus_Winter : defaultMap {
+                friendlyName = "Chernarus (Winter)";
+            };
+
+            class takistan : defaultMap {
+                friendlyName = "Takistan"; 
+            };
+
+            class utes : defaultMap {
+                friendlyName = "Utes";
+            };
+            
+        };
+
         // smoke shell colours - these are used across a few scripts. just call/edit them from here.
         smokeShellColours[] = {"SmokeShell","SmokeShellYellow","SmokeShellRed","SmokeShellGreen","SmokeShellPurple","SmokeShellBlue","SmokeShellOrange"};
 
-        // exclude these cities from being used for missions and base object spawn. (automatically switches based on map name)
-        class exclusionZones {
-            chernarusredux[] = {"Guglovo", "Chernogorsk", "Elektrozavodsk"};
-        };
-
-        // {{position},radius}  eg. {{2000,2000,0},100}     // missions wont spawn radius meters from position. 
-        class exclusionPos {
-            chernarusredux[] = {};
-        };
-
-        exclusionDist = 1000;       // missions wont spawn 1000 meters  from the above locations.
-        playerDist = 800;           // missions wont spawn within this distance of any players
+        
         
         cleanupDays = 21;               // if an item/vehicle is more than X days since last used it will be cleaned up.
         maxVehiclesTowed = 4;           // maximum vehicles to chain together. sethduda advanced towing slows down if vehicles too heavy anyways.
@@ -111,52 +211,92 @@ class dmd_cfg_settings {
             timeToRepair = 2;               // time to repair each part
         };
 
+        // Boat Spawning
+        class boatSpawn {
+
+            debugMarkers = 0;
+            boatQty[] = { 15, 30 };
+
+            classes[] = {
+                #ifdef DMD_USE_CUP
+                    "CUP_B_RHIB_USMC",
+                    "CUP_B_Zodiac_USMC",
+                    "CUP_C_Fishing_Boat_Chernarus",
+                    "CUP_C_PBX_CIV",
+                    "CUP_C_Zodiac_CIV",
+                    "CUP_O_PBX_RU",
+                #endif
+                #ifdef DMD_USE_RHS
+                    "rhsgref_civ_canoe",
+                    "rhsgref_hidf_assault_boat",
+                    "rhsgref_hidf_canoe",
+                    "rhsgref_hidf_rhib",
+                #endif
+                "B_G_Boat_Transport_01_F",
+                "B_Lifeboat",
+                "C_Boat_Civil_01_F",
+                "C_Boat_Civil_01_police_F",
+                "C_Boat_Civil_01_rescue_F",
+                "C_Boat_Transport_02_F",
+                "C_Rubberboat",
+                "C_Scooter_Transport_01_F"
+            };
+        };
+
         // Helicopter Spawning
         class HeliSpawn {
             enable = 1;                     // enable/disable the helispawn script. (1 on / 0 off).
             debugMarkers = 0;               // create a map marker to show where the helis have spawned (1 on / 0 off).
-            heliQty[] = { 2, 3 };           // min / max amount of helis to spawn around the map
+            heliQty[] = { 3, 6 };           // min / max amount of helis to spawn around the map
             heliFuel[] = { 0.1, 0.75 };     // min / max amount of fuel a heli can spawn with.
             heliFuelEmptyChance = 30;       // 30% of helicopter spawning with no fuel.
             
             // types of helicopters that can spawn.
             heliTypes[] = {
                 #ifdef DMD_USE_CUP
-                    "CUP_B_MH6J_OBS_USA",
-                    "CUP_B_MH6M_USA",
+                "CUP_B_MH6J_OBS_USA",
+                "CUP_B_MH6J_USA",
+                "CUP_B_MH6M_USA",
+                "CUP_B_UH1Y_MEV_USMC",
+                "CUP_B_UH1Y_UNA_USMC",
+                "CUP_B_UH60M_Unarmed_FFV_US",
+                "CUP_B_UH60M_Unarmed_US",
+                "CUP_B_UH60M_US",
+                "CUP_C_Mi17_Civilian_RU",
+                "CUP_I_MH6J_RACS",
+                "CUP_O_Mi8_medevac_CHDKZ",
+                "CUP_O_UH1H_SLA",
+                "CUP_O_UH1H_slick_SLA",
                 #endif
                 #ifdef DMD_USE_RHS
-                    "RHS_CH_47F_10",
-                    "RHS_Mi8t_civilian",
-                    "RHS_Mi8T_vvsc",
-                    "rhs_uh1h_hidf",
-                    "rhs_uh1h_idap",
-                    "rhs_uh1h_un",
-                    "RHS_UH60M2_d",
-                    "rhssaf_airforce_o_ht40",
+                "RHS_CH_47F_10",
+                "rhs_ka60_grey",
+                "RHS_Mi8amt_civilian",
+                "RHS_Mi8mt_Cargo_vv",
+                "RHS_Mi8t_civilian",
+                "rhs_uh1h_hidf",
+                "rhs_uh1h_hidf_unarmed",
+                "rhs_uh1h_idap",
+                "RHS_UH1Y_d",
+                "RHS_UH1Y_UNARMED_d",
+                "RHS_UH60M2",
+                "rhsgref_ins_Mi8amt",
+                "rhssaf_airforce_o_ht40",
                 #endif
-                "C_Heli_Light_01_civil_F"
-            };
-            
-            // just using an array of preset locations for now. this will switch automatically based on map 
-            class locations {
-
-                // CHERNARUS REDUX 
-                chernarusredux[] = {{12226.1,12603.7,0},{4117.85,10579.7,0},{4691.25,2492.7,0},{6370.2,7790.87,0},{2569.73,5115.78,0},{12248.9,9735.88,0},{12782.7,9766.24,0},{12243.1,12597.8,0},{11938.5,12788.4,0},{12897.4,12772.3,0},{8746.95,13310.3,0},{4515.08,10798.5,0},{4806.65,10124.3,0},{4824.92,10060.1,0},{4872.19,10015.3,0}};
-
-                // TODO: ADD MORE MAPS LATER 
+                "B_Heli_Light_01_F",
+                "B_Heli_Transport_01_F",
+                "B_Heli_Transport_03_F",
+                "B_Heli_Transport_03_unarmed_F",
+                "C_Heli_Light_01_civil_F",
+                "C_IDAP_Heli_Transport_02_F",
+                "I_Heli_light_03_unarmed_F",
+                "I_Heli_Transport_02_F",
+                "O_Heli_Light_02_unarmed_F",
+                "O_Heli_Transport_04_bench_F",
+                "O_Heli_Transport_04_F"
             };
         };
 
-        // safezones will switch automatically based on map. 
-        class safeZones {
-            // format is {{position}, radius}
-            // CHERNARUS REDUX - TODO: ADD MORE MAPS LATER
-            chernarusredux[] = {
-                {{8309, 6685, 0}, 75}
-            };
-
-        };
 
         // spawn base parts around the map
         class objectSpawner {

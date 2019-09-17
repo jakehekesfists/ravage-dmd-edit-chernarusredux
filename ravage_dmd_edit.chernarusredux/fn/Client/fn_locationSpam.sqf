@@ -25,8 +25,10 @@ private _month = (_mthList select _month);
 private _formatDate = format ["%2 %1 %3", _month, _date, _year];
 private _formatTime = [daytime,"HH:MM"] call BIS_fnc_timeToString;
 
+private _worldName = (getText(missionConfigFile >> "dmd_cfg_settings" >> "ServerSettings" >> "worldSettings" >> worldName >> "friendlyName"));
+
 if !(_locationName isEqualTo "") then {
 	[parseText format [
-		"<t align='right' size='1.1'><t font='PuristaBold' size='1.4'>%1</t><br/>Chernarus<br/>%2, %3</t>",
-	(toUpper _locationName), _formatTime, _formatDate ], true, nil, 10, 0.7, 0] spawn BIS_fnc_textTiles;
+		"<t align='right' size='1.1'><t font='PuristaBold' size='1.4'>%1</t><br/>%4<br/>%2, %3</t>",
+	(toUpper _locationName), _formatTime, _formatDate, (toUpper _worldName) ], true, nil, 10, 0.7, 0] spawn BIS_fnc_textTiles;
 };

@@ -5,7 +5,6 @@
 	#include "HALs\Addons\main\config.hpp"
 #undef HALs_DEF_INIT
 
-OnLoadName = "Ravage";
 class RscTitles {
 	#include "StatusBar\statusBarCfg.hpp"
 };
@@ -24,6 +23,11 @@ class Header {
 	minPlayers =  1;			// minimum number of players the mission supports
 	maxPlayers = 50;			// maximum number of players the mission supports
 };
+
+author			= "JakeHekesFists[DMD]";
+OnLoadName		= "RAVAGE REDUX (DMD Edition)";
+OnLoadMission	= "Try to survive in a harsh, Zombie ravaged Wasteland. Avoid roaming Bandits, Complete AI Missions, Construct Bases using objects that litter the map and more...";
+loadScreen		= "images\loadScreen.paa";
 
 scriptedPlayer = 1;
 skipLobby = 0;

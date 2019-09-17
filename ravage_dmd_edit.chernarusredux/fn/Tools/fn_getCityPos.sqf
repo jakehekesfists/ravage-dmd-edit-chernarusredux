@@ -2,7 +2,7 @@
     File: fn_getCityPos.sqf
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
-([[ "ServerSettings", "exclusionZones"],[ worldName ]] call dmd_fnc_getMissionCfg ) params ["_excl"];
+([[ "ServerSettings", "worldSettings", worldName],[ "exclusionZones" ]] call dmd_fnc_getMissionCfg ) params ["_excl"];
 private _posArr = [];
 private _mid = worldSize/2;
 private _cntPos = [_mid, _mid];

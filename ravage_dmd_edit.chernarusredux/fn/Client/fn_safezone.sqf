@@ -2,7 +2,7 @@
     File: fn_safeZone.sqf
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
-( [	[ "ServerSettings", "safeZones" ], [ worldName ] ] call dmd_fnc_getMissionCfg ) params [ "_sz" ];
+( [	[ "ServerSettings", "worldSettings", worldName ], [ "safeZones" ] ] call dmd_fnc_getMissionCfg ) params [ "_sz" ];
 
 fn_enter = {
 	params ["_pos"];

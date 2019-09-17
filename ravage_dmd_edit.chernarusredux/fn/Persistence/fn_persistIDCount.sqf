@@ -4,10 +4,18 @@
 -------------------------------------- */
 params ["_getSet", "_value", "_type"];
 
+// DEFINE THE FILENAMES
+private _objfilename = "Object_DB";
+private _vehfilename = "Vehicle_DB";
+if !((toLower worldName) isEqualTo "chernarusredux") then {
+    _objfilename = format["%1_%2","Object_DB",worldName];
+    _vehfilename = format["%1_%2","Vehicle_DB",worldName];
+};
+
 switch (_type) do {
 
 	case "object": {
-		private _inidbObjectDB = ["new", "Object_DB"] call OO_INIDBI;
+		private _inidbObjectDB = ["new", _objfilename] call OO_INIDBI;
 
 		if (_getSet isEqualTo "get") then {
 			private _databasefind = "exists" call _inidbObjectDB;
@@ -26,7 +34,7 @@ switch (_type) do {
 	};
 
 	case "vehicle": {
-		private _inidbVehDB = ["new", "Vehicle_DB"] call OO_INIDBI;
+		private _inidbVehDB = ["new", _vehfilename] call OO_INIDBI;
 
 		if (_getSet isEqualTo "get") then {
 			private _vdbFind = "exists" call _inidbVehDB;

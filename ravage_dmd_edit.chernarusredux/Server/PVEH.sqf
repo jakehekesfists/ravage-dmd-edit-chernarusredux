@@ -6,14 +6,17 @@
 	private _packet = _this select 1;
 	_packet params ["_dataplayrowner", "_dataplayrname", "_dataplayruid"];
 
-	// SETUP BANK ACCOUNTS 
+	// SETUP BANK ACCOUNTS (share across all maps)
 	_inidbiBank = ["new", "DMD_BANK_ACCOUNTS"] call OO_INIDBI;
 	_readCash = ["read", [_dataplayruid, "Balance", 0]] call _inidbiBank;
 	dmd_db_bank = [_readCash];
 	_dataplayrowner publicVariableClient "dmd_db_bank";
 
-	// DEAL WITH CHARACTER DATA 
-	_inidbiReq = ["new", _dataplayruid] call OO_INIDBI;
+	// DEAL WITH CHARACTER DATA (ONLY APPEND WORLDNAME TO NON REDUX MAPS SO PLAYERS DONT LOSE THEIR CHARS/BASES)
+	_filename = _dataplayruid;
+	if !((toLower worldName) isEqualTo "chernarusredux") then { _filename = format["%1_%2",_dataplayruid,worldName]; };	
+
+	_inidbiReq = ["new", _filename] call OO_INIDBI;
 	_databasefind = "exists" call _inidbiReq;
 
 	private "_handler";

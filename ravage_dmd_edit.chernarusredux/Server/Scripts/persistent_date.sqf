@@ -2,6 +2,8 @@
     File: persistent_date.sqf
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
+private _filename = "Server_Settings";
+if !((toLower worldName) isEqualTo "chernarusredux") then { _filename = format["%1_%2","Server_Settings",worldName]; };	
 private _inidbcall = ["new", "Server_Settings"] call OO_INIDBI;
 // load settings to start. 
 private _databasefind = "exists" call _inidbcall;

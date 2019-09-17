@@ -79,6 +79,7 @@ class dmd {
 	class Server {
 		file = "fn\Server";
 		class heliSpawn {};
+		class boatSpawner {};
 		class spawnObjects {};
 		class safezoneMarkers {};
 	};

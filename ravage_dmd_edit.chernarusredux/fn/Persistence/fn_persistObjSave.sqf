@@ -4,7 +4,12 @@
 -------------------------------------- */
 params ["_object", "_objectID"];
 
-_inidbSave = ["new", "Object_DB"] call OO_INIDBI;
+private _objfilename = "Object_DB";
+if !((toLower worldName) isEqualTo "chernarusredux") then {
+    _objfilename = format["%1_%2","Object_DB",worldName];
+};
+
+_inidbSave = ["new", _objfilename] call OO_INIDBI;
 _sysTime = "getTimeStamp" call _inidbSave;
 
 private ["_position"];

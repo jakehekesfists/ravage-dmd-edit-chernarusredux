@@ -1,4 +1,41 @@
 -----------------------------------------------------------------------------------------------------------------------
+September 17th 2019
+-----------------------------------------------------------------------------------------------------------------------
++ dmd_ravageModuleSettings.hpp
+    can better enable/disable RHS/CUP items from the ravage modules by editing defines.h
+    this means more stuff in the loot/vehicle spawn settings
++ more helicopter types added
++ boat spawner added (disabled on redux by default)
+
+* fixed script error with bad positions in fn_positionFilter
+
+:: MAP PORTING PREPARATION (more maps will come shortly)
+all of the below are for ease in porting to other maps 
+    * dynamic heli spawn locations 
+    * worldSettings added to config
+    * safezones, exclusion positions and exclusion towns moved to worldSettings
+    * friendlyName added to locationSpam.
+    * seperate database files for each map.
+        - notes: chernarus redux has no _appendage to the filename. all other maps do. 
+            Bank Account will be shared across all maps. 
+            Vehicle, Player and Object Databases will work on a per map basis. 
+
+        db file names may look like so 
+            // chernarus redux 
+            76561198035522330.ini               
+            Object_DB.ini
+            Server_Settings.ini
+            Vehicle_DB.ini 
+
+            // malden
+            76561198035522330_Malden.ini               
+            Object_DB_Malden.ini
+            Server_Settings_Malden.ini
+            Vehicle_DB_Malden.ini
+            
+
+
+-----------------------------------------------------------------------------------------------------------------------
 September 16th 2019
 -----------------------------------------------------------------------------------------------------------------------
 + code annotation/comments 

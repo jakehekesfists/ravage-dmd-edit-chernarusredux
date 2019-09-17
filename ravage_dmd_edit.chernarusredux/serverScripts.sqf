@@ -34,6 +34,7 @@ for "_ii" from 5 to (count _cityPosArray)-1 do { _invadeCities pushBack (_cityPo
 
 [] spawn dmd_fnc_safezoneMarkers;								// makes green lights around the trader city.
 [] spawn dmd_fnc_heliSpawn;										// spawns some helicopters around the map for players to use 
+[] spawn dmd_fnc_boatSpawner;									// spawns some boats around the map for players to use 
 [] execVM "Server\advancedTowing.sqf";							// sethdudas advanced towing script
 
 ["Initialize"] call BIS_fnc_dynamicGroups;						// groups system

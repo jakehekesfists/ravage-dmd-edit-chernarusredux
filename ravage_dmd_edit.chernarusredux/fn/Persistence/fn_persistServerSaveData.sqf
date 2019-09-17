@@ -4,7 +4,11 @@
 -------------------------------------- */
 params ["_uid","_data"];
 _data params ["_pos", "_dir", "_ani", "_dmg", "_ger", "_hun", "_thi"];
-_inidbSave = ["new", _uid] call OO_INIDBI;
+
+private _filename = _uid;
+if !((toLower worldName) isEqualTo "chernarusredux") then { _filename = format["%1_%2",_uid,worldName]; };
+
+_inidbSave = ["new", _filename] call OO_INIDBI;
 ["write", ["Account", "Position", _pos]] call _inidbSave;
 ["write", ["Account", "Direction", _dir]] call _inidbSave;
 ["write", ["Account", "Anim", _ani]] call _inidbSave;
