@@ -15,7 +15,7 @@ private _cPos = [_hfWd, _hfWd, 0];
 // we will add 100 positions into the array. this will check 90% of the map surface, and be sure it can fit a large boat to avoid explosions
 private _posArray = [];
 for "_i" from 0 to 99 do {
-	private _foundPos = [_cPos, 100, _hfWd, 999, 1, 2, 1, "C_Boat_Civil_01_police_F"] call dmd_fnc_findSafePos;
+	private _foundPos = [_cPos, 100, _hfWd, 10, 0, 50, 1, "C_Boat_Civil_01_police_F"] call dmd_fnc_findSafePos; 
 	_posArray pushBack _foundPos; 
 };
 
