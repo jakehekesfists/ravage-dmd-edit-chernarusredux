@@ -25,6 +25,7 @@ All Mods require
 * INIDBI2 - Official Extension (Host/Server only)
 
 If the filename is 
+
 	-vanillaA3.mapname.pbo
 		this does not require additional weapons/vehicles mods.
 		
