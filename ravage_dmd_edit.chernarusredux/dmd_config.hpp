@@ -113,10 +113,13 @@ class dmd_cfg_settings {
             class Altis : defaultMap {
                 friendlyName = "Altis";
                 safeZones[] = {
-                    {{9264, 13780,0},125}
+                    {{9264, 13780,0},125},
+                    {{14009, 17532,0},125},
+                    {{19884, 11214,0},125}
                 };
 
                 exclusionZones[] = {"Kavala","Pyrgos"};
+                boatSpawner = 1;
             };
 
             class Malden : defaultMap {

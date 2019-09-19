@@ -16,7 +16,7 @@ class dmd_ai_loadouts {
             uniformClass = "U_BG_Guerrilla_6_1";
             backpack = "";
             weapons[] = {"Binocular","srifle_EBR_F","Throw","Put"};
-            magazines[] = {"20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","CUP_HandGrenade_RGD5"};
+            magazines[] = {"20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","HandGrenade"};
             items[] = {};
             linkedItems[] = {"V_TacVest_camo","H_Shemag_olive_hs","G_Shades_Black","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio"};
         };
@@ -25,16 +25,16 @@ class dmd_ai_loadouts {
             uniformClass = "U_I_C_Soldier_Para_4_F";
             backpack = "B_AssaultPack_blk";
             weapons[] = {"Binocular","SMG_02_F","Throw","Put"};
-            magazines[] = {"30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","CUP_HandGrenade_RGD5"};
+            magazines[] = {"30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","HandGrenade"};
             items[] = {};
             linkedItems[] = {"V_BandollierB_rgr","G_Balaclava_blk","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio"};
-        };
+        }; 
 
         class ba_rifleman {
             uniformClass = "U_BG_Guerilla2_1";
             backpack = "B_AssaultPack_blk";
             weapons[] = {"Binocular","arifle_Katiba_F","Throw","Put"};
-            magazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","CUP_HandGrenade_RGD5"};
+            magazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","HandGrenade"};
             items[] = {};
             linkedItems[] = {"V_CarrierRigKBT_01_light_EAF_F","H_ShemagOpen_tan","G_Shades_Black","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio"};
         };
@@ -43,7 +43,7 @@ class dmd_ai_loadouts {
             uniformClass = "U_I_C_Soldier_Para_1_F";
             backpack = "B_ViperHarness_ghex_F";
             weapons[] = {"Binocular","LMG_03_F","Throw","Put"};
-            magazines[] = {"200Rnd_556x45_Box_F","200Rnd_556x45_Box_F","CUP_HandGrenade_RGD5","CUP_HandGrenade_RGD5","200Rnd_556x45_Box_F","200Rnd_556x45_Box_F","200Rnd_556x45_Box_F"};
+            magazines[] = {"200Rnd_556x45_Box_F","200Rnd_556x45_Box_F","HandGrenade","HandGrenade","200Rnd_556x45_Box_F","200Rnd_556x45_Box_F","200Rnd_556x45_Box_F"};
             items[] = {};
             linkedItems[] = {"V_CarrierRigKBT_01_heavy_EAF_F","H_HelmetSpecO_blk","G_Balaclava_blk","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio"};
         };
@@ -52,7 +52,7 @@ class dmd_ai_loadouts {
             uniformClass = "U_I_GhillieSuit";
             backpack = "B_ViperHarness_ghex_F";
             weapons[] = {"Binocular","srifle_DMR_01_F","Throw","Put"};
-            magazines[] = {"10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","CUP_HandGrenade_RGD5"};
+            magazines[] = {"10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","HandGrenade"};
             items[] = {};
             linkedItems[] = {"V_HarnessOGL_brn","G_Balaclava_oli","rvg_ItemMap","ItemCompass","ItemWatch","ItemRadio"};
         };
