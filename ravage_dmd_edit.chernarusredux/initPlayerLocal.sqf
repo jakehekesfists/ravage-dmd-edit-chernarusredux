@@ -10,4 +10,6 @@ cutText ["","BLACK OUT",0.1];
 [] execVM "Client\locationSpam.sqf";	// little message popup with location and date when you enter new areas. 
 [] execVM "Client\credits.sqf";			// adds credits/thanks/shoutouts to the diary on map screen.
 
+[] execVM "DMD_LootSpawn\lootHandler_client.sqf";		// client loop for loot spawning.
+
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;			// groups system

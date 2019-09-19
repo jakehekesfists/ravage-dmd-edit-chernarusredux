@@ -3,10 +3,10 @@
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
 params [ ["_veh", objNull] ];
-if (_veh isEqualTo objNull) exitWith {};
+if (isNull _veh) exitWith { diag_log __FILE__ + "ERROR: NULL VEHICLE"; };
 
 _veh addMPEventHandler ["MPKilled", {
-    params ["_obj" ];    
+    params ["_obj" ];
     [_obj, (_obj getVariable "unique_id")] call dmd_fnc_persistVehDelete;
 }];
 

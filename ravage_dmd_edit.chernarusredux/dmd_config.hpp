@@ -39,6 +39,13 @@ class params {
         texts[] = { "10%", "25%", "50%", "75%", "100%" };
         default = 3;
     };
+
+    class groundLootDropper {
+        title = "GroundLoot Spawner Scarcity";
+        values[] = { 0, 1, 2 };
+        texts[] = {"Not Much Loot", "Default Loot", "Heaps of Loot"};
+        default = 1; 
+    };
 };
 
 // SETTINGS FOR RAVAGE MODULES - THIS ALLOWS ADDITION/REMOVAL OF CUP/RHS ITEMS BY EDITING dmd_defines.h
@@ -99,10 +106,6 @@ class dmd_cfg_settings {
                     {{3593,9267,0}, 75},
                     {{8795,1522,0}, 75}
                 };
-                exclusionPos[] = {
-                    {{3593,9267,0}, 1200},
-                    {{8795,1522,0}, 1200}
-                };
                 boatSpawner = 1;
             };
 
@@ -114,19 +117,12 @@ class dmd_cfg_settings {
                 };
 
                 exclusionZones[] = {"Kavala","Pyrgos"};
-
-                exclusionPos[] = {
-                    {{9264, 13780,0},1200}
-                };
             };
 
             class Malden : defaultMap {
                 friendlyName = "Malden";
                 safeZones[] = {
                     {{7076, 6699,0},75}
-                };
-                exclusionPos[] = {
-                    {{7076, 6699,0},1200}
                 };
                 boatSpawner = 1;
             };

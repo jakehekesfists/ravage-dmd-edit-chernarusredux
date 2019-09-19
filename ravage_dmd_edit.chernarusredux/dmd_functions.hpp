@@ -2,9 +2,7 @@ class dmd {
     
     class LootSpawn {
         file = "DMD_LootSpawn\fn";
-        class getlootpos {};
-		class lootCleanLoop {};
-		class lootLoop {};
+        class createLoot {};
     };
     
 	class AI {
@@ -55,6 +53,8 @@ class dmd {
 		file = "fn\Persistence";
 		class bank_update {};
 		class calculateAge {};
+		class getDBNames {};
+		
 		class persistClientGetPlayerData {};
 		class persistIDCount {};
 		class persistLoadData {};
@@ -103,5 +103,6 @@ class dmd {
 		class findSafeMissionPos {};
 		class positionFilter {};
 		class vehicleCargoCapacity {};
+		class isItNightTime {};
 	};
 };

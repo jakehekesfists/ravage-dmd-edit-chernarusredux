@@ -4,10 +4,10 @@
 -------------------------------------- */
 params ["_veh", "_vehid"];
 
-private _vehfilename = "Vehicle_DB";
-if !((toLower worldName) isEqualTo "chernarusredux") then { _vehfilename = format["%1_%2","Vehicle_DB",worldName]; };
+// DEFINE THE FILENAMES
+([] call dmd_fnc_getDBNames) params ["_playerDB", "_objectDB", "_vehicleDB", "_settingsDB"];
 
-private _inidbi = ["new", _vehfilename] call OO_INIDBI;
+private _inidbi = ["new", _vehicleDB] call OO_INIDBI;
 private _found = ["read", ["Vehicles", _vehID, []]] call _inidbi;
 if !(_found isEqualTo []) then { ["deleteKey", ["Vehicles", _vehID]] call _inidbi; };
 

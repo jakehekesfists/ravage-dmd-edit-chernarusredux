@@ -5,10 +5,8 @@ class LootSettings {
         "Land_Brana02nodoor","Land_Wall_CBrk_5_D"
     };
 
-    buildingChance = 75;                // chance building will be used to spawn loot
-    lootPosChance = 33;                 // chance per position inside building that spot will be used
-    rareLootMil = 15;                   // percentage change, per building. to add rare loot to the military tables.
-    rareLootCiv = 1;                    // 1 in 200 chance of adding rare loot to the civ tables (0.5%)
+    // loot scarcity settings now changed in params. 3 settings
+    // if you know what you're doing... you can also edit fn_createLoot to acheive the same result 
 
     // todo: allow better customisation of loot tables per sub category
     

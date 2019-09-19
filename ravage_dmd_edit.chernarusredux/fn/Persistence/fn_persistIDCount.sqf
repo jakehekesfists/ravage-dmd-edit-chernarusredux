@@ -5,17 +5,12 @@
 params ["_getSet", "_value", "_type"];
 
 // DEFINE THE FILENAMES
-private _objfilename = "Object_DB";
-private _vehfilename = "Vehicle_DB";
-if !((toLower worldName) isEqualTo "chernarusredux") then {
-    _objfilename = format["%1_%2","Object_DB",worldName];
-    _vehfilename = format["%1_%2","Vehicle_DB",worldName];
-};
+([] call dmd_fnc_getDBNames) params ["_playerDB", "_objectDB", "_vehicleDB", "_settingsDB"];
 
 switch (_type) do {
 
 	case "object": {
-		private _inidbObjectDB = ["new", _objfilename] call OO_INIDBI;
+		private _inidbObjectDB = ["new", _objectDB] call OO_INIDBI;
 
 		if (_getSet isEqualTo "get") then {
 			private _databasefind = "exists" call _inidbObjectDB;
@@ -34,7 +29,7 @@ switch (_type) do {
 	};
 
 	case "vehicle": {
-		private _inidbVehDB = ["new", _vehfilename] call OO_INIDBI;
+		private _inidbVehDB = ["new", _vehicleDB] call OO_INIDBI;
 
 		if (_getSet isEqualTo "get") then {
 			private _vdbFind = "exists" call _inidbVehDB;
@@ -49,6 +44,6 @@ switch (_type) do {
 			["write", ["VehicleID", "Count", _value]] call _inidbVehDB;
 			dmd_vehID = _value;
 			publicVariable "dmd_vehID";
-		};		
+		};
 	};
 };

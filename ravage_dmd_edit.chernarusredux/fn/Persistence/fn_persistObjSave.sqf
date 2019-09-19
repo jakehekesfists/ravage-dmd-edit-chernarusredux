@@ -2,14 +2,15 @@
     File: fn_persistObjSave.sqf
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
-params ["_object", "_objectID"];
+params [
+	["_object",objNull],
+	"_objectID"
+];
+if (isNull _object) exitWith { diag_log __FILE__ + "ERROR: NULL OBJECT"; };
+// DEFINE THE FILENAMES
+([] call dmd_fnc_getDBNames) params ["_playerDB", "_objectDB", "_vehicleDB", "_settingsDB"];
 
-private _objfilename = "Object_DB";
-if !((toLower worldName) isEqualTo "chernarusredux") then {
-    _objfilename = format["%1_%2","Object_DB",worldName];
-};
-
-_inidbSave = ["new", _objfilename] call OO_INIDBI;
+_inidbSave = ["new", _objectDB] call OO_INIDBI;
 _sysTime = "getTimeStamp" call _inidbSave;
 
 private ["_position"];

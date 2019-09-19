@@ -1,4 +1,29 @@
 -----------------------------------------------------------------------------------------------------------------------
+September 19th 2019
+-----------------------------------------------------------------------------------------------------------------------
++ new safezone method
+    bug discovered when using multiple safezones, now uses triggers instead of loops. fixed
++ database naming function created
++ fn_isItNightTime - new function to determine if its nighttime. use with crate markers and time acceleration.
++ loot system re-write
+    server to handle loot creation/cleanup
+    players will send nearby buildings to server for loot creation
+    more categories of buildings can spawn industrial or military loot, not just civilian
+
+* fn_positionFilter - now automatically appends safezones to the exclusion filter
+* timeCycle complete re-write. will now work on all maps
+* failsafes added to object spawner, invasion and redzone missions
+
+- rhsusf_acc_ACOG_MDO // throwing errors (BAD VEHICLE TYPE). removed from loot/trader arrays 
+
+September 19th 2019 (hotfix)
++   Ground Loot Scarcity Parameters
+    Shortly after publishing the last version, A suggestion came in to have user alterable loot scarcity
+    This will only affect the ground loot spawner.
+    Settings can be editing in mission parameters. 3 settings to choose from.
+
+
+-----------------------------------------------------------------------------------------------------------------------
 September 17th 2019
 -----------------------------------------------------------------------------------------------------------------------
 + dmd_ravageModuleSettings.hpp
@@ -10,56 +35,55 @@ September 17th 2019
 * fixed script error with bad positions in fn_positionFilter
 
 :: MAP PORTING PREPARATION (more maps will come shortly)
-all of the below are for ease in porting to other maps 
-    * dynamic heli spawn locations 
+all of the below are for ease in porting to other maps
+    * dynamic heli spawn locations
     * worldSettings added to config
     * safezones, exclusion positions and exclusion towns moved to worldSettings
     * friendlyName added to locationSpam.
     * seperate database files for each map.
-        - notes: chernarus redux has no _appendage to the filename. all other maps do. 
-            Bank Account will be shared across all maps. 
-            Vehicle, Player and Object Databases will work on a per map basis. 
+        - notes: chernarus redux has no _appendage to the filename. all other maps do.
+            Bank Account will be shared across all maps.
+            Vehicle, Player and Object Databases will work on a per map basis.
 
-        db file names may look like so 
-            // chernarus redux 
-            76561198035522330.ini               
+        db file names may look like so
+            // chernarus redux
+            76561198035522330.ini
             Object_DB.ini
             Server_Settings.ini
-            Vehicle_DB.ini 
+            Vehicle_DB.ini
 
             // malden
-            76561198035522330_Malden.ini               
+            76561198035522330_Malden.ini
             Object_DB_Malden.ini
             Server_Settings_Malden.ini
             Vehicle_DB_Malden.ini
             
 
-
 -----------------------------------------------------------------------------------------------------------------------
 September 16th 2019
 -----------------------------------------------------------------------------------------------------------------------
-+ code annotation/comments 
++ code annotation/comments
     I am going to try and put better notes in my code for others to work with.
     I have always been really bad at this. sorry
 + sale price coefficient added to player host config params - default setting 75%
 
 * config changed for automatic world switching (this is for future compatability on other maps. coming soonTM)
-* Night Fog Loop Settings moved to player changable params 
+* Night Fog Loop Settings moved to player changable params
 * description.ext params moved to top of dmd_config.hpp
 
 - removed some junk code from invasion missions
 
-Note: Default ravage loot spawner will only do vanilla items, my ground loot spawner will use VANILLA/RHS & CUP items. 
+Note: Default ravage loot spawner will only do vanilla items, my ground loot spawner will use VANILLA/RHS & CUP items.
 I haven't quite worked out how to dynamically change the ravage spawner via script.
-I wanna keep the module as vanilla as possible to make it easier to port to other maps. 
-This will be the last script update for a little while, I'm about to begin porting this to other maps. 
+I wanna keep the module as vanilla as possible to make it easier to port to other maps.
+This will be the last script update for a little while, I'm about to begin porting this to other maps.
 
 -----------------------------------------------------------------------------------------------------------------------
 September 13th 2019
 -----------------------------------------------------------------------------------------------------------------------
-SO MANY CHANGES, BUT FEW PLAYERS WILL EVEN NOTICE :'( 
+SO MANY CHANGES, BUT FEW PLAYERS WILL EVEN NOTICE :'(
 
-51 files changed, but not much functional difference. 
+51 files changed, but not much functional difference.
 
 + lamps added to green mountain
 + edited Haleks breathfog script. now only foggy breath at night.
@@ -67,7 +91,7 @@ SO MANY CHANGES, BUT FEW PLAYERS WILL EVEN NOTICE :'(
 + more skills settings for ai missions added.
 + fn_delayDelete function
 
-* fixed for non-driveable mission vehicles. spawning at [0,0,0] was spawning in water and killing the engine! 
+* fixed for non-driveable mission vehicles. spawning at [0,0,0] was spawning in water and killing the engine!
 * fn_createFire re-written to enable attaching flames to objects. will be used in missions later
 * destroyCrate function optimised to use new functions
 * vehicle paradrop script optimised

@@ -2,6 +2,8 @@
     File: PVEH.sqf (Server)
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
+
+// PLAYER CONNECTS/RESPAWNS. SERVER CHECKS/CREATES DATABASE AND SENDS TO CLIENT
 "dmd_db_check" addPublicVariableEventHandler {
 	private _packet = _this select 1;
 	_packet params ["_dataplayrowner", "_dataplayrname", "_dataplayruid"];
@@ -13,14 +15,14 @@
 	_dataplayrowner publicVariableClient "dmd_db_bank";
 
 	// DEAL WITH CHARACTER DATA (ONLY APPEND WORLDNAME TO NON REDUX MAPS SO PLAYERS DONT LOSE THEIR CHARS/BASES)
-	_filename = _dataplayruid;
-	if !((toLower worldName) isEqualTo "chernarusredux") then { _filename = format["%1_%2",_dataplayruid,worldName]; };	
+    ([_dataplayruid] call dmd_fnc_getDBNames) params ["_playerDB", "_objectDB", "_vehicleDB", "_settingsDB"];
 
-	_inidbiReq = ["new", _filename] call OO_INIDBI;
+
+	_inidbiReq = ["new", _playerDB] call OO_INIDBI;
 	_databasefind = "exists" call _inidbiReq;
 
 	private "_handler";
-	private _dataArray = []; 
+	private _dataArray = [];
 
 	// set up a new account if doesn't exist
 	if (!_databasefind) then {
@@ -39,7 +41,7 @@
 			(["read", ["Account", "Hunger", ""]] call _inidbiReq),
 			(["read", ["Account", "Thirst", ""]] call _inidbiReq)
 		];
-		_handler = "load";	
+		_handler = "load";
 	};
 
 	dmd_db_load = [_handler,_dataArray];
@@ -48,7 +50,7 @@
 	dmd_db_check = nil;
 };
 
-// SAVES THE PLAYER WHEN THEY PRESS ESCAPE 
+// SAVES THE PLAYER WHEN THEY PRESS ESCAPE
 "dmd_db_esc_save" addPublicVariableEventHandler {
 	private _packet = _this select 1;
 	_packet params ["_myUID", "_myPos","_myDir","_myAni","_myDmg","_myGear","_hunger","_thirst"];
@@ -90,7 +92,7 @@
 	["set", dmd_vehID, "vehicle"] call dmd_fnc_persistIDCount;
 };
 
-// EVERY TIME A PLAYER UPDATES THEIR CURRENCY - SAVE IT TO DB 
+// EVERY TIME A PLAYER UPDATES THEIR CURRENCY - SAVE IT TO DB
 "dmd_save_bank" addPublicVariableEventHandler {
 	_pack = _this select 1;
 	_pack params ["_uid", "_amt"];
@@ -99,7 +101,7 @@
 
 // HOTWIRING REQUEST - CHANGE OWNERSHIP OF VEHICLE AND UPDATE DB
 "dmd_hotwire_vehicle" addPublicVariableEventHandler {
-	_pack = _this select 1; 
+	_pack = _this select 1;
 	_pack params ["_vehicle", "_vehicleID", "_playerUID"];
 	{ _vehicle removeAllEventHandlers _x; } forEach ["Deleted", "ContainerClosed", "Dammaged", "GetOut"];
 	_vehicle removeAllMPEventHandlers "MPKilled";

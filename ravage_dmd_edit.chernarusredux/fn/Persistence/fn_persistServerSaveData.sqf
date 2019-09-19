@@ -5,10 +5,10 @@
 params ["_uid","_data"];
 _data params ["_pos", "_dir", "_ani", "_dmg", "_ger", "_hun", "_thi"];
 
-private _filename = _uid;
-if !((toLower worldName) isEqualTo "chernarusredux") then { _filename = format["%1_%2",_uid,worldName]; };
+// DEFINE THE FILENAMES
+([_uid] call dmd_fnc_getDBNames) params ["_playerDB", "_objectDB", "_vehicleDB", "_settingsDB"];
 
-_inidbSave = ["new", _filename] call OO_INIDBI;
+_inidbSave = ["new", _playerDB] call OO_INIDBI;
 ["write", ["Account", "Position", _pos]] call _inidbSave;
 ["write", ["Account", "Direction", _dir]] call _inidbSave;
 ["write", ["Account", "Anim", _ani]] call _inidbSave;

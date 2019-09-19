@@ -3,7 +3,7 @@
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
 params ["_testPos"];
-([[ "ServerSettings", "worldSettings", worldName],[ "exclusionZones", "exclusionPos", "exclusionDist", "playerDist" ]] call dmd_fnc_getMissionCfg ) params ["_excl", "_exPos","_exDst", "_plyDist"];
+([[ "ServerSettings", "worldSettings", worldName],[ "exclusionZones", "exclusionPos", "exclusionDist", "playerDist", "safeZones" ]] call dmd_fnc_getMissionCfg ) params ["_excl", "_exPos","_exDst", "_plyDist", "_sfZon"];
 
 private _foundBad = false;
 try {
@@ -23,6 +23,7 @@ try {
     
     // Check Postions
     private _psBad = false;
+    { _exPos pushBack [(_x select 0), _exDst]; } forEach _sfZon;
     if ((count _exPos) > 0) then {
         {
             private _dst = (_x select 0) distance2d _testPos;

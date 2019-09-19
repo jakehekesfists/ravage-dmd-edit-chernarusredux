@@ -1785,7 +1785,7 @@ class ravageModules {
 				"rhsusf_acc_ACOG_d_3d",
 				"rhsusf_acc_ACOG_d_pip",
 				"rhsusf_acc_ACOG_d",
-				"rhsusf_acc_ACOG_MDO",
+				//	"rhsusf_acc_ACOG_MDO",
 				"rhsusf_acc_ACOG_PIP",
 				"rhsusf_acc_ACOG_RMR_3d",
 				"rhsusf_acc_ACOG_RMR_PIP",

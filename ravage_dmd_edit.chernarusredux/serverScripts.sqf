@@ -39,4 +39,4 @@ for "_ii" from 5 to (count _cityPosArray)-1 do { _invadeCities pushBack (_cityPo
 
 ["Initialize"] call BIS_fnc_dynamicGroups;						// groups system
 
-[] spawn dmd_fnc_lootCleanLoop;									// server to handle loot cleanup scripts 
+[] execVM "DMD_LootSpawn\lootHandler_server.sqf";				// server loop for loot spawning/cleanup.

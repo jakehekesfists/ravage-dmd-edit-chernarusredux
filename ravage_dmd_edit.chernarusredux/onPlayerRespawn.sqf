@@ -26,8 +26,7 @@ private _query = missionNamespace getVariable ["DMD_Respawned", false];
 if (!_query) then { [] call dmd_fnc_persistQuery; };
 
 [] spawn dmd_fnc_playerActions;				// actions like using ATMs, repairing vehicles, etc etc. 
-[] call dmd_fnc_safezone;					// safezone godmode thread. 
-[] spawn dmd_fnc_lootLoop;					// dmd ground lootspawner script 
+[] call dmd_fnc_safezone;					// safezone godmode thread.
 
 // spawn a thread so player will be able to respawn correctly when they next die. 
 [_newUnit] spawn {

@@ -2,7 +2,11 @@
     File: fn_persistObjSetupEH.sqf
     Author:  JakeHekesFists[DMD] 2019
 -------------------------------------- */
-params ["_object", "_objID"];
+params [
+    ["_object",objNull],
+    "_objID"
+];
+if (isNull _object) exitWith { diag_log __FILE__ + "ERROR: NULL OBJECT"; };
 OBJECT_ID = _objID;
 
 _object addMPEventHandler ["MPKilled", {

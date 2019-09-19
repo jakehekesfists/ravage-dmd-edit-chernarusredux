@@ -2105,7 +2105,7 @@ class cfgHALsStore {
 			class rhsusf_acc_ACOG_d							{ price = 250; stock = 5; };
 			class rhsusf_acc_ACOG_d_3d						{ price = 250; stock = 5; };
 			class rhsusf_acc_ACOG_d_pip						{ price = 250; stock = 5; };
-			class rhsusf_acc_ACOG_MDO						{ price = 250; stock = 5; };
+			//	class rhsusf_acc_ACOG_MDO						{ price = 250; stock = 5; };
 			class rhsusf_acc_ACOG_PIP						{ price = 250; stock = 5; };
 			class rhsusf_acc_ACOG_RMR						{ price = 250; stock = 5; };
 			class rhsusf_acc_ACOG_RMR_3d					{ price = 250; stock = 5; };
