@@ -10,21 +10,11 @@ if (_enable != 1) exitWith {};
 private _hfWd = (worldSize/2);
 private _cPos = [_hfWd, _hfWd, 0];
 
-// we will add 1000 positions into the array. this will check 90% of the map surface, and be sure it can fit a large helicopter to avoid explosions
-private _posArray = [];
-for "_i" from 0 to 999 do {
-	private _foundPos = [_cPos, 100, (_hfWd*0.9), 2.5, 0, 2, 0, "B_Heli_Transport_03_unarmed_F"] call dmd_fnc_findSafeMissionPos;
-	_posArray pushBack _foundPos; 
-};
-
-// shuffle the array, and trim it. 
 private _qty = (floor(random (_qty select 1)) max (_qty select 0));
-_posArray = _posArray call dmd_fnc_arrayShuffle;
-_posArray resize _qty;
 
-{
-	private _heliPos = _x;
+for "_i" from 0 to (_qty)-1 do {
 	private _type = (selectRandom _types);
+	private _heliPos = [_cPos, 100, (_hfWd*0.9), 2.5, 0, 2, 0, _type] call dmd_fnc_findSafeMissionPos;
 
 	private _heli = createVehicle [_type, _heliPos, [], 0, "NONE"];
 	_heli allowDamage false;
@@ -48,5 +38,4 @@ _posArray resize _qty;
 		_mrkr setMarkerColor "ColorWhite";
 		_mrkr setMarkerText format ["%1 POS %2", "DEBUG: HELICOPTER", _heliPos];
 	};
-
-} forEach _posArray;
+};

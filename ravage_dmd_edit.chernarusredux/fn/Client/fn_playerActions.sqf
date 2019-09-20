@@ -141,7 +141,6 @@ for "_i" from 0 to 1 step 0 do {
 
 			_atm setVariable ["atm_action", true, true];
 		};
-		
 
 		///////////////////////////// VEHICLE ACTIONS /////////////////////////////
 		_vehicle = (nearestObjects [player, ["LandVehicle", "Air", "Ship"], 5]) select 0;

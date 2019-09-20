@@ -212,7 +212,7 @@ class dmd_cfg_settings {
         class boatSpawn {
 
             debugMarkers = 0;
-            boatQty[] = { 15, 30 };
+            boatQty[] = { 15, 25 };
 
             classes[] = {
                 #ifdef DMD_USE_CUP
@@ -244,7 +244,7 @@ class dmd_cfg_settings {
         class HeliSpawn {
             enable = 1;                     // enable/disable the helispawn script. (1 on / 0 off).
             debugMarkers = 0;               // create a map marker to show where the helis have spawned (1 on / 0 off).
-            heliQty[] = { 3, 6 };           // min / max amount of helis to spawn around the map
+            heliQty[] = { 4, 8 };           // min / max amount of helis to spawn around the map
             heliFuel[] = { 0.1, 0.75 };     // min / max amount of fuel a heli can spawn with.
             heliFuelEmptyChance = 30;       // 30% of helicopter spawning with no fuel.
             

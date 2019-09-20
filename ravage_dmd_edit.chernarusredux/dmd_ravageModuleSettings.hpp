@@ -323,6 +323,7 @@ class ravageModules {
 			"rhs_weap_type94_new",
 			"rhsusf_weap_m1911a1",
 			"rhsusf_weap_m9",
+			"rhs_weap_l1a1_wood",
 			#endif
 			"arifle_Katiba_C_F",
 			"arifle_Mk20C_plain_F",
@@ -344,7 +345,6 @@ class ravageModules {
 			"Rusty_srifle_DMR_04_F",
 			"Rusty_srifle_DMR_04_F",
 			"SMG_02_F",
-			"rhs_weap_l1a1_wood",
 			"SMG_03_camo",
 			"SMG_03_camo",
 			"SMG_03_TR_black",
@@ -464,9 +464,7 @@ class ravageModules {
 			#endif
 			"launch_NLAW_F",
 			"launch_RPG32_F",
-			"launch_RPG7_F",
-			"launch_RPG7_F",
-			"RPG7_F"		
+			"launch_RPG7_F"	
 		}; 
 
 		// (getArray(missionConfigFile >> "ravageModules" >> "gearPool" >> "commonUniforms"))

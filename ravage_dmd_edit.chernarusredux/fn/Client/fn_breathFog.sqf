@@ -2,7 +2,8 @@
 // edited to only work at night time by JakeHekesFists[DMD]
 if !(hasInterface) exitWith {};
 for "_i" from 0 to 1 step 0 do {
-	if ((daytime > 23) || (daytime < 7)) then {
+	private _nightTime = [] call dmd_fnc_isItNightTime;
+	if (_nightTime) then {
 		private _nearUnits = (positionCameraToWorld[0,0,0]) nearEntities ["CAManBase", 75];
 		if (count _nearUnits > 0) then {
 			{
